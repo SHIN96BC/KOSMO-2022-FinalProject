@@ -1,0 +1,749 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko"><head><script>
+(function(i, s, o, g, r, a, m) {
+    a = s.createElement(o);
+    m = s.getElementsByTagName(o)[0];
+    a.src = g;
+    a.onload = function() {
+        i[r].init('https://js-error-tracer-api.cafe24.com', {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJlY3VkZW1vMTI2NjA5LmNhZmUyNC5jb20iLCJhdWQiOiJqcy1lcnJvci10cmFjZXItYXBpLmNhZmUyNC5jb20iLCJtYWxsX2lkIjoiZWN1ZGVtbzEyNjYwOSIsInNob3Bfbm8iOjEsInBhdGhfcm9sZSI6IkJPQVJEX1BST0RVQ1RfTElTVCIsImxhbmd1YWdlX2NvZGUiOiJrb19LUiIsImNvdW50cnlfY29kZSI6IktSIiwib3JpZ2luIjoiaHR0cDpcL1wvZWN1ZGVtbzEyNjYwOS5jYWZlMjQuY29tIiwiaXNfY29udGFpbmVyIjpmYWxzZSwiaG9zdG5hbWUiOiJ1ZG1wLTEwOCJ9.-IdlwZfTqWrov7OY9KNe0xURsHUiE-5M_BZVtYkI5u8","collectWindowErrors":true,"preventDuplicateReport":true,"storageKeyPrefix":"EC_JET.BOARD_PRODUCT_LIST"});
+    };
+    m.parentNode.insertBefore(a, m);
+}(window, document, 'script', '/ind-script/optimizer.php?filename=08_Iz03VNzQq0i8oyk8vSszVLy8v18_MS-EqTi7KLCjRz0oFY57czDyerGIA&type=js&k=f8c449ff82a3977059c3195db755507c2666c339&t=1625595433', 'EC_JET'));
+</script><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><!-- PG크로스브라우징필수내용 --><meta http-equiv="Cache-Control" content="no-cache"/><meta http-equiv="Expires" content="0"/><meta http-equiv="Pragma" content="no-cache"/><!-- // PG크로스브라우징필수내용 --><!-- 해당 CSS는 쇼핑몰 전체 페이지에 영향을 줍니다. 삭제와 수정에 주의해주세요. -->
+
+
+
+<!--  네비게이션바 시작 -->
+<!--===============================================================================================-->   
+   <link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+<!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->   
+   <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->   
+   <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+<!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
+<!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="css/util.css">
+   <link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+	
+  
+			<div class="top-bar" >
+				<div class="content-topbar flex-sb-m h-full container">
+					<div class="left-top-bar">
+						JEJU FRIENDS
+					</div>
+			</div>
+		
+      		<div class="wrap-menu-desktop">
+            <nav class="limiter-menu-desktop container">
+              
+               <!-- Logo desktop -->      
+               <a href="#" class="logo">
+                  <img src="img/jeju2.png" alt="IMG-LOGO" style='width: 100px; height: 50px; margin-left: 50px;; margin-right: -20px;'>
+               </a>
+ 
+               <!-- Menu desktop -->
+               <div class="menu-desktop" style='margin-top: 10px;'>
+                  <ul class="main-menu">
+                     <li>
+                        <a href="index.html" style="font-size: 18px;">Home</a>
+                     </li>
+
+                     <li class="label1" data-label1="hot">
+                        <a href="product.html" style="font-size: 18px;">Course</a>
+                        <ul class="sub-menu">
+                           <li><a href="index.html">코스추천</a></li>
+                           <li><a href="home-02.html">나만의코스</a></li>
+                        </ul>
+                     </li>
+
+                     <li >
+                        <a href="shoping-cart.html" style="font-size: 18px;">Contents</a>
+                        <ul class="sub-menu">
+                           <li><a href="index.html">소문난맛집</a></li>
+                           <li><a href="home-02.html">관광지</a></li>
+                           <li><a href="home-02.html">로컬체험</a></li>
+                           <li><a href="home-03.html">숙소</a></li>
+                        </ul>
+                     </li>
+
+                     <li>
+                        <a href="blog.html" style="font-size: 18px;">Community</a>
+                     </li>
+
+
+                     <li>
+                        <a href="contact.html" style="font-size: 18px;">CS</a>
+                        <ul class="sub-menu">
+                           <li><a href="index.html">Q&A</a></li>
+                           <li><a href="home-02.html">FAQ</a></li>
+                        </ul>
+                     </li>
+                     
+                     <li>
+                        <a href="about.html" style="font-size: 18px;">About</a>
+                     </li>
+                  </ul>
+               </div>   
+
+               <!-- Icon header -->
+               <div class="wrap-icon-header flex-w flex-r-m" style="margin-bottom: -10px;">
+               	  <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
+                     <i class="zmdi zmdi-sign-in"></i>
+                  </a>
+                  <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
+                     <i class="zmdi zmdi-power-off"></i>
+                  </a>
+				<!--  장바구니 아이콘
+                  <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="2">
+                     <i class="zmdi zmdi-shopping-cart"></i>
+                  </div>
+				-->
+                  <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
+                     <i class="zmdi zmdi-account"></i>
+                  </a>
+               </div>
+            </nav>
+         </div>   
+      </div>
+      </header>
+      <!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+		$(".js-select2").each(function(){
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect2')
+			});
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/slick/slick.min.js"></script>
+	<script src="js/slick-custom.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/parallax100/parallax100.js"></script>
+	<script>
+        $('.parallax100').parallax100();
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+	<script>
+		$('.gallery-lb').each(function() { // the containers for all your galleries
+			$(this).magnificPopup({
+		        delegate: 'a', // the selector for gallery item
+		        type: 'image',
+		        gallery: {
+		        	enabled:true
+		        },
+		        mainClass: 'mfp-fade'
+		    });
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/isotope/isotope.pkgd.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/sweetalert/sweetalert.min.js"></script>
+	<script>
+		$('.js-addwish-b2').on('click', function(e){
+			e.preventDefault();
+		});
+
+		$('.js-addwish-b2').each(function(){
+			var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to wishlist !", "success");
+
+				$(this).addClass('js-addedwish-b2');
+				$(this).off('click');
+			});
+		});
+
+		$('.js-addwish-detail').each(function(){
+			var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
+
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to wishlist !", "success");
+
+				$(this).addClass('js-addedwish-detail');
+				$(this).off('click');
+			});
+		});
+
+		/*---------------------------------------------*/
+
+		$('.js-addcart-detail').each(function(){
+			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to cart !", "success");
+			});
+		});
+	
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script>
+		$('.js-pscroll').each(function(){
+			$(this).css('position','relative');
+			$(this).css('overflow','hidden');
+			var ps = new PerfectScrollbar(this, {
+				wheelSpeed: 1,
+				scrollingThreshold: 1000,
+				wheelPropagation: false,
+			});
+
+			$(window).on('resize', function(){
+				ps.update();
+			})
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+<!--  네비게이션바 끝 -->
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko"><head><script>
+(function(i, s, o, g, r, a, m) {
+    a = s.createElement(o);
+    m = s.getElementsByTagName(o)[0];
+    a.src = g;
+    a.onload = function() {
+        i[r].init('https://js-error-tracer-api.cafe24.com', {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJlY3VkZW1vMTI2NjA5LmNhZmUyNC5jb20iLCJhdWQiOiJqcy1lcnJvci10cmFjZXItYXBpLmNhZmUyNC5jb20iLCJtYWxsX2lkIjoiZWN1ZGVtbzEyNjYwOSIsInNob3Bfbm8iOjEsInBhdGhfcm9sZSI6IkJPQVJEX1BST0RVQ1RfTElTVCIsImxhbmd1YWdlX2NvZGUiOiJrb19LUiIsImNvdW50cnlfY29kZSI6IktSIiwib3JpZ2luIjoiaHR0cDpcL1wvZWN1ZGVtbzEyNjYwOS5jYWZlMjQuY29tIiwiaXNfY29udGFpbmVyIjpmYWxzZSwiaG9zdG5hbWUiOiJ1ZG1wLTEwOCJ9.-IdlwZfTqWrov7OY9KNe0xURsHUiE-5M_BZVtYkI5u8","collectWindowErrors":true,"preventDuplicateReport":true,"storageKeyPrefix":"EC_JET.BOARD_PRODUCT_LIST"});
+    };
+    m.parentNode.insertBefore(a, m);
+}(window, document, 'script', '/ind-script/optimizer.php?filename=08_Iz03VNzQq0i8oyk8vSszVLy8v18_MS-EqTi7KLCjRz0oFY57czDyerGIA&type=js&k=f8c449ff82a3977059c3195db755507c2666c339&t=1625595433', 'EC_JET'));
+</script><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><!-- PG크로스브라우징필수내용 --><meta http-equiv="Cache-Control" content="no-cache"/><meta http-equiv="Expires" content="0"/><meta http-equiv="Pragma" content="no-cache"/><!-- // PG크로스브라우징필수내용 --><!-- 해당 CSS는 쇼핑몰 전체 페이지에 영향을 줍니다. 삭제와 수정에 주의해주세요. --><link href="https://fonts.googleapis.com/css?family=Poppins:400,700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&amp;display=swap&amp;subset=korean" rel="stylesheet"/><!-- 스마트디자인에서는 JQuery 1.4.4 버전이 내장되어있습니다. 추가로 호출하면 충돌이 생길 수 있습니다. --><link rel="canonical" href="http://ecudemo126609.cafe24.com/board/상품-qa/6/" />
+<link rel="alternate" href="http://m.ecudemo126609.cafe24.com/board/상품-qa/6/" />
+<meta property="og:url" content="http://ecudemo126609.cafe24.com/board/상품-qa/6/" />
+<meta property="og:title" content="상품 Q&amp;A - 쇼핑몰 이름" />
+<meta property="og:description" content="상품 Q&amp;A입니다." />
+<meta property="og:site_name" content="쇼핑몰 이름" />
+<meta property="og:type" content="article" />
+<script type="text/javascript" src="/app/Eclog/js/cid.generate.js?vs=64ad5b9a963f4fb3ff2ab35465471511"></script>
+<script type="text/javascript">
+window.CAFE24 = window.CAFE24 || {};
+CAFE24.MANIFEST_CACHE_REVISION = '2203161305';
+CAFE24.getDeprecatedNamespace = function(sDeprecatedNamespace, sSupersededNamespace) {
+var sNamespace = sSupersededNamespace 
+? sSupersededNamespace 
+: sDeprecatedNamespace.replace(/^EC_/, '');
+return CAFE24[sNamespace];
+}
+CAFE24.FRONT_LANGUAGE_CODE = "ko_KR";
+CAFE24.MOBILE = false;
+CAFE24.MOBILE_DEVICE = false;
+CAFE24.MOBILE_USE = true;
+var EC_MOBILE = CAFE24.MOBILE;
+var EC_MOBILE_DEVICE = CAFE24.MOBILE_DEVICE;
+var EC_MOBILE_USE = CAFE24.MOBILE_USE;
+CAFE24.SKIN_CODE = "base";
+CAFE24.FRONT_EXTERNAL_SCRIPT_VARIABLE_DATA = {"common_member_id_crypt":""};
+var EC_FRONT_EXTERNAL_SCRIPT_VARIABLE_DATA = CAFE24.getDeprecatedNamespace('EC_FRONT_EXTERNAL_SCRIPT_VARIABLE_DATA');
+CAFE24.SDE_SHOP_NUM = 1;CAFE24.SHOP = {getLanguage : function() { return "ko_KR"; },getCurrency : function() { return "KRW"; },getFlagCode : function() { return "KR"; },getTimezone: function() { return "Asia/Seoul" },getDateFormat: function() { return "Y-m-d" },isMultiShop : function() { return false; },isDefaultShop : function() { return true; },isDefaultLanguageShop : function(sLanguageCode) { return SHOP.isDefaultShop() && SHOP.isLanguageShop(sLanguageCode); },isKR : function() { return true; },isUS : function() { return false; },isJP : function() { return false; },isCN : function() { return false; },isTW : function() { return false; },isES : function() { return false; },isPT : function() { return false; },isVN : function() { return false; },isPH : function() { return false; },getCountryAndLangMap : function() { return {
+"KR": "ko_KR",
+"US": "en_US",
+"JP": "ja_JP",
+"CN": "zh_CN",
+"TW": "zh_TW",
+"VN": "vi_VN",
+"PH": "en_PH"
+}},isLanguageShop : function(sLanguageCode) { return sLanguageCode === "ko_KR"; },getDefaultShopNo : function() { return 1; },getProductVer : function() { return 2; },isSDE : function() { return true; },isMode : function() {return false; },getModeName : function() {return false; },isMobileAdmin : function() {return false; },isExperienceMall : function() { return false; },getAdminID : function() {return ''},getMallID : function() {return 'ecudemo126609'},getCurrencyFormat : function(sPriceTxt, bIsNumberFormat) { 
+sPriceTxt = String(sPriceTxt);
+var aCurrencySymbol = ["","\uc6d0",false];
+if (typeof CAFE24.SHOP_PRICE !== 'undefined' && isNaN(sPriceTxt.replace(/[,]/gi, '')) === false && bIsNumberFormat === true) {
+// bIsNumberFormat 사용하려면 Ui(':libUipackCurrency')->plugin('Currency') 화폐 라이브러리 추가 필요
+sPriceTxt = CAFE24.SHOP_PRICE.toShopPrice(sPriceTxt.replace(/[,]/gi, ''), true, CAFE24.SDE_SHOP_NUM);
+}
+try {
+var sPlusMinusSign = (sPriceTxt.toString()).substr(0, 1);
+if (sPlusMinusSign === '-' || sPlusMinusSign === '+') {
+sPriceTxt = (sPriceTxt.toString()).substr(1);
+return sPlusMinusSign + aCurrencySymbol[0] + sPriceTxt + aCurrencySymbol[1];
+} else {
+return aCurrencySymbol[0] + sPriceTxt + aCurrencySymbol[1];
+}
+} catch (e) {
+return aCurrencySymbol[0] + sPriceTxt + aCurrencySymbol[1];
+}
+}};CAFE24.CURRENCY_INFO = {getOriginReferenceCurrency : function() {return 'USD'},getCurrencyList : function(sCurrencyCode) { var aCurrencyList = {"JPY":{"currency_symbol":"&yen;","decimal_place":0,"round_method_type":"F"},"VND":{"currency_symbol":"&#8363;","decimal_place":0,"round_method_type":"F"},"PHP":{"currency_symbol":"&#8369;","decimal_place":2,"round_method_type":"R"},"USD":{"currency_symbol":"$","decimal_place":2,"round_method_type":"R"},"CNY":{"currency_symbol":"&yen;","decimal_place":2,"round_method_type":"R"},"TWD":{"currency_symbol":"NT$","decimal_place":0,"round_method_type":"F"},"EUR":{"currency_symbol":"\u20ac","decimal_place":2,"round_method_type":"R"},"BRL":{"currency_symbol":"R$","decimal_place":2,"round_method_type":"R"},"AUD":{"currency_symbol":"A$","decimal_place":2,"round_method_type":"R"},"BHD":{"currency_symbol":".&#1583;.&#1576;","decimal_place":3,"round_method_type":"R"},"BDT":{"currency_symbol":"&#2547;","decimal_place":2,"round_method_type":"R"},"GBP":{"currency_symbol":"&pound;","decimal_place":2,"round_method_type":"R"},"CAD":{"currency_symbol":"C$","decimal_place":2,"round_method_type":"R"},"CZK":{"currency_symbol":"K&#269;","decimal_place":2,"round_method_type":"R"},"DKK":{"currency_symbol":"kr","decimal_place":2,"round_method_type":"R"},"HKD":{"currency_symbol":"HK$","decimal_place":2,"round_method_type":"R"},"HUF":{"currency_symbol":"Ft","decimal_place":2,"round_method_type":"R"},"INR":{"currency_symbol":"&#8377;","decimal_place":2,"round_method_type":"R"},"IDR":{"currency_symbol":"Rp","decimal_place":2,"round_method_type":"R"},"ILS":{"currency_symbol":"&#8362;","decimal_place":2,"round_method_type":"R"},"JOD":{"currency_symbol":" &#1583;&#1610;&#1606;&#1575;&#1585;","decimal_place":3,"round_method_type":"R"},"KWD":{"currency_symbol":"&#1583;&#1610;&#1606;&#1575;&#1585;","decimal_place":3,"round_method_type":"R"},"MYR":{"currency_symbol":"RM","decimal_place":2,"round_method_type":"R"},"MXN":{"currency_symbol":"Mex$","decimal_place":2,"round_method_type":"R"},"NZD":{"currency_symbol":"NZ$","decimal_place":2,"round_method_type":"R"},"NOK":{"currency_symbol":"kr","decimal_place":2,"round_method_type":"R"},"PKR":{"currency_symbol":"&#8360;","decimal_place":2,"round_method_type":"R"},"PLN":{"currency_symbol":"z\u0142","decimal_place":2,"round_method_type":"R"},"RUB":{"currency_symbol":"\u0440\u0443\u0431","decimal_place":2,"round_method_type":"R"},"SAR":{"currency_symbol":"&#65020;","decimal_place":2,"round_method_type":"R"},"SGD":{"currency_symbol":"S$","decimal_place":2,"round_method_type":"R"},"ZAR":{"currency_symbol":"R","decimal_place":2,"round_method_type":"R"},"SEK":{"currency_symbol":"kr","decimal_place":2,"round_method_type":"R"},"CHF":{"currency_symbol":"Fr","decimal_place":2,"round_method_type":"R"},"THB":{"currency_symbol":"&#3647;","decimal_place":2,"round_method_type":"R"},"TRY":{"currency_symbol":"TL","decimal_place":2,"round_method_type":"R"},"AED":{"currency_symbol":"&#1601;&#1604;&#1587;","decimal_place":2,"round_method_type":"R"}}; return aCurrencyList[sCurrencyCode] },isUseReferenceCurrency : function() {return false }};CAFE24.COMMON_UTIL = {convertSslForString : function(sString) { return sString.replace(/http:/gi, '');},convertSslForHtml : function(sHtml) { return sHtml.replace(/((?:src|href)\s*=\s*['"])http:(\/\/(?:[a-z0-9\-_\.]+)\/)/ig, '$1$2');},getProtocol : function() { return 'http'; },moveSsl : function() { if (CAFE24.COMMON_UTIL.getProtocol() === 'http') { var oLocation = jQuery(window.location); var sUrl = 'https://' + oLocation.attr('host') + oLocation.attr('pathname') + oLocation.attr('search'); window.location.replace(sUrl); } },setEcCookie : function(sKey, sValue, iExpire) {var exdate = new Date();exdate.setDate(exdate.getDate() + iExpire);var setValue = escape(sValue) + "; domain=." + CAFE24.GLOBAL_INFO.getBaseDomain() + "; path=/;expires=" + exdate.toUTCString();document.cookie = sKey + "=" + setValue;}};CAFE24.SHOP_LIB_INFO = {getBankInfo : function() { 
+var oBankInfo = "";
+$.ajax({
+type: "GET",
+url: "/exec/front/Shop/Bankinfo",
+dataType: "json",
+async: false,
+success: function(oResponse) {
+oBankInfo = oResponse;
+}
+});
+return oBankInfo; }};            var EC_SDE_SHOP_NUM = CAFE24.SDE_SHOP_NUM;
+var SHOP = CAFE24.getDeprecatedNamespace('SHOP');
+var EC_COMMON_UTIL = CAFE24.getDeprecatedNamespace('EC_COMMON_UTIL');
+var EC_SHOP_LIB_INFO = CAFE24.getDeprecatedNamespace('EC_SHOP_LIB_INFO');
+var EC_CURRENCY_INFO = CAFE24.getDeprecatedNamespace('EC_CURRENCY_INFO');
+CAFE24.ROOT_DOMAIN = "cafe24.com";
+CAFE24.API_DOMAIN = "cafe24api.com";
+CAFE24.TRANSLATE_LOG_STATUS = "F";
+CAFE24.GLOBAL_INFO = (function() {
+var oData = {"base_domain":"ecudemo126609.cafe24.com","root_domain":"cafe24.com","api_domain":"cafe24api.com","is_global":false,"is_global_standard":false,"country_code":"KR","language_code":"ko_KR","admin_language_code":"ko_KR"};
+return {
+getBaseDomain: function() {
+return oData['base_domain'];
+},
+getRootDomain: function() {
+return oData['root_domain'];
+},
+getApiDomain: function() {
+return oData['api_domain'];
+},
+isGlobal: function() {
+return oData['is_global'];
+},
+isGlobalStandard: function() {
+return oData['is_global_standard'];
+},
+getCountryCode: function() {
+return oData['country_code'];
+},
+getLanguageCode: function() {
+return oData['language_code'];
+},
+getAdminLanguageCode: function() {
+return oData['admin_language_code'];
+}
+};
+})();
+var EC_ROOT_DOMAIN = CAFE24.ROOT_DOMAIN;
+var EC_API_DOMAIN = CAFE24.API_DOMAIN;
+var EC_TRANSLATE_LOG_STATUS = CAFE24.TRANSLATE_LOG_STATUS;
+var EC_GLOBAL_INFO = CAFE24.getDeprecatedNamespace('EC_GLOBAL_INFO');
+CAFE24.AVAILABLE_LANGUAGE = ["ko_KR","zh_CN","en_US","zh_TW","es_ES","pt_PT","vi_VN","ja_JP","en_PH"];
+CAFE24.AVAILABLE_LANGUAGE_CODES = {"ko_KR":"KOR","zh_CN":"CHN","en_US":"ENG","zh_TW":"TWN","es_ES":"ESP","pt_PT":"PRT","vi_VN":"VNM","ja_JP":"JPN","en_PH":"PHL"};
+var EC_AVAILABLE_LANGUAGE = CAFE24.AVAILABLE_LANGUAGE;
+var EC_AVAILABLE_LANGUAGE_CODES = CAFE24.AVAILABLE_LANGUAGE_CODES;
+CAFE24.GLOBAL_PRODUCT_LANGUAGE_CODES = {  
+sClearanceCategoryCode: '',
+sManualLink: '//serviceguide.cafe24shop.com/ko_KR/PR.PD.GA.html',
+sHsCodePopupLink: 'https://www.wcotradetools.org/en/harmonized-system',
+aCustomRegex: '"PHL" : "^[0-9]{8}[A-Z]?$"',
+sCountryCodeData: 'kor',
+sEnglishExampleURlForGlobal: '',
+aReverseAddressCountryCode: ["VNM","PHL"],
+aSizeGuideCountryAlign: '["US","UK","EU","KR","JP","CN"]',
+aIsSupportTran: ["ja_JP","zh_CN","zh_TW","en_US","vi_VN","en_PH","pt_PT","es_ES"]
+};
+var EC_GLOBAL_PRODUCT_LANGUAGE_CODES = CAFE24.getDeprecatedNamespace('EC_GLOBAL_PRODUCT_LANGUAGE_CODES');
+CAFE24.GLOBAL_ORDER_LANGUAGE_CODES = {
+aModifyOrderLanguage: {"KR":"ko_KR","JP":"ja_JP","CN":"zh_CN","TW":"zh_TW","VN":"vi_VN","PH":"en_PH"},
+aUseIdCardKeyCountry: ["CN","TW"],
+aLanguageWithCountryCode: {"zh_CN":["CN","CHN","HK","HNK"],"ja_JP":["JP","JPN"],"zh_TW":["TW","TWN"],"ko_KR":["KR","KOR"],"vi_VN":["VN","VNM"],"en_PH":["PH","PHL"]},
+aCheckDisplayRequiredIcon: ["ja_JP","zh_CN","zh_TW","en_US","vi_VN","en_PH"],
+aSetReceiverName: {"zh_CN":{"sCountry":"CN","bUseLastName":true},"zh_TW":{"sCountry":"TW","bUseLastName":false},"ja_JP":{"sCountry":"JP","bUseLastName":true}},
+aSetDeferPaymethodLanguage: {"ja_JP":"\uc77c\ubcf8","zh_CN":"\uc911\uad6d"},
+aUseDeferPaymethod: ["ja_JP","zh_CN"],
+aCheckShippingCompanyAndPaymethod: ["ja_JP","zh_CN"],
+aSetDeferPaymethodLanguageForShipping: {"ja_JP":"\u65e5\u672c","zh_CN":"\uc911\uad6d"},
+aCheckStoreByPaymethod: ["ja_JP","zh_CN"],
+aCheckIsEmailRequiredForJs: ["en_US","zh_CN","zh_TW","ja_JP","vi_VN","en_PH"],
+aSetIdCardKeyCountryLanguage: {"CN":"\uc911\uad6d\uc758","TW":"\ub300\ub9cc\uc758"},
+aReverseGlobalAddress: ["en_PH","vi_VN","PHL","VNM","VN","PH"],
+aNoCheckZipCode: ["KOR","JPN"],
+aNotPostCodeAPICountryList: ["en_US","es_ES","pt_PT","en_PH"],
+aEnableSearchExchangeAddr: ["KR","JP","CN","VN","TW","PH"],
+aDuplicatedBaseAddr: ["TW","JP"],
+aReverseAddressCountryCode: ["VN","PH"],
+aCheckZipCode: ["PHL","en_PH","PH"]
+};
+var EC_GLOBAL_ORDER_LANGUAGE_CODES = CAFE24.getDeprecatedNamespace('EC_GLOBAL_ORDER_LANGUAGE_CODES');
+CAFE24.GLOBAL_MEMBER_LANGUAGE_CODES = {  
+sAdminWebEditorLanguageCode: 'ko' ,
+oNotAvailDecimalPointLanguages: ["ko_KR","ja_JP","zh_TW","vi_VN"],
+oAddressCountryCode: {"KOR":"ko_KR","JPN":"ja_JP","CHN":"zh_CN","TWN":"zh_TW","VNM":"vi_VN","PHL":"en_PH"},
+};
+var EC_GLOBAL_MEMBER_LANGUAGE_CODES = CAFE24.getDeprecatedNamespace('EC_GLOBAL_MEMBER_LANGUAGE_CODES');
+CAFE24.GLOBAL_BOARD_LANGUAGE_CODES = {  
+bUseLegacyBoard: true
+};
+var EC_GLOBAL_BOARD_LANGUAGE_CODES = CAFE24.getDeprecatedNamespace('EC_GLOBAL_BOARD_LANGUAGE_CODES');
+CAFE24.GLOBAL_MALL_LANGUAGE_CODES = {
+oDesign: {
+oDesignAddReplaceInfo: {"group_id":"SKIN.ADD.ADMIN.DESIGNDETAIL","replacement":{"KR":"KOREAN","US":"ENGLISH","JP":"JAPANESE","CN":"SIMPLIFIED.CHINESE","TW":"TRADITIONAL.CHINESE","ES":"SPANISH","PT":"PORTUGUESE","PH":"ENGLISH"}},
+oDesignDetailLanguageCountryMap: {"KR":"ko_KR","JP":"ja_JP","CN":"zh_CN","TW":"zh_TW","US":"en_US","ES":"es_ES","PT":"pt_PT","PH":"en_PH"},
+oSmartDesignSwitchTipLink: {"edibot":{"img":"\/\/img.echosting.cafe24.com\/smartAdmin\/img\/design\/img_editor_dnd.png","link":"\/\/ecsupport.cafe24.com\/board\/free\/list.html?board_act=list&board_no=12&category_no=9&cate_no=9"},"smart":{"img":"\/\/img.echosting.cafe24.com\/smartAdmin\/img\/design\/ko_KR\/img_editor_smart.png","link":"\/\/sdsupport.cafe24.com"}},
+oSmartDesignDecoShopList: ["ko_KR","ja_JP","zh_CN","en_US","zh_TW","es_ES","pt_PT"],
+oSmartDesignDecoMultilingual: {"list":{"ko_KR":"KOREAN","en_US":"ENGLISH","ja_JP":"JAPANESE","zh_CN":"SIMPLIFIED.CHINESE","zh_TW":"TRADITIONAL.CHINESE","es_ES":"SPANISH","pt_PT":"PORTUGUESE","vi_VN":"VIETNAMESE"},"group_id":"EDITOR.LAYER.EDITING.DECO"},
+aSmartDesignModuleShopList: ["ko_KR","ja_JP","zh_CN","en_US","zh_TW","es_ES","pt_PT"]
+},
+oStore: {
+oMultiShopCurrencyInfo: {"en_US":{"currency":"USD"},"zh_CN":{"currency":"USD","sub_currency":"CNY"},"ja_JP":{"currency":"JPY"},"zh_TW":{"currency":"TWD"},"es_ES":{"currency":"EUR"},"pt_PT":{"currency":"EUR"},"ko_KR":{"currency":"KRW"},"vi_VN":{"currency":"VND"},"en_PH":{"currency":"PHP"}},
+oBrowserRedirectLanguage: {"ko":{"primary":"ko_KR","secondary":"en_US"},"en":{"detail":{"en-ph":{"primary":"en_PH","secondary":"en_US"},"en-us":{"primary":"en_US","secondary":"es_ES"},"default":{"primary":"en_US","secondary":"es_ES"}}},"ja":{"primary":"ja_JP","secondary":"en_US"},"zh":{"detail":{"zh-cn":{"primary":"zh_CN","secondary":"en_US"},"zh-tw":{"primary":"zh_TW","secondary":"zh_CN"},"default":{"primary":"en_US","secondary":"ko_KR"}}},"es":{"primary":"es_ES","secondary":"en_US"},"pt":{"primary":"pt_PT","secondary":"en_US"},"vi":{"primary":"vi_VN","secondary":"en_US"},"default":{"primary":"en_US","secondary":"ko_KR"}},
+aChangeableLanguages: ["en_US","vi_VN","ja_JP","ko_KR","zh_TW","th_TH"],
+aNoZipCodeLanguage: ["ko_KR","ja_JP"]
+},
+oMobile: {
+sSmartWebAppFaqUrl: "https://ecsupport.cafe24.com/board/free/read.html?no=1832&board_no=5&category_no=13&cate_no=13&category_no=13&category_no=13",
+sAmpFaqUrl: "https://ecsupport.cafe24.com/board/free/read.html?no=1864&board_no=5&category_no=13&cate_no=13&category_no=13&category_no=13",
+},
+oPromotion: {
+bQrCodeAvailable: true,
+bSnsMarketingAvailable: true
+},
+oShippingReverseAddressLanguage: ["vi_VN","en_PH"] ,
+oGlobalStandardSwitchHelpCodeLink: {"SH.DS":{"link":"\/\/serviceguide.cafe24shop.com\/en_PH\/SH.DS.html"},"PR.DS":{"link":"\/\/serviceguide.cafe24shop.com\/en_PH\/PR.DS.html"},"OR.SM.BO":{"link":"\/\/serviceguide.cafe24shop.com\/en_PH\/OR.SM.BO.html"},"CU.DS":{"link":"\/\/serviceguide.cafe24shop.com\/en_PH\/CU.DS.html"},"DE.DS":{"link":"\/\/serviceguide.cafe24shop.com\/en_PH\/DE.DS.html"},"MB.DS":{"link":"\/\/serviceguide.cafe24shop.com\/en_PH\/MB.DS.html"},"PM.DS":{"link":"\/\/serviceguide.cafe24shop.com\/en_PH\/PM.DS.html"}},
+getAdminMainLocaleLanguage: function(sSkinLocaleCode) {
+var oLocaleData = [];
+var locale = "";
+var shopLangName = ""; 
+if (sSkinLocaleCode == "US") {
+locale = "en_US";
+shopLangName = "ENGLISH";
+} else if (sSkinLocaleCode == "JP") {
+locale = "ja_JP";
+shopLangName = "JAPANESE";
+} else if (sSkinLocaleCode == "CN") {
+locale = "zh_CN";
+shopLangName = "SIMPLIFIED.CHINESE";
+} else if (sSkinLocaleCode == "TW") {
+locale = "zh_TW";
+shopLangName = "TRADITIONAL.CHINESE";
+} else if (sSkinLocaleCode == "ES") {
+locale = "es_ES";
+shopLangName = "SPANISH";
+} else if (sSkinLocaleCode == "PT") {
+locale = "pt_PT";
+shopLangName = "PORTUGUESE";
+} else if (sSkinLocaleCode == "VN") {
+locale = "vi_VN";
+shopLangName = "VIETNAMESE";
+} else if(sSkinLocaleCode == "PH") {
+locale = "en_PH";
+shopLangName = "ENGLISH.PH";
+}
+oLocaleData["locale"] = locale;
+oLocaleData["shopLangName"] = shopLangName;
+return oLocaleData;
+}
+};
+var EC_GLOBAL_MALL_LANGUAGE_CODES = CAFE24.getDeprecatedNamespace('EC_GLOBAL_MALL_LANGUAGE_CODES');
+CAFE24.GLOBAL_DATETIME_INFO = {
+oConstants: {"STANDARD_DATE_REGEX":"\/([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))\/","IN_ZONE":"inZone","OUT_ZONE":"outZone","IN_FORMAT":"inFormat","OUT_FORMAT":"outFormat","IN_DATE_FORMAT":"inDateFormat","IN_TIME_FORMAT":"inTimeFormat","OUT_DATE_FORMAT":"outDateFormat","OUT_TIME_FORMAT":"outTimeFormat","IN_FORMAT_DATE_ONLY":1,"IN_FORMAT_TIME_ONLY":2,"IN_FORMAT_ALL":3,"OUT_FORMAT_DATE_ONLY":1,"OUT_FORMAT_TIME_ONLY":2,"OUT_FORMAT_ALL":3,"DATE_ONLY":"YYYY-MM-DD","TIME_ONLY":"HH:mm:ss","FULL_TIME":"YYYY-MM-DD HH:mm:ss","ISO_8601":"YYYY-MM-DD[T]HH:mm:ssZ","YEAR_ONLY":"YYYY","MONTH_ONLY":"MM","DAY_ONLY":"DD","WEEK_ONLY":"e","TIME_H_I_ONLY":"HH:mm","TIME_HOUR_ONLY":"HH","TIME_MINUTE_ONLY":"mm","POSTGRE_FULL_TIME":"YYYY-MM-DD HH24:MI:SS","POSTGRE_TIME_ONLY":" HH24:MI:SS","MICRO_SECOND_ONLY":"u","SEOUL":"Asia\/Seoul","TOKYO":"Asia\/Tokyo","SHANGHAI":"Asia\/Shanghai","TAIPEI":"Asia\/Taipei","HANOI":"Asia\/Bangkok","LOS_ANGELES":"America\/Los_Angeles","LISBON":"Europe\/Lisbon","MADRID":"Europe\/Madrid","SINGAPORE":"Asia\/Singapore","UTC":"Etc\/UTC","MAX_DATETIME":"9999-12-31 23:59:59"},
+oOptions: {"inZone":"Asia\/Seoul","inFormat":"YYYY-MM-DD HH:mm:ss","inDateFormat":"YYYY-MM-DD","inTimeFormat":"HH:mm:ss","outZone":"Asia\/Seoul","outFormat":"YYYY-MM-DD HH:mm:ss","outDateFormat":"YYYY-MM-DD","outTimeFormat":"HH:mm:ss"},
+oPolicies: {"shop":{"outZone":"Asia\/Seoul","outFormat":"YYYY-MM-DD HH:mm:ss","outDateFormat":"YYYY-MM-DD","outTimeFormat":"HH:mm:ss"}},
+sOverrideTimezone: '',
+sMomentNamespace: 'EC_GLOBAL_MOMENT'
+};
+CAFE24.FRONT_JS_CONFIG_MANAGE = {"sSmartBannerScriptUrl":"https:\/\/app4you.cafe24.com\/SmartBanner\/tunnel\/scriptTags?vs=1563164396689206","sMallId":"ecudemo126609","sDefaultAppDomain":"https:\/\/app4you.cafe24.com","sWebLogOffFlag":"F","cdnUrl":"http:"};
+var EC_FRONT_JS_CONFIG_MANAGE = CAFE24.getDeprecatedNamespace('EC_FRONT_JS_CONFIG_MANAGE');
+CAFE24.FRONT_JS_CONFIG_MEMBER = {"sAuthUrl":"https:\/\/i-pin.cafe24.com\/certify\/1.0\/?action=auth"};
+var EC_FRONT_JS_CONFIG_MEMBER = CAFE24.getDeprecatedNamespace('EC_FRONT_JS_CONFIG_MEMBER');
+typeof window.CAFE24 === "undefined" && (window.CAFE24 = {});
+CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ko_KR","path":{"origin":"\/board\/\uc0c1\ud488-qa\/6\/","result":"\/board\/\uc0c1\ud488-qa\/6\/","prefix":""},"shop_no":0,"skin_code":"default"};
+</script>
+<link rel="stylesheet" type="text/css" href="css/public1.css"/>
+
+<link rel="stylesheet" type="text/css" href="css/public2.css"/>
+
+<link rel="stylesheet" type="text/css" href="css/qna.css"/>
+
+<title> 상품 Q&amp;A - 쇼핑몰 이름</title>
+<meta name="path_role" content="BOARD_PRODUCT_LIST" />
+<meta name="description" content="상품 Q&amp;A입니다." />
+<meta name="keywords" content="상품 Q&amp;A" />
+<meta name="design_html_path" content="/board/product/list.html" /></head><body>
+
+
+
+	<div id="quick_search">
+		<div class="quick_searchClose"><img src="/images/icon_close.png" class="rotate"/></div>
+		<form id="searchBarForm" name="" action="/product/search.html" method="get" target="_self" enctype="multipart/form-data" >
+<input id="banner_action" name="banner_action" value="" type="hidden"  /><div class="xans-element- xans-layout xans-layout-searchheader "><!--
+			$product_page=/product/detail.html
+			$category_page=/product/list.html
+			-->
+<fieldset>
+<legend>검색</legend>
+				<input id="keyword" name="keyword" fw-filter="" fw-label="검색어" fw-msg="" class="inputTypeText" placeholder="" onmousedown="SEARCH_BANNER.clickSearchForm(this)" value="" type="text"  /><img src="/images/icon_search_btn.png" alt="검색" class="search_btn" onclick="SEARCH_BANNER.submitSearchBanner(this); return false;"/>
+			 </fieldset>
+</div>
+</form>	</div><!-- //quick_search -->
+</div><!-- //header -->
+<hr class="layout"/><div id="wrap">
+    <div id="container">
+        <div id="contents">
+            
+    <div style="margin-top: 150px"></div>
+<div class="xans-element- xans-board xans-board-listpackage-4 xans-board-listpackage xans-board-4 "><div class="xans-element- xans-board xans-board-title-4 xans-board-title xans-board-4 "><div class="path">
+            <span>현재 위치</span>
+            <ol>
+		<li><a href="/">홈</a></li>
+                <li><a href="/board/index.html">게시판</a></li>
+                <li title="현재 위치"><strong>상품 Q&A</strong></li>
+            </ol>
+</div>
+<div class="titleArea">
+            <h2><font color="333333">상품 Q&A</font> </h2>
+            <p>상품 Q&A입니다.</p>
+        </div>
+<div class="xans-element- xans-layout xans-layout-boardinfo cboth event_tab"><ul>
+<li rel="공지사항" class="xans-record-"><a href="/board/공지사항/1/" class="move" style="background-color: rgba(81, 127, 226, 0.5); color:rgb(255,255,255);">공지사항</a></li>
+			<li rel="상품 Q&A" class="xans-record-"><a href="/board/상품-qa/6/" class="move" style="background-color: rgba(81, 127, 226, 0.5); color:rgb(255,255,255);">상품 Q&A</a></li>
+<li rel="상품 사용후기" class="xans-record-"><a href="/board/상품-사용후기/4/" class="move" style="background-color: rgba(81, 127, 226, 0.5); color:rgb(255,255,255);">상품 사용후기</a></li>
+<li rel="자유게시판" class="xans-record-"><a href="/board/자유게시판/5/" class="move" style="background-color: rgba(81, 127, 226, 0.5); color:rgb(255,255,255);">자유게시판</a></li>
+<li rel="갤러리" class="xans-record-"><a href="/board/갤러리/8/" class="move" style="background-color: rgba(81, 127, 226, 0.5); color:rgb(255,255,255);">갤러리</a></li>
+		</ul>
+</div>
+<div class="boardSort">
+                <span class="xans-element- xans-board xans-board-replysort-4 xans-board-replysort xans-board-4 "></span>
+    </div>
+<div class="ec-base-table typeList gBorder">
+        <table border="1" summary="">
+<caption>상품 게시판 목록</caption>
+        <colgroup class="xans-element- xans-board xans-board-listheader-4 xans-board-listheader xans-board-4 "><col style="width:70px;"/>
+<col style="width:250px;"/>
+<col style="width:130px;" class="displaynone"/>
+<col style="width:auto;"/>
+<col style="width:84px;"/>
+<col style="width:77px;" class=""/>
+<col style="width:55px;" class=""/>
+<col style="width:55px;" class="displaynone"/>
+<col style="width:80px;" class="displaynone"/>
+</colgroup>
+<thead class="xans-element- xans-board xans-board-listheader-4 xans-board-listheader xans-board-4 "><tr style=" ">
+<th scope="col"> 번호</th>
+                <th scope="col">상품정보</th>
+                <th scope="col" class="displaynone">카테고리</th>
+                <th scope="col">제목</th>
+                <th scope="col">작성자</th>
+                <th scope="col" class="">작성일</th>
+                <th scope="col" class="">조회</th>
+                <th scope="col" class="displaynone">추천</th>
+                <th scope="col" class="displaynone">평점</th>
+            </tr></thead>
+<tbody class="xans-element- xans-board xans-board-list-4 xans-board-list xans-board-4 center"><!--
+                $product_name_cut = 30
+                $login_page_url = /member/login.html
+                $deny_access_url = /index.html
+            --><tr style="background-color:#FFFFFF; color:#555555;" class="xans-record-">
+<td> 3</td>
+                <td class="thumb left"><a href="/product/$1/$2/"><span></span></a></td>
+                <td class="displaynone"></td>
+                <td class="subject left txtBreak">
+                    <span class="displaynone">
+                        <a href="#none" onclick="BOARD.viewTarget('4','6',this);"><img src="//img.echosting.cafe24.com/skin/base/board/btn_unfold.gif" alt="내용 보기"/></a>
+                    </span>
+                     <a href="/article/상품-qa/6/4/" style="color:#555555;">바카라사이트</a> <span class="txtEm"></span>
+                </td>
+                <td>a****</td>
+                <td class=""><span class="txtNum">2020-08-03</span></td>
+                <td class=""><span class="txtNum">47</span></td>
+                <td class="displaynone"><span class="txtNum">0</span></td>
+                <td class="displaynone"><img src="//img.echosting.cafe24.com/skin/base/board/ico_point0.gif" alt="0점"/></td>
+            </tr>
+<tr style="background-color:#FFFFFF; color:#555555;" class="xans-record-">
+<td> 2</td>
+                <td class="thumb left"><a href="/product/$1/$2/"><span></span></a></td>
+                <td class="displaynone"></td>
+                <td class="subject left txtBreak">
+                    <span class="displaynone">
+                        <a href="#none" onclick="BOARD.viewTarget('3','6',this);"><img src="//img.echosting.cafe24.com/skin/base/board/btn_unfold.gif" alt="내용 보기"/></a>
+                    </span>
+                     <a href="/article/상품-qa/6/3/" style="color:#555555;">우리카지노</a> <span class="txtEm"></span>
+                </td>
+                <td>a****</td>
+                <td class=""><span class="txtNum">2020-07-24</span></td>
+                <td class=""><span class="txtNum">13</span></td>
+                <td class="displaynone"><span class="txtNum">0</span></td>
+                <td class="displaynone"><img src="//img.echosting.cafe24.com/skin/base/board/ico_point0.gif" alt="0점"/></td>
+            </tr>
+<tr style="background-color:#FFFFFF; color:#555555;" class="xans-record-">
+<td> 1</td>
+                <td class="thumb left"><a href="/product/$1/$2/"><span></span></a></td>
+                <td class="displaynone"></td>
+                <td class="subject left txtBreak">
+                    <span class="displaynone">
+                        <a href="#none" onclick="BOARD.viewTarget('2','6',this);"><img src="//img.echosting.cafe24.com/skin/base/board/btn_unfold.gif" alt="내용 보기"/></a>
+                    </span>
+                     <a href="/article/상품-qa/6/2/" style="color:#555555;">바카라주소</a> <span class="txtEm"></span>
+                </td>
+                <td>a****</td>
+                <td class=""><span class="txtNum">2020-07-24</span></td>
+                <td class=""><span class="txtNum">22</span></td>
+                <td class="displaynone"><span class="txtNum">0</span></td>
+                <td class="displaynone"><img src="//img.echosting.cafe24.com/skin/base/board/ico_point0.gif" alt="0점"/></td>
+            </tr>
+</tbody>
+</table><p class="xans-element- xans-board xans-board-empty-4 xans-board-empty xans-board-4 message displaynone "></p>
+    </div>
+<div class="xans-element- xans-board xans-board-buttonlist-4 xans-board-buttonlist xans-board-4 displaynone ec-base-button typeBG "><span class="gRight">
+            <a href="/board/product/write.html?board_no=6" class="btnSubmitFix sizeS displaynone">글쓰기</a>
+        </span>
+</div>
+</div>
+
+<div class="xans-element- xans-board xans-board-paging-4 xans-board-paging xans-board-4 ec-base-paginate"><a href="?board_no=6&page=1"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지"/></a>
+<ol>
+<li class="xans-record-"><a href="?board_no=6&page=1" class="this">1</a></li>
+            </ol>
+<a href="?board_no=6&page=1"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지"/></a>
+</div>
+
+<form id="boardSearchForm" name="" action="/board/상품-qa/6" method="get" target="_top" enctype="multipart/form-data" >
+<input id="board_no" name="board_no" value="6" type="hidden"  />
+<input id="page" name="page" value="1" type="hidden"  />
+<input id="board_sort" name="board_sort" value="" type="hidden"  /><div class="xans-element- xans-board xans-board-search-4 xans-board-search xans-board-4 "><fieldset class="boardSearch">
+<legend>게시물 검색</legend>
+        <p class="category displaynone"></p>
+        <p><select id="search_date" name="search_date" fw-filter="" fw-label="" fw-msg="" >
+<option value="week">일주일</option>
+<option value="month">한달</option>
+<option value="month3">세달</option>
+<option value="all">전체</option>
+</select> <select id="search_key" name="search_key" fw-filter="" fw-label="" fw-msg="" >
+<option value="subject">제목</option>
+<option value="content">내용</option>
+<option value="writer_name">글쓴이</option>
+<option value="member_id">아이디</option>
+<option value="nick_name">별명</option>
+<option value="product">상품정보</option>
+</select> <input id="search" name="search" fw-filter="" fw-label="" fw-msg="" class="inputTypeText" placeholder="" value="" type="text"  /> <a href="#none" class="btnEmFix" onclick="BOARD.form_submit('boardSearchForm');">찾기</a></p>
+    </fieldset>
+</div>
+</form>
+<!-- 관리자 전용 메뉴 -->
+
+<!-- // 관리자 전용 메뉴 -->
+		</div><hr class="layout"/></div><!-- //container -->
+	<hr class="layout"/><div id="quick"></div>
+</div><!-- //wrap -->
+<hr class="layout"/><div id="footer">
+	<div class="xans-element- xans-layout xans-layout-footer cboth inner "><div class="bt_logo"><a href="/"><img src="/images/logo.png"/></a></div>
+<div class="bt_info">
+			<div class="bt_title">디센터</div>
+			대표자 : 조혜진<br/>
+			소재지 :   <br/>
+			사업자등록번호 : 114-81-20586 <br/>
+			통신판매업신고번호 : <br/>
+			개인정보보호책임자 : <a href="mailto:">()</a>
+		</div>
+<!-- //bt_info -->
+<div class="bt_cscenter">
+			<div class="bt_title">고객센터</div>
+			<br/>
+					</div>
+<!-- //bt_cscenter -->
+<div class="bt_runtime">
+<!-- 운영시간 및 계좌번호는 [상점관리 - 기본정보관리 - 내쇼핑몰정보 - CS운영시간] 에 작성하시면 자동출력됩니다. -->
+					</div>
+<!-- //bt_runtime -->
+<div class="bt_communitu">
+			<div class="bt_title">커뮤니티</div>
+			<a href="/board/%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD/1/">공지사항</a>
+			<a href="/board/%EC%83%81%ED%92%88-%EC%82%AC%EC%9A%A9%ED%9B%84%EA%B8%B0/4/">구매후기</a>
+			<a href="/board/%EC%83%81%ED%92%88-qa/6/">질문답변</a>
+			<a href="/board/event/8/?board_no=8&amp;category_no=1">이벤트</a>
+		</div>
+<!-- //bt_communitu -->
+<div class="cboth pdt70">
+			<ul class="cboth utilMenu">
+<li><a href="/member/privacy.html"><strong>개인정보 처리방침</strong></a></li>
+				<li>|</li>
+				<li><a href="/member/agreement.html">이용약관</a></li>
+				<li>|</li>
+				<li><a href="/shopinfo/guide.html">이용안내</a></li>
+				<li>|</li>
+				<li><a href="/board/%EC%83%81%ED%92%88-qa/6/">제휴문의</a></li>
+			</ul>
+<!-- //utilMenu --><div class="cboth escrow">고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 PG 사의 구매안전서비스를 이용하실 수 있습니다. [ LG U+ 에스크로 ]</div>
+			<div class="copyright">COPYRIGHT © <span>쇼핑몰 이름. </span> ALL RIGHTS RESERVED. HOSTING BY 카페24(주)</div>
+
+			<div class="cboth bt_sns">
+<!-- 하단 SNS 링크 수정하는곳 -->
+				<a href="https://www.instagram.com/" target="_blank" class="move"><img src="/images/icon_insta.png"/></a>
+				<a href="https://www.facebook.com/" target="_blank" class="move"><img src="/images/icon_fb.png"/></a>
+				</div>
+		</div>
+</div>
+<!-- //inner -->
+</div><!-- //footer -->
+
+<!-- 결제를 위한 필수 영역 -->
+<div id="progressPaybar" style="display:none;">
+    <div id="progressPaybarBackground" class="layerProgress"></div>
+    <div id="progressPaybarView">
+        <div class="box">
+            <p class="graph">
+                <span><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/txt_progress.gif" alt="현재 결제가 진행중입니다."/></span>
+                <span><img src="//img.echosting.cafe24.com/skin/base/layout/img_loading.gif" alt=""/></span>
+            </p>
+            <p class="txt">
+                본 결제 창은 결제완료 후 자동으로 닫히며,결제 진행 중에 본 결제 창을 닫으시면<br/>
+                주문이 되지 않으니 결제 완료 될 때 까지 닫지 마시기 바랍니다.
+            </p>
+        </div>
+    </div>
+</div>
+<!-- //결제를 위한 필수 영역 -->
+
+
+
+<span itemscope="" itemtype="http://schema.org/Organization">
+<link itemprop="url" href="https://ecudemo126609.cafe24.com">
+</span>
+<script type="text/javascript" src="/ind-script/i18n.php?lang=ko_KR&domain=front&v=2203161305" charset="utf-8"></script>
+
+<script src="/ind-script/optimizer.php?filename=zVjbbts4EH1P9LrfoaZbLPY1cdB20QQxsin6PKJG1kQUh8tLEvXrO5Ldi9vKlqgEWBiQZZrncDRzZoZUXnOL-dlrl1cOWnxk1-QOPUenML_3OZ39bbJ7_0d-aF4kC6rJ7_-L6Lrd15_ZX9mrmUh8CugMaL8byBRzQ7iUJTqd9AgZqqwyyVDDik2lSYUkirPsjXySFpd_A7uf_GYdbwS_F90SAgaSCa3MMiFHdT3cfKJQ332-hABZS2YGj6ZCUHgn98dR3joyoZpAzyr2Zr1l167YBMdaozuOW-voz629cFRuJtgTA-njsyrHg6dOPGtBsDkJbE80GTwpwJgpdm0pFLctm6mzn8BINhqRtnUYpq8y4AK2Vktcfg8Ca_NrLkhjfvsDfmvfAa-M4Fouowz5R7LzFqyiUb1D-3lllLRpR0U8leGAESLV_OM2e36k0PC50wzlLFAbA_Tr3hQe3cNYcEbAlnVXkZ4svRIriDr0LvAtuHDxG9XNL5LFhgbQ_6Nkl1JAjBeP-qVMCJ7MZilLiwHKvhyOqvHfmu1eWN8OwfoADXDe9Nc1PaE-VIsO0KyGXPx4MBVHoLdYoUOjcBVd_92tHan5FngEp-pZwg5QVd2vDeSo962OG5Kq9QCaxOnsvkbh20AmN-AX0_ZhNqX_lV4YrGgPX26FGrXFF3-OGkypZ9eGGQtIrSOJ8YvxS10Mz-YmzQqkYTR8vNJ-t2A0Ty4YXLmndxnNin40DRSVSgNq8n2v7LvhgW4JBjb73fIRC82bWSn9tYbkXqrEqR2vJJPwavfrtJKNHYSlljwXzbR9YB1aLXtSCoR-ltvBd0Ztr8m4FtsCXTL8xpXolAnJBBfgGwzLGezhXjSJY73b66WyrDhKsV_yLNeSebBJf45LtOwpff1P5OurvggsIVAcF7jAocIF8NsBfscB9GqRHYOy0wWFBitaKuor6BbY8M5BmS6l8xhYaiCpgUb2co_pqpZDBq3ZRptO0V1Rg7sEXRbYPapFYr-iB5TjejN29p6qsvfUv2XpnkGvO6Y7KJ6F5x857id6yEKoHWs8nbABOubm0UP0CNgm1PFtHzyVbcyU11SO4_AO5As&type=js&k=2f77be9618db291555c5b2f4aea6e33f2a64af8e&t=1645509281" ></script><script src="/ind-script/optimizer.php?filename=tdDLEcIwDATQApwrdQg4ZIY6qMAfTaJgWU5swaR7DAcaiLntRW92BbMwAnqjBbfSggZkuVzH8XyDrC6SN3PlCCWgCVhoSuBsQYh2F62fTB6WdvnEVE21bljKCXqp33BIbIgXZklHFZag8ddwVfIP8yR8dd27rIrbPrgsWfPAlLrq_I9PeFtxkla6q8oaK5VZ8n2mnClNjX8D&type=js&k=bb0955cd7c693bf2097b22ad9d78f8571b92f770&t=1562306353&user=T" ></script>
+<script type="text/javascript">
+CAFE24.MOBILE_WEB = false; var mobileWeb = CAFE24.MOBILE_WEB;
+var bUseElastic = false;
+var sSearchBannerUseFlag = 'F';
+var bIsUseSpread = false;
+var sIsSecret = false;
+var iBoardNo = "6";
+var aLogData = {"log_server1":"eclog2-181.cafe24.com","log_server2":"eclog2-181.cafe24.com","mid":"ecudemo126609","stype":"e","domain":"","shop_no":1,"lang":"ko_KR","ver":2,"hash":"881c347f38a24c6057e78b782f762ed3","ca":"cfa-js.cafe24.com\/cfa.js","etc":""};
+var sMileageName = '적립금';
+var sMileageUnit = '[:PRICE:]원';
+var sDepositName = '예치금';
+var sDepositUnit = '원';
+CAFE24.SHOP_CURRENCY_INFO = {"1":{"aShopCurrencyInfo":{"currency_code":"KRW","currency_no":"410","currency_symbol":"\uffe6","currency_name":"South Korean won","currency_desc":"\uffe6 \uc6d0 (\ud55c\uad6d)","decimal_place":0,"round_method_type":"F"},"aShopSubCurrencyInfo":null,"aBaseCurrencyInfo":{"currency_code":"KRW","currency_no":"410","currency_symbol":"\uffe6","currency_name":"South Korean won","currency_desc":"\uffe6 \uc6d0 (\ud55c\uad6d)","decimal_place":0,"round_method_type":"F"},"fExchangeRate":1,"fExchangeSubRate":null,"aFrontCurrencyFormat":{"head":"","tail":"\uc6d0"},"aFrontSubCurrencyFormat":{"head":"","tail":""}}}; var SHOP_CURRENCY_INFO = CAFE24.SHOP_CURRENCY_INFO;
+var EC_ASYNC_LIVELINKON_ID = '';
+if (EC$('[async_section=before]').length > 0) {
+EC$('[async_section=before]').addClass('displaynone');
+}
+
+</script></body></html>
+
+      
