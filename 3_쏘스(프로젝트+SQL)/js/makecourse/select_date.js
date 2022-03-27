@@ -1,7 +1,7 @@
 
 let CDate = new Date(); 
 let _today = new Date();
-let selectCk = 0;
+
 
 // 달력 만들기
 let buildcalendar = function(){
@@ -48,118 +48,144 @@ let buildcalendar = function(){
 
 // 저번달 보기
 function prevCal(){
-	 CDate.setMonth(CDate.getMonth()-1); 
-	 buildcalendar(); 
+    CDate.setMonth(CDate.getMonth()-1); 
+    buildcalendar(); 
 } 
 // 다음달 보기
 function nextCal(){
-	 CDate.setMonth(CDate.getMonth()+1);
-	 buildcalendar(); 
+    CDate.setMonth(CDate.getMonth()+1);
+    buildcalendar(); 
 }
 
 let startDate = "";
 let lastDate = "";
+let selectDate = 0;
+let selectMonth = 0;
+let selectYear = 0;
 
 // 달력에서 날짜를 눌렀을때의 함수
 function fn_selectDate(date){
-	
-	let year = CDate.getFullYear();
-	let month = CDate.getMonth() + 1;
-	let date_txt = "";
-    
-	if(CDate.getMonth + 1 < 10){
-		month = "0" + (CDate.getMonth() + 1);
-	}
-	if(date < 10){
-		date_txt = "0" + date;
-	}
+   
+   let year = CDate.getFullYear();
+   let month = CDate.getMonth() + 1;
+   let date_txt = "";
+   
+   if(CDate.getMonth + 1 < 10){
+       month = "0" + (CDate.getMonth() + 1);
+   }
+   if(date < 10){
+       date_txt = "0" + date;
+   }
 
-	if(selectCk == 0){
-        $('#region_code').empty(); // 콤보박스 초기화
-        $('#show_lodgment').empty(); // n박n일 글자 초기화
+   if(selectDate === 0 && selectMonth === 0 && selectYear == 0){
+       $('#region_code').empty(); // 콤보박스 초기화
+       $('#show_lodgment').empty(); // n박n일 글자 초기화
 
-		$(".date").css("background-color", "");
-		$(".date").css("color", "");
-		$("#date_"+date).css("background-color", "red");
-		$("#date_"+date).css("color", "white");
-		
-		$("#period_1").val(year+"-"+month+"-"+date);
-		$("#period_2").val('');
+       $(".date").css("background-color", "");
+       $(".date").css("color", "");
+       $("#date_"+date).css("background-color", "red");
+       $("#date_"+date).css("color", "white");
+       
+       $("#period_1").val(year+"-"+month+"-"+date);
+       $("#period_2").val('');
 
-		selectCk = date;
-        startDate = String(year) + month + date;
-	}else if(selectCk === date) {
-        // 같은곳을 한번 더 눌렀을때 처리
-        $("#date_"+date).css('background-color', '');
-		$("#date_"+date).css('color', '');
-        $("#period_1").val('');
-		$("#period_2").val('');
-        selectCk = 0;
-    }else{
-        if(selectCk > date) {
-            // 두번째 선택할 때 처음 선택한 날짜보다 과거의 날짜를 골랐을 때
-            $('#region_code').empty(); // 콤보박스 초기화
-            $('#show_lodgment').empty(); // n박n일 글자 초기화
+       selectDate = date;
+       selectMonth = month;
+       selectYear = year;
+       startDate = new Date(year, month, date);
+   }else if(selectDate === date && selectMonth === month && selectYear === year) {
+       // 같은곳을 한번 더 눌렀을때 처리
+       $("#date_"+date).css('background-color', '');
+       $("#date_"+date).css('color', '');
+       $("#period_1").val('');
+       $("#period_2").val('');
+       selectDate = 0;
+       selectMonth = 0;
+       selectYear = 0;
+   }else{
+       if(selectDate > date && selectMonth >= month && selectYear >= year) {
+           // 두번째 선택할 때 처음 선택한 날짜보다 과거의 날짜를 골랐을 때
+           $('#region_code').empty(); // 콤보박스 초기화
+           $('#show_lodgment').empty(); // n박n일 글자 초기화
 
-            $(".date").css("background-color", "");
-            $(".date").css("color", "");
-            $("#date_"+date).css("background-color", "red");
-            $("#date_"+date).css("color", "white");
-            
-            $("#period_1").val(year+"-"+month+"-"+date);
-            $("#period_2").val('');
+           $(".date").css("background-color", "");
+           $(".date").css("color", "");
+           $("#date_"+date).css("background-color", "red");
+           $("#date_"+date).css("color", "white");
+           
+           $("#period_1").val(year+"-"+month+"-"+date);
+           $("#period_2").val('');
 
-            selectCk = date;
-            startDate = String(year) + month + date;
-        }else {
-            // 정상적으로 두번째 날짜를 골랐을 때
-            $("#date_"+date).css("background-color", "red");
-            $("#date_"+date).css("color", "white");		
-            for(let j = selectCk + 1 ; j < date ; j++){
-                $("#date_"+j).css("background-color", "#FFDDDD");
-            }
-            
-            $("#period_2").val(year+"-"+month+"-"+date);
-            selectCk = 0;
-            lastDate = String(year) + month + date;
+           selectDate = date;
+           selectMonth = month;
+           selectYear = year;
+           startDate = new Date(year, month, date); // 시작 날짜
+       }else {
+           // 정상적으로 두번째 날짜를 골랐을 때
+           $("#date_"+date).css("background-color", "red");
+           $("#date_"+date).css("color", "white");
+           
+           lastDate = new Date(year, month, date); // 끝 날짜 
 
-            let startLodgment = Number(lastDate) - Number(startDate);
-            let lastLodgment = startLodgment + 1;
+           let startMonth = startDate.getMonth();
+           let lastMonth = lastDate.getMonth();
 
-            $('#show_lodgment').append(`${startLodgment}박 ${lastLodgment}일`); // n박n일 글자 띄우기
-            
-            // 콤보박스 생성
-            for(let i = 1; i <= lastLodgment; i++) {
-                if(i === 1) {
-                    $('#region_code').append(
-                        `<option value="${i}" selected>Day ${i}</option>`
-                    );
-                }else {
-                    $('#region_code').append(
-                        `<option value="${i}">Day ${i}</option>`
-                    );
-                }
-            }
-        }
-        
-	}
-	
+           if(lastMonth > startMonth){
+               for(let i = date - 1; i > 0 ; i--){
+                   $("#date_"+i).css("background-color", "#FFDDDD");
+                   
+               }
+               $(".last").css("background-color", "#FFDDDD");
+           }else {
+               for(let i = selectDate + 1 ; i < date ; i++){
+                   $("#date_"+i).css("background-color", "#FFDDDD");
+               }
+           }
+           
+           $("#period_2").val(year+"-"+month+"-"+date);
+
+           let startLodgment = lastDate.getTime() - startDate.getTime();
+           startLodgment = startLodgment / (1000*60*60*24); // 일자수 계산
+           let lastLodgment = startLodgment + 1;
+
+           $('#show_lodgment').append(`${startLodgment}박 ${lastLodgment}일`); // n박n일 글자 띄우기
+           
+           // 콤보박스 생성
+           for(let i = 1; i <= lastLodgment; i++) {
+               if(i === 1) {
+                   $('#region_code').append(
+                       `<option value="${i}" selected>Day ${i}</option>`
+                   );
+               }else {
+                   $('#region_code').append(
+                       `<option value="${i}">Day ${i}</option>`
+                   );
+               }
+           }
+
+           selectDate = 0;
+           selectMonth = 0;
+           selectYear = 0;
+       }
+       
+   }
+   
 }
 
 $(document).ready(function() {
-	buildcalendar();
-    let flag = false;
-    $('#date_btn').click(function() {
-        
-        if(flag) {
-            $('#set_calendar').hide();
-            flag = false;
-        }else {
-            $('#set_calendar').show();
-            flag = true;
-        }
-        
-    });
+   buildcalendar();
+   let flag = false;
+   $('#date_btn').click(function() {
+       
+       if(flag) {
+           $('#set_calendar').hide();
+           flag = false;
+       }else {
+           $('#set_calendar').show();
+           flag = true;
+       }
+       
+   });
 });
 
 
