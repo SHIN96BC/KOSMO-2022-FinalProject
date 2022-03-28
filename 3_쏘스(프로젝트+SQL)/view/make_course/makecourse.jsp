@@ -1454,7 +1454,7 @@
 												<div class="form-group srch-type" style="float: right;">
 													<div class="form-item">
 														<div class="select-type type2">
-															<select id="region_code" style="margin-top: 3px;">
+															<select id="lodgment_combobox" style="margin-top: 3px;">
 																
 															</select>
 														</div>
@@ -1466,7 +1466,7 @@
 											</div>
 											<div class="tab-content active etcdelete" style="margin-top: -1px; border: 1px solid #dddddd; padding: 30px; height: 365px; overflow-y: scroll;">
 												<div class="menu-list-v2">
-													<ul id="course_append">
+													<ul id="course_search_append">
 														<li>
 															<div class="title-type2">담은여행지</div>
 														</li>
@@ -1480,14 +1480,8 @@
 																<div class="price-box">
 																	<strong>1,000</strong>
 																</div>
-																	
 																<div class="quantity-box">
-																	<button class="btn-minus etc"></button>
-																	<input class="setNum" type="number" value="0" readonly>
-																	<input class="setName" type="hidden" value="캐나다 드라이 진저 에일 250ML">
-																	<input class="setCode" type="hidden" value="RDK028L1">
-																	<input class="setPrice" type="hidden" value="1000">
-																	<button class="btn-plus etc"></button>
+																	<a href="" class="btnEmFix sizeS ">추가</a>
 																</div>
 															</div>
 														</li>
@@ -1630,295 +1624,9 @@
 										
 							<script type="text/javascript"></script>
 								
-							<div id="childdiv" style="margin-top: 50px;">
-								<!-- <div class="promotion-box" id="eventBox2" style="display:none;">
-									<a href="javascript:goLink('', '/event/entry/1250', '_self');">신규& 미주문 고객 대상, 코카콜라 0원 이벤트</a>
-								</div> -->
-							
-								<div class="step-wrap">
-									<div class="title-wrap">
-										<div class="title-type2">음료&기타</div>
-									</div>
-									<div class="tab-content active etcdelete">
-										<div class="menu-list-v2">
-											<ul>
-												<li class="" >
-													<div class="prd-img">
-														<img class="lazyload" src="https://cdn.dominos.co.kr/domino/pc/images/bg.gif" data-src="https://cdn.dominos.co.kr/admin/upload/goods/20210226_TKPKtnva.jpg" alt="캐나다 드라이 진저 에일 250ML"  />
-													</div>
-													
-													<div class="prd-cont">
-														<div class="subject">캐나다 드라이 진저 에일 250ML</div>
-														<div class="price-box">
-															<strong>1,000</strong>
-														</div>
-															
-														<div class="quantity-box">
-															<a href="" class="btnEmFix sizeS ">삭제</a>
-															<input class="setName" type="hidden" value="NEW 치즈 볼로네즈 스파게티">
-															<input class="setCode" type="hidden" value="RSD031M1">
-															<input class="setPrice" type="hidden" value="8800">
-														</div>
-													</div>
-												</li>
-												<li class="" >
-													<div class="prd-img">
-														<img class="lazyload" src="https://cdn.dominos.co.kr/domino/pc/images/bg.gif" data-src="https://cdn.dominos.co.kr/admin/upload/goods/20200316_xko4stGP.jpg" alt="코카콜라 1.25L"  />
-													</div>
-													
-													<div class="prd-cont">
-														<div class="subject">코카콜라 1.25L</div>
-														<div class="price-box">
-															<strong>2,100</strong>
-														</div>
-															
-														<div class="quantity-box">
-															<button class="btn-minus etc"></button>
-															<input class="setNum" type="number" value="0" readonly>
-															<input class="setName" type="hidden" value="코카콜라 1.25L">
-															<input class="setCode" type="hidden" value="RDK001L6">
-															<input class="setPrice" type="hidden" value="2100">
-															<button class="btn-plus etc"></button>
-														</div>
-													</div>
-												</li>
-												<li class="cokeClass" >
-													<div class="prd-img">
-														<img class="lazyload" src="https://cdn.dominos.co.kr/domino/pc/images/bg.gif" data-src="https://cdn.dominos.co.kr/admin/upload/goods/20200316_2lmLufa0.jpg" alt="코카콜라 500ml"  />
-													</div>
-													
-													<div class="prd-cont">
-														<div class="subject">코카콜라 500ml</div>
-														<div class="price-box">
-															<strong>1,500</strong>
-														</div>
-															
-														<div class="quantity-box">
-															<button class="btn-minus etc"></button>
-															<input class="setNum" type="number" value="0" readonly>
-															<input class="setName" type="hidden" value="코카콜라 500ml">
-															<input class="setCode" type="hidden" value="RDK001L7">
-															<input class="setPrice" type="hidden" value="1500">
-															<button class="btn-plus etc"></button>
-														</div>
-													</div>
-												</li>
-												<li class="" >
-													<div class="prd-img">
-														<img class="lazyload" src="https://cdn.dominos.co.kr/domino/pc/images/bg.gif" data-src="https://cdn.dominos.co.kr/admin/upload/goods/20220114_S1MbvZL1.jpg" alt="코카콜라 제로 1.25L"  />
-													</div>
-													
-													<div class="prd-cont">
-														<div class="subject">코카콜라 제로 1.25L</div>
-														<div class="price-box">
-															<strong>2,100</strong>
-														</div>
-														
-														<div class="quantity-box">
-															<button class="btn-minus etc"></button>
-															<input class="setNum" type="number" value="0" readonly>
-															<input class="setName" type="hidden" value="코카콜라 제로 1.25L">
-															<input class="setCode" type="hidden" value="RDK005L3">
-															<input class="setPrice" type="hidden" value="2100">
-															<button class="btn-plus etc"></button>
-														</div>
-													</div>
-												</li>
-												<li class="" >
-													<div class="prd-img">
-														<img class="lazyload" src="https://cdn.dominos.co.kr/domino/pc/images/bg.gif" data-src="https://cdn.dominos.co.kr/admin/upload/goods/20200316_Hllio1OV.jpg" alt="코카콜라 제로 500ml"  />
-													</div>
-													
-													<div class="prd-cont">
-														<div class="subject">코카콜라 제로 500ml</div>
-														<div class="price-box">
-															<strong>1,500</strong>
-														</div>
-														
-														<div class="quantity-box">
-															<button class="btn-minus etc"></button>
-															<input class="setNum" type="number" value="0" readonly>
-															<input class="setName" type="hidden" value="코카콜라 제로 500ml">
-															<input class="setCode" type="hidden" value="RDK005L2">
-															<input class="setPrice" type="hidden" value="1500">
-															<button class="btn-plus etc"></button>
-														</div>
-													</div>
-												</li>
-												<li class="" >
-													<div class="prd-img">
-														<img class="lazyload" src="https://cdn.dominos.co.kr/domino/pc/images/bg.gif" data-src="https://cdn.dominos.co.kr/admin/upload/goods/20200316_kr91ng5H.jpg" alt="스프라이트 1.5L"  />
-													</div>
-													
-													<div class="prd-cont">
-														<div class="subject">스프라이트 1.5L</div>
-														<div class="price-box">
-															<strong>2,200</strong>
-														</div>
-														
-														<div class="quantity-box">
-															<button class="btn-minus etc"></button>
-															<input class="setNum" type="number" value="0" readonly>
-															<input class="setName" type="hidden" value="스프라이트 1.5L">
-															<input class="setCode" type="hidden" value="RDK003L1">
-															<input class="setPrice" type="hidden" value="2200">
-															<button class="btn-plus etc"></button>
-														</div>
-													</div>
-												</li>
-												<li class="" >
-													<div class="prd-img">
-														<img class="lazyload" src="https://cdn.dominos.co.kr/domino/pc/images/bg.gif" data-src="https://cdn.dominos.co.kr/admin/upload/goods/20200316_aH0XAR71.jpg" alt="스프라이트 500ml"  />
-													</div>
-													
-													<div class="prd-cont">
-														<div class="subject">스프라이트 500ml</div>
-														<div class="price-box">
-															<strong>1,500</strong>
-														</div>
-														
-														<div class="quantity-box">
-															<button class="btn-minus etc"></button>
-															<input class="setNum" type="number" value="0" readonly>
-															<input class="setName" type="hidden" value="스프라이트 500ml">
-															<input class="setCode" type="hidden" value="RDK003L3">
-															<input class="setPrice" type="hidden" value="1500">
-															<button class="btn-plus etc"></button>
-														</div>
-													</div>
-												</li>
-												<li class="" >
-													<div class="prd-img">
-														<img class="lazyload" src="https://cdn.dominos.co.kr/domino/pc/images/bg.gif" data-src="https://cdn.dominos.co.kr/admin/upload/goods/20200316_ZiDHxA8U.jpg" alt="우리 피클 L"  />
-													</div>
-													
-													<div class="prd-cont">
-														<div class="subject">우리 피클 L</div>
-														<div class="price-box">
-															<strong>800</strong>
-														</div>
-														
-														<div class="quantity-box">
-															<button class="btn-minus etc"></button>
-															<input class="setNum" type="number" value="0" readonly>
-															<input class="setName" type="hidden" value="우리 피클 L">
-															<input class="setCode" type="hidden" value="RSD152P1">
-															<input class="setPrice" type="hidden" value="800">
-															<button class="btn-plus etc"></button>
-														</div>
-													</div>
-												</li>
-												<li class="" >
-													<div class="prd-img">
-														<img class="lazyload" src="https://cdn.dominos.co.kr/domino/pc/images/bg.gif" data-src="https://cdn.dominos.co.kr/admin/upload/goods/20200316_g5R87V5j.jpg" alt="우리 피클 M"  />
-													</div>
-													
-													<div class="prd-cont">
-														<div class="subject">우리 피클 M</div>
-														<div class="price-box">
-															<strong>500</strong>
-														</div>
-														
-														<div class="quantity-box">
-															<button class="btn-minus etc"></button>
-															<input class="setNum" type="number" value="0" readonly>
-															<input class="setName" type="hidden" value="우리 피클 M">
-															<input class="setCode" type="hidden" value="RSD101P1">
-															<input class="setPrice" type="hidden" value="500">
-															<button class="btn-plus etc"></button>
-														</div>
-													</div>
-												</li>
-												<li class="" >
-													<div class="prd-img">
-														<img class="lazyload" src="https://cdn.dominos.co.kr/domino/pc/images/bg.gif" data-src="https://cdn.dominos.co.kr/admin/upload/goods/20200316_8eI3CpW8.jpg" alt="스위트 칠리소스 15g"  />
-													</div>
-													
-													<div class="prd-cont">
-														<div class="subject">스위트 칠리소스 15g</div>
-														<div class="price-box">
-															<strong>300</strong>
-														</div>
-														
-														<div class="quantity-box">
-															<button class="btn-minus etc"></button>
-															<input class="setNum" type="number" value="0" readonly>
-															<input class="setName" type="hidden" value="스위트 칠리소스 15g">
-															<input class="setCode" type="hidden" value="RSD086P1">
-															<input class="setPrice" type="hidden" value="300">
-															<button class="btn-plus etc"></button>
-														</div>
-													</div>
-												</li>
-												<li class="" >
-													<div class="prd-img">
-														<img class="lazyload" src="https://cdn.dominos.co.kr/domino/pc/images/bg.gif" data-src="https://cdn.dominos.co.kr/admin/upload/goods/20200316_H1ApYYz5.jpg" alt="갈릭 디핑 소스 15g"  />
-													</div>
-													
-													<div class="prd-cont">
-														<div class="subject">갈릭 디핑 소스 15g</div>
-														<div class="price-box">
-															<strong>200</strong>
-														</div>
-														
-														<div class="quantity-box">
-															<button class="btn-minus etc"></button>
-															<input class="setNum" type="number" value="0" readonly>
-															<input class="setName" type="hidden" value="갈릭 디핑 소스 15g">
-															<input class="setCode" type="hidden" value="RSD088P1">
-															<input class="setPrice" type="hidden" value="200">
-															<button class="btn-plus etc"></button>
-														</div>
-													</div>
-												</li>
-												<li class="" >
-													<div class="prd-img">
-														<img class="lazyload" src="https://cdn.dominos.co.kr/domino/pc/images/bg.gif" data-src="https://cdn.dominos.co.kr/admin/upload/goods/20200316_1uKUqRes.jpg" alt="핫소스"  />
-													</div>
-													
-													<div class="prd-cont">
-														<div class="subject">핫소스</div>
-														<div class="price-box">
-															<strong>100</strong>
-														</div>
-														
-														<div class="quantity-box">
-															<button class="btn-minus etc"></button>
-															<input class="setNum" type="number" value="0" readonly>
-															<input class="setName" type="hidden" value="핫소스">
-															<input class="setCode" type="hidden" value="RSD017P1">
-															<input class="setPrice" type="hidden" value="100">
-															<button class="btn-plus etc"></button>
-														</div>
-													</div>
-												</li>
-												<li class="" >
-													<div class="prd-img">
-														<img class="lazyload" src="https://cdn.dominos.co.kr/domino/pc/images/bg.gif" data-src="https://cdn.dominos.co.kr/admin/upload/goods/20211201_D9Rb2B60.jpg" alt="크리미 와사비 마요 소스"  />
-													</div>
-													
-													<div class="prd-cont">
-														<div class="subject">크리미 와사비 마요 소스</div>
-														<div class="price-box">
-															<strong>400</strong>
-														</div>
-														
-														<div class="quantity-box">
-															<button class="btn-minus etc"></button>
-															<input class="setNum" type="number" value="0" readonly>
-															<input class="setName" type="hidden" value="크리미 와사비 마요 소스">
-															<input class="setCode" type="hidden" value="RSD193P1">
-															<input class="setPrice" type="hidden" value="400">
-															<button class="btn-plus etc"></button>
-														</div>
-													</div>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div> <!-- 음료선택 끝 -->
+							<div id="lodgment_box" style="margin-top: 50px;"> 
 								
-							</div><!-- #child 끝  -->
+							</div><!-- #lodgment_box 끝  -->
 							
 						</div>
 					</div>
