@@ -80,6 +80,8 @@ let buildcalendar = function(){
             }else {
                 if(_today.getMonth() < CDate.getMonth() && _today.getFullYear() <= CDate.getFullYear()) {
                     htmlDates += '<div id="date_'+dates[i]+'" class="date" onclick="fn_selectDate('+dates[i]+');">'+dates[i]+'</div>'; 
+                }else if(_today < CDate) {
+                    htmlDates += '<div id="date_'+dates[i]+'" class="date" onclick="fn_selectDate('+dates[i]+');">'+dates[i]+'</div>'; 
                 }else {
                     htmlDates += '<div class="date last">'+dates[i]+'</div>'; 
                 }
@@ -130,7 +132,7 @@ function fn_selectDate(date){
        $("#date_"+date).css("background-color", "red");
        $("#date_"+date).css("color", "white");
        
-       $("#period_1").val(year+"-"+month+"-"+date);
+       $("#period_1").val(year+"-"+month+"-"+date); //시작 날짜
        $("#period_2").val('');
 
        selectDate = date;
@@ -158,7 +160,7 @@ function fn_selectDate(date){
            $("#date_"+date).css("background-color", "red");
            $("#date_"+date).css("color", "white");
            
-           $("#period_1").val(year+"-"+month+"-"+date);
+           $("#period_1").val(year+"-"+month+"-"+date); //시작 날짜
            $("#period_2").val('');
 
            selectDate = date;
@@ -171,8 +173,8 @@ function fn_selectDate(date){
             let startLodgment = lastDate.getTime() - startDate.getTime();
             startLodgment = startLodgment / (1000*60*60*24); // 일자수 계산
             let lastLodgment = startLodgment + 1;
-            // 큰달에서 작은 숫자를 고르고 작은달에서 큰숫자를 골랐을 때 마이너스 날짜가 되는거 방지 + 14일 이상 선택 불가
-            if(lastDate < startDate || startLodgment > 14) {
+            // 큰달에서 작은 숫자를 고르고 작은달에서 큰숫자를 골랐을 때 마이너스 날짜가 되는거 방지 + 30일 이상 선택 불가
+            if(lastDate < startDate || startLodgment > 30 ) {
                  // 두번째 선택할 때 처음 선택한 날짜보다 과거의 날짜를 골랐을 때
                 $('#lodgment_combobox').empty(); // 콤보박스 초기화
                 $('#show_lodgment').empty(); // n박n일 글자 초기화
@@ -183,8 +185,7 @@ function fn_selectDate(date){
                 $("#date_"+date).css("background-color", "red");
                 $("#date_"+date).css("color", "white");
                 
-                $("#period_1").val(year+"-"+month+"-"+date);
-                $("#period_2").val('');
+                $("#period_1").val(year+"-"+month+"-"+date); //시작 날짜
 
                 selectDate = date;
                 selectMonth = month;
@@ -212,7 +213,7 @@ function fn_selectDate(date){
                     }
                 }
                 
-                $("#period_2").val(year+"-"+month+"-"+date);
+                $("#period_2").val(year+"-"+month+"-"+date); // 끝 날짜
 
                 $('#show_lodgment').append(`${startLodgment}박 ${lastLodgment}일`); // n박n일 글자 띄우기
                 

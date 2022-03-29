@@ -485,14 +485,14 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ko_KR",
 				<div class="xans-element- xans-board xans-board-title-1002 xans-board-title xans-board-1002 ">
 					<!-- 지도 이미지 시작 -->   
 			        <form>
-			            	<img width="600px" alt="제주도 사진" usemap="#jejumap" src="../img/jejucourse.png">
-			            	<map name="jejumap">
-				                <area shape="rect" coords="190,124,290,180" href='course.do?m=list&division=1' alt="제주의 숲">
-				                <area shape="rect" coords="140,44,285,97" href='course.do?m=list&division=2' alt="제주의 화려한 밤">
-				                <area shape="rect" coords="23,168,137,232" href='course.do?m=list&division=3' alt="제주에서의 힐링">
-				                <area shape="rect" coords="168,204,300,262" href='course.do?m=list&division=4' alt="열대지방 제주">
-				                <area shape="rect" coords="314,41,435,110" href='course.do?m=list&division=5' alt="모험가득한 제주">
-			            	</map>
+		            	<img width="600px" alt="제주도 사진" usemap="#jejumap" src="../img/jejucourse.png">
+		            	<map name="jejumap">
+			                <area shape="rect" coords="190,124,290,180" href='course.do?m=list&division=1' alt="제주의 숲">
+			                <area shape="rect" coords="140,44,285,97" href='course.do?m=list&division=2' alt="제주의 화려한 밤">
+			                <area shape="rect" coords="23,168,137,232" href='course.do?m=list&division=3' alt="제주에서의 힐링">
+			                <area shape="rect" coords="168,204,300,262" href='course.do?m=list&division=4' alt="열대지방 제주">
+			                <area shape="rect" coords="314,41,435,110" href='course.do?m=list&division=5' alt="모험가득한 제주">
+		            	</map>
 					</form>
 			        
 			        <!-- 지도이미지 끝 --> 
@@ -506,26 +506,27 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ko_KR",
 <div class="boardSort">
                 <span class="xans-element- xans-board xans-board-replysort-1002 xans-board-replysort xans-board-1002 "></span>
     </div>
-<div class="boardList">
+	<div class="boardList">
         <table border="1" summary="">
-<caption>상품 게시판 목록</caption>
-        <colgroup class="xans-element- xans-board xans-board-listheader-1002 xans-board-listheader xans-board-1002 "><col style="width:70px;"/>
-<col style="width:134px;"/>
-<col style="width:135px;" class="displaynone"/>
-<col style="width:auto;"/>
-<col style="width:84px;"/>
-<col style="width:80px;" class=""/>
-<col style="width:55px;" class=""/>
-<col style="width:55px;" class="displaynone"/>
-<col style="width:80px;" class="displaynone"/>
-</colgroup>
+	<caption>상품 게시판 목록</caption>
+        <colgroup class="xans-element- xans-board xans-board-listheader-1002 xans-board-listheader xans-board-1002 ">
+        <col style="width:70px;"/>
+		<col style="width:134px;"/>
+		<col style="width:135px;" class="displaynone"/>
+		<col style="width:auto;"/>
+		<col style="width:84px;"/>
+		<col style="width:80px;" class=""/>
+		<col style="width:55px;" class=""/>
+		<col style="width:55px;" class="displaynone"/>
+		<col style="width:80px;" class="displaynone"/>
+	</colgroup>
 <thead class="xans-element- xans-board xans-board-listheader-1002 xans-board-listheader xans-board-1002 ">
 <tr style=" ">
 	<th scope="col" >
 			<input class="boardListAll" value="all" type="checkbox"  style="float: left; margin-left: 10px;"/> 번호</th>
-                <th scope="col" class="thumb" style="text-align:center;">상품정보</th>
+                <th scope="col" class="thumb" style="text-align:center;">코스이름</th>
                 <th scope="col" class="displaynone" style="text-align:center;">카테고리</th>
-                <th scope="col" style="text-align:center;">제목</th>
+                <th scope="col" style="text-align:center;">경로</th>
                 <th scope="col" style="text-align:center;">작성자</th>
                 <th scope="col" class="" style="text-align:center;">작성일</th>
                 <th scope="col" class="" style="text-align:center;">조회</th>
@@ -536,14 +537,19 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ko_KR",
                 $login_page_url = /member/login.html
                 $deny_access_url = /index.html
             --><tr style="background-color:#FFFFFF; color:#555555;" class="">
-<td ><input class="boardChk" value="16" type="checkbox"  style="float: left; margin-left: 10px; margin-right: -15px;"/>4</td>
-                <td class="thumb"><a href="/product/detail.html"><span></span></a></td>
+			<td ><input class="boardChk" value="16" type="checkbox"  style="float: left; margin-left: 10px; margin-right: -15px;"/>4</td>
+                <td class="subject" style="text-align: center;">
+                	<a href="/board/product/read.html?no=16&board_no=5" style="color:#555555;">kkjjkkj</a> 
+                    <img src="http://img.echosting.cafe24.com/design/skin/admin/ko_KR/ico_attach2.gif"  alt="파일첨부" class="ec-common-rwd-image" onmouseover="BOARD.load_attached_image('afile_16','1','5');" onmouseout="BOARD.load_attached_image('afile_16','0','5');" />
+               		<span></span>
+	            </td>
                 <td class="displaynone"></td>
                 <td class="subject">
                     <span class="displaynone">
-                        <a href="#none" onclick="BOARD.viewTarget('16','5',this);"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/btn_unfold.gif" alt="내용 보기"/></a>
+                        <a href="#none" onclick="BOARD.viewTarget('16','5',this);">
+                        <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/btn_unfold.gif" alt="내용 보기"/></a>
                     </span>
-                     <a href="/board/product/read.html?no=16&board_no=5" style="color:#555555;">kkjjkkj</a> <img src="http://img.echosting.cafe24.com/design/skin/admin/ko_KR/ico_new.gif"  alt="NEW" class="ec-common-rwd-image" /><img src="http://img.echosting.cafe24.com/design/skin/admin/ko_KR/ico_attach2.gif"  alt="파일첨부" class="ec-common-rwd-image" onmouseover="BOARD.load_attached_image('afile_16','1','5');" onmouseout="BOARD.load_attached_image('afile_16','0','5');" /><span id="afile_16" style="display:none;"></span><span class="comment"></span>
+                     <a href="/board/product/read.html?no=16&board_no=5" style="color:#555555;">kkjjkkj</a> 
                 </td>
                 <td>기호제학</td>
                 <td class="txtLess ">2022-03-23 19:19:03</td>

@@ -1462,7 +1462,7 @@
 												</div>
 											</div>
 											<div class="title-box" style="margin-bottom: 1px;">
-												<input type="text" name="course_search" value="" placeholder="여행지를 검색하세요"/>
+												<input id="course_search_id" type="text" name="course_search" value="" placeholder="여행지를 검색하세요"/>
 											</div>
 											<div class="tab-content active etcdelete" style="margin-top: -1px; border: 1px solid #dddddd; padding: 30px; height: 365px; overflow-y: scroll;">
 												<div class="menu-list-v2">
