@@ -1,6 +1,7 @@
 package jejufreinds.course.make.repository;
 
-import java.util.ArrayList;
+
+import java.util.List;
 
 import jejufreinds.test.all.Activity;
 import jejufreinds.test.all.Food;
@@ -9,10 +10,10 @@ import jejufreinds.test.all.LandMark;
 
 public interface MakeCourseRepository {
 	// 검색
-	ArrayList<Hotel> hotelList();
-	ArrayList<Activity> activityList();
-	ArrayList<Food> foodList();
-	ArrayList<LandMark> landmarkList();
+	List<Hotel> hotelList();
+	List<Activity> activityList();
+	List<Food> foodList();
+	List<LandMark> landmarkList();
 	
 	
 	// 데이터베이스에 코스 저장

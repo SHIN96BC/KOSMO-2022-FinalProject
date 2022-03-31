@@ -1,5 +1,11 @@
 package jejufreinds.course.make.service;
 
-public interface MakeCourseService {
+import java.util.List;
+import java.util.Map;
 
+import jejufreinds.course.domain.MakeCourse;
+
+public interface MakeCourseService {
+	List<MakeCourse> search(String keyword);
+	Map<String, MakeCourse> setContents();
 }
