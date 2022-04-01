@@ -24,27 +24,28 @@ import lombok.extern.log4j.Log4j;
 public class MakeCourseServiceImpl implements MakeCourseService {
 	private final MakeCourseRepository makeCourseRepository;
 	private static Map<String, MakeCourse> searchContents;
-
-	@PostConstruct
-	public void init() {
-		// 서버 켜질 떄  
-		log.info("PostConstruct 실행됨");
-	}
 	
 	@Override
 	public List<MakeCourse> search(String keyword) {
+	/*List<Activity> activityList = makeCourseRepository.selectActivitySearch(keyword);
+		List<Hotel> HotelList = makeCourseRepository.selectHotelSearch(keyword);
+		List<Food> foodList = makeCourseRepository.selectFoodSearch(keyword);
+		List<LandMark> landmarkList = makeCourseRepository.selectLandmarkSearch(keyword);*/
+		Set<String> keys = searchContents.keySet();
+		for(String key: keys) {
+			
+		}
 		
 		
-		searchContents.get(keyword);
 		return null;
 	}
 
 	@Override
-	public Map<String, MakeCourse> setContents() {
-		List<Activity> activityList = makeCourseRepository.activityList();
-		List<Hotel> HotelList = makeCourseRepository.hotelList();
-		List<Food> foodList = makeCourseRepository.foodList();
-		List<LandMark> landmarkList = makeCourseRepository.landmarkList();
+	public void setContents() {
+		List<Activity> activityList = makeCourseRepository.selectActivityAll();
+		List<Hotel> HotelList = makeCourseRepository.selectHotelAll();
+		List<Food> foodList = makeCourseRepository.selectFoodAll();
+		List<LandMark> landmarkList = makeCourseRepository.selectLandmarkAll();
 		
 		Map<String, MakeCourse> makeCourseMap = new HashMap<>();
 		
@@ -113,8 +114,6 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 					));
 		}
 		
-		return makeCourseMap;
+		searchContents = makeCourseMap;
 	}
-	
-	
 }
