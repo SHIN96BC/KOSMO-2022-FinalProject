@@ -16,7 +16,7 @@ public class MakeCourse {
 	long contentcost; // 컨텐츠 평균 가격
 	long contentchoosed; // 컨텐츠 선택받은 횟수
 	String contentphoto; // 컨텐츠 사진
-	String contentAddress;
+	String contentAddress; // 컨텐츠 주소
 	double locationX; // 컨텐츠 경도
 	double locationY; // 컨텐츠 위도
 	String contentType; // 컨텐츠 종류

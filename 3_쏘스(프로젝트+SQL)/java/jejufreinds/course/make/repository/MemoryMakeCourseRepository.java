@@ -40,27 +40,80 @@ public class MemoryMakeCourseRepository implements MakeCourseRepository{
 		lList.add(new LandMark(1L, "수월봉", 1, 5.0, 9, 0L, "수월봉.png", "제주시 한경면 고산리 3760"));
 
 	}
+
+	@Override
+	public List<Hotel> selectHotelAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Activity> selectActivityAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Food> selectFoodAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<LandMark> selectLandmarkAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Hotel> selectHotelLocation() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Activity> selectActivityLocation() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Food> selectFoodLocation() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<LandMark> selectLandmarkLocation() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Hotel> selectHotelSearch(String keyword) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Activity> selectActivitySearch(String keyword) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Food> selectFoodSearch(String keyword) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<LandMark> selectLandmarkSearch(String keyword) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
-	// 전체 검색
-	@Override
-	public List<Hotel> hotelList() {
-		return hList;
-	}
 
-	@Override
-	public List<Activity> activityList() {
-		return aList;
-	}
-
-	@Override
-	public List<Food> foodList() {
-		return fList;
-	}
-
-	@Override
-	public List<LandMark> landmarkList() {
-		return lList;
-	}
 
 	
 }

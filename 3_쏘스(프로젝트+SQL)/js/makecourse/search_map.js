@@ -33,6 +33,14 @@ geocoder.addressSearch('제주특별자치도 제주시 한경면 녹차분재�
         
         let message = "위도: " + result[0].y + ", 경도: "+ result[0].x;
         
+        if(typeof result[0].y == 'string') {
+        	console.log("스트링 타입");
+        }else if(typeof result[0].y == 'number') {
+        	console.log("넘버 타입");
+        }else {
+        	console.log("넌 뭐냐?");
+        }
+        
         $('#showmessage').append(`<div>${message}</div>`);
         console.log(message);
         

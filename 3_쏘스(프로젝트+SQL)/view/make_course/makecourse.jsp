@@ -9,32 +9,32 @@
 		<!--===============================================================================================-->   
 			<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
+			<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+			<link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../fonts/iconic/css/material-design-iconic-font.min.css">
+			<link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../fonts/linearicons-v1.0.0/icon-font.min.css">
+			<link rel="stylesheet" type="text/css" href="/fonts/linearicons-v1.0.0/icon-font.min.css">
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../vendor/animate/animate.css">
+			<link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
 		<!--===============================================================================================-->   
-			<link rel="stylesheet" type="text/css" href="../vendor/css-hamburgers/hamburgers.min.css">
+			<link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../vendor/animsition/css/animsition.min.css">
+			<link rel="stylesheet" type="text/css" href="/vendor/animsition/css/animsition.min.css">
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../vendor/select2/select2.min.css">
+			<link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">
 		<!--===============================================================================================-->   
-			<link rel="stylesheet" type="text/css" href="../vendor/daterangepicker/daterangepicker.css">
+			<link rel="stylesheet" type="text/css" href="/vendor/daterangepicker/daterangepicker.css">
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../vendor/slick/slick.css">
+			<link rel="stylesheet" type="text/css" href="/vendor/slick/slick.css">
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../vendor/MagnificPopup/magnific-popup.css">
+			<link rel="stylesheet" type="text/css" href="/vendor/MagnificPopup/magnific-popup.css">
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../vendor/perfect-scrollbar/perfect-scrollbar.css">
+			<link rel="stylesheet" type="text/css" href="/vendor/perfect-scrollbar/perfect-scrollbar.css">
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../css/util.css">
-			<link rel="stylesheet" type="text/css" href="../css/main.css">
+			<link rel="stylesheet" type="text/css" href="/css/util.css">
+			<link rel="stylesheet" type="text/css" href="/css/main.css">
 		<!--===============================================================================================-->
 			
 	  
@@ -50,7 +50,7 @@
 	             
 		            <!-- Logo desktop -->      
 		            	<a href="#" class="logo">
-		                	<img src="../img/jeju2.png" alt="IMG-LOGO" style='width: 100px; height: 50px; margin-left: 50px;; margin-right: -20px;'>
+		                	<img src="/img/jeju2.png" alt="IMG-LOGO" style='width: 100px; height: 50px; margin-left: 50px;; margin-right: -20px;'>
 		              	</a>
 		
 		            <!-- Menu desktop -->
@@ -63,8 +63,8 @@
 			                    <li class="label1" data-label1="hot">
 			                       <a href="product.html" style="font-size: 18px;">Course</a>
 			                       <ul class="sub-menu">
-			                          <li><a href="index.html">코스추천</a></li>
-			                          <li><a href="home-02.html">나만의코스</a></li>
+			                          <li><a href="/jejufreinds/select_course/select.do">코스추천</a></li>
+			                          <li><a href="/jejufreinds/make_course/make.do">나만의코스</a></li>
 			                       </ul>
 			                    </li>
 		
@@ -118,14 +118,14 @@
 	        	</div>   
 	     	</div>
 		<!--===============================================================================================-->	
-			<script src="../vendor/jquery/jquery-3.2.1.min.js"></script>
+			<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
 		<!--===============================================================================================-->
-			<script src="../vendor/animsition/js/animsition.min.js"></script>
+			<script src="/vendor/animsition/js/animsition.min.js"></script>
 		<!--===============================================================================================-->
-			<script src="../vendor/bootstrap/js/popper.js"></script>
-			<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+			<script src="/vendor/bootstrap/js/popper.js"></script>
+			<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 		<!--===============================================================================================-->
-			<script src="../vendor/select2/select2.min.js"></script>
+			<script src="/vendor/select2/select2.min.js"></script>
 			<script>
 				$(".js-select2").each(function(){
 					$(this).select2({
@@ -135,18 +135,18 @@
 				})
 			</script>
 		<!--===============================================================================================-->
-			<script src="../vendor/daterangepicker/moment.min.js"></script>
-			<script src="../vendor/daterangepicker/daterangepicker.js"></script>
+			<script src="/vendor/daterangepicker/moment.min.js"></script>
+			<script src="/vendor/daterangepicker/daterangepicker.js"></script>
 		<!--===============================================================================================-->
-			<script src="../vendor/slick/slick.min.js"></script>
-			<script src="../js/slick-custom.js"></script>
+			<script src="/vendor/slick/slick.min.js"></script>
+			<script src="/js/slick-custom.js"></script>
 		<!--===============================================================================================-->
-			<script src="../vendor/parallax100/parallax100.js"></script>
+			<script src="/vendor/parallax100/parallax100.js"></script>
 			<script>
 		        $('.parallax100').parallax100();
 			</script>
 		<!--===============================================================================================-->
-			<script src="../vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+			<script src="/vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
 			<script>
 				$('.gallery-lb').each(function() { // the containers for all your galleries
 					$(this).magnificPopup({
@@ -160,9 +160,9 @@
 				});
 			</script>
 		<!--===============================================================================================-->
-			<script src="../vendor/isotope/isotope.pkgd.min.js"></script>
+			<script src="/vendor/isotope/isotope.pkgd.min.js"></script>
 		<!--===============================================================================================-->
-			<script src="../vendor/sweetalert/sweetalert.min.js"></script>
+			<script src="/vendor/sweetalert/sweetalert.min.js"></script>
 			<script>
 				$('.js-addwish-b2').on('click', function(e){
 					e.preventDefault();
@@ -200,7 +200,7 @@
 			
 			</script>
 		<!--===============================================================================================-->
-			<script src="../vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+			<script src="/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 			<script>
 				$('.js-pscroll').each(function(){
 					$(this).css('position','relative');
@@ -217,7 +217,7 @@
 				});
 			</script>
 		<!--===============================================================================================-->
-			<script src="../js/main.js"></script>
+			<script src="/js/main.js"></script>
 			
 		<!--  네비게이션바 끝 -->
 	
@@ -1386,11 +1386,13 @@
 	
 			<!-- container -->
 			<div id="container">
-				<link rel="stylesheet" type="text/css" href="../css/search_map.css"/>
-				<!-- 달력 시작 -->
-				<script type="text/javascript" language="javascript" src="../js/makecourse/select_date.js"></script>
-				<link rel="stylesheet" type="text/css" href="../css/select_date.css"/>
-				<!-- 달력 끝 -->
+				<link rel="stylesheet" type="text/css" href="/css/search_map.css"/>
+				<!-- 일정 시작 -->
+				<script type="text/javascript" language="javascript" src="/js/makecourse/search_ajax.js"></script>
+				<script type="text/javascript" language="javascript" src="/js/makecourse/set_calendar.js"></script>
+				<script type="text/javascript" language="javascript" src="/js/makecourse/select_date.js"></script>
+				<link rel="stylesheet" type="text/css" href="/css/select_date.css"/>
+				<!-- 일정 끝 -->
 				<input type="hidden" class="options" id="RPZ147BL" data-ctgrnm="치즈버스트(오)" data-options="L:" data-gubun="123" data-price="40900" data-pricecomma="40,900" />
 				<input type="hidden" class="options" id="RPZ147EL" data-ctgrnm="치즈버스트(나)" data-options="L:" data-gubun="124" data-price="40900" data-pricecomma="40,900" />
 				<input type="hidden" class="options" id="RPZ147RM" data-ctgrnm="라이스볼" data-options="M:" data-gubun="125" data-price="10800" data-pricecomma="10,800" />
@@ -1462,29 +1464,16 @@
 												</div>
 											</div>
 											<div class="title-box" style="margin-bottom: 1px;">
-												<input id="course_search_id" type="text" name="course_search" value="" placeholder="여행지를 검색하세요"/>
+												<input id="course_search_id" type="text" name="search_keyword" placeholder="여행지를 검색하세요"/>
 											</div>
 											<div class="tab-content active etcdelete" style="margin-top: -1px; border: 1px solid #dddddd; padding: 30px; height: 365px; overflow-y: scroll;">
 												<div class="menu-list-v2">
-													<ul id="course_search_append">
+													<ul>
 														<li>
-															<div class="title-type2">담은여행지</div>
+															<div class="title-type2">검색된 여행지</div>
 														</li>
-														<li class="" >
-															<div class="prd-img">
-																<img class="lazyload" src="https://cdn.dominos.co.kr/domino/pc/images/bg.gif" data-src="https://cdn.dominos.co.kr/admin/upload/goods/20210226_TKPKtnva.jpg" alt="캐나다 드라이 진저 에일 250ML"  />
-															</div>
-															
-															<div class="prd-cont">
-																<div class="subject">캐나다 드라이 진저 에일 250ML</div>
-																<div class="price-box">
-																	<strong>1,000</strong>
-																</div>
-																<div class="quantity-box">
-																	<a href="" class="btnEmFix sizeS ">추가</a>
-																</div>
-															</div>
-														</li>
+													</ul>
+													<ul id="course_search_append">
 													</ul>
 												</div>
 											</div>
@@ -1634,7 +1623,7 @@
 			</div><!-- //content -->
 		</div><!-- //container -->
 			
-		<link rel="stylesheet" type="text/css" href="../css/makecourse.css"  />
+		<link rel="stylesheet" type="text/css" href="/css/makecourse.css"  />
 		
 		<div id="footer" style="margin-top: -150px">
 			<div class="xans-element- xans-layout xans-layout-footer cboth inner ">

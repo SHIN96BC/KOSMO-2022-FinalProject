@@ -1,14 +1,11 @@
 package jejufreinds.course.make.service;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import javax.annotation.PostConstruct;
-
-import org.springframework.stereotype.Component;
-
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import org.springframework.stereotype.Service;
 import jejufreinds.course.domain.MakeCourse;
 import jejufreinds.course.make.repository.MakeCourseRepository;
 import jejufreinds.test.all.Activity;
@@ -19,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j;
 
 @Log4j
-@Component
+@Service
 @RequiredArgsConstructor
 public class MakeCourseServiceImpl implements MakeCourseService {
 	private final MakeCourseRepository makeCourseRepository;
@@ -31,13 +28,15 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 		List<Hotel> HotelList = makeCourseRepository.selectHotelSearch(keyword);
 		List<Food> foodList = makeCourseRepository.selectFoodSearch(keyword);
 		List<LandMark> landmarkList = makeCourseRepository.selectLandmarkSearch(keyword);*/
+		List<MakeCourse> makeCourseList = new ArrayList<>();
 		Set<String> keys = searchContents.keySet();
 		for(String key: keys) {
-			
+			if(key.contains(keyword)) {
+				makeCourseList.add(searchContents.get(key));
+			}
 		}
 		
-		
-		return null;
+		return makeCourseList;
 	}
 
 	@Override
@@ -47,7 +46,7 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 		List<Food> foodList = makeCourseRepository.selectFoodAll();
 		List<LandMark> landmarkList = makeCourseRepository.selectLandmarkAll();
 		
-		Map<String, MakeCourse> makeCourseMap = new HashMap<>();
+		Map<String, MakeCourse> makeCourseMap = new ConcurrentHashMap<>();
 		
 		for(Activity activity: activityList) {
 			makeCourseMap.put(activity.getAname(), 

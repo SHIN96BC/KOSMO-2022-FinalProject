@@ -69,8 +69,8 @@
                      <li class="label1" data-label1="hot">
                         <a href="product.html" style="font-size: 18px;">Course</a>
                         <ul class="sub-menu">
-                           <li><a href="/select_course/select.do">코스추천</a></li>
-                           <li><a href="/make_course/make.do">나만의코스</a></li>
+                           <li><a href="/jejufreinds/select_course/select.do">코스추천</a></li>
+                           <li><a href="/jejufreinds/make_course/make.do">나만의코스</a></li>
                         </ul>
                      </li>
 
@@ -544,7 +544,6 @@ $(function() {
 
 <%
 	String sessionNick = (String)session.getAttribute("Member_Nick");
-	System.out.println("sessionNick: " + sessionNick);
 	
 %>
 	<script language=javascript>

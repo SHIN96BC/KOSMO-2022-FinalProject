@@ -1,34 +1,22 @@
+
+// 일정 추가 박스 생성
 function makeLodgmentBox(number) {
     for(let i = 1; i <= number; i++) {
         $('#lodgment_box').append(
-            `<div class="step-wrap">
+            `   
+            <div class="step-wrap">
                 <div class="title-wrap">
-                    <div class="title-type2">${i}일차 일정</div>
+                    <div class="title-type2">${i}일차 일정 ( 최대 5개까지 선택 가능 )</div>
                 </div>
                 <div class="tab-content active etcdelete">
                     <div class="menu-list-v2">
-                        <ul id=course_date_"${i}">
-                            <li class="" >
-                                <div class="prd-img">
-                                    <img class="lazyload" src="https://cdn.dominos.co.kr/domino/pc/images/bg.gif" data-src="https://cdn.dominos.co.kr/admin/upload/goods/20210226_TKPKtnva.jpg" alt="캐나다 드라이 진저 에일 250ML"  />
-                                </div>
-                                
-                                <div class="prd-cont">
-                                    <div class="subject">캐나다 드라이 진저 에일 250ML</div>
-                                    <div class="price-box">
-                                        <strong>1,000</strong>
-                                    </div>
-                                        
-                                    <div class="quantity-box">
-                                        <button class="btn-minus etc"></button>
-                                        <input class="setNum" type="number" value="0" readonly>
-                                        <input class="setName" type="hidden" value="캐나다 드라이 진저 에일 250ML">
-                                        <input class="setCode" type="hidden" value="RDK028L1">
-                                        <input class="setPrice" type="hidden" value="1000">
-                                        <button class="btn-plus etc"></button>
-                                    </div>
-                                </div>
+                        <ul>
+                            <li>
+                                <div class="title-type2">담은여행지</div>
                             </li>
+                        </ul>
+                        <ul id=course_date_${i}>
+                            
                         </ul>
                     </div>
                 </div> 
@@ -126,6 +114,7 @@ function fn_selectDate(date){
        $('#lodgment_combobox').empty(); // 콤보박스 초기화
        $('#show_lodgment').empty(); // n박n일 글자 초기화
        $('#lodgment_box').empty(); // 일정 박스 초기화
+       listIndex = 0; // // 태그의 id 값이 겹치지 않게 하기 위한 변수 초기화
 
        $(".date").css("background-color", "");
        $(".date").css("color", "");
@@ -228,6 +217,7 @@ function fn_selectDate(date){
                             `<option value="${i}">Day ${i}</option>`
                         );
                     }
+                    addOverlapCheckList(i);
                 }
                 
                 // 일정 박스 생성
@@ -244,6 +234,7 @@ function fn_selectDate(date){
    
 }
 
+// 달력보기, 달력 숨기기
 $(document).ready(function() {
    buildcalendar();
    let flag = false;
