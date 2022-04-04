@@ -23,7 +23,7 @@ public class MakeCourseController {
 	@GetMapping("make.do")
 	public String make() {
 		makeCourseService.setContents();  //map 셋팅
-		return "make_course/makecourse";
+		return "/make_course/makecourse";
 	}
 	
 	@PostMapping("search")
@@ -36,5 +36,19 @@ public class MakeCourseController {
 			}
 		}
 		return makeCourseList;
+	}
+	
+	@GetMapping("contentInfo.do")
+	public ModelAndView contentInfo(String contentname) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("/make_course/make_content");
+		System.out.println("contentname: " + contentname);
+		if(contentname != null) {
+			if(contentname.trim().length() != 0) {
+				MakeCourse makeCourse = makeCourseService.contentInfo(contentname);
+				modelAndView.addObject("makeCourse", makeCourse);
+			}
+		}
+		return modelAndView;
 	}
 }

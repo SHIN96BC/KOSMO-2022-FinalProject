@@ -4,7 +4,7 @@ function makeLodgmentBox(number) {
     for(let i = 1; i <= number; i++) {
         $('#lodgment_box').append(
             `   
-            <div class="step-wrap">
+            <div id="lodgment_${i}" class="step-wrap">
                 <div class="title-wrap">
                     <div class="title-type2">${i}일차 일정 ( 최대 5개까지 선택 가능 )</div>
                 </div>
@@ -114,7 +114,7 @@ function fn_selectDate(date){
        $('#lodgment_combobox').empty(); // 콤보박스 초기화
        $('#show_lodgment').empty(); // n박n일 글자 초기화
        $('#lodgment_box').empty(); // 일정 박스 초기화
-       listIndex = 0; // // 태그의 id 값이 겹치지 않게 하기 위한 변수 초기화
+       overlapCheckList = []; // 중복체크 리스트 초기화
 
        $(".date").css("background-color", "");
        $(".date").css("color", "");

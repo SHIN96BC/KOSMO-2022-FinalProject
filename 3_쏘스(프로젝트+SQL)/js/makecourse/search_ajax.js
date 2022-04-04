@@ -17,22 +17,21 @@ $(document).ready(function() {
                         let searchHtml = '';
                         makeCourseList = data;
                         for(let makeCourse of makeCourseList) {
-                            // .replace(/^\s+|\s+$/gm,''); 스트링 앞뒤 공백 제거 정규식
-                            // .replace(/(\s*)/g, ""); 스트링 모든공백 제거( 문자 사이 공백도 ) 정규식
-                            let contentName = makeCourse.contentname.replace(/(\s*)/g, "");
                             searchHtml += `
-                                <li class="" >
+                                <li class="make_course_content" >
+                                    <input class="content_input" value="${makeCourse.contentAddress}"/>
                                     <div class="prd-img">
                                         <img class="" style="width:100%; height:100%;" src="/photo/${makeCourse.contentphoto}"/>
                                     </div>
                                     
                                     <div class="prd-cont">
-                                        <div class="subject">${makeCourse.contentname}</div>
-                                        <div class="price-box">
+                                        <div class="subject content_subject" style="cursor:pointer; display:inline-block;">${makeCourse.contentname}</div>
+                                        <br/>
+                                        <div class="price-box" style="display:inline-block;">
                                             <strong>가격: ${makeCourse.contentcost}</strong>
                                         </div>
                                         <div class="quantity-box">
-                                            <a onClick="calendarAdd('${makeCourse.contentname}')" class="btnEmFix sizeS" style="color:rgb(255,255,255);cursor:pointer;">추가</a>
+                                            <a onClick="calendarAdd(event,'${makeCourse.contentname}')" class="btnEmFix sizeS" style="color:rgb(255,255,255);cursor:pointer;">추가</a>
                                         </div>
                                     </div>
                                 </li>
@@ -52,7 +51,6 @@ $(document).ready(function() {
                             $('#course_search_append').append(searchHtml);
                         }
                     }else {
-                        console.log("else 수행");
                         $('#course_search_append').append(`
                             <li>
                                 <div class="prd-cont">

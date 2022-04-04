@@ -14,6 +14,11 @@ public class Activity {
 	long anum;
 	String aname;
 	int division;
+	double star;
+	long choosed;
+	long acost;
+	String aphoto;
+	String aaddress;
 	public Activity(long anum, String aname, int division, double star, long choosed, long acost, String aphoto,
 			String aaddress) {
 		super();
@@ -26,9 +31,4 @@ public class Activity {
 		this.aphoto = aphoto;
 		this.aaddress = aaddress;
 	}
-	double star;
-	long choosed;
-	long acost;
-	String aphoto;
-	String aaddress;
 }

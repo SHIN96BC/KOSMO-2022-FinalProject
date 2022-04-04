@@ -115,4 +115,11 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 		
 		searchContents = makeCourseMap;
 	}
+
+	@Override
+	public MakeCourse contentInfo(String contentname) {
+		MakeCourse makeCourse = searchContents.get(contentname);
+		System.out.println(makeCourse);
+		return makeCourse;
+	}
 }

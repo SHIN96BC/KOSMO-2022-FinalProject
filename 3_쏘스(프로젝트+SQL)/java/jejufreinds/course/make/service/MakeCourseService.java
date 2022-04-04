@@ -8,4 +8,5 @@ import jejufreinds.course.domain.MakeCourse;
 public interface MakeCourseService {
 	List<MakeCourse> search(String keyword);
 	void setContents();
+	MakeCourse contentInfo(String contentname);
 }
