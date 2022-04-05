@@ -284,6 +284,10 @@
 				<script type="text/javascript" language="javascript" src="/js/makecourse/set_calendar.js"></script>
 				<script type="text/javascript" language="javascript" src="/js/makecourse/select_date.js"></script>
 				<script type="text/javascript" language="javascript" src="/js/makecourse/search_content_info.js"></script>
+				<script type="text/javascript" language="javascript" src="/js/makecourse/make_course.js"></script>
+				<script type="text/javascript" language="javascript" src="/js/makecourse/html2canvas.js"></script>
+				<script type="text/javascript" language="javascript" src="/js/makecourse/FileSaver.js"></script>
+				
 				<link rel="stylesheet" type="text/css" href="/css/select_date.css"/>
 				<!-- 일정 끝 -->
 				<input type="hidden" class="options" id="RPZ147BL" data-ctgrnm="치즈버스트(오)" data-options="L:" data-gubun="123" data-price="40900" data-pricecomma="40,900" />
@@ -318,7 +322,7 @@
 								</div>
 								<!-- //menu-list -->
 								
-								<div class="menu-info inner-box">
+								<div id="full" class="menu-info inner-box">
 									<div class="img-wrap">
 										<div class="view-box" style="height: 300px;">
 											<!-- 대표 이미지 슬라이드 -->
@@ -337,13 +341,16 @@
 										<div class="step-wrap" style="position: relative; border-top: 2px solid #000; margin-top: 30px;">
 											<div class="title-wrap" style="padding: 10px 0 15px;">
 												<div class="title-type2" style="float: left; margin-top: 15px;">여행지를 추가해보세요</div>
-												<!-- 지역 검색 -->
-												<div class="form-group srch-type" style="float: right;">
-													<div class="form-item">
-														<div class="select-type type2">
-															<select id="lodgment_combobox" style="margin-top: 3px;">
-																
-															</select>
+												<div style="float: right;width:230px;">
+													<a id="add_calendar" class="btnEmFix sizeS" style="float: right;color:rgb(255,255,255);cursor:pointer;margin-top:2px;height:42px;line-height:28px;font-size:17px;">추가</a>
+													<!-- 지역 검색 -->
+													<div class="form-group srch-type" style="width:120px;"> 
+														<div class="form-item"style="width:100%;">
+															<div class="select-type type2"style="width:100%;">
+																<select id="lodgment_combobox" style="float: left; width:100%; margin-top: 3px;">
+
+																</select>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -368,9 +375,11 @@
 									<div class="detail-wrap">
 										<div class="menu-box">
 											<div class="title-box">
-												<input type="text" name="course-name" value="" placeholder="코스의 이름을 입력하세요."/>
-												<input type="text" name="course-hash" value="" placeholder="해시태그를 달아주세요." style="margin-top: 10px;"/>
+												<input type="text" id="course-name" value="" placeholder="코스의 이름을 입력하세요."/>
+												<input type="text" id="course-hash" value="" placeholder="해시태그를 달아주세요." style="margin-top: 10px;"/>
 												<p style="color: rgb(180, 180, 180); margin-left: 5px;">※ # 을 반드시 적어주세요. ※</p>
+												<textarea id="course_info" rows="" cols="" style="margin-top: 10px;" placeholder="코스에 대한 설명을 적어주세요."></textarea>
+												<p id="content_count" style="float:right;">0/200</p>
 											</div>
 											
 										</div>
@@ -491,13 +500,13 @@
 								<div class="size-box">
 									<!-- checkbox 활성화 일 경우 -->
 									<div class="chk-box2 selected">
-										<input type="radio" id="size1" name="size" value="L" checked onclick="addToppingCheck()"/>
+										<input type="radio" id="size1" name="size" value="L" checked/>
 										<label class="checkbox" for="size1"></label>
 										<label for="size1">L 35,900원</p></label>
 									</div>
 									<!-- //checkbox 활성화 일 경우 -->
 									<div class="chk-box2">
-										<input type="radio" id="size2" name="size" value="M" onclick="addToppingCheck()"/>
+										<input type="radio" id="size2" name="size" value="M"/>
 										<label class="checkbox" for="size2"></label>
 										<label for="size2">M 29,500원</p></label>
 									</div>
