@@ -287,6 +287,7 @@
 				<script type="text/javascript" language="javascript" src="/js/makecourse/make_course.js"></script>
 				<script type="text/javascript" language="javascript" src="/js/makecourse/html2canvas.js"></script>
 				<script type="text/javascript" language="javascript" src="/js/makecourse/FileSaver.js"></script>
+				<script type="text/javascript" language="javascript" src="/js/makecourse/save_ajax.js"></script>
 				
 				<link rel="stylesheet" type="text/css" href="/css/select_date.css"/>
 				<!-- 일정 끝 -->
@@ -375,11 +376,11 @@
 									<div class="detail-wrap">
 										<div class="menu-box">
 											<div class="title-box">
-												<input type="text" id="course-name" value="" placeholder="코스의 이름을 입력하세요."/>
-												<input type="text" id="course-hash" value="" placeholder="해시태그를 달아주세요." style="margin-top: 10px;"/>
+												<input type="text" id="course_name" value="" placeholder="코스의 이름을 입력하세요."/>
+												<input type="text" id="course_hash" value="" placeholder="해시태그를 달아주세요." style="margin-top: 10px;"/>
 												<p style="color: rgb(180, 180, 180); margin-left: 5px;">※ # 을 반드시 적어주세요. ※</p>
 												<textarea id="course_info" rows="" cols="" style="margin-top: 10px;" placeholder="코스에 대한 설명을 적어주세요."></textarea>
-												<p id="content_count" style="float:right;">0/200</p>
+												<p id="content_info" style="float:right;">0/200</p>
 											</div>
 											
 										</div>
@@ -494,21 +495,16 @@
 							</div><!-- #lodgment_box 끝  -->
 							
 							<div class="step-wrap">
-								<div class="title-wrap">
-									<div class="title-type2">사이즈 선택</div>
-								</div>
-								<div class="size-box">
+								<div class="size-box" style="margin-top:20px;text-align:center;">
 									<!-- checkbox 활성화 일 경우 -->
-									<div class="chk-box2 selected">
-										<input type="radio" id="size1" name="size" value="L" checked/>
-										<label class="checkbox" for="size1"></label>
-										<label for="size1">L 35,900원</p></label>
+									<div class="course_reset"style="float:left;font-size:20px;cursor:pointer;">
+										<input type="button"  name="size" value=""/>
+										<label style="display:inline-block;cursor:pointer;">초기화</label>
 									</div>
 									<!-- //checkbox 활성화 일 경우 -->
-									<div class="chk-box2">
-										<input type="radio" id="size2" name="size" value="M"/>
-										<label class="checkbox" for="size2"></label>
-										<label for="size2">M 29,500원</p></label>
+									<div id="save_course" class="course_submit" style="float:right;font-size:20px;cursor:pointer;">
+										<input type="button" name="size" value=""/>
+										<label style="display:inline-block;cursor:pointer;">코스저장</label>
 									</div>
 									<!---->
 								</div>

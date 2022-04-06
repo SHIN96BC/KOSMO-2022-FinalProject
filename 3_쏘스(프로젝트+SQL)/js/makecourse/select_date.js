@@ -7,6 +7,11 @@ function makeLodgmentBox(number) {
             <div id="lodgment_${i}" class="step-wrap">
                 <div class="title-wrap">
                     <div class="title-type2">${i}일차 일정 ( 최대 5개까지 선택 가능 )</div>
+                    <div style="float:right;">
+                        <a class="btnEmFix sizeS route" style="color:rgb(255,255,255);cursor:pointer;">위치보기</a>
+                        <a class="btnEmFix sizeS delete" style="color:rgb(255,255,255);cursor:pointer;">삭제</a>
+                        <input type="hidden" class="delete_input" value="${i}"/>
+                    </div>
                 </div>
                 <div class="tab-content active etcdelete">
                     <div class="menu-list-v2">
@@ -54,12 +59,17 @@ let buildcalendar = function(){
 	for(let l = 1; l <= 13 - thisLast.getDay(); l++){ 
 			 dates.push(l); // 다음 달 날짜 채우기 (나머지 다 채운 다음 출력할 때 42개만 출력함)
 	} 
-	
+	let flag = true;
 	for(let i = 0; i < 42; i++){
 		if(i < thisFirst.getDay()){
 			htmlDates += '<div class="date last">'+dates[i]+'</div>'; 
 		}else if(_today.getDate()==dates[i] && _today.getMonth()==CDate.getMonth() && _today.getFullYear()==CDate.getFullYear()){
-            htmlDates += '<div id="date_'+dates[i]+'" class="date _today" onclick="fn_selectDate('+dates[i]+');">'+dates[i]+'</div>'; 
+            if(flag) {
+                htmlDates += '<div id="date_'+dates[i]+'" class="date _today" onclick="fn_selectDate('+dates[i]+');">'+dates[i]+'</div>'; 
+                flag = false;
+            }else {
+                htmlDates += '<div class="date next">'+dates[i]+'</div>'; 
+            }
 		}else if(i >= thisFirst.getDay() + thisLast.getDate()){
 			 htmlDates += '<div class="date next">'+dates[i]+'</div>'; 
 		}else{

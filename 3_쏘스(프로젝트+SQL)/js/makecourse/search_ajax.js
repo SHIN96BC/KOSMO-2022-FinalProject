@@ -1,6 +1,6 @@
 
 let makeCourseList = []; // 검색되어서 ajax 로 넘어온 값을 넣어줄 변수
-
+// 검색 ajax
 $(document).ready(function() {
     let csrfParameter = $('meta[name="_csrf_parameter"]').attr('content');
     let csrfHeader = $('meta[name="_csrf_header"]').attr('content');
@@ -17,9 +17,10 @@ $(document).ready(function() {
                         let searchHtml = '';
                         makeCourseList = data;
                         for(let makeCourse of makeCourseList) {
+                            let contentName = makeCourse.contentname.replace(/(\s*)/g, "");
                             searchHtml += `
-                                <li class="make_course_content" >
-                                    <input class="content_input" value="${makeCourse.contentAddress}"/>
+                                <li id="search_${contentName}" class="make_search_content make_content">
+                                    <input type="hidden" class="content_input" value="${makeCourse.contentAddress}"/>
                                     <div class="prd-img">
                                         <img class="" style="width:100%; height:100%;" src="/photo/${makeCourse.contentphoto}"/>
                                     </div>
@@ -29,9 +30,6 @@ $(document).ready(function() {
                                         <br/>
                                         <div class="price-box" style="display:inline-block;">
                                             <strong>가격: ${makeCourse.contentcost}</strong>
-                                        </div>
-                                        <div class="quantity-box">
-                                            <a onClick="calendarAdd(event,'${makeCourse.contentname}')" class="btnEmFix sizeS" style="color:rgb(255,255,255);cursor:pointer;">추가</a>
                                         </div>
                                     </div>
                                 </li>
@@ -59,8 +57,13 @@ $(document).ready(function() {
                             `
                         );
                     }
-                }
+                },
+                error: function() {
+                    alert("검색중 문제가 발생했습니다");
+            		window.location.reload();
+            	}
             });
         }
     });
 });
+

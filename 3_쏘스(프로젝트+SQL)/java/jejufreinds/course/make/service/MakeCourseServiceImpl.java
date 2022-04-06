@@ -122,4 +122,26 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 		System.out.println(makeCourse);
 		return makeCourse;
 	}
+	
+	private String tagSet(String tags) {
+		String tag = null;
+		String tagTemp = tags;
+		if(tagTemp != null) {
+			tagTemp = tagTemp.trim();
+			//String[] tagList = tagTemp.split(" ");
+			String[] tagList = tagTemp.split("#");
+			for(int i=0; i<tagList.length; i++) {
+				if(tagList[i] != null) {
+					if(tagList[i].trim().length() == 0) continue;
+					if(!tagList[i].startsWith("#")) {
+						tag += "#"+tagList[i]+" ";
+					}else {
+						if(tagList[i].trim().length() == 1) continue;
+						tag += tagList[i]+" ";
+					}
+				}
+			}
+		}
+		return tag;
+	}
 }

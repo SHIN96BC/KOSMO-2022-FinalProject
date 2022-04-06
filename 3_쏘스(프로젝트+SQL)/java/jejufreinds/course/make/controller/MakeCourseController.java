@@ -2,15 +2,19 @@ package jejufreinds.course.make.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import jejufreinds.course.domain.MakeCourse;
+import jejufreinds.course.domain.SaveCourse;
+import jejufreinds.course.domain.SaveCourseMap;
 import jejufreinds.course.make.service.MakeCourseService;
 import lombok.RequiredArgsConstructor;
 
@@ -42,7 +46,6 @@ public class MakeCourseController {
 	public ModelAndView contentInfo(String contentname) {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("/make_course/make_content");
-		System.out.println("contentname: " + contentname);
 		if(contentname != null) {
 			if(contentname.trim().length() != 0) {
 				MakeCourse makeCourse = makeCourseService.contentInfo(contentname);
@@ -51,4 +54,12 @@ public class MakeCourseController {
 		}
 		return modelAndView;
 	}
+	@PostMapping("saveCourse")
+	@ResponseBody
+	public boolean saveCourse(SaveCourse savecourse) {
+		System.out.println("savecourse: " + savecourse);
+
+		return false;
+	}
+	
 }
