@@ -1,7 +1,7 @@
 create table COURSE_HOTEL (
 	CHNUM number constraint SEQ_PK primary key,
-	ANUM number,
-	CDAY number,
+	HNAME nvarchar2(30),
+	CDAY number(3),
 	CNUM number,
 	constraint CH_FK foreign key(C_NUM, C_DAY) references COURSE(C_NUM, C_DAY) on delete cascade
 );

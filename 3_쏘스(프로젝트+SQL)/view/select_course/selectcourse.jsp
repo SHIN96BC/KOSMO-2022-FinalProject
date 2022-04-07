@@ -9,32 +9,32 @@
 		<!--===============================================================================================-->   
 			<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
+			<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+			<link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../fonts/iconic/css/material-design-iconic-font.min.css">
+			<link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../fonts/linearicons-v1.0.0/icon-font.min.css">
+			<link rel="stylesheet" type="text/css" href="/fonts/linearicons-v1.0.0/icon-font.min.css">
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../vendor/animate/animate.css">
+			<link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
 		<!--===============================================================================================-->   
-			<link rel="stylesheet" type="text/css" href="../vendor/css-hamburgers/hamburgers.min.css">
+			<link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../vendor/animsition/css/animsition.min.css">
+			<link rel="stylesheet" type="text/css" href="/vendor/animsition/css/animsition.min.css">
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../vendor/select2/select2.min.css">
+			<link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">
 		<!--===============================================================================================-->   
-			<link rel="stylesheet" type="text/css" href="../vendor/daterangepicker/daterangepicker.css">
+			<link rel="stylesheet" type="text/css" href="/vendor/daterangepicker/daterangepicker.css">
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../vendor/slick/slick.css">
+			<link rel="stylesheet" type="text/css" href="/vendor/slick/slick.css">
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../vendor/MagnificPopup/magnific-popup.css">
+			<link rel="stylesheet" type="text/css" href="/vendor/MagnificPopup/magnific-popup.css">
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../vendor/perfect-scrollbar/perfect-scrollbar.css">
+			<link rel="stylesheet" type="text/css" href="/vendor/perfect-scrollbar/perfect-scrollbar.css">
 		<!--===============================================================================================-->
-			<link rel="stylesheet" type="text/css" href="../css/util.css">
-			<link rel="stylesheet" type="text/css" href="../css/main.css">
+			<link rel="stylesheet" type="text/css" href="/css/util.css">
+			<link rel="stylesheet" type="text/css" href="/css/main.css">
 		<!--===============================================================================================-->
 			
 	  
@@ -50,7 +50,7 @@
 	             
 		            <!-- Logo desktop -->      
 		            	<a href="#" class="logo">
-		                	<img src="../img/jeju2.png" alt="IMG-LOGO" style='width: 100px; height: 50px; margin-left: 50px;; margin-right: -20px;'>
+		                	<img src="/img/jeju2.png" alt="IMG-LOGO" style='width: 100px; height: 50px; margin-left: 50px;; margin-right: -20px;'>
 		              	</a>
 		
 		            <!-- Menu desktop -->
@@ -63,8 +63,8 @@
 			                    <li class="label1" data-label1="hot">
 			                       <a href="product.html" style="font-size: 18px;">Course</a>
 			                       <ul class="sub-menu">
-			                          <li><a href="index.html">코스추천</a></li>
-			                          <li><a href="home-02.html">나만의코스</a></li>
+			                          <li><a href="/jejufreinds/select_course/select.do">코스추천</a></li>
+			                          <li><a href="/jejufreinds/make_course/make.do">나만의코스</a></li>
 			                       </ul>
 			                    </li>
 		
@@ -118,14 +118,14 @@
 	        	</div>   
 	     	</div>
 		<!--===============================================================================================-->	
-			<script src="../vendor/jquery/jquery-3.2.1.min.js"></script>
+			<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
 		<!--===============================================================================================-->
-			<script src="../vendor/animsition/js/animsition.min.js"></script>
+			<script src="/vendor/animsition/js/animsition.min.js"></script>
 		<!--===============================================================================================-->
-			<script src="../vendor/bootstrap/js/popper.js"></script>
-			<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+			<script src="/vendor/bootstrap/js/popper.js"></script>
+			<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 		<!--===============================================================================================-->
-			<script src="../vendor/select2/select2.min.js"></script>
+			<script src="/vendor/select2/select2.min.js"></script>
 			<script>
 				$(".js-select2").each(function(){
 					$(this).select2({
@@ -135,18 +135,18 @@
 				})
 			</script>
 		<!--===============================================================================================-->
-			<script src="../vendor/daterangepicker/moment.min.js"></script>
-			<script src="../vendor/daterangepicker/daterangepicker.js"></script>
+			<script src="/vendor/daterangepicker/moment.min.js"></script>
+			<script src="/vendor/daterangepicker/daterangepicker.js"></script>
 		<!--===============================================================================================-->
-			<script src="../vendor/slick/slick.min.js"></script>
-			<script src="../js/slick-custom.js"></script>
+			<script src="/vendor/slick/slick.min.js"></script>
+			<script src="/js/slick-custom.js"></script>
 		<!--===============================================================================================-->
-			<script src="../vendor/parallax100/parallax100.js"></script>
+			<script src="/vendor/parallax100/parallax100.js"></script>
 			<script>
 		        $('.parallax100').parallax100();
 			</script>
 		<!--===============================================================================================-->
-			<script src="../vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+			<script src="/vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
 			<script>
 				$('.gallery-lb').each(function() { // the containers for all your galleries
 					$(this).magnificPopup({
@@ -160,9 +160,9 @@
 				});
 			</script>
 		<!--===============================================================================================-->
-			<script src="../vendor/isotope/isotope.pkgd.min.js"></script>
+			<script src="/vendor/isotope/isotope.pkgd.min.js"></script>
 		<!--===============================================================================================-->
-			<script src="../vendor/sweetalert/sweetalert.min.js"></script>
+			<script src="/vendor/sweetalert/sweetalert.min.js"></script>
 			<script>
 				$('.js-addwish-b2').on('click', function(e){
 					e.preventDefault();
@@ -200,7 +200,7 @@
 			
 			</script>
 		<!--===============================================================================================-->
-			<script src="../vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+			<script src="/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 			<script>
 				$('.js-pscroll').each(function(){
 					$(this).css('position','relative');
@@ -217,7 +217,7 @@
 				});
 			</script>
 		<!--===============================================================================================-->
-			<script src="../js/main.js"></script>
+			<script src="/js/main.js"></script>
 			
 		<!--  네비게이션바 끝 -->
 </head>
@@ -462,8 +462,8 @@ CAFE24.CONFIG = {"is_use_admin_manage":"T"};
 CAFE24.EDITOR = {"atl":{"used":"\uc0ac\uc6a9\ud568","adminPageLinkedParts":"\uc0ac\uc6a9\ud568\uc73c\ub85c \uc124\uc815\ud558\uba74, \uc6d0\ud558\ub294 \ubd80\ubd84\uc744 \ubc14\ub85c \uc218\uc815\ud560 \uc218 \uc788\ub3c4\ub85d \uad00\ub9ac\uc790 \ud398\uc774\uc9c0\ub97c \ub9c1\ud06c\ud558\uc5ec \uc90d\ub2c8\ub2e4. \uc6d0\ud558\ub294 \ubd80\ubd84\uc758 \uad00\ub9ac\uc790 \uc124\uc815\uacfc \ub514\uc790\uc778 \ud3b8\uc9d1\uc744 \ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.","notUsed":"\uc0ac\uc6a9\uc548\ud568","youCanMoveEachPage":"\uc0ac\uc6a9\uc548\ud568\uc73c\ub85c \uc124\uc815\ud558\uba74, \uae30\uc874 \uc1fc\ud551\ubab0 \ud654\uba74\uc758 \uac01 \ud398\uc774\uc9c0\ub85c \uc774\ub3d9 \ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.","goShoppingMallManager":"\uc1fc\ud551\ubab0 \uad00\ub9ac\uc790 \ubc14\ub85c\uac00\uae30","mallManagerFunction":"\uc1fc\ud551\ubab0 \uad00\ub9ac\uc790 \uae30\ub2a5\uc744 \uc0ac\uc6a9\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?","mallManagerManual":"\uc1fc\ud551\ubab0 \uad00\ub9ac\uc790 \ub9e4\ub274\uc5bc","storeManagerFunction":"\uc1fc\ud551\ubab0 \uad00\ub9ac\uc790 \uae30\ub2a5","accessingAdminPage":"\uc1fc\ud551\ubab0 \uad00\ub9ac\uc790 \uae30\ub2a5\uc774\ub780? \uad00\ub9ac\uc790 \ud398\uc774\uc9c0\uc5d0 \uc811\uc18d\ud558\uc9c0 \uc54a\uace0\ub3c4 \uc1fc\ud551\ubab0 \ud654\uba74\uc5d0<br><strong>\ub300\ud45c\uc6b4\uc601\uc790\ub85c \ub85c\uadf8\uc778 \uc2dc, \uc6d0\ud558\ub294 \ubd80\ubd84\uc744 \ubc14\ub85c \uc218\uc815\ud560 \uc218 \uc788\ub3c4\ub85d \uad00\ub9ac\uc790 \uc124\uc815 \ud398\uc774\uc9c0\ub97c<br>\ub9c1\ud06c \ub610\ub294 \ub514\uc790\uc778 \ud3b8\uc9d1\ucc3d\uc744 \ub9c1\ud06c \ud574\uc8fc\ub294 \uae30\ub2a5<\/strong>\uc744 \ub9d0\ud569\ub2c8\ub2e4.","youCanModifyManager":"\uad00\ub9ac\uc790 \uc124\uc815 \ud398\uc774\uc9c0 \ubc0f \ub514\uc790\uc778 \ud3b8\uc9d1\ucc3d \ub9c1\ud06c\ud558\uc5ec \ubc14\ub85c \uc218\uc815\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.","youCanMovePages":"\uae30\uc874 \uc1fc\ud551\ubab0 \ud654\uba74\uc758 \ud398\uc774\uc9c0\ub97c \uc774\ub3d9\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.","closeTheLayer":"\ub808\uc774\uc5b4 \ub2eb\uae30","storeManagerFeatures":"\uc1fc\ud551\ubab0 \uad00\ub9ac\uc790 \uae30\ub2a5 \uc811\uae30","heat":"\uc5f4\uae30","bringEditDesign":"\uafb8\ubbf8\uae30 \ucc3d\uc744 \ub744\uc6cc\uc11c \ub514\uc790\uc778\uc744 \uc0c1\uc138 \ud3b8\uc9d1\ud569\ub2c8\ub2e4.","editDesign":"\ub514\uc790\uc778 \ud3b8\uc9d1","addDesign":"\ub514\uc790\uc778 \ucd94\uac00","close":"\ub2eb\uae30"},"atl_model":{"logo":"\ub85c\uace0","footerLogo":"\ud478\ud130\ub85c\uace0","favorites":"\uc990\uaca8\ucc3e\uae30","shortcuts":"\ubc14\ub85c\uac00\uae30","searchKeyword":"\uac80\uc0c9 \ud0a4\uc6cc\ub4dc","productSeenToday":"\uc624\ub298 \ubcf8 \uc0c1\ud488","classificationSetting":"\ubd84\ub958 \uc124\uc815","myShopping":"\ub9c8\uc774\uc1fc\ud551","plannedExhibition":"\uae30\ud68d\uc804","customerConsultation":"\uace0\uac1d\uc0c1\ub2f4 \uc548\ub0b4","fullBoard":"\uc804\uccb4\uac8c\uc2dc\ud310","groupBuying":"\uacf5\ub3d9\uad6c\ub9e4","bulletinBoardList":"\uac8c\uc2dc\ud310 \ubaa9\ub85d","bulletinPaging":"\uac8c\uc2dc\ud310 \ud398\uc774\uc9d5 \ucc98\ub9ac","bulletinBoardSearch":"\uac8c\uc2dc\ud310 \uac80\uc0c9","mainPageProductList":"\uba54\uc778\ud398\uc774\uc9c0 \uc0c1\ud488\ub9ac\uc2a4\ud2b8","productCategoryHeader":"\uc0c1\ud488 \uce74\ud14c\uace0\ub9ac \ud5e4\ub354","categoryProductDisplay":"\uce74\ud14c\uace0\ub9ac \uc0c1\ud488\uc9c4\uc5f4","productDetails001":"\uc0c1\ud488\uc0c1\uc138 \uc815\ubcf4","generalProductPaging":"\uc77c\ubc18\uc0c1\ud488 \ud398\uc774\uc9d5","searchProduct":"\uc0c1\ud488\uac80\uc0c9","exhibitionList":"\uae30\ud68d\uc804 \ub9ac\uc2a4\ud2b8","informationUse":"\uc774\uc6a9\uc548\ub0b4","aboutUs":"\ud68c\uc0ac\uc18c\uac1c","conditionsRegistration":"\uc774\uc6a9\uc57d\uad00 \ub4f1\ub85d","shoppingBasket":"\uc7a5\ubc14\uad6c\ub2c8","shoppingCartGuide":"\uc7a5\ubc14\uad6c\ub2c8 \uc774\uc6a9\uc548\ub0b4","createOrderForm":"\uc8fc\ubb38\uc11c \uc791\uc131","orderCompleted":"\uc8fc\ubb38 \uc644\ub8cc","viewOrderHistory":"\uc8fc\ubb38 \ub0b4\uc5ed \uc870\ud68c","myShopping001":"\ub9c8\uc774 \uc1fc\ud551","itemsOfInterest":"\uad00\uc2ec\uc0c1\ud488","reserves":"\uc801\ub9bd\uae08","coupon":"\ucfe0\ud3f0","couponList":"\ucfe0\ud3f0\ub9ac\uc2a4\ud2b8","boardSearch":"1:1\uac8c\uc2dc\ud310 \uac80\uc0c9","orderDetails":"\uc8fc\ubb38\uc0c1\uc138\ub0b4\uc5ed","addressManagement":"\ubc30\uc1a1\uc8fc\uc18c\ub85d \uad00\ub9ac","unearnedEarningHistory":"\ubbf8\uac00\uc6a9 \uc801\ub9bd\ub0b4\uc5ed\ubcf4\uae30","modulePaging":"\ubaa8\ub4c8 \ud398\uc774\uc9d5","smartBanner":"\uc2a4\ub9c8\ud2b8\ubc30\ub108","customModuleEdit":"\ucee4\uc2a4\ud140 \ubaa8\ub4c8 \ud3b8\uc9d1"},"module_layer":{"yourFavoriteInformation":"\uc990\uaca8\ucc3e\uae30 \uc815\ubcf4\ub97c \uc785\ub825\ud569\ub2c8\ub2e4.","favoritesSettings":"\uc990\uaca8\ucc3e\uae30 \uc124\uc815","shortcutInformation":"\ubc14\ub85c\uac00\uae30 \uc815\ubcf4\ub97c \uc785\ub825\ud569\ub2c8\ub2e4.","shortcutSettings":"\ubc14\ub85c\uac00\uae30 \uc124\uc815","classification":"\uae30\ud68d\uc804 \ubd84\ub958\ub97c \uad00\ub9ac\ud569\ub2c8\ub2e4.","classificationManagement":"\uae30\ud68d\uc804 \ubd84\ub958 \uad00\ub9ac","displayBeforePlanning":"\uae30\ud68d\uc804 \uc0c1\ud488 \uc9c4\uc5f4\uc744 \uad00\ub9ac\ud569\ub2c8\ub2e4.","exhibitionDisplay":"\uae30\ud68d\uc804 \uc0c1\ud488 \uc9c4\uc5f4\uad00\ub9ac","centerInformationGuide":"\uace0\uac1d\uc13c\ud130\uc815\ubcf4\uc548\ub0b4\ub97c \uc124\uc815\ud569\ub2c8\ub2e4.","informationSettings":"\uace0\uac1d\uc13c\ud130\uc815\ubcf4\uc548\ub0b4 \uc124\uc815","productSearchCriteria":"\uc0c1\ud488\uac80\uc0c9\uc870\uac74\uc744 \uc124\uc815\ud569\ub2c8\ub2e4.","productSearchSettings":"\uc0c1\ud488\uac80\uc0c9 \uc124\uc815","confirm":"\ud655\uc778","setRecentlyViewedItems":"\ucd5c\uadfc\ubcf8 \uc0c1\ud488\uc758 \uac1c\uc218\ub97c \uc124\uc815\ud569\ub2c8\ub2e4.","recentlyViewedItems":"\ucd5c\uadfc\ubcf8\uc0c1\ud488 \uac1c\uc218 \uc124\uc815","categorySettings":"\uce74\ud14c\uace0\ub9ac \uc124\uc815","registerNewCategory":"\uc0c1\ud488 \ubaa9\ub85d\uc5d0 \uc0c8\ub85c\uc6b4 \ubd84\ub958\ub97c \ub4f1\ub85d\ud569\ub2c8\ub2e4.","majorClassification":"\ub300\ubd84\ub958 \ub4f1\ub85d","setDisplayedMainMenu":"\uba54\uc778\uba54\ub274\uc5d0 \ub178\ucd9c\ub420 \ubd84\ub958\ub97c \uc124\uc815\ud569\ub2c8\ub2e4.","mainMenuSettings":"\uba54\uc778\uba54\ub274 \uc124\uc815","displayStatus":"\uba54\uc778\ubd84\ub958 \ud45c\uc2dc\uc0c1\ud0dc\ub97c \ubcc0\uacbd\ud569\ub2c8\ub2e4.","displayStatus001":"\uba54\uc778\ubd84\ub958 \ud45c\uc2dc\uc0c1\ud0dc","changeMenuViewSettings":"\uba54\ub274\ubcf4\uae30 \uc124\uc815\uc744 \ubcc0\uacbd\ud569\ub2c8\ub2e4.","menuViewPopup":"\uba54\ub274\ubcf4\uae30 \uc124\uc815(\ud31d\uc5c5\uba54\ub274)","orderBulletinBoards":"\uac8c\uc2dc\ud310 \ud45c\uc2dc\uc21c\uc11c \ubcc0\uacbd","setDisplayMainMenu":"\uba54\uc778\uba54\ub274\uc5d0 \ub178\ucd9c\ub420 \ubd84\ub958\ub97c \uc124\uc815\ud569\ub2c8\ub2e4.","theOrderOfBoards":"\uac8c\uc2dc\ud310 \uc21c\uc11c\ubcc0\uacbd","moveSmartBanner":"\uc2a4\ub9c8\ud2b8\ubc30\ub108 \uc124\uc815\ud654\uba74\uc73c\ub85c \uc774\ub3d9\ud569\ub2c8\ub2e4.","smartBannerSetting":"\uc2a4\ub9c8\ud2b8\ubc30\ub108 \uc124\uc815"},"module_product":{"editItems":"\uc0c1\ud488 \uc218\uc815","youCanDisplayTheGoods":"\uc0c1\ud488\uc744 \uc9c4\uc5f4\ud558\uc2e4 \uc218 \uc788\uc2b5\ub2c8\ub2e4.","displayManagement":"\uba54\uc778\uc0c1\ud488 \uc9c4\uc5f4\uad00\ub9ac","displayProductList":"\uc0c1\ud488 \ubaa9\ub85d\uc5d0 \ud45c\uc2dc\ub418\ub294 \ud56d\ubaa9\uc744 \uc124\uc815\ud569\ub2c8\ub2e4.","displayItemManagement":"\ud45c\uc2dc\ud56d\ubaa9 \uad00\ub9ac","setAppearsProductList":"\uc0c1\ud488\ubaa9\ub85d\uc5d0 \ub098\uc624\ub294 \uc544\uc774\ucf58\uc744 \uc124\uc815\ud569\ub2c8\ub2e4.","itemIconSet":"\uc0c1\ud488 \uc544\uc774\ucf58 \uc124\uc815","registerYourProduct":"\uc0c1\ud488\uc744 \ub4f1\ub85d\ud569\ub2c8\ub2e4.","productRegistration":"\uc0c1\ud488 \ub4f1\ub85d","displayManagement001":"\uc0c1\ud488\uc9c4\uc5f4 \uad00\ub9ac","informationDisplay":"\uc0c1\ud488\uc815\ubcf4 \ud45c\uc2dc\ub97c \uc124\uc815\ud569\ub2c8\ub2e4.","displaySetting":"\uc0c1\ud488\uc815\ubcf4\ud45c\uc2dc \uc124\uc815","optionReviewFeature":"\uc635\uc158 \ubbf8\ub9ac\ubcf4\uae30 \uae30\ub2a5\uc744 \uc124\uc815\ud569\ub2c8\ub2e4.","optionReviewFunction":"\uc635\uc158 \ubbf8\ub9ac\ubcf4\uae30 \uae30\ub2a5","categoryPreferences001":"\uc0c1\ud488 \uce74\ud14c\uace0\ub9ac \uae30\ubcf8\uc124\uc815\uc744 \uc218\uc815\ud569\ub2c8\ub2e4.","categoryPreferences":"\uce74\ud14c\uace0\ub9ac \uae30\ubcf8\uc124\uc815","classificationDecorating":"\ubd84\ub958 \uafb8\ubbf8\uae30\ub97c \uc124\uc815\ud569\ub2c8\ub2e4.","categoryDecorating":"\ubd84\ub958 \uafb8\ubbf8\uae30","setTheClassification":"\ubd84\ub958\ub97c \uc124\uc815\ud569\ub2c8\ub2e4.","classificationSetting":"\ubd84\ub958 \uc124\uc815","registerTheProduct":"\uc77c\ubc18\uc0c1\ud488\uc5d0 \uc0c1\ud488\uc744 \ub4f1\ub85d\ud569\ub2c8\ub2e4.","generalGoodsManagement":"\uc77c\ubc18 \uc0c1\ud488\uc744 \uc9c4\uc5f4\uad00\ub9ac\ud569\ub2c8\ub2e4.","displayManagement002":"\uc9c4\uc5f4\uad00\ub9ac","changeTheDisplayOrder":"\uc9c4\uc5f4\uc21c\uc11c\ub97c \ubcc0\uacbd\ud569\ub2c8\ub2e4.","changeDisplayOrder":"\uc9c4\uc5f4\uc21c\uc11c \ubcc0\uacbd","andManageNewProducts":"\uc2e0\uc0c1\ud488\uc744 \uc9c4\uc5f4\uad00\ub9ac\ud569\ub2c8\ub2e4.","displayManagement003":"\uc2e0\uc0c1\ud488 \uc9c4\uc5f4\uad00\ub9ac","recommendedProducts":"\ucd94\ucc9c\uc0c1\ud488\uc744 \uc9c4\uc5f4\uad00\ub9ac\ud569\ub2c8\ub2e4.","howYoursStoreOperates":"\uc0c1\uc810\uc6b4\uc601 \ubc29\uc2dd\uc744 \uc124\uc815\ud569\ub2c8\ub2e4.","convenienceFunctions":"\uae30\ud0c0 \ud3b8\uc758\uae30\ub2a5\uc744 \uc124\uc815\ud569\ub2c8\ub2e4.","convenienceFeatures":"\uae30\ud0c0 \ud3b8\uc758\uae30\ub2a5 \uc124\uc815","goodsIconsSet":"\uc0c1\ud488 \uc544\uc774\ucf58\uc744 \uc124\uc815\ud569\ub2c8\ub2e4.","editProductInformation001":"\ud574\ub2f9\uc0c1\ud488\uc758 \uc815\ubcf4\ub97c \uc218\uc815\ud569\ub2c8\ub2e4.","defineReserveSettings":"\uc801\ub9bd\uae08 \uc124\uc815\uc744 \uc815\uc758\ud569\ub2c8\ub2e4.","setUpReserve":"\uc801\ub9bd\uae08 \uc124\uc815","promotionThroughSns":"SNS\ub97c \ud1b5\ud55c \uc0c1\ud488\ud64d\ubcf4\ub97c \uc704\ud55c \uc124\uc815 \ud398\uc774\uc9c0\uc785\ub2c8\ub2e4.","promotionManagement":"SNS \uc0c1\ud488\ud64d\ubcf4 \uad00\ub9ac","createQrCodeProduct":"\uc0c1\ud488\uc758 QR\ucf54\ub4dc\ub97c \ub9cc\ub4ed\ub2c8\ub2e4.","createProductQrCode":"\uc0c1\ud488 QR\ucf54\ub4dc \ub9cc\ub4e4\uae30","managementSettings":"\uc0c1\ud488\uc6b4\uc601 \uad00\ub9ac \uc124\uc815","commonEventManagement001":"\uacf5\ud1b5\uc774\ubca4\ud2b8 \uad00\ub9ac\ub97c \ud569\ub2c8\ub2e4.","commonEventManagement":"\uacf5\ud1b5\uc774\ubca4\ud2b8 \uad00\ub9ac","setYourCouponDefaults":"\ucfe0\ud3f0\uc758 \uae30\ubcf8\uc124\uc815\uc744 \ud569\ub2c8\ub2e4.","offerPreference":"\ucfe0\ud3f0 \uae30\ubcf8\uc124\uc815","cartConfirmationWindow001":"\uc7a5\ubc14\uad6c\ub2c8 \ub2f4\uae30 \ud655\uc778\ucc3d\uc744 \uc124\uc815","cartConfirmationWindow":"\uc7a5\ubc14\uad6c\ub2c8 \ub2f4\uae30 \ud655\uc778\ucc3d \uc124\uc815","yourPaymentInstructions":"\uacb0\uc81c \uc548\ub0b4\uc815\ubcf4\ub97c \ubcc0\uacbd\ud569\ub2c8\ub2e4.","paymentInstructions":"\uacb0\uc81c\uc548\ub0b4 \ubcc0\uacbd","shippingInstructions":"\ubc30\uc1a1\uc548\ub0b4\ub97c \ubcc0\uacbd\ud569\ub2c8\ub2e4.","changeShippingGuide":"\ubc30\uc1a1\uc548\ub0b4 \ubcc0\uacbd","changeTheExchangeGuide":"\uad50\ud658\uc548\ub0b4\ub97c \ubcc0\uacbd\ud569\ub2c8\ub2e4.","changeOfExchangeGuide":"\uad50\ud658\uc548\ub0b4 \ubcc0\uacbd","shippingReturnSettings":"\ubc30\uc1a1\/\ubc18\uc1a1 \uc124\uc815","changeProductDetails":"\uc0c1\ud488 \uc0c1\uc138\uc815\ubcf4\ub97c \ubcc0\uacbd\ud569\ub2c8\ub2e4.","modifyProductDetails":"\uc0c1\ud488\uc0c1\uc138\uc815\ubcf4 \uc218\uc815","billingInformation":"\uc0c1\ud488 \uacb0\uc81c\uc815\ubcf4\ub97c \ubcc0\uacbd\ud569\ub2c8\ub2e4.","paymentInformation":"\uc0c1\ud488\uacb0\uc81c\uc815\ubcf4 \uc218\uc815","yourShippingInformation":"\ubc30\uc1a1\uc815\ubcf4\ub97c \ubcc0\uacbd\ud569\ub2c8\ub2e4.","editShippingInformation":"\ubc30\uc1a1\uc815\ubcf4 \uc218\uc815","changeTheExchange":"\uad50\ud658 \ubc0f \ubc18\ud488\uc815\ubcf4\ub97c \ubcc0\uacbd\ud569\ub2c8\ub2e4.","andReturnInformation":"\uad50\ud658 \ubc0f \ubc18\ud488\uc815\ubcf4 \uc218\uc815","makeChangesServiceCall":"\uc11c\ube44\uc2a4 \ubb38\uc758 \ub0b4\uc6a9\uc744 \ubcc0\uacbd\ud569\ub2c8\ub2e4.","editServiceInquiry":"\uc11c\ube44\uc2a4 \ubb38\uc758 \uc218\uc815","testimonial":"\uc0c1\ud488 \uc0ac\uc6a9 \ud6c4\uae30 \uc124\uc815\uc744 \ubcc0\uacbd\ud569\ub2c8\ub2e4.","productReviewSettings":"\uc0c1\ud488 \uc0ac\uc6a9 \ud6c4\uae30 \uc124\uc815","productAmpSettings001":"\uc0c1\ud488 Q&A \uc124\uc815\uc744 \ubcc0\uacbd\ud569\ub2c8\ub2e4.","productAmpSettings":"\uc0c1\ud488 Q&A \uc124\uc815","changeRelatedProducts":"\uad00\ub828\uc0c1\ud488\uc744 \ubcc0\uacbd\ud569\ub2c8\ub2e4.","editRelatedProduct":"\uad00\ub828\uc0c1\ud488 \uc218\uc815","productSearchCriteria":"\uc0c1\ud488\uac80\uc0c9\uc870\uac74\uc744 \uc124\uc815\ud569\ub2c8\ub2e4.","productSearchSettings":"\uc0c1\ud488\uac80\uc0c9 \uc124\uc815"},"module_board":{"boardInformation":"\uac8c\uc2dc\ud310 \uc815\ubcf4\ub97c \uc124\uc815\ud569\ub2c8\ub2e4.","boardInformation001":"\uac8c\uc2dc\ud310 \uc815\ubcf4","bulletinBoardIconsSet":"\uac8c\uc2dc\ud310 \uc544\uc774\ucf58\uc744 \uc124\uc815\ud569\ub2c8\ub2e4.","bulletinBoardIconSet":"\uac8c\uc2dc\ud310 \uc544\uc774\ucf58 \uc124\uc815","upDesignConfiguration":"\ub514\uc790\uc778 \uad6c\uc131\uc744 \uc124\uc815\ud569\ub2c8\ub2e4.","designConfiguration":"\ub514\uc790\uc778 \uad6c\uc131"},"module_mall":{"membershipInformation":"\ud68c\uc6d0\uac00\uc785 \uc548\ub0b4\uc815\ubcf4\ub97c \ubcc0\uacbd\ud569\ub2c8\ub2e4.","changeMembershipGuide":"\ud68c\uc6d0\uac00\uc785\uc548\ub0b4 \ubcc0\uacbd","yourOrderInstructions":"\uc8fc\ubb38 \uc548\ub0b4\uc815\ubcf4\ub97c \ubcc0\uacbd\ud569\ub2c8\ub2e4.","changeOrderGuide":"\uc8fc\ubb38\uc548\ub0b4 \ubcc0\uacbd","yourPaymentInstructions":"\uacb0\uc81c \uc548\ub0b4\uc815\ubcf4\ub97c \ubcc0\uacbd\ud569\ub2c8\ub2e4.","paymentInstructions":"\uacb0\uc81c\uc548\ub0b4 \ubcc0\uacbd","shippingInstructions":"\ubc30\uc1a1\uc548\ub0b4\ub97c \ubcc0\uacbd\ud569\ub2c8\ub2e4.","changeShippingGuide":"\ubc30\uc1a1\uc548\ub0b4 \ubcc0\uacbd","changeTheExchangeGuide":"\uad50\ud658\uc548\ub0b4\ub97c \ubcc0\uacbd\ud569\ub2c8\ub2e4.","changeOfExchangeGuide":"\uad50\ud658\uc548\ub0b4 \ubcc0\uacbd","shippingReturnSettings":"\ubc30\uc1a1\/\ubc18\uc1a1 \uc124\uc815","refundInstructions":"\ud658\ubd88\uc548\ub0b4\ub97c \ubcc0\uacbd\ud569\ub2c8\ub2e4.","changeRefundGuide":"\ud658\ubd88\uc548\ub0b4 \ubcc0\uacbd","changeOtherGuides":"\uae30\ud0c0\uc548\ub0b4\ub97c \ubcc0\uacbd\ud569\ub2c8\ub2e4.","changeOtherGuide":"\uae30\ud0c0\uc548\ub0b4 \ubcc0\uacbd","shoppingMallUsageGuide":"\uc1fc\ud551\ubab0\uc774\uc6a9\uc548\ub0b4\ub97c \ubcc0\uacbd\ud569\ub2c8\ub2e4.","useShoppingMall":"\uc1fc\ud551\ubab0\uc774\uc6a9\uc548\ub0b4 \ub4f1\ub85d","yourShippingSettings":"\ubc30\uc1a1\uc124\uc815\uc744 \ubcc0\uacbd\ud569\ub2c8\ub2e4.","shippingSetting":"\ubc30\uc1a1\uc124\uc815","changeCompanyProfile":"\ud68c\uc0ac\uc18c\uac1c\ub97c \ub4f1\ub85d\/\ubcc0\uacbd\ud569\ub2c8\ub2e4.","companyRegistration":"\ud68c\uc0ac\uc18c\uac1c \ub4f1\ub85d","changeCompanyMap":"\ud68c\uc0ac\uc57d\ub3c4\ub97c \ub4f1\ub85d\/\ubcc0\uacbd\ud569\ub2c8\ub2e4.","profileRegistration":"\ud68c\uc0ac\uc57d\ub3c4 \ub4f1\ub85d","termsAndConditions":"\uc774\uc6a9\uc57d\uad00\uc744 \ub4f1\ub85d\ud569\ub2c8\ub2e4.","conditionsRegistration":"\uc774\uc6a9\uc57d\uad00 \ub4f1\ub85d","policyRegistration":"\uac1c\uc778\uc815\ubcf4\ucc98\ub9ac\ubc29\uce68 \ub4f1\ub85d"},"module_order":{"youCanSetTheShopping":"\uc7a5\ubc14\uad6c\ub2c8 \uc800\uc7a5 \uae30\uac04\uc124\uc815\uc744 \ud558\uc2e4 \uc218 \uc788\uc2b5\ub2c8\ub2e4.","cartStoragePeriod":"\uc7a5\ubc14\uad6c\ub2c8 \uc800\uc7a5 \uae30\uac04\uc124\uc815","setYourFormOfPayment":"\uacb0\uc81c\ubc29\uc2dd\uc744 \uc124\uc815\ud569\ub2c8\ub2e4.","setFormOfPayment":"\uacb0\uc81c\ubc29\uc2dd \uc124\uc815","setUpDepositAccount":"\ubb34\ud1b5\uc7a5\uc785\uae08 \uacc4\uc88c\ub97c \uc124\uc815\ud569\ub2c8\ub2e4.","depositAccount":"\ubb34\ud1b5\uc7a5\uc785\uae08 \uacc4\uc88c\uc124\uc815","additionalItemSetting":"\uc8fc\ubb38\ucd94\uac00\ud56d\ubaa9 \uc124\uc815","setTheDeliveryPeriod":"\ubc30\uc1a1\uae30\uac04\uc744 \uc124\uc815\ud569\ub2c8\ub2e4.","setDeliveryDate":"\ubc30\uc1a1\uae30\uac04 \uc124\uc815"},"module_myshop":{"upReserveInformation":"\uc801\ub9bd\uae08 \uc815\ubcf4\ub97c \uc124\uc815\ud569\ub2c8\ub2e4.","setUpReserve":"\uc801\ub9bd\uae08 \uc124\uc815","setMembershipLevel":"\ud68c\uc6d0\ub4f1\uae09\uc744 \uc124\uc815\ud569\ub2c8\ub2e4.","setMembershipLevel001":"\ud68c\uc6d0\ub4f1\uae09 \uc124\uc815","setYourCouponDefaults":"\ucfe0\ud3f0\uc758 \uae30\ubcf8\uc124\uc815\uc744 \ud569\ub2c8\ub2e4.","offerPreference":"\ucfe0\ud3f0 \uae30\ubcf8\uc124\uc815","createSerialCoupon001":"\uc2dc\ub9ac\uc5bc\ucfe0\ud3f0\uc744 \uc0dd\uc131\ud569\ub2c8\ub2e4.","createSerialCoupon":"\uc2dc\ub9ac\uc5bc\ucfe0\ud3f0 \ub9cc\ub4e4\uae30","andSearchSerialCoupons":"\uc2dc\ub9ac\uc5bc\ucfe0\ud3f0\uc744 \ubc1c\uae09 \ubc0f \uc870\ud68c\ud569\ub2c8\ub2e4.","couponIssueInquiry":"\uc2dc\ub9ac\uc5bc\ucfe0\ud3f0 \ubc1c\uae09\/\uc870\ud68c","setTheBulletinBoard":"\uac8c\uc2dc\ud310\uc744 \uc124\uc815\ud569\ub2c8\ub2e4.","bulletinBoardSettings":"\uac8c\uc2dc\ud310 \uc124\uc815","bulletinBoardDesign":"\uac8c\uc2dc\ud310 \ub514\uc790\uc778\uc744 \uad6c\uc131\ud569\ub2c8\ub2e4.","designConfiguration":"\ub514\uc790\uc778 \uad6c\uc131"}};
 CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ko_KR","path":{"origin":"\/board\/\uc790\uc720\uac8c\uc2dc\ud310\/5\/","result":"\/board\/\uc790\uc720\uac8c\uc2dc\ud310\/5\/","prefix":""},"shop_no":0,"skin_code":"default"};
 </script>
-<link rel="stylesheet" type="text/css" href="../css/selectcourse.css" charset="utf-8"/>
-<script type="text/javascript" src="../js/selectsourse/check.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/selectcourse.css" charset="utf-8"/>
+<script type="text/javascript" src="/js/selectsourse/check.js"></script>
 
 <style type="text/css">
 #front-linker {z-index: 9999;position: fixed;left: 0;top: 0;right: 0;min-width: 1280px;height: 61px;background: url(//img.echosting.cafe24.com/smartAdmin/img/design/ko_KR/sfix_linker.png) repeat 0 0;}#front-linker .show-ctrl h2 { width:210px; z-index: 260;margin: 0;position: absolute;left: 0;top: 0;overflow: hidden;height: 50px;text-indent: -9999px;background: url(//img.echosting.cafe24.com/smartAdmin/img/design/ko_KR/sfix_linker.png) repeat 0 -71px;}#front-linker .show-ctrl .close {border: 0;position: absolute;right: 0;top: 0;overflow: hidden;width: 58px;height: 50px;text-indent: -9999px;background: url(//img.echosting.cafe24.com/smartAdmin/img/design/ko_KR/sfix_linker.png) no-repeat 0 -191px;}#front-linker .show-ctrl .admin {margin: 0;position: absolute;right: 58px;top: 0;width: 164px;height: 50px;background: url(//img.echosting.cafe24.com/smartAdmin/img/design/ko_KR/sfix_linker.png) no-repeat 0 -131px;}#front-linker .show-ctrl .use { width:242px; position: absolute;left: 50%;top: 18px;overflow: hidden;height: 15px;margin-left: -216px;background: url(//img.echosting.cafe24.com/smartAdmin/img/design/ko_KR/sfix_linker.png) no-repeat 0 -413px;}#front-linker .show-ctrl .manual { width:78px;right:222px; position: absolute; top: 0; overflow: hidden; height: 50px; background: url(//img.echosting.cafe24.com/smartAdmin/img/design/ko_KR/sfix_linker.png) no-repeat -174px -131px;}#front-linker .show-ctrl .choice { width:240px;right:300px;margin-left:30px; position: absolute;top: 13px;}#front-linker .show-ctrl .choice li { margin:0 0 0 32px; position: relative; float: left; background: url(//img.echosting.cafe24.com/smartAdmin/img/design/ko_KR/sfix_linker.png) no-repeat 0 -309px;}#introduce .hide {position: absolute;right: 13px;top: 8px;overflow: hidden;width: 7px;height: 7px;text-indent: -9999px;border: 0;background: url(//img.echosting.cafe24.com/smartAdmin/img/design/ko_KR/sfix_linker.png) no-repeat -22px -361px;}#front-linker .hide-ctrl .open {overflow: hidden;float: right;width: 104px;height: 30px;text-indent: -9999px;background: url(//img.echosting.cafe24.com/smartAdmin/img/design/ko_KR/sfix_linker.png) no-repeat -68px -191px;}#atl-menu a .bullet {position: absolute;right: 0;top: 3px;width: 4px;height: 7px;background: url(//img.echosting.cafe24.com/smartAdmin/img/design/ko_KR/sfix_linker.png) repeat 0 -344px;}#atl-admin button.close {position: absolute;right: 15px;top: 8px;overflow: hidden;width: 12px;height: 11px;text-indent: -9999px;background: url(//img.echosting.cafe24.com/smartAdmin/img/design/ko_KR/sfix_linker.png) no-repeat 0 -361px;}#atl-admin .btn a {display: inline-block;overflow: hidden;width: 42px;height: 22px;background: url(//img.echosting.cafe24.com/smartAdmin/img/design/ko_KR/sfix_linker.png) no-repeat;}
@@ -485,7 +485,7 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ko_KR",
 				<div class="xans-element- xans-board xans-board-title-1002 xans-board-title xans-board-1002 ">
 					<!-- 지도 이미지 시작 -->   
 			        <form>
-		            	<img width="600px" alt="제주도 사진" usemap="#jejumap" src="../img/jejucourse.png">
+		            	<img width="600px" alt="제주도 사진" usemap="#jejumap" src="/img/jejucourse.png">
 		            	<map name="jejumap">
 			                <area shape="rect" coords="190,124,290,180" href='course.do?m=list&division=1' alt="제주의 숲">
 			                <area shape="rect" coords="140,44,285,97" href='course.do?m=list&division=2' alt="제주의 화려한 밤">

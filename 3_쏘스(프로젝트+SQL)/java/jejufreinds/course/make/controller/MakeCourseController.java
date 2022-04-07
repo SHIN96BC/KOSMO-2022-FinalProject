@@ -7,14 +7,15 @@ import java.util.Map;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import jejufreinds.course.domain.MakeCourse;
-import jejufreinds.course.domain.SaveCourse;
-import jejufreinds.course.domain.SaveCourseMap;
+import jejufreinds.course.make.domain.MakeCourse;
+import jejufreinds.course.make.domain.SaveCourse;
+import jejufreinds.course.make.domain.SaveCourseMap;
 import jejufreinds.course.make.service.MakeCourseService;
 import lombok.RequiredArgsConstructor;
 
@@ -56,10 +57,12 @@ public class MakeCourseController {
 	}
 	@PostMapping("saveCourse")
 	@ResponseBody
-	public boolean saveCourse(SaveCourse savecourse) {
-		System.out.println("savecourse: " + savecourse);
-
-		return false;
+	public boolean saveCourse(@RequestBody SaveCourse savecourse) {
+		boolean flag = false;
+		if(savecourse != null) {
+			flag = makeCourseService.saveCourse(savecourse);
+		}
+		return flag;
 	}
 	
 }

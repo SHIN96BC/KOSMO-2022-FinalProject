@@ -288,6 +288,7 @@
 				<script type="text/javascript" language="javascript" src="/js/makecourse/html2canvas.js"></script>
 				<script type="text/javascript" language="javascript" src="/js/makecourse/FileSaver.js"></script>
 				<script type="text/javascript" language="javascript" src="/js/makecourse/save_ajax.js"></script>
+				<script type="text/javascript" language="javascript" src="/js/makecourse/check_tag.js"></script>
 				
 				<link rel="stylesheet" type="text/css" href="/css/select_date.css"/>
 				<!-- 일정 끝 -->
@@ -341,7 +342,7 @@
 										<!-- 검색창  -->
 										<div class="step-wrap" style="position: relative; border-top: 2px solid #000; margin-top: 30px;">
 											<div class="title-wrap" style="padding: 10px 0 15px;">
-												<div class="title-type2" style="float: left; margin-top: 15px;">여행지를 추가해보세요</div>
+												<div class="title-type2" style="float: left; margin-top: 15px;">여행지를 추가해보세요(Enter로 검색)</div>
 												<div style="float: right;width:230px;">
 													<a id="add_calendar" class="btnEmFix sizeS" style="float: right;color:rgb(255,255,255);cursor:pointer;margin-top:2px;height:42px;line-height:28px;font-size:17px;">추가</a>
 													<!-- 지역 검색 -->
@@ -375,11 +376,12 @@
 							<!-- 오른쪽 메뉴  -->
 									<div class="detail-wrap">
 										<div class="menu-box">
+											<div class="title-wrap" style="margin-bottom:10px;">
+												<div class="title-type2">코스 정보 입력</div>
+											</div>
 											<div class="title-box">
 												<input type="text" id="course_name" value="" placeholder="코스의 이름을 입력하세요."/>
-												<input type="text" id="course_hash" value="" placeholder="해시태그를 달아주세요." style="margin-top: 10px;"/>
-												<p style="color: rgb(180, 180, 180); margin-left: 5px;">※ # 을 반드시 적어주세요. ※</p>
-												<textarea id="course_info" rows="" cols="" style="margin-top: 10px;" placeholder="코스에 대한 설명을 적어주세요."></textarea>
+												<textarea id="course_info" rows="" cols="" style="margin-top: 20px;height:250px;" placeholder="코스에 대한 설명을 적어주세요."></textarea>
 												<p id="content_info" style="float:right;">0/200</p>
 											</div>
 											
@@ -389,60 +391,12 @@
 										<div class="select-box">
 											<div class="step-wrap">
 												<div class="title-wrap">
-													<div class="title-type2">도우 선택</div>
+													<div class="title-type2"style="margin-top:6px;">해시태그를 추가하고 메인태그를 골라주세요(Enter로 추가) </div>
+													<input type="text" id="course_hash" value="#" style="margin-top: 10px;"/>
 												</div>
 												
-												<div class="option-box dough selected"><!--2020-03-06 클래스추가-->
-													<div class="chk-box">
-														<input type="radio" id="dough4" name="dough" value="203" checked onclick="addToppingCheck()"/>
-														<label class="checkbox" for="dough4"></label>
-														<label for="dough4">
-															슈퍼시드 함유 도우 <em>+2,000원</em><!--2020-03-06 em추가-->
-														</label>
-													</div>
-												
-													<div class="chk-box">
-														<div class="chk-box dough10">
-															<input type="radio" id="dough10" name="dough" value="123" onclick="addToppingCheck()"/>
-															<label class="checkbox" for="dough10"></label>
-															<label for="dough10">
-																오리지널 도우 (트리플 치즈 버스트 엣지) <em>+5,000원</em>
-															</label>
-														</div>
-													</div>
+												<div id="hashtag_list" class="option-box dough selected"><!--2020-03-06 클래스추가-->
 													
-													<div class="chk-box">
-														<input type="radio" id="dough5" name="dough" value="777" onclick="addToppingCheck()"/>
-														<label class="checkbox" for="dough5"></label>
-														<label for="dough5">
-															오리지널 도우 (더블 치즈엣지) <em class="doubleCheeseDough">+5,000원</em><!--2020-03-06 em추가-->
-														</label>
-													</div>
-													<div class="chk-box">
-														<input type="radio" id="dough1" name="dough" value="104" onclick="addToppingCheck()"/>
-														<label class="checkbox" for="dough1"></label>
-														<label for="dough1">오리지널 도우 (기본)</label>
-													</div>
-														
-													<div class="chk-box">
-														<div class="chk-box dough11">
-															<input type="radio" id="dough11" name="dough" value="124" onclick="addToppingCheck()"/>
-															<label class="checkbox" for="dough11"></label>
-															<label for="dough11">
-																나폴리 도우 (트리플 치즈 버스트 엣지) <em>+5,000원</em>
-															</label>
-														</div>
-													</div>
-													<div class="chk-box">
-														<input type="radio" id="dough2" name="dough" value="115" onclick="addToppingCheck()"/>
-														<label class="checkbox" for="dough2"></label>
-														<label for="dough2">나폴리 도우</label>
-													</div>
-													<div class="chk-box">
-														<input type="radio" id="dough3" name="dough" value="103" onclick="addToppingCheck()"/>
-														<label class="checkbox" for="dough3"></label>
-														<label for="dough3">씬 도우(기본 갈릭디핑 소스 미제공)</label>
-													</div>
 												</div>
 											</div>
 											
@@ -452,6 +406,7 @@
 												<div class="title-wrap">
 													<div class="title-type2" style="margin-top:6px;">몇박 하시나요?</div>
 													<input class="btnEmFix" id="date_btn" type="button" value="달력보기" style="cursor:pointer; float:right; margin-top:4px;"/>
+													
 													<div class="calendar" id="set_calendar" style="display:none; margin-top:17px;">
 														<div class="header">
 															<button class="calendar_btn" onclick="prevCal();">&lt;</button>
@@ -459,13 +414,13 @@
 															<button class="calendar_btn" onclick="nextCal();">&gt;</button>
 														</div>
 														<div class="day">
-															<div>S</div>
-															<div>M</div>
-															<div>T</div>
-															<div>W</div>
-															<div>T</div>
-															<div>F</div>
-															<div>S</div>
+															<div>일</div>
+															<div>월</div>
+															<div>화</div>
+															<div>수</div>
+															<div>목</div>
+															<div>금</div>
+															<div>토</div>
 														</div>
 														<div class="dates"></div>
 													</div>
@@ -495,7 +450,7 @@
 							</div><!-- #lodgment_box 끝  -->
 							
 							<div class="step-wrap">
-								<div class="size-box" style="margin-top:20px;text-align:center;">
+								<div class="size-box" style="margin-top:40px;text-align:center;">
 									<!-- checkbox 활성화 일 경우 -->
 									<div class="course_reset"style="float:left;font-size:20px;cursor:pointer;">
 										<input type="button"  name="size" value=""/>

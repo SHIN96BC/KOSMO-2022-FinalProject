@@ -6,7 +6,14 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import org.springframework.stereotype.Service;
-import jejufreinds.course.domain.MakeCourse;
+
+import jejufreinds.course.make.domain.CourseActivity;
+import jejufreinds.course.make.domain.CourseFood;
+import jejufreinds.course.make.domain.CourseHotel;
+import jejufreinds.course.make.domain.CourseLandMark;
+import jejufreinds.course.make.domain.MakeCourse;
+import jejufreinds.course.make.domain.SaveCourse;
+import jejufreinds.course.make.domain.SaveCourseMap;
 import jejufreinds.course.make.repository.MakeCourseRepository;
 import jejufreinds.test.all.Activity;
 import jejufreinds.test.all.Food;
@@ -119,29 +126,47 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 	@Override
 	public MakeCourse contentInfo(String contentname) {
 		MakeCourse makeCourse = searchContents.get(contentname);
-		System.out.println(makeCourse);
 		return makeCourse;
 	}
 	
-	private String tagSet(String tags) {
-		String tag = null;
-		String tagTemp = tags;
-		if(tagTemp != null) {
-			tagTemp = tagTemp.trim();
-			//String[] tagList = tagTemp.split(" ");
-			String[] tagList = tagTemp.split("#");
-			for(int i=0; i<tagList.length; i++) {
-				if(tagList[i] != null) {
-					if(tagList[i].trim().length() == 0) continue;
-					if(!tagList[i].startsWith("#")) {
-						tag += "#"+tagList[i]+" ";
-					}else {
-						if(tagList[i].trim().length() == 1) continue;
-						tag += tagList[i]+" ";
-					}
+	@Override
+	public boolean saveCourse(SaveCourse saveCourse) {
+		boolean flag = false;
+		String cnick = saveCourse.getNick();
+		String cname = saveCourse.getCname();
+		ArrayList<String> ctaglist = saveCourse.getCtaglist();
+		String cintro = saveCourse.getCintro();
+		String startdate = saveCourse.getStartdate();
+		String lastdate = saveCourse.getLastdate();
+		ArrayList<SaveCourseMap> coursemaplist = saveCourse.getCoursemaplist();
+		if(cnick != null || cname != null || ctaglist != null || cintro != null || startdate != null || lastdate != null || coursemaplist != null) {
+			cnick = cnick.trim();
+			cname = cname.trim();
+			cintro = cintro.trim();
+			startdate = cintro.trim();
+			lastdate = lastdate.trim();
+			if(cnick.length() != 0 || cname.length() != 0 || ctaglist.size() != 0 || cintro.length() != 0 || startdate.length() != 0 || lastdate.length() != 0 || coursemaplist.size() != 0) {
+				String ctag = tagCheck(ctaglist);
+				
+			}
+		}
+		
+		return flag;
+	}
+	
+	private String tagCheck(ArrayList<String> tags) {
+		String tagTemp = "";
+		if(tags != null) {
+			for(String tag: tags) {
+				if(tag.startsWith("#")) {
+					tagTemp += tag;
+				}else {
+					tag += "#"+tag;
+					tagTemp += tag;
 				}
 			}
 		}
-		return tag;
+		return tagTemp;
 	}
+
 }

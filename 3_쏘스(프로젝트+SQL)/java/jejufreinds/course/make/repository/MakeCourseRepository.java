@@ -3,6 +3,10 @@ package jejufreinds.course.make.repository;
 
 import java.util.List;
 
+import jejufreinds.course.make.domain.CourseActivity;
+import jejufreinds.course.make.domain.CourseFood;
+import jejufreinds.course.make.domain.CourseHotel;
+import jejufreinds.course.make.domain.CourseLandMark;
 import jejufreinds.test.all.Activity;
 import jejufreinds.test.all.Food;
 import jejufreinds.test.all.Hotel;
@@ -28,6 +32,11 @@ public interface MakeCourseRepository {
 	List<LandMark> selectLandmarkSearch(String keyword);
 	
 	// 데이터베이스에 코스 저장
+	void insertCourseHotel(CourseHotel courseHotel);
+	void insertCourseActivity(CourseActivity courseActivity);
+	void insertCourseFood(CourseFood courseFood);
+	void insertCourseLandMark(CourseLandMark courseLandMark);
+	
 	
 	// 코스 삭제 ( 필요할까? )
 	
