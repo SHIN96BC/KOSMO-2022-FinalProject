@@ -450,13 +450,19 @@
 							</div><!-- #lodgment_box 끝  -->
 							
 							<div class="step-wrap">
+								<div class="title-wrap" style="text-align:center;">
+									<div class="title-type2" style="margin-top:11px;display:inline-block;float:left;">예상금액:</div>
+									<div id="course_ccost_text" class="title-type2" style="margin-top:12px;display:inline-block;font-size:25px;color:#FF0000;margin-left:-60px">0원</div>
+									<input id="course_ccost" type="hidden" value=""></input>
+								</div>
+							</div>
+							
+							<div class="step-wrap" style="margin-top:8px">
 								<div class="size-box" style="margin-top:40px;text-align:center;">
-									<!-- checkbox 활성화 일 경우 -->
 									<div class="course_reset"style="float:left;font-size:20px;cursor:pointer;">
 										<input type="button"  name="size" value=""/>
 										<label style="display:inline-block;cursor:pointer;">초기화</label>
 									</div>
-									<!-- //checkbox 활성화 일 경우 -->
 									<div id="save_course" class="course_submit" style="float:right;font-size:20px;cursor:pointer;">
 										<input type="button" name="size" value=""/>
 										<label style="display:inline-block;cursor:pointer;">코스저장</label>

@@ -6,7 +6,7 @@ import java.util.Map;
 import jejufreinds.course.make.domain.CourseActivity;
 import jejufreinds.course.make.domain.CourseFood;
 import jejufreinds.course.make.domain.CourseHotel;
-import jejufreinds.course.make.domain.CourseLandMark;
+import jejufreinds.course.make.domain.CourseContent;
 import jejufreinds.course.make.domain.MakeCourse;
 import jejufreinds.course.make.domain.SaveCourse;
 
@@ -19,5 +19,6 @@ public interface MakeCourseService {
 	MakeCourse contentInfo(String contentname);
 	// 코스테이블에 저장하기 위한 메소드
 	boolean saveCourse(SaveCourse saveCourse);
-
+	// 이름 중복을 확인하기 위한 메소드
+	boolean findCourseName(String cname);
 }

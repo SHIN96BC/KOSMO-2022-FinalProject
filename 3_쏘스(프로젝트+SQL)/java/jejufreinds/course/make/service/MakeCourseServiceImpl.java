@@ -7,13 +7,14 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import org.springframework.stereotype.Service;
 
+import jejufreinds.course.domain.Course;
 import jejufreinds.course.make.domain.CourseActivity;
 import jejufreinds.course.make.domain.CourseFood;
 import jejufreinds.course.make.domain.CourseHotel;
-import jejufreinds.course.make.domain.CourseLandMark;
+import jejufreinds.course.make.domain.CourseContent;
 import jejufreinds.course.make.domain.MakeCourse;
 import jejufreinds.course.make.domain.SaveCourse;
-import jejufreinds.course.make.domain.SaveCourseMap;
+import jejufreinds.course.make.domain.SaveCourseContent;
 import jejufreinds.course.make.repository.MakeCourseRepository;
 import jejufreinds.test.all.Activity;
 import jejufreinds.test.all.Food;
@@ -53,7 +54,7 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 		List<Food> foodList = makeCourseRepository.selectFoodAll();
 		List<LandMark> landmarkList = makeCourseRepository.selectLandmarkAll();
 		
-		Map<String, MakeCourse> makeCourseMap = new ConcurrentHashMap<>();
+		Map<String, MakeCourse> makeCourseMap = new ConcurrentHashMap<>(); // 동시성 이슈때문에 컨커넌트 해시맵을 사용
 		
 		for(Activity activity: activityList) {
 			makeCourseMap.put(activity.getAname(), 
@@ -130,43 +131,97 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 	}
 	
 	@Override
+	public boolean findCourseName(String cname) {
+		Long course = makeCourseRepository.selectCourseNum(cname);
+		if(course != null) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	@Override
 	public boolean saveCourse(SaveCourse saveCourse) {
 		boolean flag = false;
 		String cnick = saveCourse.getNick();
 		String cname = saveCourse.getCname();
-		ArrayList<String> ctaglist = saveCourse.getCtaglist();
+		List<String> ctaglist = saveCourse.getCtaglist();
 		String cintro = saveCourse.getCintro();
+		String ccost = saveCourse.getCcost();
 		String startdate = saveCourse.getStartdate();
 		String lastdate = saveCourse.getLastdate();
-		ArrayList<SaveCourseMap> coursemaplist = saveCourse.getCoursemaplist();
-		if(cnick != null || cname != null || ctaglist != null || cintro != null || startdate != null || lastdate != null || coursemaplist != null) {
+		List<SaveCourseContent> coursecontentList = saveCourse.getCoursemaplist();
+		
+		cnick = "테스트";
+		ccost = "0";
+		System.out.println("cnick: " + cnick);
+		System.out.println("cname: " + cname);
+		System.out.println("ctaglist: " + ctaglist);
+		System.out.println("cintro: " + cintro);
+		System.out.println("startdate: " + startdate);
+		System.out.println("lastdate: " + lastdate);
+		System.out.println("coursecontentList: " + coursecontentList);
+		
+		if(cnick != null && cname != null && ctaglist != null && cintro != null && ccost != null && startdate != null && lastdate != null && coursecontentList != null) {
 			cnick = cnick.trim();
 			cname = cname.trim();
 			cintro = cintro.trim();
+			ccost = ccost.trim();
 			startdate = cintro.trim();
 			lastdate = lastdate.trim();
-			if(cnick.length() != 0 || cname.length() != 0 || ctaglist.size() != 0 || cintro.length() != 0 || startdate.length() != 0 || lastdate.length() != 0 || coursemaplist.size() != 0) {
+			if(cnick.length() != 0 && cname.length() != 0 && ctaglist.size() != 0 && cintro.length() != 0 && ccost.length() != 0 && startdate.length() != 0 && lastdate.length() != 0 && coursecontentList.size() != 0) {
 				String ctag = tagCheck(ctaglist);
+				Course course = new Course(-1L, cnick, cname, cintro, ctag, -1L, ccost, -1L, -1, startdate, lastdate, null);
+				// 코스 인서트
+				makeCourseRepository.insertCourse(course);
+				// 인서트한 코스의 cnum을 가져온다
+				Long cnum = makeCourseRepository.selectCourseNum(cname);
+				if(cnum == null) {
+					return false;
+				}
 				
+				// 코스 컨텐츠 테이블에 인서트
+				for(SaveCourseContent saveCourseContent: coursecontentList) {
+					String lodgment = saveCourseContent.getLodgment();
+					int cday = -1;
+					if(lodgment != null) {
+						lodgment.trim();
+						if(lodgment.length() != 0) {
+							try {
+								cday = Integer.parseInt(lodgment);
+							}catch(NumberFormatException nfe) {
+							}
+						}
+					}
+					if(cday == -1) return false;
+					
+					List<String> contentList = saveCourseContent.getContentList();
+					for(String content: contentList) {
+						String contentType = searchContents.get(content).getContentType();
+						CourseContent courseContent = new CourseContent(-1L, content, cday, cnum, contentType);
+						makeCourseRepository.insertCourseContent(courseContent);
+					}
+				}
+				
+				System.out.println("ctag: " + ctag);
 			}
 		}
 		
 		return flag;
 	}
 	
-	private String tagCheck(ArrayList<String> tags) {
+	private String tagCheck(List<String> tags) {
 		String tagTemp = "";
 		if(tags != null) {
 			for(String tag: tags) {
 				if(tag.startsWith("#")) {
-					tagTemp += tag;
+					tagTemp += tag+" ";
 				}else {
 					tag += "#"+tag;
-					tagTemp += tag;
+					tagTemp += tag+" ";
 				}
 			}
 		}
 		return tagTemp;
 	}
-
 }

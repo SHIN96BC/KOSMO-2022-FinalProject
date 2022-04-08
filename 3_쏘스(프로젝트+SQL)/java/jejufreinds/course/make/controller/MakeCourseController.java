@@ -13,9 +13,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import jejufreinds.course.domain.Course;
 import jejufreinds.course.make.domain.MakeCourse;
 import jejufreinds.course.make.domain.SaveCourse;
-import jejufreinds.course.make.domain.SaveCourseMap;
+import jejufreinds.course.make.domain.SaveCourseContent;
 import jejufreinds.course.make.service.MakeCourseService;
 import lombok.RequiredArgsConstructor;
 
@@ -55,6 +56,13 @@ public class MakeCourseController {
 		}
 		return modelAndView;
 	}
+	
+	@PostMapping("findcname")
+	@ResponseBody
+	public boolean findCname(String cname) {
+		return makeCourseService.findCourseName(cname);
+	}
+	
 	@PostMapping("saveCourse")
 	@ResponseBody
 	public boolean saveCourse(@RequestBody SaveCourse savecourse) {
@@ -62,7 +70,7 @@ public class MakeCourseController {
 		if(savecourse != null) {
 			flag = makeCourseService.saveCourse(savecourse);
 		}
-		return flag;
+		return true;
 	}
 	
 }

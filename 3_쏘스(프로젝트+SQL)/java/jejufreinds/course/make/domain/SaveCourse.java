@@ -1,6 +1,7 @@
 package jejufreinds.course.make.domain;
 
 
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -17,15 +18,18 @@ public class SaveCourse {
 	String cname;
 	ArrayList<String> ctaglist;
 	String cintro;
+	String ccost;
 	String startdate;
 	String lastdate;
-	ArrayList<SaveCourseMap> coursemaplist;
-	public SaveCourse(String nick, String cname, ArrayList<String> ctaglist, String cintro, String startdate,
-			String lastdate, ArrayList<SaveCourseMap> coursemaplist) {
+	ArrayList<SaveCourseContent> coursemaplist;
+	public SaveCourse(String nick, String cname, ArrayList<String> ctaglist, String cintro, String ccost,
+			String startdate, String lastdate, ArrayList<SaveCourseContent> coursemaplist) {
+		super();
 		this.nick = nick;
 		this.cname = cname;
 		this.ctaglist = ctaglist;
 		this.cintro = cintro;
+		this.ccost = ccost;
 		this.startdate = startdate;
 		this.lastdate = lastdate;
 		this.coursemaplist = coursemaplist;
