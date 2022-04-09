@@ -69,7 +69,7 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 						activity.getAaddress(),
 						0.0,
 						0.0,
-						"ACTIVITY"
+						"COURSE_ACTIVITY"
 					));
 		}
 		for(Hotel hotel: HotelList) {
@@ -85,7 +85,7 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 						hotel.getHaddress(),
 						0.0,
 						0.0,
-						"HOTEL"
+						"COURSE_HOTEL"
 					));
 		}
 		for(Food food: foodList) {
@@ -101,7 +101,7 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 						food.getFaddress(),
 						0.0,
 						0.0,
-						"FOOD"
+						"COURSE_FOOD"
 					));
 		}
 		for(LandMark landmark: landmarkList) {
@@ -117,7 +117,7 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 						landmark.getLaddress(),
 						0.0,
 						0.0,
-						"LANDMARK"
+						"COURSE_LANDMARK"
 					));
 		}
 		
@@ -150,30 +150,38 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 		String ccost = saveCourse.getCcost();
 		String startdate = saveCourse.getStartdate();
 		String lastdate = saveCourse.getLastdate();
+		List<String> divisionList = saveCourse.getDivisionlist();
 		List<SaveCourseContent> coursecontentList = saveCourse.getCoursemaplist();
 		
+		// 테스트 용
 		cnick = "테스트";
-		ccost = "0";
 		System.out.println("cnick: " + cnick);
 		System.out.println("cname: " + cname);
 		System.out.println("ctaglist: " + ctaglist);
 		System.out.println("cintro: " + cintro);
+		System.out.println("ccost: " + ccost);
 		System.out.println("startdate: " + startdate);
 		System.out.println("lastdate: " + lastdate);
 		System.out.println("coursecontentList: " + coursecontentList);
+		System.out.println("divisionList: " + divisionList);
 		
-		if(cnick != null && cname != null && ctaglist != null && cintro != null && ccost != null && startdate != null && lastdate != null && coursecontentList != null) {
+		if(cnick != null && cname != null && ctaglist != null && cintro != null && divisionList != null && ccost != null && startdate != null && lastdate != null && coursecontentList != null) {
 			cnick = cnick.trim();
 			cname = cname.trim();
 			cintro = cintro.trim();
 			ccost = ccost.trim();
-			startdate = cintro.trim();
+			startdate = startdate.trim();
 			lastdate = lastdate.trim();
-			if(cnick.length() != 0 && cname.length() != 0 && ctaglist.size() != 0 && cintro.length() != 0 && ccost.length() != 0 && startdate.length() != 0 && lastdate.length() != 0 && coursecontentList.size() != 0) {
+			if(cnick.length() != 0 && cname.length() != 0 && ctaglist.size() != 0 && cintro.length() != 0 && divisionList.size() != 0 && ccost.length() != 0 && startdate.length() != 0 && lastdate.length() != 0 && coursecontentList.size() != 0) {
+				// 태그 검사 및 문자열로 만드는 메소드
 				String ctag = tagCheck(ctaglist);
-				Course course = new Course(-1L, cnick, cname, cintro, ctag, -1L, ccost, -1L, -1, startdate, lastdate, null);
+				// division 계산하는 메소드
+				int division = setDivision(divisionList);
+				
 				// 코스 인서트
+				Course course = new Course(-1L, cnick, cname, cintro, ctag, -1L, ccost, -1, division, startdate, lastdate, null);
 				makeCourseRepository.insertCourse(course);
+				
 				// 인서트한 코스의 cnum을 가져온다
 				Long cnum = makeCourseRepository.selectCourseNum(cname);
 				if(cnum == null) {
@@ -202,8 +210,7 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 						makeCourseRepository.insertCourseContent(courseContent);
 					}
 				}
-				
-				System.out.println("ctag: " + ctag);
+				return true;
 			}
 		}
 		
@@ -223,5 +230,61 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 			}
 		}
 		return tagTemp;
+	}
+	
+	private int setDivision(List<String> divisionList) {
+		// 한 지역이 과반수가 넘으면 그 지역으로 구분한다
+		int division = -1;
+		// 과반수 계산
+		int majority = divisionList.size();
+		if(majority%2 == 1) {
+			majority = majority/2+1;
+		}else if(majority%2 == 0) {
+			majority = majority/2;
+		}
+		int[] divisionCheck = new int[5];
+		
+		for(String divisionStr: divisionList) {
+			if(divisionStr != null) {
+				divisionStr = divisionStr.trim();
+				if(divisionStr.length() != 0) {
+					try {
+						int tempDivsion = Integer.parseInt(divisionStr);
+						if(tempDivsion == 1) {
+							divisionCheck[0] += 1;
+						}else if(tempDivsion == 2) {
+							divisionCheck[1] += 1;
+						}else if(tempDivsion == 3) {
+							divisionCheck[2] += 1;
+						}else if(tempDivsion == 4) {
+							divisionCheck[3] += 1;
+						}else if(tempDivsion == 5) {
+							divisionCheck[4] += 1;
+						}
+					}catch(NumberFormatException nfe) {
+					}
+				}
+			}
+		}
+		
+		// 최고로 많이 선택한 인덱스 값으로 division을 계산(ex: 인덱스 0 == division 1)
+		int maxIndex = -1;
+		int max = -1;
+		for(int i=0; i < divisionCheck.length; i++) {
+			if(divisionCheck[i] >= majority) {
+				if(divisionCheck[i] == max) {
+					// 최대값이 중복 되었으므로 지역을 그외 지역인 6번으로 분류한다.
+					division = 6;
+				}else {
+					max = divisionCheck[i];
+					maxIndex = i+1;
+				}
+			}
+		}
+		if(maxIndex != -1 && max != -1) {
+			division = maxIndex;
+		}
+		
+		return division;
 	}
 }

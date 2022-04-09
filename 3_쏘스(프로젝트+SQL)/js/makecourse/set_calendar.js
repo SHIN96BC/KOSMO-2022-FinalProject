@@ -110,6 +110,8 @@ $(document).ready(function() {
                                 `
                                 <li id="calendar_day_${comboboxIndex}_${contentName}" class="make_course_content make_content" >
                                     <input type="hidden" class="content_input" value="${makeCourse.contentAddress}"/>
+                                    <input type="hidden" class="division_input" value="${makeCourse.contentdivision}"/>
+                                    <input type="hidden" class="set_amount" value="${makeCourse.contentcost}"/>
                                     <div class="prd-img">
                                         <img class="lazyload" style="width:100%; height:100%;" src="/photo/${makeCourse.contentphoto}"/>
                                     </div>
@@ -134,6 +136,7 @@ $(document).ready(function() {
                             overlapCheckList[comboboxIndex-1].listNameList = listNameList;
                         }
                         contentColorReset();
+                        setAmount();
                     }
                 }else{
                     alert("하루당 최대값은 5개 입니다.");
@@ -169,3 +172,25 @@ $(document).ready(function() {
     });
 });
 
+function setAmount() {
+    const maxNum = $('#lodgment_combobox option:last-child').val();
+    let maxAmount = 0;
+    for(let i = 0; i < maxNum; i++) {
+        let courseDate = $(`#course_date_${i+1}`);
+        let contentLength = courseDate.children().length;
+        if(contentLength > 0) { // 일정안에 컨텐츠가 하나도 들어있지 않은곳이 있는지 체크
+            for(let j = 0; j < contentLength; j++){
+                let amount = courseDate.find('.set_amount').eq(j).val();
+                if(amount.indexOf('원')) {
+                    amount = amount.substring(amount.indexOf('원')-1);
+                }
+                console.log("amount: " + amount);
+                if(amount) {
+                    maxAmount += Number(amount);
+                }
+            }
+        }
+    }
+    $('#course_ccost_text').text(`${maxAmount}원`);
+    $('#course_ccost').val(maxAmount);
+}

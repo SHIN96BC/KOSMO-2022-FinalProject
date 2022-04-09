@@ -20,14 +20,15 @@ $(document).ready(function() {
             const maxNum = $('#lodgment_combobox option:last-child').val();
             // 컨텐츠 값 셋팅
             const courseMapList = [];
+            const divisionList = [];
             const startDate = $("#period_1").val();
             const lastDate = $("#period_2").val();
             
             for(let i = 0; i < maxNum; i++) {
                 let courseDate = $(`#course_date_${i+1}`);
                 let contentLength = courseDate.children().length;
-                console.log("contentLength: " + contentLength);
                 const dataList = [];
+                
                 const courseMap = {
                     lodgment: "",
                     contentList: []
@@ -35,9 +36,10 @@ $(document).ready(function() {
                 if(contentLength > 0) { // 일정안에 컨텐츠가 하나도 들어있지 않은곳이 있는지 체크
                     for(let j = 0; j < contentLength; j++){
                         let contentName = courseDate.find('.content_subject').eq(j).text();
-                        console.log("contentName: " + contentName);
+                        let contentDivision = courseDate.find('.division_input').eq(j).val();
                         if(contentName) {
                             dataList.push(contentName);
+                            divisionList.push(contentDivision);
                         }
                     }
                 }else {
@@ -53,7 +55,6 @@ $(document).ready(function() {
 
             const hashTagNum = $('#hashtag_list').children().length;
             const mainHash = $('.tag:checked').val();
-            console.log("mainHash: " + mainHash);
             if(!mainHash) {
                 alert("메인태그를 골라주세요");
                 location.href = "#course_info";
@@ -72,12 +73,16 @@ $(document).ready(function() {
             }else {
                 hashTagLsit.push("없음");
             }
-            console.log("hashTagLsit: " + hashTagLsit);
+
+            // 예상 금액 가져오기
+            const ccost = $('#course_ccost').val();
+            console.log("ccost: " + ccost);
+            
             $.ajax({  // ajax 로 필요한 데이터 전송
                 url: "/jejufreinds/make_course/saveCourse.json",
                 type: "POST",
                 contentType: "application/json",
-                data: JSON.stringify({cname:courseName, ctaglist:hashTagLsit, cintro: courseInfo, startdate: startDate, lastdate: lastDate, coursemaplist: courseMapList}),
+                data: JSON.stringify({cname:courseName, ctaglist:hashTagLsit, cintro: courseInfo, divisionlist: divisionList, ccost: ccost, startdate: startDate, lastdate: lastDate, coursemaplist: courseMapList}),
                 success: function(flag) {
                     if(flag){
                         alert("코스 작성 완료!");

@@ -18,17 +18,19 @@ public class SaveCourse {
 	String cname;
 	ArrayList<String> ctaglist;
 	String cintro;
+	ArrayList<String> divisionlist;
 	String ccost;
 	String startdate;
 	String lastdate;
 	ArrayList<SaveCourseContent> coursemaplist;
-	public SaveCourse(String nick, String cname, ArrayList<String> ctaglist, String cintro, String ccost,
-			String startdate, String lastdate, ArrayList<SaveCourseContent> coursemaplist) {
-		super();
+	public SaveCourse(String nick, String cname, ArrayList<String> ctaglist, String cintro,
+			ArrayList<String> divisionlist, String ccost, String startdate, String lastdate,
+			ArrayList<SaveCourseContent> coursemaplist) {
 		this.nick = nick;
 		this.cname = cname;
 		this.ctaglist = ctaglist;
 		this.cintro = cintro;
+		this.divisionlist = divisionlist;
 		this.ccost = ccost;
 		this.startdate = startdate;
 		this.lastdate = lastdate;

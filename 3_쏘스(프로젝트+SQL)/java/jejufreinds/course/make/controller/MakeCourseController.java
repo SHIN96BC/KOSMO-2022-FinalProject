@@ -70,7 +70,7 @@ public class MakeCourseController {
 		if(savecourse != null) {
 			flag = makeCourseService.saveCourse(savecourse);
 		}
-		return true;
+		return flag;
 	}
 	
 }

@@ -13,13 +13,13 @@ public class CourseContent {
 	String contentname;
 	int cday;
 	long cnum;
-	String contentType;
-	public CourseContent(long clnum, String contentname, int cday, long cnum, String contentType) {
+	String contenttype;
+	public CourseContent(long clnum, String contentname, int cday, long cnum, String contenttype) {
 		super();
 		this.clnum = clnum;
 		this.contentname = contentname;
 		this.cday = cday;
 		this.cnum = cnum;
-		this.contentType = contentType;
+		this.contenttype = contenttype;
 	}
 }
