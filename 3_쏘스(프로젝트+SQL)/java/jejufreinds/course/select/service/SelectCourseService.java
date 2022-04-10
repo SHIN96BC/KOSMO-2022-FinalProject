@@ -5,5 +5,5 @@ import java.util.List;
 import jejufreinds.course.domain.Course;
 
 public interface SelectCourseService {
-	List<Course> courseList();
+	List<Course> courseListAll();
 }

@@ -382,7 +382,7 @@
 											<div class="title-box">
 												<input type="text" id="course_name" value="" placeholder="코스의 이름을 입력하세요."/>
 												<textarea id="course_info" rows="" cols="" style="margin-top: 20px;height:250px;" placeholder="코스에 대한 설명을 적어주세요."></textarea>
-												<p id="content_info" style="float:right;">0/200</p>
+												<p id="content_info_count" style="float:right;">0/200</p>
 											</div>
 											
 										</div>

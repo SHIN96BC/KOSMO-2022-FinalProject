@@ -27,7 +27,6 @@ public class Course {
 	Date cdate;
 	public Course(long cnum, String nick, String cname, String cintro, String ctag, long choosed, String ccost, long love,
 			int division, String startdate, String lastdate, Date cdate) {
-		super();
 		this.cnum = cnum;
 		this.nick = nick;
 		this.cname = cname;
