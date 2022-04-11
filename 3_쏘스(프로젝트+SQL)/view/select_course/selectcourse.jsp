@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" import="java.util.List, jejufreinds.course.domain.Course"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -61,7 +61,7 @@
 			                    </li>
 		
 			                    <li class="label1" data-label1="hot">
-			                       <a href="product.html" style="font-size: 18px;">Course</a>
+			                       <a href="" style="font-size: 18px;">Course</a>
 			                       <ul class="sub-menu">
 			                          <li><a href="/jejufreinds/select_course/select.do">코스추천</a></li>
 			                          <li><a href="/jejufreinds/make_course/make.do">나만의코스</a></li>
@@ -221,6 +221,7 @@
 			
 		<!--  네비게이션바 끝 -->
 </head>
+
 <body>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -235,7 +236,7 @@
 <meta property="og:type" content="article" />
 
 <link rel="stylesheet" type="text/css" href="/css/selectcourse.css" charset="utf-8"/>
-<script type="text/javascript" src="/js/selectsourse/check.js"></script>
+<script type="text/javascript" src="/js/selectcourse/check.js"></script>
 
 <style type="text/css">
 </style>
@@ -247,26 +248,40 @@
 <meta name="design_html_path" content="/board/free/list.html" />
 
 
+<script type="text/javascript" src="/js/selectcourse/set_course_img.js"></script>
+<script type="text/javascript" src="/js/selectcourse/paging.js"></script>
+
+<%
+	List<Course> courseList = (List<Course>)request.getAttribute("courseList");
+	long courseListLength = courseList.size();
+%>
+
+<script type="text/javascript">
+	(function() {
+		let courseLength = <%=courseListLength%>;
+		pageSet(10, 1, courseLength);
+	})();
+</script>
 <hr class="layout"/>
-<div id="wrap">
+<div id="wrap" style="-webkit-user-drag: none;-webkit-tap-highlight-color:unset;border:none;">
     <div id="container">
         <div id="contents">
             
-			<div class="xans-element- xans-board xans-board-listpackage-1002 xans-board-listpackage xans-board-1002 " style="text-align: center; margin-top: 120px;">
-				<div class="xans-element- xans-board xans-board-title-1002 xans-board-title xans-board-1002 ">
-					<!-- 지도 이미지 시작 -->   
-	            	<img id="jejudo_map_img" usemap="#jejumap" src="/img/jejudo_full.png" style="width:1000px; height: 500px;">
+			<div class="xans-element- xans-board xans-board-listpackage-1002 xans-board-listpackage xans-board-1002 " style="text-align: center; margin-top: 150px;">
+				<!-- oncontextmenu="return false" ondragstart="return false" onselectstart="return false" == 드래그 방지 -->
+				<div class="xans-element- xans-board xans-board-title-1002 xans-board-title xans-board-1002 " oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+					<!-- 지도 이미지 시작 -->
+	            	<img id="jejudo_map_img" usemap="#jejumap" src="/img/jejudo_full.png" style="border:none; width:1200px; height: 700px;-webkit-user-drag: none;-webkit-tap-highlight-color:unset;">
 	            	<map name="jejumap">
-		                <area class="course_division" shape="rect" coords="190,124,290,180" href='course.do?m=list&division=1' alt="제주의 숲">
-		                <area class="course_division" shape="rect" coords="140,44,285,97" href='course.do?m=list&division=2' alt="제주의 화려한 밤">
-		                <area class="course_division" shape="rect" coords="23,168,137,232" href='course.do?m=list&division=3' alt="제주에서의 힐링">
-		                <area class="course_division" shape="rect" coords="168,204,300,262" href='course.do?m=list&division=4' alt="열대지방 제주">
-		                <area class="course_division" shape="rect" coords="314,41,435,110" href='course.do?m=list&division=5' alt="모험가득한 제주">
+		                <area class="course_division" shape="rect" coords="460,281,770,382" alt="1" title="center" style="cursor:pointer;">
+		                <area class="course_division" shape="rect" coords="252,247,396,502" alt="2" title="west" style="cursor:pointer;">
+		                <area class="course_division" shape="rect" coords="435,157,766,223" alt="3" title="north" style="cursor:pointer;">
+		                <area class="course_division" shape="rect" coords="815,135,960,464" alt="4" title="east" style="cursor:pointer;">
+		                <area class="course_division" shape="rect" coords="453,412,806,517" alt="5" title="south" style="cursor:pointer;">
 	            	</map>
-		        
 			        <!-- 지도이미지 끝 --> 
 					<div class="title">
-			            <h2><font color="#555555">코스추천</font> </h2>
+			            <h2><font color="#555555">코스추천</font></h2>
 			            <h2 style="margin-left: 5px;">　</h2>
 			        </div>
 			        
@@ -289,19 +304,19 @@
 		<col style="width:55px;" class="displaynone"/>
 		<col style="width:80px;" class="displaynone"/>
 	</colgroup>
-<thead class="xans-element- xans-board xans-board-listheader-1002 xans-board-listheader xans-board-1002 ">
-<tr style=" ">
-	<th scope="col" >
-			<input class="boardListAll" value="all" type="checkbox"  style="float: left; margin-left: 10px;"/> 번호</th>
-                <th scope="col" class="thumb" style="text-align:center;width:15%;">코스이름</th>
-                <th scope="col" style="text-align:center;">코스설명</th>
-                <th scope="col" style="text-align:center;width:15%;">작성자</th>
-                <th scope="col" class="" style="text-align:center;">작성일</th>
-                <th scope="col" class="" style="text-align:center;width:7%;">조회</th>
-                <th scope="col" class="" style="text-align:center;width:7%;">선택받은횟수</th>
-            </tr>
-         </thead>
-		 <tbody id="course_list" class="xans-element- xans-board xans-board-list-1002 xans-board-list xans-board-1002"><!--
+	<thead class="xans-element- xans-board xans-board-listheader-1002 xans-board-listheader xans-board-1002 ">
+		<tr style=" ">
+			<th scope="col" ><input class="boardListAll" value="all" type="checkbox"  style="float: left; margin-left: 10px;"/> 번호</th>
+            <th scope="col" class="thumb" style="text-align:center;width:15%;">코스이름</th>
+            <th scope="col" style="text-align:center;">코스설명</th>
+            <th scope="col" style="text-align:center;width:15%;">작성자</th>
+            <th scope="col" class="" style="text-align:center;">작성일</th>
+            <th scope="col" class="" style="text-align:center;width:7%;">조회</th>
+            <th scope="col" class="" style="text-align:center;width:7%;">선택받은횟수</th>
+		</tr>
+	</thead>
+		 <tbody id="course_list" class="xans-element- xans-board xans-board-list-1002 xans-board-list xans-board-1002">
+		 	<!--
                 $product_name_cut = 30
                 $login_page_url = /member/login.html
                 $deny_access_url = /index.html
@@ -317,7 +332,7 @@
 				<td ><input class="boardChk" value="16" type="checkbox"  style="float: left; margin-left: 10px; margin-right: -15px;"/>${course.cnum}</td>
 	                <td class="subject" style="text-align: center;">
 	                	<a href="/board/product/read.html?no=16&board_no=5" style="color:#555555;">${course.cname}</a> 
-	                    <img src="http://img.echosting.cafe24.com/design/skin/admin/ko_KR/ico_attach2.gif"  alt="파일첨부" class="ec-common-rwd-image" onmouseover="BOARD.load_attached_image('afile_16','1','5');" onmouseout="BOARD.load_attached_image('afile_16','0','5');" />
+	                    <img src="http://img.echosting.cafe24.com/design/skin/admin/ko_KR/ico_attach2.gif"  alt="파일첨부" class="ec-common-rwd-image"/>
 	               		<span></span>
 		            </td>
 	                <td class="displaynone"></td>
@@ -338,52 +353,45 @@
 		</tbody>
 	</table>
 </div>
-<div class="xans-element- xans-board xans-board-empty-1002 xans-board-empty xans-board-1002 boardListEmpty displaynone "><p>
-                    </p>
+<div class="xans-element- xans-board xans-board-empty-1002 xans-board-empty xans-board-1002 boardListEmpty displaynone "><p></p>
 </div>
-<div class="xans-element- xans-board xans-board-buttonlist-1002 xans-board-buttonlist xans-board-1002  "><a href="/board/product/write.html?board_no=5" class=""><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/btn_write.gif" alt="글쓰기"/></a>
+<div class="xans-element- xans-board xans-board-buttonlist-1002 xans-board-buttonlist xans-board-1002"><a href="/board/product/write.html?board_no=5" class=""><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/btn_write.gif" alt="글쓰기"/></a>
 </div>
 </div>
+	
+	<div id="paging" class="xans-element- xans-board xans-board-paging-1002 xans-board-paging xans-board-1002 ec-base-paginate">
+		<a href="?board_no=5&page=1"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지"/></a>
+		<ol>
+			<li class="xans-record-"><a href="?board_no=5&page=1" class="this">1</a></li>
+		</ol>
+		<a href="?board_no=5&page=1"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지"/></a>
+	</div>
 
-
-
-
-
-
-<div class="xans-element- xans-board xans-board-paging-1002 xans-board-paging xans-board-1002 ec-base-paginate">
-<a href="?board_no=5&page=1">
-<img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지"/></a>
-<ol>
-<li class="xans-record-"><a href="?board_no=5&page=1" class="this">1</a></li>
-            </ol>
-<a href="?board_no=5&page=1"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지"/></a>
-</div>
-
-		<form id="boardSearchForm" name="" action="/board/상품-qa/6" method="get" target="_top" enctype="multipart/form-data" >
-			<input id="board_no" name="board_no" value="6" type="hidden"  />
+		<form id="boardSearchForm" name="" action="/board/상품-qa/6" method="get" target="_top" enctype="multipart/form-data">
+			<input id="board_no" name="board_no" value="6" type="hidden"/>
 			<input id="page" name="page" value="1" type="hidden"  />
-			<input id="board_sort" name="board_sort" value="" type="hidden"  />
+			<input id="board_sort" name="board_sort" value="" type="hidden"/>
 			<div class="xans-element- xans-board xans-board-search-4 xans-board-search xans-board-4 ">
 				<fieldset class="boardSearch">
 					<legend>게시물 검색</legend>
 						<p class="category displaynone"></p>
 						<div style="display: flex; justify-content: right; align-items: center;">
-							<select id="search_key" name="search_key" fw-filter="" fw-label="" fw-msg="" >
-								<option value="10">페이지수</option>
+							<select id="pageNum" name="search_key" fw-filter="" fw-label="" fw-msg="" >
+								<option value="10" selected>페이지수</option>
 								<option value="10">10</option>
 								<option value="20">20</option>
 								<option value="30">30</option>
 								<option value="40">40</option>
 								<option value="50">50</option>
-							</select> 
+							</select>
 							<select id="search_key" name="search_key" fw-filter="" fw-label="" fw-msg="" >
-								<option value="subject">코스이름</option>
+								<option value="subject" selected>코스이름</option>
 								<option value="content">코스설명</option>
 								<option value="writer_name">아이디</option>
 								<option value="member_id">아이디</option>
 								<option value="nick_name"></option>
 								<option value="product"></option>
-							</select> 
+							</select>
 							<input id="search" name="search" fw-filter="" fw-label="" fw-msg="" class="inputTypeText" placeholder="" value="" type="text" style="margin-left: 10px;"/> 
 							<a href="#none" class="btnEmFix" onclick="BOARD.form_submit('boardSearchForm');" style="margin-left: 10px;">찾기</a>
 						</div>
