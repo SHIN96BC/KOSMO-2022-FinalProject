@@ -1,13 +1,9 @@
 package jejufreinds.course.domain;
 
-import java.sql.Date;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 @NoArgsConstructor
 @Getter
@@ -24,9 +20,9 @@ public class Course {
 	int division;
 	String startdate;
 	String lastdate;
-	Date cdate;
+	String cdate;
 	public Course(long cnum, String nick, String cname, String cintro, String ctag, long choosed, String ccost, long love,
-			int division, String startdate, String lastdate, Date cdate) {
+			int division, String startdate, String lastdate, String cdate) {
 		this.cnum = cnum;
 		this.nick = nick;
 		this.cname = cname;

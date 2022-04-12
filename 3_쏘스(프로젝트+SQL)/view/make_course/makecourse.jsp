@@ -289,6 +289,7 @@
 				<script type="text/javascript" language="javascript" src="/js/makecourse/FileSaver.js"></script>
 				<script type="text/javascript" language="javascript" src="/js/makecourse/save_ajax.js"></script>
 				<script type="text/javascript" language="javascript" src="/js/makecourse/check_tag.js"></script>
+				<script type="text/javascript" language="javascript" src="/js/makecourse/check_cname.js"></script>
 				
 				<link rel="stylesheet" type="text/css" href="/css/select_date.css"/>
 				<!-- 일정 끝 -->
@@ -381,7 +382,8 @@
 											</div>
 											<div class="title-box">
 												<input type="text" id="course_name" value="" placeholder="코스의 이름을 입력하세요."/>
-												<textarea id="course_info" rows="" cols="" style="margin-top: 20px;height:250px;" placeholder="코스에 대한 설명을 적어주세요."></textarea>
+												<div id="find_cname" style="margin-top: 15px;"></div>
+												<textarea id="course_info" rows="" cols="" style="margin-top: 15px;height:250px;" placeholder="코스에 대한 설명을 적어주세요."></textarea>
 												<p id="content_info_count" style="float:right;">0/200</p>
 											</div>
 											

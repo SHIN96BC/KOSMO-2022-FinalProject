@@ -248,20 +248,10 @@
 <meta name="design_html_path" content="/board/free/list.html" />
 
 
-<script type="text/javascript" src="/js/selectcourse/set_course_img.js"></script>
 <script type="text/javascript" src="/js/selectcourse/paging.js"></script>
+<script type="text/javascript" src="/js/selectcourse/set_course_img.js"></script>
 
-<%
-	List<Course> courseList = (List<Course>)request.getAttribute("courseList");
-	long courseListLength = courseList.size();
-%>
 
-<script type="text/javascript">
-	(function() {
-		let courseLength = <%=courseListLength%>;
-		pageSet(10, 1, courseLength);
-	})();
-</script>
 <hr class="layout"/>
 <div id="wrap" style="-webkit-user-drag: none;-webkit-tap-highlight-color:unset;border:none;">
     <div id="container">
@@ -327,28 +317,32 @@
             	</tr>
             </c:if>
             
+            <c:set var="i" value="0"/>
             <c:forEach items="${courseList}" var="course">
-	            <tr style="background-color:#FFFFFF; color:#555555;" class="">
-				<td ><input class="boardChk" value="16" type="checkbox"  style="float: left; margin-left: 10px; margin-right: -15px;"/>${course.cnum}</td>
-	                <td class="subject" style="text-align: center;">
-	                	<a href="/board/product/read.html?no=16&board_no=5" style="color:#555555;">${course.cname}</a> 
-	                    <img src="http://img.echosting.cafe24.com/design/skin/admin/ko_KR/ico_attach2.gif"  alt="파일첨부" class="ec-common-rwd-image"/>
-	               		<span></span>
-		            </td>
-	                <td class="displaynone"></td>
-	                <td class="subject">
-	                    <span class="displaynone">
-	                        <a href="#none" onclick="BOARD.viewTarget('16','5',this);">
-	                        <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/btn_unfold.gif" alt="내용 보기"/></a>
-	                    </span>
-	                     <a href="/board/product/read.html?no=16&board_no=5" style="color:#555555;">${course.cintro}</a> 
-	                </td>
-	                <td>${course.nick}</td>
-	                <td class="txtLess ">${course.cdate}</td>
-	                <td class="txtLess ">${course.love}</td>
-	                <td class="txtLess ">${course.choosed}</td>
-	                <td class="displaynone"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point0.gif" alt="0점"/></td>
-	            </tr>
+            	<c:if test="${i < 10}">
+		            <tr style="background-color:#FFFFFF; color:#555555;" class="">
+					<td ><input class="boardChk" value="16" type="checkbox"  style="float: left; margin-left: 10px; margin-right: -15px;"/>${course.cnum}</td>
+		                <td class="subject" style="text-align: center;">
+		                	<a href="/board/product/read.html?no=16&board_no=5" style="color:#555555;">${course.cname}</a> 
+		                    <img src="http://img.echosting.cafe24.com/design/skin/admin/ko_KR/ico_attach2.gif"  alt="파일첨부" class="ec-common-rwd-image"/>
+		               		<span></span>
+			            </td>
+		                <td class="displaynone"></td>
+		                <td class="subject">
+		                    <span class="displaynone">
+		                        <a href="#none" onclick="BOARD.viewTarget('16','5',this);">
+		                        <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/btn_unfold.gif" alt="내용 보기"/></a>
+		                    </span>
+		                     <a href="/board/product/read.html?no=16&board_no=5" style="color:#555555;">${course.cintro}</a> 
+		                </td>
+		                <td>${course.nick}</td>
+		                <td class="txtLess ">${course.cdate}</td>
+		                <td class="txtLess ">${course.love}</td>
+		                <td class="txtLess ">${course.choosed}</td>
+		                <td class="displaynone"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point0.gif" alt="0점"/></td>
+		            </tr>
+	            </c:if>
+	            <c:set var="i" value="${i + 1}"/>
 	        </c:forEach>
 		</tbody>
 	</table>
@@ -360,12 +354,19 @@
 </div>
 	
 	<div id="paging" class="xans-element- xans-board xans-board-paging-1002 xans-board-paging xans-board-1002 ec-base-paginate">
-		<a href="?board_no=5&page=1"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지"/></a>
-		<ol>
-			<li class="xans-record-"><a href="?board_no=5&page=1" class="this">1</a></li>
-		</ol>
-		<a href="?board_no=5&page=1"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지"/></a>
+		
 	</div>
+	<%
+		List<Course> courseList = (List<Course>)request.getAttribute("courseList");
+		long courseListLength = courseList.size();
+	%>
+	
+	<script type="text/javascript">
+		(function() {
+			let courseLength = <%=courseListLength%>;
+			pageSet(10, 1, courseLength);
+		})();
+	</script>
 
 		<form id="boardSearchForm" name="" action="/board/상품-qa/6" method="get" target="_top" enctype="multipart/form-data">
 			<input id="board_no" name="board_no" value="6" type="hidden"/>
@@ -376,7 +377,7 @@
 					<legend>게시물 검색</legend>
 						<p class="category displaynone"></p>
 						<div style="display: flex; justify-content: right; align-items: center;">
-							<select id="pageNum" name="search_key" fw-filter="" fw-label="" fw-msg="" >
+							<select id="c" name="search_key" fw-filter="" fw-label="" fw-msg="" >
 								<option value="10" selected>페이지수</option>
 								<option value="10">10</option>
 								<option value="20">20</option>

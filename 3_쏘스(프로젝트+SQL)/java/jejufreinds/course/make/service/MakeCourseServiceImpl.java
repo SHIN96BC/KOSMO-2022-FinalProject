@@ -132,11 +132,11 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 	
 	@Override
 	public boolean findCourseName(String cname) {
-		Long course = makeCourseRepository.selectCourseNum(cname);
-		if(course != null) {
-			return true;
-		}else {
+		String courseName = makeCourseRepository.selectCourseName(cname);
+		if(cname.equals(courseName)) {
 			return false;
+		}else {
+			return true;
 		}
 	}
 	
@@ -153,17 +153,8 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 		List<String> divisionList = saveCourse.getDivisionlist();
 		List<SaveCourseContent> coursecontentList = saveCourse.getCoursemaplist();
 		
-		// 테스트 용
+		// 테스트 용 나중에 지우기
 		cnick = "테스트";
-		System.out.println("cnick: " + cnick);
-		System.out.println("cname: " + cname);
-		System.out.println("ctaglist: " + ctaglist);
-		System.out.println("cintro: " + cintro);
-		System.out.println("ccost: " + ccost);
-		System.out.println("startdate: " + startdate);
-		System.out.println("lastdate: " + lastdate);
-		System.out.println("coursecontentList: " + coursecontentList);
-		System.out.println("divisionList: " + divisionList);
 		
 		if(cnick != null && cname != null && ctaglist != null && cintro != null && divisionList != null && ccost != null && startdate != null && lastdate != null && coursecontentList != null) {
 			cnick = cnick.trim();

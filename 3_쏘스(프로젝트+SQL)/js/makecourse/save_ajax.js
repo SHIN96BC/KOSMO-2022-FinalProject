@@ -4,6 +4,7 @@ $(document).ready(function() {
         const comboboxNum = $('#lodgment_combobox').val();
         const courseName = $('#course_name').val();
         const courseInfo = $('#course_info').val();
+        const courseNameCheck = $('#find_cname').text();
 
         if(!courseName) {  // 코스이름 입력 체크
             alert("코스이름을 입력해주세요");
@@ -12,6 +13,12 @@ $(document).ready(function() {
         }
         if(!courseInfo) {  // 코스설명 입력 체크
             alert("코스설명을 작성해주세요");
+            location.href = "#content";
+            return;
+        }
+
+        if(courseNameCheck != '사용가능한 코스 이름 입니다.') {
+            alert("코스이름을 사용할 수 없습니다.");
             location.href = "#content";
             return;
         }

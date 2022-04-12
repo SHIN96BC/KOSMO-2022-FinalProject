@@ -38,6 +38,7 @@ public interface MakeCourseRepository {
 	
 	// 코스 조회
 	Long selectCourseNum(String cname);
+	String selectCourseName(String cname);
 	
 	// 코스 삭제 ( 필요할까? )
 	
