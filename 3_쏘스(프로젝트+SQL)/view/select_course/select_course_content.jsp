@@ -366,47 +366,47 @@
 					<!-- // 메인 태그-->
 				</div>
 				
-				<div class="addBox">
+				<div class="addBox"style="width:1280px;margin-left:0px;">
 					<dl class="add">
-						<dt id="storeAddressTitle">코스설명 </dt>
-						<dd id="storeAddressTxt">${food.faddress} </dd>
+						<dt id="storeAddressTitle">코스설명 - ${course.cintro}</dt>
 					</dl>
 				</div>
-				
-			<c:set var="i" value="1"></c:set>	
-			<C:forEach begin="1" end="${fn:length(selectCourseContentList)}" step="1" varStatus="i">
-				<c:forEach items="${selectCourseContentList}" var="selectCourseContent">
-					<c:if test="${i.index eq selectCourseContent.cday}" >
-						<div class="store_con" id="storeInfo" style="display: block;">
-				            <h2 class="s_tit" id="storeInfoTitle">${selectCourseContent.cday}박 일정</h2> <!-- 이 맛집의 정보가 알고 싶은가요? -->
-				            <dl class="store_view" id="storeTimeFrame" style="display: block;">
+			
+			 
+                
+            <script type="text/javascript" src="/js/selectcourse/course_content_info.js"></script>
+			
+			<c:set var="count" value="0"></c:set>
+			<c:forEach begin="1" end="${fn:length(selectCourseContentList)}" step="1">
+				<c:set var="i" value="${i+1}"></c:set>
+				<c:if test="${fn:length(selectCourseContentList) ne count}">
+					<div class="store_con" id="storeInfo" style="display: block;background-color: #f7f8fa;">
+					<h2 class="s_tit" id="storeInfoTitle" style="margin-bottom: -20px;display:inline-block;">▶ ${i}박 일정 경유지</h2> <!-- 이 맛집의 정보가 알고 싶은가요? -->
+					<a class="btnEm sizeM"style="color:rgb(255,255,255);cursor:pointer;margin-left:20px;">경로보기</a>
+					<c:forEach items="${selectCourseContentList}" var="selectCourseContent">
+						<c:if test="${i eq selectCourseContent.cday}" >
+							<c:set var="count" value="${count+1}"></c:set>
+				            <dl class="store_view" id="storeTimeFrame" style="display: block;background-color: #fff; height:190px;margin-top: 30px;box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.2)">
 			                  <!--  // 영업시간, 쉬는시간, 휴무일 -->
 					            <dt class="hide">영업시간</dt> <!-- MSG : 영업시간 -->
-					            <dd>
-					               <div class="row" id="workingTimeFrame" style="display: block;">
-					                  <img src="/photo/${selectCourseContent.contentphoto}"></img>
-					                  <div class="cell" id="workingTimeTitle">영업시간</div>
-					                  <div class="cell" id="workingTime">
-					                  <dd style="margin-top: -40px;">${selectCourseContent.contentname}</dd>
+					            <dd style="display: inline-block;align-items:center;">
+					               <div class="row" id="workingTimeFrame" style="display: inline-block;">
+					                  <img src="/photo/${selectCourseContent.contentphoto}" style="width: 290px; height: 190px;margin-top:-132px;"></img>
+					               </div>
+					               <div class="cell" id="workingTimeTitle"style="display:inline-block;height:5px;margin-left:10px;">
+					               		<div class="content_name" style="font-size: 2rem;font-weight:bold;margin-bottom:10px;">${selectCourseContent.contentname}</div>
+					               		<div style="margin-bottom:10px;">${selectCourseContent.contentintro}</div>
+					               		<div style="margin-bottom:10px;">주소 - ${selectCourseContent.contentaddress}</div>
+					               		<div style="margin-bottom:10px;">영업시간 - ${selectCourseContent.contentopcl}</div>
+					               		<a class="btnEm sizeM content_info" style="margin-right: 10px;color:rgb(255,255,255);cursor:pointer;">상세정보</a>
+					               </div>
 					            </dd>  
-					            <dt class="hide">쉬는시간</dt> <!-- MSG : 영업시간 -->
-					            <dd style ="margin-top: -30px;">
-					               <div class="row" id="workingTimeFrame" style="display: block;">
-					                 <div style ="margin-top: -30px;" class="cell" id="workingTimeTitle">쉬는시간</div>
-					                  <div class="cell" id="workingTime">
-					                  <dd style="margin-top: -40px;">${selectCourseContent.contentintro}</dd>
-					            </dd>
-					            <dd style ="margin-top: -30px;">
-					               <div class="row" id="workingTimeFrame" style="display: block;">
-					                 <div style ="margin-top: -30px;" class="cell" id="workingTimeTitle">쉬는시간</div>
-					                  <div class="cell" id="workingTime">
-					                  <dd style="margin-top: -40px;">${selectCourseContent.contentintro}</dd>
-					            </dd>
 				        	</dl>
-		            	</div>
-					</c:if>
-				</c:forEach>
-			</C:forEach>
+						</c:if>
+					</c:forEach>
+					</div>
+				</c:if>
+			</c:forEach>
 								 
 											 
 					<!-- 컨텐츠 끝 -->

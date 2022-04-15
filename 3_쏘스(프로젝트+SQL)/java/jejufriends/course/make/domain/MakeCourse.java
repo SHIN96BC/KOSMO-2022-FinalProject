@@ -17,14 +17,28 @@ public class MakeCourse {
 	long contentcost; // 컨텐츠 평균 가격
 	long contentchoosed; // 컨텐츠 선택받은 횟수
 	String contentphoto; // 컨텐츠 사진
-	String contentAddress; // 컨텐츠 주소
-	String locationX; // 컨텐츠 경도
-	String locationY; // 컨텐츠 위도
+	String contentaddress; // 컨텐츠 주소
+	String xlocation; // 컨텐츠 경도
+	String ylocation; // 컨텐츠 위도
 	String contenttype; // 컨텐츠 종류
+	String contentintro;
+	String contentintro2;
+	String contentphone;
+	String contentopcl;
+	String contentbreak;
+	String contentclosed;
+	String contentphoto2;
+	String contentphoto3;
+	long contentviews;
+	String contentmenu;
+	String contentmenu2;
+	String contentmenu3;
 	
 	public MakeCourse(long contentnum, String contentname, int contentdivision, double contentstar, long contentcost,
-			long contentchoosed, String contentphoto, String contentAddress, String locationX, String locationY,
-			String contenttype) {
+			long contentchoosed, String contentphoto, String contentaddress, String xlocation, String ylocation,
+			String contenttype, String contentintro, String contentintro2, String contentphone, String contentopcl,
+			String contentbreak, String contentclosed, String contentphoto2, String contentphoto3, long contentviews,
+			String contentmenu, String contentmenu2, String contentmenu3) {
 		this.contentnum = contentnum;
 		this.contentname = contentname;
 		this.contentdivision = contentdivision;
@@ -32,11 +46,21 @@ public class MakeCourse {
 		this.contentcost = contentcost;
 		this.contentchoosed = contentchoosed;
 		this.contentphoto = contentphoto;
-		this.contentAddress = contentAddress;
-		this.locationX = locationX;
-		this.locationY = locationY;
+		this.contentaddress = contentaddress;
+		this.xlocation = xlocation;
+		this.ylocation = ylocation;
 		this.contenttype = contenttype;
+		this.contentintro = contentintro;
+		this.contentintro2 = contentintro2;
+		this.contentphone = contentphone;
+		this.contentopcl = contentopcl;
+		this.contentbreak = contentbreak;
+		this.contentclosed = contentclosed;
+		this.contentphoto2 = contentphoto2;
+		this.contentphoto3 = contentphoto3;
+		this.contentviews = contentviews;
+		this.contentmenu = contentmenu;
+		this.contentmenu2 = contentmenu2;
+		this.contentmenu3 = contentmenu3;
 	}
-	
-	
 }

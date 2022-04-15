@@ -69,7 +69,19 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 						activity.getAaddress(),
 						activity.getXlocation(),
 						activity.getYlocation(),
-						"COURSE_ACTIVITY"
+						"COURSE_ACTIVITY",
+						activity.getAintro(),
+						activity.getAintro2(),
+						activity.getAphone(),
+						activity.getAopcl(),
+						activity.getAbreak(),
+						activity.getAclosed(),
+						activity.getAphoto2(),
+						activity.getAphoto3(),
+						activity.getViews(),
+						null,
+						null,
+						null
 					));
 		}
 		for(Hotel hotel: HotelList) {
@@ -85,7 +97,19 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 						hotel.getHaddress(),
 						hotel.getXlocation(),
 						hotel.getYlocation(),
-						"COURSE_HOTEL"
+						"COURSE_HOTEL",
+						hotel.getHintro(),
+						hotel.getHintro2(),
+						hotel.getHphone(),
+						hotel.getHopcl(),
+						hotel.getHbreak(),
+						hotel.getHclosed(),
+						hotel.getHphoto2(),
+						hotel.getHphoto3(),
+						hotel.getViews(),
+						null,
+						null,
+						null
 					));
 		}
 		for(Food food: foodList) {
@@ -102,7 +126,19 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 						food.getFaddress(),
 						food.getXlocation(),
 						food.getYlocation(),
-						"COURSE_FOOD"
+						"COURSE_FOOD",
+						food.getFintro(),
+						food.getFintro2(),
+						food.getFphone(),
+						food.getFopcl(),
+						food.getFbreak(),
+						food.getFclosed(),
+						food.getFphoto2(),
+						food.getFphoto3(),
+						food.getViews(),
+						food.getFmenu(),
+						food.getFmenu2(),
+						food.getFmenu3()
 					));
 		}
 		for(LandMark landmark: landmarkList) {
@@ -118,7 +154,19 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 						landmark.getLaddress(),
 						landmark.getXlocation(),
 						landmark.getYlocation(),
-						"COURSE_LANDMARK"
+						"COURSE_LANDMARK",
+						landmark.getLintro(),
+						landmark.getLintro2(),
+						landmark.getLphone(),
+						landmark.getLopcl(),
+						null,
+						landmark.getLclosed(),
+						landmark.getLphoto2(),
+						landmark.getLphoto3(),
+						landmark.getViews(),
+						null,
+						null,
+						null
 					));
 		}
 		
@@ -205,13 +253,13 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 					}
 					if(cday == -1) return false;
 					
-					int order = 1;
+					int corder = 1;
 					List<String> contentList = saveCourseContent.getContentList();
 					for(String content: contentList) {
 						String contentType = searchContents.get(content).getContenttype();
-						CourseContent courseContent = new CourseContent(content, cday, order, cnum, contentType);
+						CourseContent courseContent = new CourseContent(content, cday, corder, cnum, contentType);
 						makeCourseRepository.insertCourseContent(courseContent);
-						order++;
+						corder++;
 					}
 				}
 				return true;

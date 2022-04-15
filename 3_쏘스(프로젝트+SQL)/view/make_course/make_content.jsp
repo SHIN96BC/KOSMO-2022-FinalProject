@@ -5,17 +5,7 @@
 <html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
 	<head>
 
-<script>
-(function(i, s, o, g, r, a, m) {
-    a = s.createElement(o);
-    m = s.getElementsByTagName(o)[0];
-    a.src = g;
-    a.onload = function() {
-        i[r].init('https://js-error-tracer-api.cafe24.com', {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJybGdoMjU4Ny5jYWZlMjQuY29tIiwiYXVkIjoianMtZXJyb3ItdHJhY2VyLWFwaS5jYWZlMjQuY29tIiwibWFsbF9pZCI6InJsZ2gyNTg3Iiwic2hvcF9ubyI6MSwicGF0aF9yb2xlIjoiQk9BUkRfUFJPRFVDVF9ERVRBSUwiLCJsYW5ndWFnZV9jb2RlIjoia29fS1IiLCJjb3VudHJ5X2NvZGUiOiJLUiIsIm9yaWdpbiI6Imh0dHA6XC9cL3NraW4tc2tpbjEucmxnaDI1ODcuY2FmZTI0LmNvbSIsImlzX2NvbnRhaW5lciI6ZmFsc2UsImhvc3RuYW1lIjoidWUxMjA0In0.7If8V_isyvg_298aep4GNmLzYMi7lBj_P0mL4_Zfnyg","collectWindowErrors":true,"preventDuplicateReport":true,"storageKeyPrefix":"EC_JET.BOARD_PRODUCT_DETAIL"});
-    };
-    m.parentNode.insertBefore(a, m);
-}(window, document, 'script', '/ind-script/optimizer.php?filename=08_Iz03VNzQq0i8oyk8vSszVLy8v18_MS-EqTi7KLCjRz0oFY57czDyerGIA&type=js&k=f8c449ff82a3977059c3195db755507c2666c339&t=1643021158', 'EC_JET'));
-</script><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/><!-- PG크로스브라우징필수내용 -->
 <meta http-equiv="Cache-Control" content="no-cache"/>
 <meta http-equiv="Expires" content="0"/>
@@ -265,13 +255,7 @@
 					<!-- 컨텐츠 끝 -->
 </div>
 
-<div class="ec-base-button ">
-            
-            <span class="gRight">
-                <a href="#none" onclick="BOARD_READ.article_delete('BoardDelForm','5');" class="btnNormalFix sizeS ">삭제</a>
-                <a href="/board/free/modify.html?board_act=edit&no=13&board_no=5" class="btnEmFix sizeS ">수정</a>
-            </span>
-        </div>
+
 </div>
 </form>
 
@@ -328,36 +312,6 @@
         </ul>
 </div>
 </div>
-
-
-<form id="commentWriteForm" name="" action="/exec/front/Board/CommentWrite/5" method="post" target="_self" enctype="multipart/form-data" >
-<input id="board_no" name="board_no" value="5" type="hidden"  />
-<input id="no" name="no" value="13" type="hidden"  />
-<input id="comment_no" name="comment_no" value="" type="hidden"  />
-<input id="member_id" name="member_id" value="" type="hidden"  />
-<div class="xans-element- xans-board xans-board-commentwrite-1002 xans-board-commentwrite xans-board-1002 "><!-- 댓글권한 있음 -->
-<div class="">
-            <fieldset>
-			<legend>댓글 입력</legend>
-                <div class="input">
-                    <strong>댓글달기</strong>
-                 	<input style="border: 1px solid rgba(211, 211, 211, 0.7); background-color: rgba(216, 216, 216, 0.3);"type="text" name="" value="기호" disabled/>
-                </div>
-                <div class="view">
-                
-                    <textarea id="comment" name="comment" fw-filter="isFill" fw-label="댓글내용" fw-msg="" style="border: 1px solid rgba(211, 211, 211, 0.7);"></textarea>                    
-                    <a href="#none" onclick="BOARD_COMMENT.comment_insert('/exec/front/Board/CommentWrite/5');" class="btnEm sizeL ">확인</a>
-                </div>
-                <p class="grade displaynone"></p>
-                <p class="displaynone"> /  byte</p>
-                <p class="captcha displaynone">
-                <span class="ec-base-help txtInfo">왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)</span>
-                </p>
-            </fieldset>
-            </div>
-		</div>
-            </form>
-
 
 		</div><!-- //container -->
 	</div>

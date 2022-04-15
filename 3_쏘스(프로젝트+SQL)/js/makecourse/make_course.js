@@ -3,20 +3,20 @@
 $(document).ready(function() {
     $('#course_info').on("keydown", function() {
         let content = $(this).val();
-        if(content.length >= 200) {
-            $(this).val(content.substring(0,200));
-            $('#content_info_count').text("200/최대 200자");
+        if(content.length >= 100) {
+            $(this).val(content.substring(0,100));
+            $('#content_info_count').text("100/최대 100자");
         }else {
-            $('#content_info_count').text(content.length + "/200");
+            $('#content_info_count').text(content.length + "/100");
         }
     });
     $('#course_info').on("keyup", function() {
         let content = $(this).val();
-        if(content.length >= 200) {
-            $(this).val(content.substring(0,200));
-            $('#content_info_count').text("200/최대 200자");
+        if(content.length >= 100) {
+            $(this).val(content.substring(0,100));
+            $('#content_info_count').text("100/최대 100자");
         }else {
-            $('#content_info_count').text(content.length + "/200");
+            $('#content_info_count').text(content.length + "/100");
         }
     });
 });
