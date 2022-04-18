@@ -14,39 +14,44 @@ $(document).ready(function() {
                 data: {keyword: $('#course_search_id').val()},
                 success: function(data) {
                     if(data) {
-                        let searchHtml = '';
-                        makeCourseList = data;
-                        for(let makeCourse of makeCourseList) {
-                            let contentName = makeCourse.contentname.replace(/(\s*)/g, "");
-                            searchHtml += `
-                                <li id="search_${contentName}" class="make_search_content make_content">
-                                    <input type="hidden" class="content_input" value="${makeCourse.contentAddress}"/>
-                                    <div class="prd-img">
-                                        <img class="" style="width:100%; height:100%;" src="/photo/${makeCourse.contentphoto}"/>
-                                    </div>
-                                    
-                                    <div class="prd-cont">
-                                        <div class="subject content_subject" style="cursor:pointer; display:inline-block;">${makeCourse.contentname}</div>
-                                        <br/>
-                                        <div class="price-box" style="display:inline-block;">
-                                            <strong>가격: ${makeCourse.contentcost}</strong>
+                        if(data[0].contentname === "#에러") {
+                            alert("검색중 문제가 발생했습니다");
+            		        window.location.reload();
+                        }else{
+                            let searchHtml = '';
+                            makeCourseList = data;
+                            for(let makeCourse of makeCourseList) {
+                                let contentName = makeCourse.contentname.replace(/(\s*)/g, "");
+                                searchHtml += `
+                                    <li id="search_${contentName}" class="make_search_content make_content">
+                                        <input type="hidden" class="content_input" value="${makeCourse.contentaddress}"/>
+                                        <div class="prd-img">
+                                            <img class="" style="width:100%; height:100%;" src="/photo/${makeCourse.contentphoto}"/>
                                         </div>
-                                    </div>
-                                </li>
-                                `;
-                        }
-                        if(searchHtml.length === 0) {
-                            $('#course_search_append').append(`
-                                <li>
-                                    <div class="prd-img"></div>
-                                    <div class="prd-cont">
-                                     <div class="subject">검색 결과가 없습니다</div>
-                                    </div>
-                                </li>
-                                `
-                            );
-                        }else {
-                            $('#course_search_append').append(searchHtml);
+                                        
+                                        <div class="prd-cont">
+                                            <div class="subject content_subject" style="cursor:pointer; display:inline-block;">${makeCourse.contentname}</div>
+                                            <br/>
+                                            <div class="price-box" style="display:inline-block;">
+                                                <strong>가격: ${makeCourse.contentcost}</strong>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    `;
+                            }
+                            if(searchHtml.length === 0) {
+                                $('#course_search_append').append(`
+                                    <li>
+                                        <div class="prd-img"></div>
+                                        <div class="prd-cont">
+                                        <div class="subject">검색 결과가 없습니다</div>
+                                        </div>
+                                    </li>
+                                    `
+                                );
+                            }else {
+                                $('#course_search_append').append(searchHtml);
+                            }
                         }
                     }else {
                         $('#course_search_append').append(`

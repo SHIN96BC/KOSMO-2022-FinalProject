@@ -1,7 +1,7 @@
 let mapContainer = document.getElementById('map'),
     mapOption = { 
         center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-        draggable: false, // 지도 드래그 & 확대 축소 막기
+        // draggable: false, // 지도 드래그 & 확대 축소 막기
         level: 3, // 지도의 확대 레벨
         
     };
@@ -43,14 +43,14 @@ function getInfo() {
     // 개발자도구를 통해 직접 message 내용을 확인해 보세요.
 }
 
+
 /*
 // 경로 선으로 그리는 
 let distanceOverlay; // 선의 거리정보를 표시할 커스텀오버레이 입니다
 let moveLine;
 let pathList = []; 
 let dots = []; // 선이 그려지고 있을때 클릭할 때마다 클릭 지점과 거리를 표시하는 커스텀 오버레이 배열입니다.
-function drawPath() {
-    
+function drawPath() { 
     for(let i = 0; i < pathList.length; i++) {
         moveLine = new kakao.maps.Polyline({
             map: map, // 선을 표시할 지도입니다 
@@ -219,62 +219,30 @@ let infowindow = new kakao.maps.InfoWindow({
     content: null,
 });
 $(document).ready(function() {
-    $(document).on('click', '.make_content', function() {
-        deleteMarker();
-        deleteInfoWindow();
-        //deleteClickLine();
-        //deleteCircleDot();
-        //deleteDistnce();
-        $('.distanceInfo').remove();
-        const contentAddress = $(this).children('.content_input').val();
-        const contentName = $(this).children('.prd-cont').children('.content_subject').text();
-        geocoder.addressSearch(contentAddress, function(result, status) {
-
-            // 정상적으로 검색이 완료됐으면 
-             if (status === kakao.maps.services.Status.OK) {
-        
-                let coords = new kakao.maps.LatLng(result[0].y, result[0].x);
-    
-                // 결과값으로 받은 위치를 마커로 표시합니다
-                let newMarker = new kakao.maps.Marker({
-                    map: map,
-                    position: coords
-                });
-                marker = newMarker;
-        
-                // 인포윈도우로 장소에 대한 설명을 표시합니다
-                let newInfowindow = new kakao.maps.InfoWindow({
-                    content: `<div style="width:150px;text-align:center;padding:6px 0;">${contentName}</div>`
-                });
-                infowindow = newInfowindow;
-                infowindow.open(map, marker);
-        
-                // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
-                map.setCenter(coords);
-                map.setLevel(3); // 맵 확대 축소
-                getInfo();
-            } 
-        });
-    });
 
     // 일정에 들어있는 모든 컨텐츠 마커 표시 이벤트
-    $(document).on('click', '.route', function() {
+    $(document).on('click', '.select_route', function() {
+        // pathList = [];
         deleteMarker();
         deleteInfoWindow();
         // deleteClickLine();
         // deleteCircleDot();
         // deleteDistnce();
-        const lodgmentNum = $(this).siblings('.delete_input').val(); // 형제 태그 찾기
-        const contentLength = $(`#course_date_${lodgmentNum}`).children().length;
+        const lodgmentNum = $(this).siblings('.lodgment').val(); // 형제 태그 찾기
+        const contentLength = $(`#content_list_${lodgmentNum}`).children().length;
+
         for(let i = 0; i < contentLength; i++) {
             // children() 은 첫번 재 자식만 찾고, find() 는 모든 자식, 손자 태그까지 찾는다. 
-            let contentName = $(`#course_date_${lodgmentNum}`).find('.content_subject').eq(i).text();
-            let addressArr = $(`#course_date_${lodgmentNum}`).find('.content_input').eq(i).val(); //eq() 는 찾은 값 중에 몇번째인지 선택할 때 사용
+            let contentName = $(`#content_list_${lodgmentNum}`).find('.content_name').eq(i).text();
+            let addressArr = $(`#content_list_${lodgmentNum}`).find('.content_address').eq(i).val(); //eq() 는 찾은 값 중에 몇번째인지 선택할 때 사용
+
             // 좌표 검색
             geocoder.addressSearch(addressArr, function(result, status) {
                 if (status === kakao.maps.services.Status.OK) {
                     let latlng = new kakao.maps.LatLng(result[0].y, result[0].x);
-                    // pathList.push(latlng);
+
+                    // pathList.push(latlng); // 패스 리스트에 추가( drawPath )
+
                     let newMarker = new kakao.maps.Marker({
                         map: map, // 마커를 표시할 지도
                         position: latlng // 마커를 표시할 위치
@@ -289,10 +257,11 @@ $(document).ready(function() {
                 }
             });
         }
-        // drawPath();
-        map.setLevel(11); // 맵 확대 축소
-        let mapCenter = new kakao.maps.LatLng(33.450701, 126.570667)
+        map.setLevel(10); // 맵 확대 축소
+        let mapCenter = new kakao.maps.LatLng(33.400701, 126.570667);
         map.setCenter(mapCenter);
+        // drawPath();
+        location.href = '#wrap';
     });
 });
 
@@ -313,3 +282,34 @@ function deleteInfoWindow() {
     }
 }
 
+
+
+
+/*
+// div 태그 캡쳐해서 이미지파일 저장
+function pringDiv(div) {
+    div = div[0];
+    html2canvas(div).then(function(canvas) {
+        let myImage = canvas.toDataURL();
+        const courseName = $('#course-name').val();
+        console.log('courseName: ' + courseName);
+        downloadURI(myImage, `${courseName}.png`);
+    })
+}
+
+function downloadURI(uri, imageName) {
+    let link = document.createElement('a');
+    link.download = imageName;
+    link.href = uri;
+    document.body.appendChild(link);
+    link.click();
+}
+
+
+$(document).ready(function() {
+    console.log('실행1');
+    $('.chk-box2').click(function() {
+        pringDiv($('#map'));
+    });
+});
+*/

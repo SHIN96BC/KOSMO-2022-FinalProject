@@ -69,7 +69,7 @@
 			                    </li>
 		
 			                    <li >
-			                       <a href="shoping-cart.html" style="font-size: 18px;">Contents</a>
+			                       <a href="" style="font-size: 18px;">Contents</a>
 			                       <ul class="sub-menu">
 			                          <li><a href="/jejufriends/food/list.do">소문난맛집</a></li>
 			                          <li><a href="/jejufriends/landmark/list.do">관광지</a></li>
@@ -79,20 +79,20 @@
 			                    </li>
 		
 			                    <li>
-			                       <a href="blog.html" style="font-size: 18px;">Community</a>
+			                       <a href="" style="font-size: 18px;">Community</a>
 			                    </li>
 		
 		
 			                    <li>
-			                       <a href="contact.html" style="font-size: 18px;">CS</a>
+			                       <a href="" style="font-size: 18px;">CS</a>
 			                       <ul class="sub-menu">
-			                          <li><a href="index.html">Q&A</a></li>
-			                          <li><a href="home-02.html">FAQ</a></li>
+			                          <li><a href="/jejufriends/qna/list.do">Q&A</a></li>
+			                          <li><a href="/jejufriends/faq/list.do">FAQ</a></li>
 			                       </ul>
 			                    </li>
 		                    
 			                    <li>
-			                       <a href="about.html" style="font-size: 18px;">About</a>
+			                       <a href="" style="font-size: 18px;">About</a>
 			                    </li>
 		                	</ul>
 		              	</div>   
@@ -246,6 +246,9 @@
 <meta name="description" content="자유게시판입니다." />
 <meta name="keywords" content="자유게시판" />
 <meta name="design_html_path" content="/board/free/list.html" />
+<meta name="_csrf" content="${_csrf.token}"/>
+<meta name="_csrf_header" content="${_csrf.headerName}"/>
+<meta name="_csrf_parameter" content="${_csrf.parameterName}"/>
 
 
 <script type="text/javascript" src="/js/selectcourse/paging.js"></script>

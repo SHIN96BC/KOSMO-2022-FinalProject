@@ -59,13 +59,19 @@ public class SelectCourseServiceImpl implements SelectCourseService {
 	
 	@Override
 	public String findContentType(String contentname) {
-		return selectContents.get(contentname).getContenttype();
+		if(selectContents != null) {
+			return selectContents.get(contentname).getContenttype();
+		}
+		return null;
 	}
 	
 	@Override
 	public MakeCourse contentInfo(String contentname) {
-		MakeCourse makeCourse = selectContents.get(contentname);
-		return makeCourse;
+		if(selectContents != null) {
+			MakeCourse makeCourse = selectContents.get(contentname);
+			return makeCourse;
+		}
+		return null;
 	}
 	
 	@Override

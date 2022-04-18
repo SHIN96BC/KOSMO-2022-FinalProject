@@ -37,13 +37,27 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 		List<Food> foodList = makeCourseRepository.selectFoodSearch(keyword);
 		List<LandMark> landmarkList = makeCourseRepository.selectLandmarkSearch(keyword);*/
 		List<MakeCourse> makeCourseList = new ArrayList<>();
-		Set<String> keys = searchContents.keySet();
-		for(String key: keys) {
-			if(key.contains(keyword)) {
-				makeCourseList.add(searchContents.get(key));
+		if(searchContents != null) {
+			Set<String> keys = searchContents.keySet();
+			if(keyword != null) {
+				if(keyword.trim().length() != 0) {
+					for(String key: keys) {
+						if(key.contains(keyword)) {
+							makeCourseList.add(searchContents.get(key));
+						}
+					}
+				}else {
+					for(String key: keys) {
+						makeCourseList.add(searchContents.get(key));
+					}
+				}
 			}
+		}else {
+			//에러가 발생했을 때
+			MakeCourse makeCourse = new MakeCourse();
+			makeCourse.setContentname("#에러");
+			makeCourseList.add(makeCourse);
 		}
-		
 		return makeCourseList;
 	}
 
@@ -175,13 +189,19 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 	
 	@Override
 	public String findContentType(String contentname) {
-		return searchContents.get(contentname).getContenttype();
+		if(searchContents != null) {
+			return searchContents.get(contentname).getContenttype();
+		}
+		return null;
 	}
 
 	@Override
 	public MakeCourse contentInfo(String contentname) {
-		MakeCourse makeCourse = searchContents.get(contentname);
-		return makeCourse;
+		if(searchContents != null) {
+			MakeCourse makeCourse = searchContents.get(contentname);
+			return makeCourse;
+		}
+		return null;
 	}
 	
 	@Override
@@ -211,9 +231,6 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 		String lastdate = saveCourse.getLastdate();
 		List<String> divisionList = saveCourse.getDivisionlist();
 		List<SaveCourseContent> coursecontentList = saveCourse.getCoursemaplist();
-		
-		// 테스트 용 나중에 지우기
-		cnick = "테스트";
 		
 		if(cnick != null && cname != null && ctaglist != null && cintro != null && divisionList != null && ccost != null && startdate != null && lastdate != null && coursecontentList != null) {
 			cnick = cnick.trim();

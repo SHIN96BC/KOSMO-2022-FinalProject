@@ -44,6 +44,7 @@ $(document).ready(function() {
     $(document).on('click', '.make_course_content', function() {
         let contentName = $(this).children('.prd-cont').children('.content_subject').text();
         
+        // has() 는 맵이 파라미터에 넣은 키 값을 가지고 있는지 확인하는 메소드
         if(make_course_content_map.has(contentName)) {
             let makeCourseContentFlag = make_course_content_map.get(contentName);
             if(makeCourseContentFlag) {
@@ -82,7 +83,6 @@ $(document).ready(function() {
             let flag = false;
             const overlapCheck = overlapCheckList[comboboxIndex-1];
             const listNameList = overlapCheck.listNameList;
-            console.log("listNameList: "+listNameList);
             if(listNameList){
                 for(let contentName of listNameList) {
                     if(make_search_content_map.has(contentName)) {
@@ -109,7 +109,7 @@ $(document).ready(function() {
                             $(`#course_date_${comboboxIndex}`).append(
                                 `
                                 <li id="calendar_day_${comboboxIndex}_${contentName}" class="make_course_content make_content" >
-                                    <input type="hidden" class="content_input" value="${makeCourse.contentAddress}"/>
+                                    <input type="hidden" class="content_input" value="${makeCourse.contentaddress}"/>
                                     <input type="hidden" class="division_input" value="${makeCourse.contentdivision}"/>
                                     <input type="hidden" class="set_amount" value="${makeCourse.contentcost}"/>
                                     <div class="prd-img">
@@ -184,7 +184,6 @@ function setAmount() {
                 if(amount.indexOf('원')) {
                     amount = amount.substring(amount.indexOf('원')-1);
                 }
-                console.log("amount: " + amount);
                 if(amount) {
                     maxAmount += Number(amount);
                 }

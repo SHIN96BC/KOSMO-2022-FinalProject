@@ -65,17 +65,24 @@ public class SelectCourseController {
 		if(contentname != null) {
 			if(contentname.trim().length() != 0) {
 				String contentType = selectCourseService.findContentType(contentname);
-				if(contentType.equals("FOOD")) {
-					Food food = selectCourseService.contentFoodInfo(contentname);
-					modelAndView.setViewName("/make_course/make_content_food");
-					modelAndView.addObject("food", food);
-				}else {
-					MakeCourse makeCourse = selectCourseService.contentInfo(contentname);
-					modelAndView.setViewName("/make_course/make_content");
-					modelAndView.addObject("makeCourse", makeCourse);
+				if(contentType != null) {
+					if(contentType.equals("FOOD")) {
+						Food food = selectCourseService.contentFoodInfo(contentname);
+						modelAndView.setViewName("/make_course/make_content_food");
+						modelAndView.addObject("food", food);
+						return modelAndView;
+					}else {
+						MakeCourse makeCourse = selectCourseService.contentInfo(contentname);
+						if(makeCourse != null) {
+							modelAndView.setViewName("/make_course/make_content");
+							modelAndView.addObject("makeCourse", makeCourse);
+							return modelAndView;
+						}
+					}
 				}
 			}
 		}
+		modelAndView.setViewName("/error/error");
 		return modelAndView;
 	}
 }

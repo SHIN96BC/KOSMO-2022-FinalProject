@@ -36,13 +36,7 @@ public class MakeCourseController {
 	@PostMapping("search")
 	@ResponseBody
 	public List<MakeCourse> search(String keyword) {
-		List<MakeCourse> makeCourseList = new ArrayList<>();
-		if(keyword != null) {
-			if(keyword.trim().length() != 0) {
-				makeCourseList = makeCourseService.search(keyword);
-			}
-		}
-		return makeCourseList;
+		return makeCourseService.search(keyword);
 	}
 	
 	@GetMapping("contentInfo.do")
@@ -51,17 +45,24 @@ public class MakeCourseController {
 		if(contentname != null) {
 			if(contentname.trim().length() != 0) {
 				String contentType = makeCourseService.findContentType(contentname);
-				if(contentType.equals("FOOD")) {
-					Food food = makeCourseService.contentFoodInfo(contentname);
-					modelAndView.setViewName("/make_course/make_content_food");
-					modelAndView.addObject("food", food);
-				}else {
-					MakeCourse makeCourse = makeCourseService.contentInfo(contentname);
-					modelAndView.setViewName("/make_course/make_content");
-					modelAndView.addObject("makeCourse", makeCourse);
+				if(contentType != null) {
+					if(contentType.equals("COURSE_FOOD")) {
+						Food food = makeCourseService.contentFoodInfo(contentname);
+						modelAndView.setViewName("/make_course/make_content_food");
+						modelAndView.addObject("food", food);
+						return modelAndView;
+					}else {
+						MakeCourse makeCourse = makeCourseService.contentInfo(contentname);
+						if(makeCourse != null) {
+							modelAndView.setViewName("/make_course/make_content");
+							modelAndView.addObject("makeCourse", makeCourse);
+							return modelAndView;
+						}
+					}
 				}
 			}
 		}
+		modelAndView.setViewName("/error/error");
 		return modelAndView;
 	}
 	

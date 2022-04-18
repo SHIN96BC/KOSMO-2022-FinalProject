@@ -5,6 +5,12 @@
 <html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
 	<head>
 
+
+	<meta name="_csrf" content="${_csrf.token}"/>
+	<meta name="_csrf_header" content="${_csrf.headerName}"/>
+	<meta name="_csrf_parameter" content="${_csrf.parameterName}"/>
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/><!-- PG크로스브라우징필수내용 -->
 <meta http-equiv="Cache-Control" content="no-cache"/>

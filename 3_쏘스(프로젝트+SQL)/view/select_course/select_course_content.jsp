@@ -64,7 +64,7 @@
 		                    </li>
 	
 		                    <li class="label1" data-label1="hot">
-		                       <a href="product.html" style="font-size: 18px;">Course</a>
+		                       <a href="" style="font-size: 18px;">Course</a>
 		                       <ul class="sub-menu">
 		                          <li><a href="/jejufriends/select_course/select.do">코스추천</a></li>
 		                          <li><a href="/jejufriends/make_course/make.do">나만의코스</a></li>
@@ -72,7 +72,7 @@
 		                    </li>
 	
 		                    <li >
-		                       <a href="shoping-cart.html" style="font-size: 18px;">Contents</a>
+		                       <a href="" style="font-size: 18px;">Contents</a>
 		                       <ul class="sub-menu">
 		                          <li><a href="/jejufriends/food/list.do">소문난맛집</a></li>
 		                          <li><a href="/jejufriends/landmark/list.do">관광지</a></li>
@@ -82,20 +82,20 @@
 		                    </li>
 	
 		                    <li>
-		                       <a href="blog.html" style="font-size: 18px;">Community</a>
+		                       <a href="" style="font-size: 18px;">Community</a>
 		                    </li>
 	
 	
 		                    <li>
-		                       <a href="contact.html" style="font-size: 18px;">CS</a>
+		                       <a href="" style="font-size: 18px;">CS</a>
 		                       <ul class="sub-menu">
-								<li><a href="/jejufriends/faq/list.do?cp=1">FAQ</a></li>
-                                <li><a href="/jejufriends/qna/list.do?cp=1">QNA</a></li>
+								<li><a href="/jejufriends/qna/list.do">FAQ</a></li>
+                                <li><a href="/jejufriends/faq/list.do">QNA</a></li>
 		                       </ul>
 		                    </li>
 	                    
 		                    <li>
-		                       <a href="about.html" style="font-size: 18px;">About</a>
+		                       <a href="" style="font-size: 18px;">About</a>
 		                    </li>
 	                	</ul>
 	              	</div>   
@@ -236,6 +236,9 @@
 <meta name="author" content="기호제학" />
 <meta name="description" content="갤러리입니다." />
 <meta name="keywords" content="갤러리" /></head><body>
+<meta name="_csrf" content="${_csrf.token}"/>
+<meta name="_csrf_header" content="${_csrf.headerName}"/>
+<meta name="_csrf_parameter" content="${_csrf.parameterName}"/>
 
 
 <div style="margin-top: 150px;"></div>
@@ -380,30 +383,35 @@
 			<c:forEach begin="1" end="${fn:length(selectCourseContentList)}" step="1">
 				<c:set var="i" value="${i+1}"></c:set>
 				<c:if test="${fn:length(selectCourseContentList) ne count}">
-					<div class="store_con" id="storeInfo" style="display: block;background-color: #f7f8fa;">
-					<h2 class="s_tit" id="storeInfoTitle" style="margin-bottom: -20px;display:inline-block;">▶ ${i}박 일정 경유지</h2> <!-- 이 맛집의 정보가 알고 싶은가요? -->
-					<a class="btnEm sizeM"style="color:rgb(255,255,255);cursor:pointer;margin-left:20px;">경로보기</a>
-					<c:forEach items="${selectCourseContentList}" var="selectCourseContent">
-						<c:if test="${i eq selectCourseContent.cday}" >
-							<c:set var="count" value="${count+1}"></c:set>
-				            <dl class="store_view" id="storeTimeFrame" style="display: block;background-color: #fff; height:190px;margin-top: 30px;box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.2)">
-			                  <!--  // 영업시간, 쉬는시간, 휴무일 -->
-					            <dt class="hide">영업시간</dt> <!-- MSG : 영업시간 -->
-					            <dd style="display: inline-block;align-items:center;">
-					               <div class="row" id="workingTimeFrame" style="display: inline-block;">
-					                  <img src="/photo/${selectCourseContent.contentphoto}" style="width: 290px; height: 190px;margin-top:-132px;"></img>
-					               </div>
-					               <div class="cell" id="workingTimeTitle"style="display:inline-block;height:5px;margin-left:10px;">
-					               		<div class="content_name" style="font-size: 2rem;font-weight:bold;margin-bottom:10px;">${selectCourseContent.contentname}</div>
-					               		<div style="margin-bottom:10px;">${selectCourseContent.contentintro}</div>
-					               		<div style="margin-bottom:10px;">주소 - ${selectCourseContent.contentaddress}</div>
-					               		<div style="margin-bottom:10px;">영업시간 - ${selectCourseContent.contentopcl}</div>
-					               		<a class="btnEm sizeM content_info" style="margin-right: 10px;color:rgb(255,255,255);cursor:pointer;">상세정보</a>
-					               </div>
-					            </dd>  
-				        	</dl>
-						</c:if>
-					</c:forEach>
+					<div class="store_con" style="display: block;background-color: #f7f8fa;">
+						<h2 class="course_info" style="margin-bottom: -20px;display:inline-block;cursor:pointer;"oncontextmenu="return false" ondragstart="return false" onselectstart="return false">▼ ${i}박 일정 경유지</h2> <!-- 이 맛집의 정보가 알고 싶은가요? -->
+						<a class="btnEm sizeM select_route"style="color:rgb(255,255,255);cursor:pointer;margin-left:20px;">경로보기</a>
+						<input type="hidden" class="lodgment" value="${i}"/>
+						<div id="content_list_${i}">
+						<c:forEach items="${selectCourseContentList}" var="selectCourseContent">
+							<c:if test="${i eq selectCourseContent.cday}" >
+								<c:set var="count" value="${count+1}"></c:set>
+								
+					            <dl class="store_view" id="storeTimeFrame" style="display: block;background-color: #fff; height:190px;margin-top: 30px;box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.2)">
+				                  <!--  // 영업시간, 쉬는시간, 휴무일 -->
+						            <dt class="hide">영업시간</dt> <!-- MSG : 영업시간 -->
+						            <dd style="display: inline-block;align-items:center;">
+						               <div class="row" id="workingTimeFrame" style="display: inline-block;">
+						                  <img src="/photo/${selectCourseContent.contentphoto}" style="width: 290px; height: 190px;margin-top:-132px;"></img>
+						               </div>
+						               <div class="cell" id="workingTimeTitle"style="display:inline-block;height:5px;margin-left:10px;">
+						               		<div class="content_name" style="font-size: 2rem;font-weight:bold;margin-bottom:10px;">${selectCourseContent.contentname}</div>
+						               		<div style="margin-bottom:10px;">${selectCourseContent.contentintro}</div>
+						               		<div style="margin-bottom:10px;">주소 - ${selectCourseContent.contentaddress}</div>
+						               		<div style="margin-bottom:10px;">영업시간 - ${selectCourseContent.contentopcl}</div>
+						               		<a class="btnEm sizeM content_info" style="margin-right: 10px;color:rgb(255,255,255);cursor:pointer;">상세정보</a>
+						               		<input type="hidden" class="content_address" value="${selectCourseContent.contentaddress}"/>
+						               </div>
+						            </dd>  
+					        	</dl>
+							</c:if>
+						</c:forEach>
+						</div>
 					</div>
 				</c:if>
 			</c:forEach>
@@ -456,7 +464,7 @@
 	}
 </script>
 
-<div class="xans-element- xans-board xans-board-commentwrite-1002 xans-board-commentwrite xans-board-1002 "><!-- 댓글권한 있음 -->
+		<div class="xans-element- xans-board xans-board-commentwrite-1002 xans-board-commentwrite xans-board-1002 "><!-- 댓글권한 있음 -->
             <fieldset>
             <form id="commentWriteForm" name="f" action="review.do?fnum=${food.fnum}" method="post" target="_self"  >
 			<legend>댓글 입력</legend>
@@ -473,9 +481,9 @@
 		</div>
             
 
-
+	</div>
 		</div><!-- //container -->
-		
+		</div>
 	</div>
 	</div>
 </div><!-- //wrap -->
@@ -502,44 +510,44 @@
 <div id="footer">
 	<div class="xans-element- xans-layout xans-layout-footer cboth inner ">
 	<div class="bt_logo"><a href="/"><img src="/img/jeju2.png"/></a></div>
-<div class="bt_info" style="margin-left: 50px;">
-			<div class="bt_title">기호제학</div>
-			대표자 : 성기호<br/>
-			소재지 :   <br/>
-			사업자등록번호 :  <br/>
-			통신판매업신고번호 : <br/>
-			개인정보보호책임자 : <a href="mailto:rlgh2587@naver.com">성기호(rlgh2587@naver.com)</a>
-		</div>
-<!-- //bt_info -->
-<div class="bt_cscenter">
-			<div class="bt_title">고객센터</div>
-			010-4065-0757<br/>
-			rlgh2587@naver.com		</div>
-<!-- //bt_cscenter -->
-<div class="bt_runtime">
-<!-- 운영시간 및 계좌번호는 [상점관리 - 기본정보관리 - 내쇼핑몰정보 - CS운영시간] 에 작성하시면 자동출력됩니다. -->
+	<div class="bt_info" style="margin-left: 50px;">
+				<div class="bt_title">기호제학</div>
+				대표자 : 성기호<br/>
+				소재지 :   <br/>
+				사업자등록번호 :  <br/>
+				통신판매업신고번호 : <br/>
+				개인정보보호책임자 : <a href="mailto:rlgh2587@naver.com">성기호(rlgh2587@naver.com)</a>
+			</div>
+	<!-- //bt_info -->
+	<div class="bt_cscenter">
+				<div class="bt_title">고객센터</div>
+				010-4065-0757<br/>
+				rlgh2587@naver.com		</div>
+	<!-- //bt_cscenter -->
+	<div class="bt_runtime">
+	<!-- 운영시간 및 계좌번호는 [상점관리 - 기본정보관리 - 내쇼핑몰정보 - CS운영시간] 에 작성하시면 자동출력됩니다. -->
+						</div>
+	
+	<!-- //bt_communitu -->
+	<div class="cboth pdt70">
+				<ul class="cboth utilMenu">
+	<li><a href="/member/privacy.html"><strong>개인정보 처리방침</strong></a></li>
+					<li>|</li>
+					<li><a href="/member/agreement.html">이용약관</a></li>
+					<li>|</li>
+					<li><a href="/shopinfo/guide.html">이용안내</a></li>
+					<li>|</li>
+					<li><a href="/board/%EC%83%81%ED%92%88-qa/6/">제휴문의</a></li>
+				</ul>
+	<!-- //utilMenu --><div class="cboth escrow">고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 PG 사의 구매안전서비스를 이용하실 수 있습니다. [ LG U+ 에스크로 ]</div>
+				<div class="copyright">COPYRIGHT © <span>기호제학. </span> ALL RIGHTS RESERVED. HOSTING BY 카페24(주)</div>
+	
+				<div class="cboth bt_sns">
+	<!-- 하단 SNS 링크 수정하는곳 -->
 					</div>
-
-<!-- //bt_communitu -->
-<div class="cboth pdt70">
-			<ul class="cboth utilMenu">
-<li><a href="/member/privacy.html"><strong>개인정보 처리방침</strong></a></li>
-				<li>|</li>
-				<li><a href="/member/agreement.html">이용약관</a></li>
-				<li>|</li>
-				<li><a href="/shopinfo/guide.html">이용안내</a></li>
-				<li>|</li>
-				<li><a href="/board/%EC%83%81%ED%92%88-qa/6/">제휴문의</a></li>
-			</ul>
-<!-- //utilMenu --><div class="cboth escrow">고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 PG 사의 구매안전서비스를 이용하실 수 있습니다. [ LG U+ 에스크로 ]</div>
-			<div class="copyright">COPYRIGHT © <span>기호제학. </span> ALL RIGHTS RESERVED. HOSTING BY 카페24(주)</div>
-
-			<div class="cboth bt_sns">
-<!-- 하단 SNS 링크 수정하는곳 -->
-				</div>
-		</div>
-</div>
-<!-- //inner -->
+			</div>
+	</div>
+	<!-- //inner -->
 </div><!-- //footer -->
 
 

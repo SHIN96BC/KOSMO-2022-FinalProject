@@ -61,7 +61,7 @@
 			                    </li>
 		
 			                    <li class="label1" data-label1="hot">
-			                       <a href="product.html" style="font-size: 18px;">Course</a>
+			                       <a href="" style="font-size: 18px;">Course</a>
 			                       <ul class="sub-menu">
 			                          <li><a href="/jejufriends/select_course/select.do">코스추천</a></li>
 			                          <li><a href="/jejufriends/make_course/make.do">나만의코스</a></li>
@@ -69,7 +69,7 @@
 			                    </li>
 		
 			                    <li >
-			                       <a href="shoping-cart.html" style="font-size: 18px;">Contents</a>
+			                       <a href="" style="font-size: 18px;">Contents</a>
 			                       <ul class="sub-menu">
 			                          <li><a href="/jejufriends/food/list.do">소문난맛집</a></li>
 			                          <li><a href="/jejufriends/landmark/list.do">관광지</a></li>
@@ -79,20 +79,20 @@
 			                    </li>
 		
 			                    <li>
-			                       <a href="blog.html" style="font-size: 18px;">Community</a>
+			                       <a href="" style="font-size: 18px;">Community</a>
 			                    </li>
 		
 		
 			                    <li>
-			                       <a href="contact.html" style="font-size: 18px;">CS</a>
+			                       <a href="" style="font-size: 18px;">CS</a>
 			                       <ul class="sub-menu">
-			                          <li><a href="index.html">Q&A</a></li>
-			                          <li><a href="home-02.html">FAQ</a></li>
+			                          <li><a href="/jejufriends/qna/list.do">Q&A</a></li>
+			                          <li><a href="/jejufriends/faq/list.do">FAQ</a></li>
 			                       </ul>
 			                    </li>
 		                    
 			                    <li>
-			                       <a href="about.html" style="font-size: 18px;">About</a>
+			                       <a href="" style="font-size: 18px;">About</a>
 			                    </li>
 		                	</ul>
 		              	</div>   
@@ -223,7 +223,10 @@
 	
 	
 
-
+	<meta name="_csrf" content="${_csrf.token}"/>
+	<meta name="_csrf_header" content="${_csrf.headerName}"/>
+	<meta name="_csrf_parameter" content="${_csrf.parameterName}"/>
+	
 		<meta charset="euc-kr">
 		
 		
