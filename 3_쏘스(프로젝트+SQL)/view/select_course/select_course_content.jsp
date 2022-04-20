@@ -164,6 +164,7 @@
 <meta name="_csrf" content="${_csrf.token}"/>
 <meta name="_csrf_header" content="${_csrf.headerName}"/>
 <meta name="_csrf_parameter" content="${_csrf.parameterName}"/>
+<sec:authentication property="principal.username" var = "emails"/>
 <header>
     <div class="wrap-menu-desktop" style="margin-top: -50px;">
             <nav class="limiter-menu-desktop container">
@@ -247,6 +248,7 @@
       </div>
 </header>
 
+<script type="text/javascript" src="/js/selectcourse/add_myschedule.js"></script>
 <div style="margin-top: 150px;"></div>
 <hr class="layout"/>
 
@@ -283,6 +285,10 @@
 	            $deny_access_url = /board/product/list.html
 	        -->
 	<div class="ec-base-table typeWrite ">
+	<input id="course_cnum" type="hidden" value="${course.cnum}"/>
+	<input id="member_email" type="hidden" value="${emails}"/>
+	<input id="course_cname" type="hidden" value="${course.cname}"/>
+	<input id="course_cintro" type="hidden" value="${course.cintro}"/>
 	<table border="1" summary="">
 		<caption>상품 게시판 상세</caption>
 		<colgroup>
@@ -295,12 +301,12 @@
 			</tr>
 			<tr>
 				<td class="board_sub_text" colspan="2">
-					<a href='#none' >${course.nick}</a>
+					<a href='#none' >작성자 - ${course.nick}</a>
 					<span class="aa">
-						선택받은 수  ${course.choosed}	
+						선택받은 수 - ${course.choosed}	
 					</span>
 					<span class="">
-						조회수  ${course.views}					
+						조회수 - ${course.views}					
 					</span>
 				</td>
 			</tr>		 
@@ -427,7 +433,7 @@
 	</div>
 
 <div class="ec-base-button ">
-
+	<a id="add_myschedule" class="btnEm sizeS" style="cursor:pointer;color:rgb(255,255,255);float:right;">나의 일정에 추가</a>
 </div>
 
 

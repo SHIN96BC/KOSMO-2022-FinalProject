@@ -83,18 +83,21 @@ $(document).ready(function() {
 
             // 예상 금액 가져오기
             const ccost = $('#course_ccost').val();
+
+            // 닉네임 가져오기
+            const nick = $('#nick').val();
             
             let csrfParameter = $('meta[name="_csrf_parameter"]').attr('content');
-            let csrfHeader = $('meta[name="_csrf_header"]').attr('content');
-            let csrfToken = $('meta[name="_csrf"]').attr('content');
+			let csrfHeader = $('meta[name="_csrf_header"]').attr('content');
+			let csrfToken = $('meta[name="_csrf"]').attr('content');
             $.ajax({  // ajax 로 필요한 데이터 전송
                 url: "/jejufriends/make_course/saveCourse.json",
                 type: "POST",
                 contentType: "application/json",
-                data: JSON.stringify({cname:courseName, ctaglist:hashTagLsit, cintro: courseInfo, divisionlist: divisionList, ccost: ccost, startdate: startDate, lastdate: lastDate, coursemaplist: courseMapList}),
+                data: JSON.stringify({nick: nick, cname:courseName, ctaglist:hashTagLsit, cintro: courseInfo, divisionlist: divisionList, ccost: ccost, startdate: startDate, lastdate: lastDate, coursemaplist: courseMapList}),
                 beforeSend: function(xhr) {
                     xhr.setRequestHeader(csrfHeader, csrfToken);
-                },
+                }, 
                 success: function(flag) {
                     if(flag){
                         alert("코스 작성 완료!");

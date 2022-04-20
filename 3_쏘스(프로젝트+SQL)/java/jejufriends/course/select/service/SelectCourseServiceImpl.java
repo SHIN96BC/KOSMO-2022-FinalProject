@@ -13,6 +13,7 @@ import jejufriends.course.domain.CourseActivity;
 import jejufriends.course.domain.CourseFood;
 import jejufriends.course.domain.CourseHotel;
 import jejufriends.course.domain.CourseLandMark;
+import jejufriends.course.domain.WishList;
 import jejufriends.course.make.domain.MakeCourse;
 import jejufriends.course.select.domain.SelectCourseContent;
 import jejufriends.course.select.domain.SelectCourseDivision;
@@ -21,7 +22,7 @@ import jejufriends.course.select.repository.SelectCourseRepository;
 import soo.md.domain.Activity;
 import soo.md.domain.Food;
 import soo.md.domain.Hotel;
-import soo.md.domain.LandMark;
+import soo.md.domain.Landmark;
 
 @Service
 public class SelectCourseServiceImpl implements SelectCourseService {
@@ -96,7 +97,7 @@ public class SelectCourseServiceImpl implements SelectCourseService {
 			// 코스 상세를 위한 VO
 			SelectCourseContent selectCourseContent = new SelectCourseContent(
 						cday, corder, hname, hotel.getHintro(), hotel.getHaddress(),
-						hotel.getHopcl(), hotel.getHbreak(), hotel.getHclosed(),
+						hotel.getHopcl(), hotel.getHbreak(),
 						hotel.getHphoto(), hotel.getXlocation(), hotel.getYlocation(), contentType
 					);
 			
@@ -108,7 +109,7 @@ public class SelectCourseServiceImpl implements SelectCourseService {
 						hotel.getHphoto(), hotel.getHaddress(), hotel.getXlocation(),
 						hotel.getYlocation(), "HOTEL", hotel.getHintro(),
 						hotel.getHintro2(), hotel.getHphone(), hotel.getHopcl(),
-						hotel.getHbreak(), hotel.getHclosed(), hotel.getHphoto2(),
+						hotel.getHbreak(), hotel.getHphoto2(),
 						hotel.getHphoto3(), hotel.getViews(), null, null, null
 					));
 			
@@ -126,7 +127,7 @@ public class SelectCourseServiceImpl implements SelectCourseService {
 			// 코스 상세를 위한 VO
 			SelectCourseContent selectCourseContent = new SelectCourseContent(
 						cday, corder, aname, activity.getAintro(), activity.getAaddress(),
-						activity.getAopcl(), activity.getAbreak(), activity.getAclosed(),
+						activity.getAopcl(), activity.getAbreak(),
 						activity.getAphoto(), activity.getXlocation(), activity.getYlocation(), contentType
 					);
 			
@@ -138,7 +139,7 @@ public class SelectCourseServiceImpl implements SelectCourseService {
 						activity.getAphoto(), activity.getAaddress(), activity.getXlocation(),
 						activity.getYlocation(), "ACTIVITY", activity.getAintro(),
 						activity.getAintro2(), activity.getAphone(), activity.getAopcl(),
-						activity.getAbreak(), activity.getAclosed(), activity.getAphoto2(),
+						activity.getAbreak(), activity.getAphoto2(),
 						activity.getAphoto3(), activity.getViews(), null, null, null
 					));
 			
@@ -156,8 +157,8 @@ public class SelectCourseServiceImpl implements SelectCourseService {
 			// 코스 상세를 위한 VO
 			SelectCourseContent selectCourseContent = new SelectCourseContent(
 						cday, corder, fname, food.getFintro(), food.getFaddress(),
-						food.getFopcl(), food.getFbreak(), food.getFclosed(),
-						food.getFphoto(), food.getXlocation(), food.getYlocation(), contentType
+						food.getFopcl(), food.getFbreak(), food.getFphoto(), food.getXlocation(), 
+						food.getYlocation(), contentType
 					);
 			
 			// map에 컨텐츠 채우기
@@ -169,7 +170,7 @@ public class SelectCourseServiceImpl implements SelectCourseService {
 						food.getFaddress(), food.getXlocation(), food.getYlocation(),
 						"FOOD", food.getFintro(), food.getFintro2(),
 						food.getFphone(), food.getFopcl(), food.getFbreak(),
-						food.getFclosed(), food.getFphoto2(), food.getFphoto3(),
+						food.getFphoto2(), food.getFphoto3(),
 						food.getViews(), food.getFmenu(), food.getFmenu2(),
 						food.getFmenu3()
 					));
@@ -183,12 +184,12 @@ public class SelectCourseServiceImpl implements SelectCourseService {
 			int corder = courseLandMark.getOrder();
 			String lname = courseLandMark.getLname();
 			String contentType = "LANDMARK";
-			LandMark landMark = selectCourseRepository.selectLandMark(lname);
+			Landmark landMark = selectCourseRepository.selectLandMark(lname);
 			
 			// 코스 상세를 위한 VO
 			SelectCourseContent selectCourseContent = new SelectCourseContent(
 						cday, corder, lname, landMark.getLintro(), landMark.getLaddress(),
-						landMark.getLopcl(), null, landMark.getLclosed(),
+						landMark.getLopcl(), null,
 						landMark.getLphoto(), landMark.getXlocation(), landMark.getYlocation(), contentType
 					);
 			
@@ -200,7 +201,7 @@ public class SelectCourseServiceImpl implements SelectCourseService {
 						landMark.getLphoto(), landMark.getLaddress(), landMark.getXlocation(),
 						landMark.getYlocation(), "LANDMARK", landMark.getLintro(),
 						landMark.getLintro2(), landMark.getLphone(), landMark.getLopcl(),
-						null, landMark.getLclosed(), landMark.getLphoto2(),
+						null, landMark.getLphoto2(),
 						landMark.getLphoto3(), landMark.getViews(), null, null, null
 					));
 			
@@ -220,6 +221,16 @@ public class SelectCourseServiceImpl implements SelectCourseService {
 	@Override
 	public void updateViews(Course course) {
 		selectCourseRepository.updateViews(course);
+	}
+
+	@Override
+	public void addWishList(WishList wishList) {
+		selectCourseRepository.insertWishList(wishList);
+	}
+
+	@Override
+	public WishList findWishList(WishList wishList) {
+		return selectCourseRepository.selectWishList(wishList);
 	}
 
 }

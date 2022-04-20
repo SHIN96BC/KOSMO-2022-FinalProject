@@ -13,7 +13,7 @@ public class MakeCourse {
 	private long contentnum; // 컨텐츠 번호
 	private String contentname; // 컨텐츠 이름
 	private int contentdivision; // 컨텐츠 지역 분류 번호
-	private double contentstar; // 컨텐츠 별점
+	private long contentstar; // 컨텐츠 별점
 	private long contentcost; // 컨텐츠 평균 가격
 	private long contentchoosed; // 컨텐츠 선택받은 횟수
 	private String contentphoto; // 컨텐츠 사진
@@ -26,7 +26,6 @@ public class MakeCourse {
 	private String contentphone;
 	private String contentopcl;
 	private String contentbreak;
-	private String contentclosed;
 	private String contentphoto2;
 	private String contentphoto3;
 	private long contentviews;
@@ -34,10 +33,10 @@ public class MakeCourse {
 	private String contentmenu2;
 	private String contentmenu3;
 	
-	public MakeCourse(long contentnum, String contentname, int contentdivision, double contentstar, long contentcost,
+	public MakeCourse(long contentnum, String contentname, int contentdivision, long contentstar, long contentcost,
 			long contentchoosed, String contentphoto, String contentaddress, String xlocation, String ylocation,
 			String contenttype, String contentintro, String contentintro2, String contentphone, String contentopcl,
-			String contentbreak, String contentclosed, String contentphoto2, String contentphoto3, long contentviews,
+			String contentbreak, String contentphoto2, String contentphoto3, long contentviews,
 			String contentmenu, String contentmenu2, String contentmenu3) {
 		this.contentnum = contentnum;
 		this.contentname = contentname;
@@ -55,7 +54,6 @@ public class MakeCourse {
 		this.contentphone = contentphone;
 		this.contentopcl = contentopcl;
 		this.contentbreak = contentbreak;
-		this.contentclosed = contentclosed;
 		this.contentphoto2 = contentphoto2;
 		this.contentphoto3 = contentphoto3;
 		this.contentviews = contentviews;

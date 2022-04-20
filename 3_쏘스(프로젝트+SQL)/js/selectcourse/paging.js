@@ -61,7 +61,7 @@ function pageSet(pageNum, page, courseList) {
                         </td>
                         <td>${course.nick}</td>
                         <td class="txtLess ">${course.cdate}</td>
-                        <td class="txtLess ">${course.love}</td>
+                        <td class="txtLess ">${course.views}</td>
                         <td class="txtLess ">${course.choosed}</td>
                         <td class="displaynone"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point0.gif" alt="0점"/></td>
                     </tr>
@@ -138,10 +138,17 @@ $(document).ready(function() {
 function selectSearchAjax() {
     const searchKey = $('#search_key option:selected').val();
     const keyWord = $('#select_search').val();
+
+    let csrfParameter = $('meta[name="_csrf_parameter"]').attr('content');
+    let csrfHeader = $('meta[name="_csrf_header"]').attr('content');
+    let csrfToken = $('meta[name="_csrf"]').attr('content');
     $.ajax({
         url: "/jejufriends/select_course/selectSearch.json",
         type: "POST",
         data: {column: searchKey, keyword: keyWord},
+        beforeSend: function(xhr) {
+            xhr.setRequestHeader(csrfHeader, csrfToken);
+        },
         success: function(courseList) {
             const pageNum = $('#pageNum option:selected').val();
             pageSet(pageNum, 1, courseList);

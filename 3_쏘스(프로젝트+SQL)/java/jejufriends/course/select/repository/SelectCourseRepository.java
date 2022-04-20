@@ -7,12 +7,13 @@ import jejufriends.course.domain.CourseActivity;
 import jejufriends.course.domain.CourseFood;
 import jejufriends.course.domain.CourseHotel;
 import jejufriends.course.domain.CourseLandMark;
+import jejufriends.course.domain.WishList;
 import jejufriends.course.select.domain.SelectCourseDivision;
 import jejufriends.course.select.domain.SelectCourseSearch;
 import soo.md.domain.Activity;
 import soo.md.domain.Food;
 import soo.md.domain.Hotel;
-import soo.md.domain.LandMark;
+import soo.md.domain.Landmark;
 
 public interface SelectCourseRepository {
 	List<Course> selectCourseAll();
@@ -32,9 +33,13 @@ public interface SelectCourseRepository {
 	Hotel selectHotel(String hname);
 	Activity selectActivity(String aname);
 	Food selectFood(String fname);
-	LandMark selectLandMark(String lname);
+	Landmark selectLandMark(String lname);
 	
 	// 조회수 셋팅
 	Long selectViews(long cnum);
 	void updateViews(Course course);
+	
+	// 나의 일정 핸들링
+	void insertWishList(WishList wishList);
+	WishList selectWishList(WishList wishList);
 }

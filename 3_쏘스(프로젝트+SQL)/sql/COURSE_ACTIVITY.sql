@@ -6,6 +6,7 @@ create table COURSE_ACTIVITY (
 	CANUM number constraint CA_PK primary key,
 	ANAME nvarchar2(30),
 	CDAY number(3),
+	CORDER number(1),
 	CNUM number,
 	constraint CA_FK foreign key(CNUM) references COURSE(CNUM) on delete cascade
 );

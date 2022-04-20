@@ -15,14 +15,13 @@ public class SelectCourseContent {
 	private String contentaddress;
 	private String contentopcl;
 	private String contentbreak;
-	private String contentclosed;
 	private String contentphoto;
 	private String xlocation;
 	private String ylocation;
 	private String contenttype;
 	
 	public SelectCourseContent(int cday, int corder, String contentname, String contentintro, String contentaddress,
-			String contentopcl, String contentbreak, String contentclosed, String contentphoto, String xlocation, 
+			String contentopcl, String contentbreak, String contentphoto, String xlocation, 
 			String ylocation, String contenttype) {
 		this.cday = cday;
 		this.corder = corder;
@@ -31,7 +30,6 @@ public class SelectCourseContent {
 		this.contentaddress = contentaddress;
 		this.contentopcl = contentopcl;
 		this.contentbreak = contentbreak;
-		this.contentclosed = contentclosed;
 		this.contentphoto = contentphoto;
 		this.xlocation = xlocation;
 		this.ylocation = ylocation;

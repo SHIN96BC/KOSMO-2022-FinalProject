@@ -19,6 +19,7 @@ import jejufriends.course.make.domain.MakeCourse;
 import jejufriends.course.make.domain.SaveCourse;
 import jejufriends.course.make.domain.SaveCourseContent;
 import jejufriends.course.make.service.MakeCourseService;
+import jejufriends.member.domain.Member;
 import lombok.RequiredArgsConstructor;
 import soo.md.domain.Food;
 
@@ -91,9 +92,10 @@ public class MakeCourseController {
 	@Secured({"ROLE_ADMIN" , "ROLE_SUPERADMIN", "ROLE_USER"})
 	@RequestMapping("findNick")
 	@ResponseBody
-	public String findNick(String email) {
-		System.out.println("email: " + email);
-		System.out.println("makeCourseService.findNick(email): " + makeCourseService.findNick(email));
-		return makeCourseService.findNick(email);
+	public Member findNick(String email) {
+		Member member = new Member();
+		String nickName = makeCourseService.findNick(email);
+		member.setNickName(nickName);
+		return member;
 	}
 }

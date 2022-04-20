@@ -6,6 +6,7 @@ create table COURSE_FOOD (
 	CFNUM number constraint CF_PK primary key,
 	FNAME nvarchar2(30),
 	CDAY number(3),
+	CORDER number(1),
 	CNUM number,
 	constraint CF_FK foreign key (CNUM) references COURSE(CNUM) on delete cascade
 );

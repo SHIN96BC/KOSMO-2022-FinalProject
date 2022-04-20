@@ -11,26 +11,26 @@ import jejufriends.course.domain.CourseHotel;
 import soo.md.domain.Activity;
 import soo.md.domain.Food;
 import soo.md.domain.Hotel;
-import soo.md.domain.LandMark;
+import soo.md.domain.Landmark;
 
 public interface MakeCourseRepository {
 	// 전부 검색
 	List<Hotel> selectHotelAll();
 	List<Activity> selectActivityAll();
 	List<Food> selectFoodAll();
-	List<LandMark> selectLandmarkAll();
+	List<Landmark> selectLandmarkAll();
 	
 	// 좌표값 없는 컨텐츠 검색
 	List<Hotel> selectHotelLocation();
 	List<Activity> selectActivityLocation();
 	List<Food> selectFoodLocation();
-	List<LandMark> selectLandmarkLocation();
+	List<Landmark> selectLandmarkLocation();
 	
 	// 키워드 검색
 	List<Hotel> selectHotelSearch(String keyword);
 	List<Activity> selectActivitySearch(String keyword);
 	List<Food> selectFoodSearch(String keyword);
-	List<LandMark> selectLandmarkSearch(String keyword);
+	List<Landmark> selectLandmarkSearch(String keyword);
 	
 	// 데이터베이스에 코스 저장
 	void insertCourse(Course course);

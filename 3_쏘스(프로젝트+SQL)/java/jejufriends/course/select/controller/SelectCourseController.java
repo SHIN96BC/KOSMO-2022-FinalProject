@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import jejufriends.course.domain.Course;
+import jejufriends.course.domain.WishList;
 import jejufriends.course.make.domain.MakeCourse;
 import jejufriends.course.make.service.MakeCourseService;
 import jejufriends.course.select.domain.SelectCourseContent;
@@ -57,7 +58,7 @@ public class SelectCourseController {
 	public ModelAndView selectContent(long cnum) {
 		// 조회수 올리기
 		Long views = selectCourseService.checkViews(cnum);
-		if(views != 0) {
+		if(views == null) {
 			views = 0L;
 		}
 		views++;
@@ -103,4 +104,18 @@ public class SelectCourseController {
 		modelAndView.setViewName("/error/error");
 		return modelAndView;
 	}
+	
+	@Secured({"ROLE_ADMIN" , "ROLE_SUPERADMIN", "ROLE_USER"})
+	@PostMapping("wishList")
+	@ResponseBody
+	public WishList wishList(WishList wishList) {
+		WishList findWishList = selectCourseService.findWishList(wishList);
+		if(findWishList == null) {
+			selectCourseService.addWishList(wishList);
+			return new WishList(-1L, -1L, null, null, null, true);
+		}else {
+			return new WishList(-1L, -1L, null, null, null, false);
+		}
+	}
+	
 }

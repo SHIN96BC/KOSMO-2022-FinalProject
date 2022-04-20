@@ -43,81 +43,90 @@
 			
 	  
 			<div class="top-bar" >
-				<div class="content-topbar flex-sb-m h-full container">
-					<div class="left-top-bar">
-						JEJU FRIENDS
-					</div>
+			<div class="content-topbar flex-sb-m h-full container">
+				<div class="left-top-bar">
+					JEJU FRIENDS
 				</div>
-		
-	     		<div class="wrap-menu-desktop">
-	           		<nav class="limiter-menu-desktop container">
-	             
-		            <!-- Logo desktop -->      
-		            	<a href="/jejufriends" class="logo">
-		                	<img src="/img/jeju2.png" alt="IMG-LOGO" style='width: 100px; height: 50px; margin-left: 50px;; margin-right: -20px;'>
-		              	</a>
-		
-		            <!-- Menu desktop -->
-		            	<div class="menu-desktop" style='margin-top: 10px;'>
-		                 	<ul class="main-menu">
-			                    <li>
-			                       <a href="/jejufriends" style="font-size: 18px;">Home</a>
-			                    </li>
-		
-			                    <li class="label1" data-label1="hot">
-			                       <a href="" style="font-size: 18px;">Course</a>
-			                       <ul class="sub-menu">
-			                          <li><a href="/jejufriends/select_course/select.do">코스추천</a></li>
-			                          <li><a href="/jejufriends/make_course/make.do">나만의코스</a></li>
-			                       </ul>
-			                    </li>
-		
-			                    <li >
-			                       <a href="" style="font-size: 18px;">Contents</a>
-			                       <ul class="sub-menu">
-			                          <li><a href="/jejufriends/food/list.do">소문난맛집</a></li>
-			                          <li><a href="/jejufriends/landmark/list.do">관광지</a></li>
-			                          <li><a href="/jejufriends/activity/list.do">로컬체험</a></li>
-			                          <li><a href="/jejufriends/hotel/list.do">숙소</a></li>
-			                       </ul>
-			                    </li>
-		
-			                    <li>
-			                       <a href="/jejufriends/community/community.do" style="font-size: 18px;">Community</a>
-			                    </li>
-		
-		
-			                    <li>
-			                       <a href="" style="font-size: 18px;">CS</a>
-			                       <ul class="sub-menu">
-			                          <li><a href="/jejufriends/qna/list.do">Q&A</a></li>
-			                          <li><a href="/jejufriends/faq/list.do">FAQ</a></li>
-			                       </ul>
-			                    </li>
-		                    
-			                    <li>
-			                       <a href="" style="font-size: 18px;">About</a>
-			                    </li>
-		                	</ul>
-		              	</div>   
-		
-			           	<!-- Icon header -->
-			            <div class="wrap-icon-header flex-w flex-r-m" style="margin-bottom: -10px;">
-			             	<a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
-			                	<i class="zmdi zmdi-sign-in"></i>
-			                </a>
-			                <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
-			                    <i class="zmdi zmdi-power-off"></i>
-			                </a>
-						<!--  장바구니 아이콘
-			                 <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="2">
-			                    <i class="zmdi zmdi-shopping-cart"></i>
-			                 </div>
-						-->
-			                <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
-			                	<i class="zmdi zmdi-account"></i>
-			                </a>
-			           	</div>
+			</div>
+	
+     		<div class="wrap-menu-desktop">
+           		<nav class="limiter-menu-desktop container">
+             
+	            <!-- Logo desktop -->      
+	            	<a href="/jejufriends" class="logo">
+	                	<img src="/img/jeju2.png" alt="IMG-LOGO" style='width: 100px; height: 50px; margin-left: 50px;; margin-right: -20px;'>
+	              	</a>
+	
+	            <!-- Menu desktop -->
+	            	<div class="menu-desktop" style='margin-top: 10px;'>
+	                 	<ul class="main-menu">
+		                    <li>
+		                       <a href="/jejufriends" style="font-size: 18px;">Home</a>
+		                    </li>
+	
+		                    <li class="label1" data-label1="hot">
+		                       <a href="" style="font-size: 18px;">Course</a>
+		                       <ul class="sub-menu">
+									<li><a href="/jejufriends/select_course/select.do">코스추천</a></li>
+                                    <li><a href="/jejufriends/make_course/make.do">나만의코스</a></li>
+		                       </ul>
+		                    </li>
+	
+		                    <li >
+		                       <a href="" style="font-size: 18px;">Contents</a>
+		                       <ul class="sub-menu">
+		                          <li><a href="/jejufriends/food/list.do">소문난맛집</a></li>
+		                          <li><a href="/jejufriends/landmark/list.do">관광지</a></li>
+		                          <li><a href="/jejufriends/activity/list.do">로컬체험</a></li>
+		                          <li><a href="/jejufriends/hotel/list.do">숙소</a></li>
+		                       </ul>
+		                    </li>
+	
+		                    <li>
+		                       <a href="/jejufriends/community/community.do" style="font-size: 18px;">Community</a>
+		                    </li>
+	
+	
+		                    <li>
+		                       <a href="" style="font-size: 18px;">CS</a>
+		                       <ul class="sub-menu">
+									<li><a href="/jejufriends/faq/list.do?cp=1">FAQ</a></li>
+                                	<li><a href="/jejufriends/qna/list.do?cp=1">QNA</a></li>
+		                       </ul>
+		                    </li>
+	                    
+		                    <li>
+		                       <a href="" style="font-size: 18px;">About</a>
+		                    </li>
+	                	</ul>
+	              	</div>   
+	
+			           <!-- Icon header -->
+		               <!-- logout-->
+		               <div class="wrap-icon-header flex-w flex-r-m" style="margin-bottom: -10px;">
+		               	 <sec:authorize access="isAuthenticated()">
+	               	     <form action="/jejufriends/logout" method="post">
+	                      	<input name="${_csrf.parameterName}" type="hidden" value="${_csrf.token}"/>
+						    <button type="submit" value="Logout" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
+						     <p style="font-size: 18px; font-weight: bold;">Logout</p>
+						    </button>
+						  </form>
+	                  </sec:authorize>
+	                  <sec:authorize access="isAnonymous()">
+	                  <!-- login-->
+	                  <a href="/jejufriends/login" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
+	                      <p style="font-size: 18px; font-weight: bold;">Login</p>
+	                  </a>
+	                  </sec:authorize>
+					<!--  장바구니 아이콘
+	                  <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="2">
+	                     <i class="zmdi zmdi-shopping-cart"></i>
+	                  </div>
+					-->
+	                  <a href="/jejufriends/member/mypage" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
+	                     <i class="zmdi zmdi-account"></i>
+	                  </a>
+	               </div>
 	           		</nav>
 	        	</div>   
 	     	</div>

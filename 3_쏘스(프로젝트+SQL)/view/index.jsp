@@ -2,59 +2,64 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
 <!doctype html>
-<html>
+<html lang="ko">
 <head>
-<title>JEJU FRIENDS</title>
+<title>제주 프렌즈</title>
 
 <meta name="Keywords" content="제주프렌즈, 제주여행, 제주관광, 제주도, 제주시, 서귀포시, 안심여행, 제주살이, 축제, 제주바다, 해안도로, 당일치기, 제주도일상, 현지인맛집, 추천맛집, 여행코스, 산책, 제주문화, 마을여행, 할인쿠폰, 짐옮김, 핸즈프리, 짐 옮김이, 자유여행, 맞춤여행, 겨울여행, 제주, 핫플레이스, 여행정보, 제주도2박3일코스, 제주도관광코스, 제주도가볼만한곳, 제주가볼만한곳, 겨울제주도여행, 제주도흑돼지맛집, 1박2일제주도, 제주공항근처가볼만한곳, jejujini, Jeju Island, jeju travel, jeju trip, where to travel in korea, jeju korea, korea travel, korea trip, 济州旅游, 济州, 济州岛, 首尔 济州, 济州景点, 济州 冬天, travel app, 여행 앱">
+
 <meta charset="utf-8">
 <meta http-equiv="Content-Language" content="ko">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
 <meta name="format-detection" content="telephone=no, address=no, email=no" />
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
 
 <!--  네비게이션바 시작 -->
 <!--===============================================================================================-->   
-   <link rel="icon" type="image/png" href="/images/icons/favicon.png"/>
+   <link rel="icon" type="image/png" href="images/icons/favicon.png"/>
 <!--===============================================================================================-->
-   <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-   <link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
-   <link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
+   <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
 <!--===============================================================================================-->
-   <link rel="stylesheet" type="text/css" href="/fonts/linearicons-v1.0.0/icon-font.min.css">
+   <link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css">
 <!--===============================================================================================-->
-   <link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
+   <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
 <!--===============================================================================================-->   
-   <link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
+   <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
-   <link rel="stylesheet" type="text/css" href="/vendor/animsition/css/animsition.min.css">
+   <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
-   <link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">
+   <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
 <!--===============================================================================================-->   
-   <link rel="stylesheet" type="text/css" href="/vendor/daterangepicker/daterangepicker.css">
+   <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
-   <link rel="stylesheet" type="text/css" href="/vendor/slick/slick.css">
+   <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
 <!--===============================================================================================-->
-   <link rel="stylesheet" type="text/css" href="/vendor/MagnificPopup/magnific-popup.css">
+   <link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
 <!--===============================================================================================-->
-   <link rel="stylesheet" type="text/css" href="/vendor/perfect-scrollbar/perfect-scrollbar.css">
+   <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
 <!--===============================================================================================-->
-   <link rel="stylesheet" type="text/css" href="/css/util.css">
-   <link rel="stylesheet" type="text/css" href="/css/main.css">
-<!--===============================================================================================-->      
+   <link rel="stylesheet" type="text/css" href="css/util.css">
+   <link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+      
       <!--===============================================================================================-->	
-	<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
-	<script src="/vendor/animsition/js/animsition.min.js"></script>
+	<script src="vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
-	<script src="/vendor/bootstrap/js/popper.js"></script>
-	<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-	<script src="/vendor/select2/select2.min.js"></script>
+	<script src="vendor/select2/select2.min.js"></script>
 	<script>
 		$(".js-select2").each(function(){
 			$(this).select2({
@@ -64,18 +69,18 @@
 		})
 	</script>
 <!--===============================================================================================-->
-	<script src="/vendor/daterangepicker/moment.min.js"></script>
-	<script src="/vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
 <!--===============================================================================================-->
-	<script src="/vendor/slick/slick.min.js"></script>
-	<script src="/js/slick-custom.js"></script>
+	<script src="vendor/slick/slick.min.js"></script>
+	<script src="js/slick-custom.js"></script>
 <!--===============================================================================================-->
-	<script src="/vendor/parallax100/parallax100.js"></script>
+	<script src="vendor/parallax100/parallax100.js"></script>
 	<script>
         $('.parallax100').parallax100();
 	</script>
 <!--===============================================================================================-->
-	<script src="/vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+	<script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
 	<script>
 		$('.gallery-lb').each(function() { // the containers for all your galleries
 			$(this).magnificPopup({
@@ -89,9 +94,9 @@
 		});
 	</script>
 <!--===============================================================================================-->
-	<script src="/vendor/isotope/isotope.pkgd.min.js"></script>
+	<script src="vendor/isotope/isotope.pkgd.min.js"></script>
 <!--===============================================================================================-->
-	<script src="/vendor/sweetalert/sweetalert.min.js"></script>
+	<script src="vendor/sweetalert/sweetalert.min.js"></script>
 	<script>
 		$('.js-addwish-b2').on('click', function(e){
 			e.preventDefault();
@@ -129,7 +134,7 @@
 	
 	</script>
 <!--===============================================================================================-->
-	<script src="/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 	<script>
 		$('.js-pscroll').each(function(){
 			$(this).css('position','relative');
@@ -146,13 +151,17 @@
 		});
 	</script>
 <!--===============================================================================================-->
-	<script src="/js/main.js"></script>
+	<script src="js/main.js"></script>
+
+<!--  네비게이션바 끝 -->
+
 
 <!--  스크롤 이벤트  시작 -->
 <link rel="stylesheet" type="text/css" href="https://cdn.jejujini.kr/resources/KR/css/common.css" />
 <link rel="stylesheet" type="text/css" href="https://cdn.jejujini.kr/resources/KR/css/swiper.min.css" />
 <link rel="stylesheet" type="text/css" href="https://cdn.jejujini.kr/resources/KR/css/jquery.fullpage.min.css" /> <!-- 180621 추가 -->
-<link rel="stylesheet" type="text/css" href="/css/event.css" />
+<link rel="stylesheet" type="text/css" href="css/event.css" />
+
 <script type="text/javascript" src="https://cdn.jejujini.kr/resources/KR/js/libs/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="https://cdn.jejujini.kr/resources/KR/js/libs/css_common.js"></script>
 <script type="text/javascript" src="https://cdn.jejujini.kr/resources/KR/js/libs/slick.min.js"></script>
@@ -232,48 +241,49 @@ $(function() {
                   <img src="/img/jeju2.png" alt="IMG-LOGO" style='width: 100px; height: 50px; margin-left: 50px;; margin-right: -20px;'>
                </a>
 
-               <!-- Menu desktop -->
-             <div class="menu-desktop" style='margin-top: 10px;'>
-                  <ul class="main-menu">
-                     <li>
-                        <a href="/jejufriends" style="font-size: 18px;">Home</a>
-                     </li>
-
-                   <li class="label1" data-label1="hot">
-                      <a href="" style="font-size: 18px;">Course</a>
-                      <ul class="sub-menu">
-                         <li><a href="/jejufriends/select_course/select.do">코스추천</a></li>
-                         <li><a href="/jejufriends/make_course/make.do">나만의코스</a></li>
-                      </ul>
-                   </li>
-
-                   <li >
-                      <a href="" style="font-size: 18px;">Contents</a>
-                      <ul class="sub-menu">
-                         <li><a href="/jejufriends/food/list.do">소문난맛집</a></li>
-                         <li><a href="/jejufriends/landmark/list.do">관광지</a></li>
-                         <li><a href="/jejufriends/activity/list.do">로컬체험</a></li>
-                         <li><a href="/jejufriends/hotel/list.do">숙소</a></li>
-                      </ul>
-                   </li>
-
-                     <li>
-                        <a href="/jejufriends/community/community.do" style="font-size: 18px;">Community</a>
-                     </li>
-
-
-                     <li>
-                        <a href="contact.html" style="font-size: 18px;">CS</a>
-                        <ul class="sub-menu">
-                           <li><a href="/jejufriends/qna/list.do">Q&A</a></li>
-                           <li><a href="/jejufriends/faq/list.do">FAQ</a></li>
-                        </ul>
-                     </li>
-		             <li>
-                        <a href="about.html" style="font-size: 18px;">About</a>
-                     </li>
-                  </ul>
-               </div>   
+              <!-- Menu desktop -->
+	            	<div class="menu-desktop" style='margin-top: 10px;'>
+	                 	<ul class="main-menu">
+		                    <li>
+		                       <a href="/jejufriends" style="font-size: 18px;">Home</a>
+		                    </li>
+	
+		                    <li class="label1" data-label1="hot">
+		                       <a href="" style="font-size: 18px;">Course</a>
+		                       <ul class="sub-menu">
+									<li><a href="/jejufriends/select_course/select.do">코스추천</a></li>
+                                    <li><a href="/jejufriends/make_course/make.do">나만의코스</a></li>
+		                       </ul>
+		                    </li>
+	
+		                    <li >
+		                       <a href="" style="font-size: 18px;">Contents</a>
+		                       <ul class="sub-menu">
+		                          <li><a href="/jejufriends/food/list.do">소문난맛집</a></li>
+		                          <li><a href="/jejufriends/landmark/list.do">관광지</a></li>
+		                          <li><a href="/jejufriends/activity/list.do">로컬체험</a></li>
+		                          <li><a href="/jejufriends/hotel/list.do">숙소</a></li>
+		                       </ul>
+		                    </li>
+	
+		                    <li>
+		                       <a href="/jejufriends/community/community.do" style="font-size: 18px;">Community</a>
+		                    </li>
+	
+	
+		                    <li>
+		                       <a href="" style="font-size: 18px;">CS</a>
+		                       <ul class="sub-menu">
+									<li><a href="/jejufriends/faq/list.do?cp=1">FAQ</a></li>
+                                	<li><a href="/jejufriends/qna/list.do?cp=1">QNA</a></li>
+		                       </ul>
+		                    </li>
+	                    
+		                    <li>
+		                       <a href="" style="font-size: 18px;">About</a>
+		                    </li>
+	                	</ul>
+	              	</div>   
 
                <!-- Icon header -->
                <!-- logout-->
@@ -305,11 +315,12 @@ $(function() {
          </div>   
       </div>
 </header>
+
 <body>
     <div id="landing">
         <div class="section" id="section0">
         <video data-autoplay loop muted style="width:2700; height:1200; display: block; z-index:0; margin-left:-400;">
-        	<source src="/media/jeju.mp4">
+        	<source src="media/jeju.mp4">
         </video>
     		<!--  <div style="margin-top:-700; z-index:1;  position:absolute;">
     			<h2>나만의 특별한<br /> 제주여행친구</h2>
@@ -325,22 +336,12 @@ $(function() {
                 <p class="subTxt">현지인들만 아는 진짜 맛집.<br/>현지인들의 신뢰할 수 있는 평가로 선별된 맛집을 추천합니다.</p>
                 <p class="subTxt">스마트검색으로 나만을 위한 맛집을 찾아서 저장해두고 제주여행 때 편하게 찾아가세요.</p>
             </div>
-
-      <div class="swiper-container myswiper" style="margin-top:-600;">
-         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="/img/꼭가야할곳.png" style="max-width: 650; height: 420;"></div>
-               <div class="swiper-slide"><img src="/img/갈치.png" style="max-width: 650; height: 420;"></div>
-                 <div class="swiper-slide"><img src="/img/흑돼지.png" style="max-width: 650; height: 420;"></div>
-                    <div class="swiper-slide"><img src="/img/고등어회.png" style="max-width: 650; height: 420;"></div>
-               
-    
-         </div>
+			<a href="/jejufriends/food/list.do">
+           <img src="/photo/food.png"  style="max-width: 750; height: 520; margin-top: -650px; margin-left: 670px;"></a>
          <!-- 페이징 -->
-         <div class="swiper-pagination"></div>
-      </div>
          <br></br>
-            <a id="food" href='/member/mController?message=loginform' style='display:none;'><p class="subTxt">제주 맛집 더 알고 싶수꽝? click!</p></a>
-            <a id="foodLogin" href='/food/food.do?m=list' style='display:block;'><p class="subTxt">제주 맛집 더 알고 싶수꽝? click!</p></a>
+            <a id="food" href="/jejufriends/food/list.do" style='display:none; margin-top: -170px;'><p class="subTxt">제주 맛집 더 알고 싶수꽝? click!</p></a>
+            <a id="foodLogin" href="/jejufriends/food/list.do" style='display:block; margin-top: -170px;'><p class="subTxt">제주 맛집 더 알고 싶수꽝? click!</p></a>
         </div>
          
 
@@ -351,44 +352,25 @@ $(function() {
                 <p class="subTxt">나만의 코스로 잊지 못할 제주에서의 추억을 만들어 보세요.</p>
             </div>
         
-        <div class="swiper-container myswiper" style="margin-top:-600;">
-         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="/img/여행코스.jpg" style="max-width: 650; height: 420;"></div>
-                 <div class="swiper-slide"><img src="/img/코스2.jpg" style="max-width: 650; height: 420;"></div>
-                    <div class="swiper-slide"><img src="/img/코스3.jpg" style="max-width: 650; height: 420;"></div>
-                     <div class="swiper-slide"><img src="/img/코스4.jpg" style="max-width: 650; height: 420;"></div>
-               
-
-         </div>
+			<a href="/jejufriends/select_course/select.do">
+           <img src="/photo/course.png"  style="max-width: 750; height: 520; margin-top: -650px; margin-left: 560px;"></a>
          <!-- 페이징 -->
-         <div class="swiper-pagination"></div>
-      </div>
          <br></br>
-         	<a id="course" href='/member/mController?message=loginform' style='display:none;'><p class="subTxt">현지인들이 추천하는 코스 더 알고 싶수꽝? click!</p></a>
-            <a id="courseLogin" href='/course/course.do?message=list' style='display:block;'><p class="subTxt">현지인들이 추천하는 코스 더 알고 싶수꽝? click!</p></a>
+         	<a id="course" href='/jejufriends/select_course/select.do' style='display:none; margin-top: -170px;'><p class="subTxt">현지인들이 추천하는 코스 더 알고 싶수꽝? click!</p></a>
+            <a id="courseLogin" href='/jejufriends/select_course/select.do' style='display:block; margin-top: -170px;'><p class="subTxt">현지인들이 추천하는 코스 더 알고 싶수꽝? click!</p></a>
       </div>
 
       <div class="section" id="section5">
             <div class="title" style="margin-top:120;">
-                <h4>볼거리</h4>
-                <p class="subTxt">제주를 대표하는<br>유명한 관광명소 여기 다 있다!</p>
+                <h4>랜드마크</h4>
+                <p class="subTxt">제주를 대표하는<br>유명한 관광명소 여기 다 있다!<br>재미있는 놀거리 골라보아요!</p>
             </div>
             
-        <div class="swiper-container myswiper" style="margin-top:-600;">
-         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="/img/꼭가야할곳.png" style="max-width: 650; height: 420;"></div>
-              <div class="swiper-slide"><img src="/img/볼거리1.jpg" style="max-width: 650; height: 420;"></div>
-                 <div class="swiper-slide"><img src="/img/볼거리2.jpg" style="max-width: 650; height: 420;"></div>
-                    <div class="swiper-slide"><img src="/img/볼거리3.png" style="max-width: 650; height: 420;"></div>
-                     <div class="swiper-slide"><img src="/img/볼거리4.jpg" style="max-width: 650; height: 420;"></div>
- 
-         </div>
-         <!-- 페이징 -->
-         <div class="swiper-pagination"></div>
-      </div>
+           <a href="/jejufriends/landmark/list.do">
+           <img src="/photo/landmark.png"  style="max-width: 750; height: 520; margin-top: -650px; margin-left: 670px;"></a>
          <br></br>
-         	<a id="land" href='/member/mController?message=loginform' style='display:none;'><p class="subTxt">제주도의 랜드마크 더 알고 싶수꽝? click!</p></a>
-            <a id="landLogin" href='/land/land.do?m=list' style='display:block;'><p class="subTxt">제주도의 랜드마크 더 알고 싶수꽝? click!</p></a>
+         	<a id="land" href="/jejufriends/landmark/list.do" style='display:none; margin-top: -170px;'><p class="subTxt">제주도의 랜드마크 더 알고 싶수꽝? click!</p></a>
+            <a id="landLogin" href="/jejufriends/landmark/list.do" style='display:block; margin-top: -170px;'><p class="subTxt">제주도의 랜드마크 더 알고 싶수꽝? click!</p></a>
       </div>
 
 	
@@ -400,49 +382,24 @@ $(function() {
                 <p class="subTxt">지루한거 말고<br/>재미있는 놀거리 골라봐요!<br>여행할 지역을 선택하면 로컬체험 목록이 보여요.</p>
             </div>
             
-        <div class="swiper-container myswiper" style="margin-top:-600;">
-         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="/img/제주도액티비티.jpg" style="max-width: 650; height: 420;"></div>
-              <div class="swiper-slide"><img src="/img/놀거리1.png" style="max-width: 650; height: 420;"></div>
-                 <div class="swiper-slide"><img src="/img/놀거리2.png" style="max-width: 650; height: 420;"></div>
-                     <div class="swiper-slide"><img src="/img/놀거리4.png" style="max-width: 650; height: 420;"></div>
-
-         </div>
-         <!-- 페이징 -->
-         <div class="swiper-pagination"></div>
-      </div>
+           <a href="/jejufriends/activity/list.do">
+           <img src="/photo/activity.png"  style="max-width: 750; height: 520; margin-top: -650px; margin-left: 670px;"></a>
          <br></br>
-         	<a id="activity" href='/member/mController?message=loginform' style='display:none;'><p class="subTxt">제주도의 놀거리 더 알고 싶수꽝? click!</p></a>
-            <a id="activityLogin" href='/activity/activity.do?m=list' style='display:block;'><p class="subTxt">제주도의 놀거리 더 알고 싶수꽝? click!</p></a>
+         	<a id="activity" href="/jejufriends/activity/list.do" style='display:none; margin-top: -170px;'><p class="subTxt">제주도의 놀거리 더 알고 싶수꽝? click!</p></a>
+            <a id="activityLogin" href="/jejufriends/activity/list.do" style='display:block; margin-top: -170px;'><p class="subTxt">제주도의 놀거리 더 알고 싶수꽝? click!</p></a>
         </div>
 
         <div class="section" id="section7">
-            <div class="title">
-                <h4>그리고!</h4>
-                <!-- 181012 수정 -->
-                <p class="subTxt">제주프렌즈는 여러분의 특별한 여행친구가 되기 위해 더욱 즐겁고 편리한 서비스를 계속 준비하고 있습니다.</p>
-                <p class="subTxt">무거운 여행가방으로부터 자유롭고 원하는 시간에 원하는 곳으로 편리하게 이동하고<br />맛집에서 더 이상 줄을 서서 기다리지 않는 여행!</p>
-                <p class="subTxt">소소하지만 특별하고 확실한 즐거움을 주는 여러분의 제주어떄가 되겠습니다.</p>
-                <!--// 181012 수정 -->
+            <div class="title" style="margin-top:120;">
+                <h4>숙소</h4>
+                <p class="subTxt">감성적인 제주에서<br/>편안한 숙소를 찾아 보세요<br>숙박할 숙소를 선택하면 숙소목록이 목록이 보여요.</p>
             </div>
-            <div class="mainImg">
-                <img style='margin-top: -400px; margin-bottom: 100px; width: 1000; height: 500' src="/img/jeju2.png" alt="" class="pc">
-                <img style='margin-top: -400px; margin-bottom: 100px; width: 1000; height: 500' src="/img/jeju2.png" alt="" class="mobile">
-            </div>
-            <!-- <div class="clause">
-	            <div class="pc">
-	                <ul>
-		                <li><a href="/MYG/EHM/MYGEHM0026.do">개인정보 처리방침</a></li>
-		                <li><a href="/MYG/EHM/MYGEHM0022.do">위치기반서비스 이용약관</a></li>
-	                </ul>
-	            </div>
-	            <div class="mobile">
-	                <ul>
-		                <li><a href="/MYG/EHM/MYGEHM0026.do">개인정보 처리방침</a></li>
-		                <li><a href="/MYG/EHM/MYGEHM0022.do">위치기반서비스 이용약관</a></li>
-	                </ul>
-	            </div>
-             </div> -->
+            
+           <a href="/jejufriends/hotel/list.do">
+           <img src="/photo/hotel.png"  style="max-width: 750; height: 520; margin-top: -650px; margin-left: 670px;"></a>
+         <br></br>
+         	<a id="hotel" href="/jejufriends/hotel/list.do" style='display:none; margin-top: -190px;'><p class="subTxt">제주도의 숙박시설 더 알고 싶수꽝? click!</p></a>
+            <a id="hotelLogin" href="/jejufriends/hotel/list.do" style='display:block; margin-top: -190px;'><p class="subTxt">제주도의 숙박시설 더 알고 싶수꽝? click!</p></a>
     	</div>
     </div>
 
@@ -451,14 +408,14 @@ $(function() {
     <div id="clausebar" class="clause" style="display: none;" >
         <div class="pc">
             <ul>
-                <li><a href="/MYG/EHM/MYGEHM0026.do"><strong>개인정보 처리방침</strong></a></li>
-                <li><a href="/MYG/EHM/MYGEHM0022.do">위치기반서비스 이용약관</a></li>
+                <li><a href=""><strong>개인정보 처리방침</strong></a></li>
+                <li><a href="">위치기반서비스 이용약관</a></li>
             </ul>
         </div>
         <div class="mobile">
             <ul>
-                <li><a href="/MYG/EHM/MYGEHM0026.do"><strong>개인정보 처리방침</strong></a></li>
-                <li><a href="/MYG/EHM/MYGEHM0022.do">위치기반서비스 이용약관</a></li>
+                <li><a href=""><strong>개인정보 처리방침</strong></a></li>
+                <li><a href="">위치기반서비스 이용약관</a></li>
             </ul>
         </div>
     </div>
@@ -487,9 +444,43 @@ $(function() {
 		</div>
 		<div class="event_con event_fullImage_Link" onclick="fnMove(); return false;">
 	        <!-- @Judy -->
-	        <img src="/img/pop.jpg" alt="">
+	        <img src="img/pop.jpg" alt="">
 	    </div>
 	</div>
+
+<%
+	String sessionNick = (String)session.getAttribute("Member_Nick");
+	System.out.println("sessionNick: " + sessionNick);
+	
+%>
+	<script language=javascript>
+		if(<%=sessionNick%> != null){
+			alter("if문 안");
+			let food = document.getElementById('food');
+			let foodLogin = document.getElementById('foodLogin');
+			let course = document.getElementById('course');
+			let courseLogin = document.getElementById('courseLogin');
+			let land = document.getElementById('land');
+			let landLogin = document.getElementById('landLogin');
+			let activity = document.getElementById('activity');
+			let activityLogin = document.getElementById('activityLogin');
+			
+			course.style.display = 'none';
+			courseLogin.style.display = 'block';
+			land.style.display = 'none';
+			landLogin.style.display = 'block';
+			food.style.display = 'none';
+			foodLogin.style.display = 'block';
+			activity.style.display = 'none';
+			activityLogin.style.display = 'block';
+		}else{
+			alter("else문 안");
+		}
+		
+	</script>
+
+
+
 
   <script>
 
@@ -519,3 +510,7 @@ new Swiper( '.myswiper', {
 
 </body>
 </html>
+
+
+
+

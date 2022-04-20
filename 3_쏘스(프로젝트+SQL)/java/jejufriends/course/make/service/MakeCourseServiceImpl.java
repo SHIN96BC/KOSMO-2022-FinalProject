@@ -21,7 +21,8 @@ import lombok.extern.log4j.Log4j;
 import soo.md.domain.Activity;
 import soo.md.domain.Food;
 import soo.md.domain.Hotel;
-import soo.md.domain.LandMark;
+import soo.md.domain.Landmark;
+
 
 @Log4j
 @Service
@@ -66,7 +67,7 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 		List<Activity> activityList = makeCourseRepository.selectActivityAll();
 		List<Hotel> HotelList = makeCourseRepository.selectHotelAll();
 		List<Food> foodList = makeCourseRepository.selectFoodAll();
-		List<LandMark> landmarkList = makeCourseRepository.selectLandmarkAll();
+		List<Landmark> landmarkList = makeCourseRepository.selectLandmarkAll();
 		
 		Map<String, MakeCourse> makeCourseMap = new ConcurrentHashMap<>(); // 동시성 이슈때문에 컨커넌트 해시맵을 사용
 		
@@ -89,7 +90,6 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 						activity.getAphone(),
 						activity.getAopcl(),
 						activity.getAbreak(),
-						activity.getAclosed(),
 						activity.getAphoto2(),
 						activity.getAphoto3(),
 						activity.getViews(),
@@ -117,7 +117,6 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 						hotel.getHphone(),
 						hotel.getHopcl(),
 						hotel.getHbreak(),
-						hotel.getHclosed(),
 						hotel.getHphoto2(),
 						hotel.getHphoto3(),
 						hotel.getViews(),
@@ -146,7 +145,6 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 						food.getFphone(),
 						food.getFopcl(),
 						food.getFbreak(),
-						food.getFclosed(),
 						food.getFphoto2(),
 						food.getFphoto3(),
 						food.getViews(),
@@ -155,7 +153,7 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 						food.getFmenu3()
 					));
 		}
-		for(LandMark landmark: landmarkList) {
+		for(Landmark landmark: landmarkList) {
 			makeCourseMap.put(landmark.getLname(),
 					new MakeCourse(
 						landmark.getLnum(),
@@ -174,7 +172,6 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 						landmark.getLphone(),
 						landmark.getLopcl(),
 						null,
-						landmark.getLclosed(),
 						landmark.getLphoto2(),
 						landmark.getLphoto3(),
 						landmark.getViews(),
