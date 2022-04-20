@@ -41,10 +41,10 @@ function communityPageSet(pageNum, page, communityList) {
                 let community = communityListTemp[i];
                 communityHtml += `
                     <tr style="background-color:#FFFFFF; color:#555555;" class="xans-record-">
-                        <td style="width:10%;"><input class="boardChk" value="14" type="checkbox"  />${community.comnum}</td>
+                        <td style="width:10%;">${community.comnum}</td>
                         <td style="width:20%;">${community.nick}</td>
                         <td class="subject left txtBreak" style="width:10%;">
-                            <a href="/jejufriends/community/content.do?comnum=${community.comnum}" style="color:#555555;">${community.comsubject}</a> 
+                            <a href="/jejufriends/community/communityContent.do?comnum=${community.comnum}" style="color:#555555;">${community.comsubject}</a> 
                         </td>
                         <td class=""><span class="txtNum">${community.comdate}</span></td>
                         <td class=""><span class="txtNum">${community.kategorie}</span></td>

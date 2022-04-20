@@ -212,4 +212,14 @@ public class SelectCourseServiceImpl implements SelectCourseService {
 		return selectCourseContentList;
 	}
 
+	@Override
+	public Long checkViews(long cnum) {
+		return selectCourseRepository.selectViews(cnum);
+	}
+
+	@Override
+	public void updateViews(Course course) {
+		selectCourseRepository.updateViews(course);
+	}
+
 }

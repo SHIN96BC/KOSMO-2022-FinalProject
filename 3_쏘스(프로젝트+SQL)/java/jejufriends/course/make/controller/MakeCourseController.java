@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,18 +28,21 @@ import soo.md.domain.Food;
 public class MakeCourseController {
 	private final MakeCourseService makeCourseService;
 	
+	@Secured({"ROLE_ADMIN" , "ROLE_SUPERADMIN", "ROLE_USER"})
 	@GetMapping("make.do")
 	public String make() {
 		makeCourseService.setContents();  //map 셋팅
 		return "/make_course/makecourse";
 	}
 	
+	@Secured({"ROLE_ADMIN" , "ROLE_SUPERADMIN", "ROLE_USER"})
 	@PostMapping("search")
 	@ResponseBody
 	public List<MakeCourse> search(String keyword) {
 		return makeCourseService.search(keyword);
 	}
 	
+	@Secured({"ROLE_ADMIN" , "ROLE_SUPERADMIN", "ROLE_USER"})
 	@GetMapping("contentInfo.do")
 	public ModelAndView contentInfo(String contentname) {
 		ModelAndView modelAndView = new ModelAndView();
@@ -66,12 +70,14 @@ public class MakeCourseController {
 		return modelAndView;
 	}
 	
+	@Secured({"ROLE_ADMIN" , "ROLE_SUPERADMIN", "ROLE_USER"})
 	@PostMapping("findcname")
 	@ResponseBody
 	public boolean findCname(String cname) {
 		return makeCourseService.findCourseName(cname);
 	}
 	
+	@Secured({"ROLE_ADMIN" , "ROLE_SUPERADMIN", "ROLE_USER"})
 	@PostMapping("saveCourse")
 	@ResponseBody
 	public boolean saveCourse(@RequestBody SaveCourse savecourse) {
@@ -82,4 +88,12 @@ public class MakeCourseController {
 		return flag;
 	}
 	
+	@Secured({"ROLE_ADMIN" , "ROLE_SUPERADMIN", "ROLE_USER"})
+	@RequestMapping("findNick")
+	@ResponseBody
+	public String findNick(String email) {
+		System.out.println("email: " + email);
+		System.out.println("makeCourseService.findNick(email): " + makeCourseService.findNick(email));
+		return makeCourseService.findNick(email);
+	}
 }

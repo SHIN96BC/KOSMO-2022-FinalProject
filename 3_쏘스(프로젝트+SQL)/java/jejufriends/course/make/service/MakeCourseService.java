@@ -21,4 +21,6 @@ public interface MakeCourseService {
 	boolean saveCourse(SaveCourse saveCourse);
 	// 이름 중복을 확인하기 위한 메소드
 	boolean findCourseName(String cname);
+	// 유저의 닉네임을 가져옴
+	String findNick(String email);
 }

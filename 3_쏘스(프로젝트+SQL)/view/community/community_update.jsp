@@ -259,16 +259,17 @@
 					</div>
 
 					<div class="ec-base-table typeWrite ">
-					<form id="community_submit" method="post" action="/jejufriends/community/community_upload.do" enctype="multipart/form-data" style="width:100%; height:500px; ">
+					<form id="community_submit" method="post" action="/jejufriends/community/community_update.do" enctype="multipart/form-data" style="width:100%; height:500px; ">
 						<input name="${_csrf.parameterName}" type="hidden" value="${_csrf.token}"/>
-						<input id="tag_set" name="comtag" value="" />
+						<input id="tag_set" type="hidden" name="comtag" value="${community.comtag}" />
 			            <table border="0" summary=""></table>
 						<input type="hidden" name="nick" type="text" value=""/>
-						<input name="comsubject" type="text" value="" style="width:100%;height:40px;" placeholder="게시글의 제목을 입력해주세요"/>
+						<input type="hidden" name="comnum" type="text" value="${community.comnum}"/>
+						<input name="comsubject" type="text" value="${community.comsubject}" style="width:100%;height:40px;" placeholder="게시글의 제목을 입력해주세요"/>
 						<table border="0" summary=""></table>
 						<input name="file" type="file" value=""/>
 						<table border="0" summary=""></table>
-						<textarea name="comcontent" style="width:100%;height:70%;" placeholder="게시글의 내용을 입력해주세요"></textarea>
+						<textarea name="comcontent" style="width:100%;height:70%;" placeholder="게시글의 내용을 입력해주세요">${community.comcontent}</textarea>
 						
 						<div style="width:300px;height:40px;float:left;">
 							<div class="title-type2"style="margin-top:6px;">해시태그를 추가하고 메인태그를 골라주세요(Enter로 추가) </div>

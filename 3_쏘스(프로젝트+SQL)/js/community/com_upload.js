@@ -19,23 +19,29 @@ function communityUpload() {
 
     const hashTagNum = $('#hashtag_list').children().length;
     const mainHash = $('.tag:checked').val();
-    if(!mainHash) {
-        alert("메인태그를 골라주세요");
-        location.href = "#content";
-        return;
-    }
-    hashTagLsit += mainHash;
     if(hashTagNum != 0) {
-        for(let i = 0; i < hashTagNum; i++) {
-            let hashTag = $(`#dough${i}`).val();
-            if(hashTag === mainHash) {
-                continue;
-            }else {
-                hashTagLsit += ' ' + hashTag;
+        if(!mainHash) {
+            if(hashTagNum != 0) {
+                for(let i = 0; i < hashTagNum; i++) {
+                    hashTagLsit += ' ' + hashTag;
+                }
+            }
+        }else {
+            hashTagLsit += mainHash;
+            if(hashTagNum != 0) {
+                for(let i = 0; i < hashTagNum; i++) {
+                    let hashTag = $(`#dough${i}`).val();
+                    if(hashTag === mainHash) {
+                        continue;
+                    }else {
+                        hashTagLsit += ' ' + hashTag;
+                    }
+                }
             }
         }
+        $('#tag_set').val(hashTagLsit);
     }
-    $('#tag_set').val(hashTagLsit);
+    
     // 카테고리 체크
     const kategorie = $('select[name=kategorie] option:selected').val();
     if(kategorie.length == 0) {

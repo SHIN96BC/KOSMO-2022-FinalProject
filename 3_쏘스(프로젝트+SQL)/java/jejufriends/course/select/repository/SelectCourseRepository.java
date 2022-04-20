@@ -33,4 +33,8 @@ public interface SelectCourseRepository {
 	Activity selectActivity(String aname);
 	Food selectFood(String fname);
 	LandMark selectLandMark(String lname);
+	
+	// 조회수 셋팅
+	Long selectViews(long cnum);
+	void updateViews(Course course);
 }

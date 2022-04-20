@@ -10,6 +10,7 @@ import lombok.Setter;
 @Getter
 public class Community {
 	private long comnum;
+	private String email;
 	private String nick;
 	private String comsubject;
 	private String comcontent;
@@ -23,9 +24,10 @@ public class Community {
 	private String comupdate;
 	private int division;
 	
-	public Community(long comnum, String nick, String comsubject, String comcontent, String kategorie, String comtag,
+	public Community(long comnum, String email, String nick, String comsubject, String comcontent, String kategorie, String comtag,
 			String comphoto, String comoriphoto, long views, long love, String comdate, String comupdate, int division) {
 		this.comnum = comnum;
+		this.email = email;
 		this.nick = nick;
 		this.comsubject = comsubject;
 		this.comcontent = comcontent;

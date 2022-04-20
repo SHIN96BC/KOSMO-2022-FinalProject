@@ -3,6 +3,7 @@ package jejufriends.course.select.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,27 +30,43 @@ public class SelectCourseController {
 	public SelectCourseController(SelectCourseService selectCourseService) {
 		this.selectCourseService = selectCourseService;
 	}
-
+	
+	@Secured({"ROLE_ADMIN" , "ROLE_SUPERADMIN", "ROLE_USER"})
 	@GetMapping("select.do")
 	public String select() {
 		return "/select_course/selectcourse";
 	}
 	
 	// ajax 
+	@Secured({"ROLE_ADMIN" , "ROLE_SUPERADMIN", "ROLE_USER"})
 	@PostMapping("selectDivision")
 	@ResponseBody
 	public List<Course> selectAll(SelectCourseDivision selectCourseDivision) {
 		return selectCourseService.courseDivisionList(selectCourseDivision);
 	}
 	
+	@Secured({"ROLE_ADMIN" , "ROLE_SUPERADMIN", "ROLE_USER"})
 	@PostMapping("selectSearch")
 	@ResponseBody
 	public List<Course> selectSearch(SelectCourseSearch selectCourseSearch) {
 		return selectCourseService.courseSearch(selectCourseSearch);
 	}
 	
+	@Secured({"ROLE_ADMIN" , "ROLE_SUPERADMIN", "ROLE_USER"})
 	@GetMapping("courseContent.do")
 	public ModelAndView selectContent(long cnum) {
+		// 조회수 올리기
+		Long views = selectCourseService.checkViews(cnum);
+		if(views != 0) {
+			views = 0L;
+		}
+		views++;
+		Course courseTemp = new Course();
+		courseTemp.setCnum(cnum);
+		courseTemp.setViews(views);
+		selectCourseService.updateViews(courseTemp);
+		
+		// 코스 객체 셋팅
 		Course course = selectCourseService.courseInfo(cnum);
 		List<SelectCourseContent> selectCourseContentList = selectCourseService.courseContentInfo(cnum);
 		ModelAndView modelAndView = new ModelAndView();
@@ -59,6 +76,7 @@ public class SelectCourseController {
 		return modelAndView;
 	}
 	
+	@Secured({"ROLE_ADMIN" , "ROLE_SUPERADMIN", "ROLE_USER"})
 	@GetMapping("selectcontentInfo.do")
 	public ModelAndView contentInfo(String contentname) {
 		ModelAndView modelAndView = new ModelAndView();

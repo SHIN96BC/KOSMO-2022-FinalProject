@@ -20,6 +20,7 @@ function pageSet(pageNum, page, courseList) {
     selectPage = page;
 
     // floor === 소수점 버림, toFixed(0) === 소수점 몇번째 자리까지 자른건지
+    // 시작 페이지
     if((page/pageNum).toFixed(0) != 0) {
         loop = Math.floor(page/pageNum+1);
         if(pageNum*(loop-1) == page){
@@ -32,6 +33,7 @@ function pageSet(pageNum, page, courseList) {
         loop = 1;
     }
 
+    // 코스 리스트 출력
     let courseHtml = '';
     let courseListStart = page*pageNum-pageNum;
     let courseListLast = page*pageNum;
@@ -43,7 +45,7 @@ function pageSet(pageNum, page, courseList) {
                 let course = courseListTemp[i];
                 courseHtml += `
                     <tr style="background-color:#FFFFFF; color:#555555;" class="">
-                    <td ><input class="boardChk" value="16" type="checkbox"  style="float: left; margin-left: 10px; margin-right: -15px;"/>${course.cnum}</td>
+                        <td>${course.cnum}</td>
                         <td class="subject" style="text-align: center;">
                             <a href="/jejufriends/select_course/courseContent.do?cnum=${course.cnum}" style="color:#555555;">${course.cname}</a> 
                             <img src="http://img.echosting.cafe24.com/design/skin/admin/ko_KR/ico_attach2.gif"  alt="파일첨부" class="ec-common-rwd-image"/>
@@ -75,16 +77,16 @@ function pageSet(pageNum, page, courseList) {
     }
     $("#course_list").append(courseHtml);
 
+    // 페이지 버튼 생성
     if(selectPage > 1) {
         pageHtml += '<a><img class="beforePage" style="cursor:pointer;" src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지"/></a>';
     }
     pageHtml += '<ol>';
-    for(let i = startPage; i <= pageNum*loop; i++) {
+    for(let i = startPage; i <= startPage+5; i++) {
         if(i === page) pageHtml += `<li class="xans-record-"><a class="this" style="cursor:pointer;">${i}</a></li>`;
         else if(i > maxPage) break;
         else pageHtml += `<li class="xans-record-"><a class="page" style="cursor:pointer;">${i}</a></li>`;
     }
-    console.log("maxPage: " + maxPage);
     pageHtml += '</ol>';
     if(selectPage != maxPage && maxPage != 0) {
         pageHtml += '<a><img class="nextPage" style="cursor:pointer;" src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지"/></a>';
@@ -132,19 +134,14 @@ $(document).ready(function() {
     });
 });
 
+// 검색 ajax
 function selectSearchAjax() {
     const searchKey = $('#search_key option:selected').val();
     const keyWord = $('#select_search').val();
-    let csrfParameter = $('meta[name="_csrf_parameter"]').attr('content');
-    let csrfHeader = $('meta[name="_csrf_header"]').attr('content');
-    let csrfToken = $('meta[name="_csrf"]').attr('content');
     $.ajax({
         url: "/jejufriends/select_course/selectSearch.json",
         type: "POST",
         data: {column: searchKey, keyword: keyWord},
-        beforeSend: function(xhr) {
-            xhr.setRequestHeader(csrfHeader, csrfToken);
-        },
         success: function(courseList) {
             const pageNum = $('#pageNum option:selected').val();
             pageSet(pageNum, 1, courseList);

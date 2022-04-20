@@ -220,6 +220,11 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 	}
 	
 	@Override
+	public String findNick(String email) {
+		return makeCourseRepository.selectNick(email);
+	}
+	
+	@Override
 	public boolean saveCourse(SaveCourse saveCourse) {
 		boolean flag = false;
 		String cnick = saveCourse.getNick();

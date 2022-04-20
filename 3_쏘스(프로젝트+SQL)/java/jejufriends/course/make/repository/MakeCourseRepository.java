@@ -43,6 +43,8 @@ public interface MakeCourseRepository {
 	// 푸드 컨텐츠
 	Food selectFood(String fname);
 	
+	// 닉네임 조회
+	String selectNick(String email);
 	// 코스 삭제 ( 필요할까? )
 	
 	// 코스 업데이트 ( 필요할까? )

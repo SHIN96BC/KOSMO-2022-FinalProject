@@ -277,16 +277,14 @@
 			<caption>게시판 목록</caption>
 	      	
 			<thead class="xans-element- xans-board xans-board-listheader-1002 xans-board-listheader xans-board-1002 ">
-				<tr style=" ">
-					<th scope="col" style="width:10%;">
-						<input class="boardListAll" value="all" type="checkbox"/> 번호
-					</th>
-					<th scope="col" style="width:20%;">작성자</th>
-		            <th scope="col" style="width:30%;">제목</th>
-		            <th scope="col" style="width:10%;">작성일</th>
-		            <th scope="col" style="width:10%;">카테고리</th>
-		            <th scope="col" style="width:10%;">조회수</th>
-		            <th scope="col" style="width:10%;">좋아요</th>
+				<tr style="">
+					<th style="width:10%;text-align:center;">번호</th>
+					<th style="width:20%;text-align:center;">작성자</th>
+		            <th style="width:30%;padding-left:10px;">제목</th>
+		            <th style="width:10%;text-align:center;">작성일</th>
+		            <th style="width:10%;text-align:center;">카테고리</th>
+		            <th style="width:10%;text-align:center;">조회수</th>
+		            <th style="width:10%;text-align:center;">좋아요</th>
 		        </tr>
 			</thead>
 			<tbody id="community_list" class="xans-element- xans-board xans-board-list-1002 xans-board-list xans-board-1002 center">
