@@ -90,15 +90,8 @@
 	                </tr>
 			<tr>
 				<td class="board_sub_text" colspan="2">
-					<a href='#none' >기호제학(rlgh2587)</a>
-					<span class="aa">
-						작성일 2022-03-17						
-					</span>
-					<span class="displaynone">
-						추천  <a href="#none" class="btnNormal" onclick="BOARD_READ.article_vote('/exec/front/Board/vote/8?no=5&return_url=%2Fboard%2Fproduct%2Fread.html&3a2a170a628554a790914fd9a=995cff7fe27b812cd9bcb7fc9cca0919&board_no=8&category_no=1&cate_no=1');">추천하기</a>
-					</span>
 					<span class="">
-						조회수 1						
+						조회수 - ${makeCourse.contentviews}						
 					</span>
 					</td>
 				</tr>		 
@@ -189,38 +182,49 @@
 				</div>
 				<div class="addBox">
 					<dl class="add">
-						<dt id="storeAddressTitle">츄츄츄</dt>
-						<dd id="storeAddressTxt">츄병철</dd>
+						<dt id="storeAddressTitle">주소 </dt>
+						<dd id="storeAddressTxt">${makeCourse.contentaddress} </dd>
 					</dl>
 					<dl class="num">
-						<dt id="storeTelTitle">츄치치</dt>
-						<dd id="storeTelTxt">츄기호</dd>
+						<dt id="storeTelTitle">전화번호</dt>
+						<dd id="storeTelTxt">${makeCourse.contentphone}</dd>
 					</dl>
 					<dl class="site" id="homepage" style="display:none;">
 						<dt id="storeHPageTitle"></dt>
 						<dd id="storeHPageTxt"></dd>
 					</dl>
-					<p class="mapBtn"><a href="javascript:;" onclick="fnMovFodInq0070(); return false;"><img src="https://cdn.jejujini.kr/resources/KR/img/pin_road_02.png"></a></p>
 				</div>
+
 
 				<div class="addcardBtn" style="display:none;"><a href="javascript:;"  class="review" onclick="fnAskRoad();return false;"><span>问路卡</span></a></div>
 				<div class="menu_link"><!--180831 추가-->
-					<ul>
-						<li><a href="#storeTotMenu" class="scrolling" id="menuInfo">메뉴안내</a></li> <!-- MSG : 메뉴안내 --> <!-- fnInitMctIf 에서 메뉴/입장료 분기 처리 -->
-						<li><a href="#storeInfo" class="scrolling" id="storeTitInfo">맛집소개</a></li> <!-- MSG : 맛집소개 -->
 
-						<li><a href="#storeReview" class="scrolling" id="rvwCnt">리뷰</a></li> <!-- MSG : 리뷰 -->
-					</ul>
 				</div>
 				<div class="store_map" id="storeTotMenu">
 					<dl class="store_view">
-                     <dt id="storeTotMenuTitle">메뉴<input type="hidden" name="41"><input type="hidden" name="42"><input type="hidden" name="43"></dt>
                      <dd>
-                        <div class="menu_img swiper-container swiper-container-horizontal swiper-container-free-mode" id="storeRepMenuImg" style="display: block;"><ul class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);"><li class="swiper-slide swiper-slide-active" style="margin-right: 10px;"><a href="javascript:;" onclick="javascript:fnShowBigImgMenu('0');return false;"><img src="https://cdn.jejujini.kr/uploadImg/MCT_PHT/SMALL/140075_20190424083454203.jpg"><span>&nbsp;</span></a></li><li class="swiper-slide swiper-slide-next" style="margin-right: 10px;"><a href="javascript:;" onclick="javascript:fnShowBigImgMenu('1');return false;"><img src="https://cdn.jejujini.kr/uploadImg/MCT_PHT/SMALL/140075_20190424083454604.jpg"><span>&nbsp;</span></a></li><li class="swiper-slide" style="margin-right: 10px;"><a href="javascript:;" onclick="javascript:fnShowBigImgMenu('2');return false;"><img src="https://cdn.jejujini.kr/uploadImg/MCT_PHT/SMALL/140075_20190424083531413.jpg"><span>&nbsp;</span></a></li><li class="swiper-slide" style="margin-right: 10px;"><a href="javascript:;" onclick="javascript:fnShowBigImgMenu('3');return false;"><img src="https://cdn.jejujini.kr/uploadImg/MCT_PHT/SMALL/140075_20190429102609486.jpg"><span>&nbsp;</span></a></li><li class="swiper-slide" style="margin-right: 10px;"><a href="javascript:;" onclick="javascript:fnShowBigImgMenu('4');return false;"><img src="https://cdn.jejujini.kr/uploadImg/MCT_PHT/SMALL/140075_20190429102609938.jpg"><span>&nbsp;</span></a></li><li class="swiper-slide" style="margin-right: 10px;"><a href="javascript:;" onclick="javascript:fnShowBigImgMenu('5');return false;"><img src="https://cdn.jejujini.kr/uploadImg/MCT_PHT/SMALL/140075_20190429102610337.jpg"><span>&nbsp;</span></a></li><li class="swiper-slide" style="margin-right: 10px;"><a href="javascript:;" onclick="javascript:fnShowBigImgMenu('6');return false;"><img src="https://cdn.jejujini.kr/uploadImg/MCT_PHT/SMALL/140075_20190424083531742.jpg"><span>&nbsp;</span></a></li><li class="swiper-slide" style="margin-right: 10px;"><a href="javascript:;" onclick="javascript:fnShowBigImgMenu('7');return false;"><img src="https://cdn.jejujini.kr/uploadImg/MCT_PHT/SMALL/140075_20190429102609026.jpg"><span>&nbsp;</span></a></li><li class="swiper-slide" style="margin-right: 10px;"><a href="javascript:;" onclick="javascript:fnShowBigImgMenu('8');return false;"><img src="https://cdn.jejujini.kr/uploadImg/MCT_PHT/SMALL/140075_20190424083532186.jpg"><span>&nbsp;</span></a></li><li class="swiper-slide" style="margin-right: 10px;"><a href="javascript:;" onclick="javascript:fnShowBigImgMenu('9');return false;"><img src="https://cdn.jejujini.kr/uploadImg/MCT_PHT/SMALL/0101000435_M_07_제주육떡식당.jpg"><span>&nbsp;</span></a></li><li class="swiper-slide" style="margin-right: 10px;"><a href="javascript:;" onclick="javascript:fnShowBigImgMenu('10');return false;"><img src="https://cdn.jejujini.kr/uploadImg/MCT_PHT/SMALL/0101000435_M_08_제주육떡식당.jpg"><span>&nbsp;</span></a></li><li class="swiper-slide" style="margin-right: 10px;"><a href="javascript:;" onclick="javascript:fnShowBigImgMenu('11');return false;"><img src="https://cdn.jejujini.kr/uploadImg/MCT_PHT/SMALL/0000000495_20180427155518375.png"><span>&nbsp;</span></a></li></ul><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div><!--// menu_img -->
+                        <div class="menu_img swiper-container swiper-container-horizontal swiper-container-free-mode" id="storeRepMenuImg" style="display: block;">
+                        <ul class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+                        <li class="swiper-slide swiper-slide-active" style="margin-right: 10px;">
+                        <a href="javascript:;" onclick="javascript:fnShowBigImgMenu('0');return false;">
+                        <img src="/photo/${makeCourse.contentphoto}">
+                        <span>&nbsp;</span></a></li>
+                        <li class="swiper-slide swiper-slide-next" style="margin-right: 10px;">
+                        <a href="javascript:;" onclick="javascript:fnShowBigImgMenu('1');return false;">
+                        <img src="/photo/${makeCourse.contentphoto2}">
+                        <span>&nbsp;</span></a></li>
+                        <li class="swiper-slide" style="margin-right: 10px;">
+                        <a href="javascript:;" onclick="javascript:fnShowBigImgMenu('2');return false;">
+                        <img src="/photo/${makeCourse.contentphoto3}">
+                        <span>&nbsp;</span></a></li>
+                    	</ul><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div><!--// menu_img -->
 
                         <div class="menu_box" id="menuFull">
-                           <ul class="store_menu" id="storeTotMenuImg" style="display: block;"><li class="group" name="41">국수바다 상차림</li><li><span><em>육떡세트(소,2인):해물떡볶이전골(소)+육전+음료1</em></span><span class="price">39,000 원</span></li><li><span><em>(대,4인):해물떡볶이전골(대)+육전+음료1</em></span><span class="price">47,000 원</span></li><li class="group" name="42">단품메뉴</li><li><span>해물떡볶이전골(소)</span><span class="price">27,000 원</span></li><li><span>해물떡볶이전골(대)</span><span class="price">35,000 원</span></li><li><span>불나게 매운 불오징어</span><span class="price">15,000 원</span></li><li><span>바삭바삭 쫀득쫀득 육전</span><span class="price">12,000 원</span></li><li class="group" name="43">추가메뉴</li><li><span>베이컨 셀프주먹밥</span><span class="price">3,000 원</span></li><li><span>베이컨 풍미볶음밥</span><span class="price">3,000 원</span></li><li><span>유부주머니(2개)</span><span class="price">2,000 원</span></li><li><span>삶은달갈(2개)</span><span class="price">2,000 원</span></li><li><span>어묵,라면,쫄면,떡 중 택1</span><span class="price">2,000 원</span></li></ul>
-                           <p class="plusBtn" id="plusBtn" onclick="menuMore();" style=""><span>더보기</span></p> <!-- MSG : 더보기 -->
+                           <ul class="store_menu" id="storeTotMenuImg" style="display: block;"><li class="group" name="41">입장료</li>
+                           <li><span><em>입장료</em></span><span class="price">${makeCourse.contentcost}원</span></li>
+                           <li class="group" name="42">나이제한</li>
+                           <li><span>전 연령 가능!</span><span class="price"></span></li>
+                           </ul>
                         </div>
                      </dd>
                    </dl>
@@ -236,9 +240,8 @@
 
 				<div class="store_con" id="storeInfo" style="display: block;">
             
-               <h2 class="s_tit" id="storeInfoTitle">맛집소개</h2> <!-- 이 맛집의 정보가 알고 싶은가요? -->
-               <h3 class="s_tit2" id="storeInfoTxt1">궁극의 떡볶이를 만나다</h3>
-               <p class="con_txt" id="storeInfoTxt2">제주도의 떡볶이 전문 식당인데 이 곳의 주인공은 해물떡볶이 전골을 꼭 시켜야 함. 떡볶이라기보다는 마치 해물찜 같이 문어, 오징어다리, 보말, 낙지, 새우가 푸짐히 떡볶이 국물에 들어가고 있음. 처음엔 그냥 떡볶이 맛 같지만 끓으면 끓을 수록 해산물 육수가 우러나와 맛이 진해지고 시원해져 그 맛이 엄지 척! 다 먹고 볶음밥 먹으려면 오징어 다리를 좀 남겨두는 게 포인트!</p>
+               <h3 class="s_tit2" id="storeInfoTxt1">${makeCourse.contentintro}</h3>
+               <p class="con_txt" id="storeInfoTxt2">${makeCourse.contentintro2}</p>
                <dl class="store_view" id="storeTimeFrame" style="display: block;">
                   <!--  // 영업시간, 쉬는시간, 휴무일 -->
                   <dt class="hide">영업시간</dt> <!-- MSG : 영업시간 -->
@@ -246,17 +249,18 @@
                      <div class="row" id="workingTimeFrame" style="display: block;">
                         <div class="cell" id="workingTimeTitle">영업시간</div>
                         <div class="cell" id="workingTime">
-                        <dd style="margin-top: -20px;">오전 11:00 - 오후 9:00 </dd>
-                        
-                     </div>
-                     <div class="row" id="breakTimeFrame" style="display: none;">
-                        <div class="cell" id="breakTimeTitle">쉬는시간</div>
-                        <div class="cell" id="breakTime"></div>
-                     </div>
-                     
+                        <dd style="margin-top: -40px;">${makeCourse.contentopcl}</dd>
+                  </dd>  
+                  <dt class="hide">쉬는시간</dt> <!-- MSG : 영업시간 -->
+                  <dd style ="margin-top: -30px;">
+                     <div class="row" id="workingTimeFrame" style="display: block;">
+                       <div style ="margin-top: -30px;" class="cell" id="workingTimeTitle">쉬는시간</div>
+                        <div class="cell" id="workingTime">
+                        <dd style="margin-top: -40px;">${makeCourse.contentbreak}</dd>
                   </dd>
+            	
                </dl>
-            </div>				 
+            </div>
 											 
 					<!-- 컨텐츠 끝 -->
 </div>
@@ -265,59 +269,6 @@
 </div>
 </form>
 
-<div id="storeReview">
-	<div class="xans-element- xans-board xans-board-commentpackage-1002 xans-board-commentpackage xans-board-1002 "><div class="xans-element- xans-board xans-board-commentlist-1002 xans-board-commentlist xans-board-1002">
-		<ul class="boardComment">
-			<li class="first  xans-record-">
-                <div class="commentTop">
-                    <strong class="name">
-                    <a href='#none' onclick=EC_BOARD_ADMIN.member_info('rlgh2587','rlgh2587');>기호제학(rlgh2587)</a></strong>
-                    <span class="date">2022-03-18 16:18:31</span>
-                    <span class="grade displaynone">
-                    	<img src="//img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point0.gif" alt="0점"/>
-                    </span>
-                </div>
-                <span class="button">
-                    <a href="javascript:;" class="btnNormal" onclick="BOARD_COMMENT.comment_update('13','2',this);">수정</a>
-                    <a href="javascript:;" class="btnNormal" onclick="BOARD_COMMENT.comment_delete('/board/free/comment_del.html?board_no=5&no=13&comment_no=2&page=&return_url=/board/free/read.html');"><i class="icoDelete"></i> 삭제</a>
-                </span>
-                <div class="comment">
-                    <span class="displaynone"><img src="//img.echosting.cafe24.com/skin/base/board/ico_spam.gif" alt="스팸글"/></span>
-                     ㅋㅋ                </div>
-            </li>
-            <li class=" xans-record-">
-                <div class="commentTop">
-                    <strong class="name">
-                    <a href='#none' onclick=EC_BOARD_ADMIN.member_info('rlgh2587','rlgh2587');>기호제학(rlgh2587)</a></strong>
-                    <span class="date">2022-03-18 16:18:37</span>
-                    <span class="grade displaynone"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point0.gif" alt="0점"/></span>
-                </div>
-                <span class="button">
-                    <a href="javascript:;" class="btnNormal" onclick="BOARD_COMMENT.comment_update('13','3',this);">수정</a>
-                    <a href="javascript:;" class="btnNormal" onclick="BOARD_COMMENT.comment_delete('/board/free/comment_del.html?board_no=5&no=13&comment_no=3&page=&return_url=/board/free/read.html');"><i class="icoDelete"></i> 삭제</a>
-                </span>
-                <div class="comment">
-                    <span class="displaynone"><img src="//img.echosting.cafe24.com/skin/base/board/ico_spam.gif" alt="스팸글"/></span>
-                     ㅎㅇㅎㅇ                </div>
-            </li>
-			<li class=" xans-record-">
-                <div class="commentTop">
-                    <strong class="name">
-                    <a href='#none' onclick=EC_BOARD_ADMIN.member_info('rlgh2587','rlgh2587');>기호제학(rlgh2587)</a></strong>
-                    <span class="date">2022-03-18 16:18:51</span>
-                    <span class="grade displaynone"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point0.gif" alt="0점"/></span>
-                </div>
-                <span class="button">
-                    <a href="javascript:;" class="btnNormal" onclick="BOARD_COMMENT.comment_update('13','4',this);">수정</a>
-                    <a href="javascript:;" class="btnNormal" onclick="BOARD_COMMENT.comment_delete('/board/free/comment_del.html?board_no=5&no=13&comment_no=4&page=&return_url=/board/free/read.html');"><i class="icoDelete"></i> 삭제</a>
-                </span>
-                <div class="comment">
-                    <span class="displaynone"><img src="//img.echosting.cafe24.com/skin/base/board/ico_spam.gif" alt="스팸글"/></span>
-                     ㅎㅇㅎㅇ                </div>
-            </li>
-        </ul>
-</div>
-</div>
 
 		</div><!-- //container -->
 	</div>
@@ -341,49 +292,7 @@
 </div>
 </div>
 
-
-<div id="footer">
-	<div class="xans-element- xans-layout xans-layout-footer cboth inner ">
-	<div class="bt_logo"><a href="/"><img src="/img/jeju2.png"/></a></div>
-<div class="bt_info" style="margin-left: 50px;">
-			<div class="bt_title">기호제학</div>
-			대표자 : 성기호<br/>
-			소재지 :   <br/>
-			사업자등록번호 :  <br/>
-			통신판매업신고번호 : <br/>
-			개인정보보호책임자 : <a href="mailto:rlgh2587@naver.com">성기호(rlgh2587@naver.com)</a>
-		</div>
-<!-- //bt_info -->
-<div class="bt_cscenter">
-			<div class="bt_title">고객센터</div>
-			010-4065-0757<br/>
-			rlgh2587@naver.com		</div>
-<!-- //bt_cscenter -->
-<div class="bt_runtime">
-<!-- 운영시간 및 계좌번호는 [상점관리 - 기본정보관리 - 내쇼핑몰정보 - CS운영시간] 에 작성하시면 자동출력됩니다. -->
-					</div>
-
-<!-- //bt_communitu -->
-<div class="cboth pdt70">
-			<ul class="cboth utilMenu">
-<li><a href="/member/privacy.html"><strong>개인정보 처리방침</strong></a></li>
-				<li>|</li>
-				<li><a href="/member/agreement.html">이용약관</a></li>
-				<li>|</li>
-				<li><a href="/shopinfo/guide.html">이용안내</a></li>
-				<li>|</li>
-				<li><a href="/board/%EC%83%81%ED%92%88-qa/6/">제휴문의</a></li>
-			</ul>
-<!-- //utilMenu --><div class="cboth escrow">고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 PG 사의 구매안전서비스를 이용하실 수 있습니다. [ LG U+ 에스크로 ]</div>
-			<div class="copyright">COPYRIGHT © <span>기호제학. </span> ALL RIGHTS RESERVED. HOSTING BY 카페24(주)</div>
-
-			<div class="cboth bt_sns">
-<!-- 하단 SNS 링크 수정하는곳 -->
-				</div>
-		</div>
-</div>
-<!-- //inner -->
-</div><!-- //footer -->
+<jsp:include page="../footer.jsp" flush="true"/>
 
 
 <!-- 180430 플로팅버튼추가 -->

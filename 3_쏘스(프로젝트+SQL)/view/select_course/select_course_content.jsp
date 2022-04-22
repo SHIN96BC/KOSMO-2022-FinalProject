@@ -43,6 +43,93 @@
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 	<!--===============================================================================================-->
 		
+		<div class="top-bar" >
+			<div class="content-topbar flex-sb-m h-full container">
+				<div class="left-top-bar">
+				</div>
+			</div>
+	
+     		<div class="wrap-menu-desktop">
+           		<nav class="limiter-menu-desktop container">
+             
+	            <!-- Logo desktop -->      
+	            	<a href="/jejufriends" class="logo">
+	                	<img src="/img/jeju2.png" alt="IMG-LOGO" style='width: 100px; height: 50px; margin-left: 50px;; margin-right: -20px;'>
+	              	</a>
+	
+	            <!-- Menu desktop -->
+	            	<div class="menu-desktop" style='margin-top: 10px;'>
+	                 	<ul class="main-menu">
+		                    <li>
+		                       <a href="/jejufriends" style="font-size: 18px;">Home</a>
+		                    </li>
+	
+		                    <li class="label1" data-label1="hot">
+		                       <a href="" style="font-size: 18px;">Course</a>
+		                       <ul class="sub-menu">
+									<li><a href="/jejufriends/select_course/select.do">코스추천</a></li>
+                                    <li><a href="/jejufriends/make_course/make.do">나만의코스</a></li>
+		                       </ul>
+		                    </li>
+	
+		                    <li >
+		                       <a href="" style="font-size: 18px;">Contents</a>
+		                       <ul class="sub-menu">
+		                          <li><a href="/jejufriends/food/list.do">소문난맛집</a></li>
+		                          <li><a href="/jejufriends/landmark/list.do">관광지</a></li>
+		                          <li><a href="/jejufriends/activity/list.do">로컬체험</a></li>
+		                          <li><a href="/jejufriends/hotel/list.do">숙소</a></li>
+		                       </ul>
+		                    </li>
+	
+		                    <li>
+		                       <a href="/jejufriends/community/community.do" style="font-size: 18px;">Community</a>
+		                    </li>
+	
+	
+		                    <li>
+		                       <a href="" style="font-size: 18px;">CS</a>
+		                       <ul class="sub-menu">
+									<li><a href="/jejufriends/faq/list.do?cp=1">FAQ</a></li>
+                                	<li><a href="/jejufriends/qna/list.do?cp=1">QNA</a></li>
+		                       </ul>
+		                    </li>
+	                    
+		                    <li>
+		                       <a href="" style="font-size: 18px;">About</a>
+		                    </li>
+	                	</ul>
+	              	</div>   
+	
+			           <!-- Icon header -->
+		               <!-- logout-->
+		               <div class="wrap-icon-header flex-w flex-r-m" style="margin-bottom: -10px;">
+		               	 <sec:authorize access="isAuthenticated()">
+	               	     <form action="/jejufriends/logout" method="post">
+	                      	<input name="${_csrf.parameterName}" type="hidden" value="${_csrf.token}"/>
+						    <button type="submit" value="Logout" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
+						     <p style="font-size: 18px; font-weight: bold;">Logout</p>
+						    </button>
+						  </form>
+	                  </sec:authorize>
+	                  <sec:authorize access="isAnonymous()">
+	                  <!-- login-->
+	                  <a href="/jejufriends/login" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
+	                      <p style="font-size: 18px; font-weight: bold;">Login</p>
+	                  </a>
+	                  </sec:authorize>
+					<!--  장바구니 아이콘
+	                  <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="2">
+	                     <i class="zmdi zmdi-shopping-cart"></i>
+	                  </div>
+					-->
+	                  <a href="/jejufriends/member/mypage" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
+	                     <i class="zmdi zmdi-account"></i>
+	                  </a>
+	               </div>
+	           		</nav>
+	        	</div>   
+	     	</div>
   
 		<!--===============================================================================================-->	
 			<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -165,88 +252,6 @@
 <meta name="_csrf_header" content="${_csrf.headerName}"/>
 <meta name="_csrf_parameter" content="${_csrf.parameterName}"/>
 <sec:authentication property="principal.username" var = "emails"/>
-<header>
-    <div class="wrap-menu-desktop" style="margin-top: -50px;">
-            <nav class="limiter-menu-desktop container">
-               
-               <!-- Logo desktop -->      
-               <a href="#" class="logo">
-                  <img src="/img/jeju2.png" alt="IMG-LOGO" style='width: 100px; height: 50px; margin-left: 50px;; margin-right: -20px;'>
-               </a>
-
-               <!-- Menu desktop -->
-             <div class="menu-desktop" style='margin-top: 10px;'>
-                  <ul class="main-menu">
-                     <li>
-                        <a href="/jejufriends" style="font-size: 18px;">Home</a>
-                     </li>
-
-                   <li class="label1" data-label1="hot">
-                      <a href="" style="font-size: 18px;">Course</a>
-                      <ul class="sub-menu">
-                         <li><a href="/jejufriends/select_course/select.do">코스추천</a></li>
-                         <li><a href="/jejufriends/make_course/make.do">나만의코스</a></li>
-                      </ul>
-                   </li>
-
-                   <li >
-                      <a href="" style="font-size: 18px;">Contents</a>
-                      <ul class="sub-menu">
-                         <li><a href="/jejufriends/food/list.do">소문난맛집</a></li>
-                         <li><a href="/jejufriends/landmark/list.do">관광지</a></li>
-                         <li><a href="/jejufriends/activity/list.do">로컬체험</a></li>
-                         <li><a href="/jejufriends/hotel/list.do">숙소</a></li>
-                      </ul>
-                   </li>
-
-                     <li>
-                        <a href="/jejufriends/community/community.do" style="font-size: 18px;">Community</a>
-                     </li>
-
-
-                     <li>
-                        <a href="contact.html" style="font-size: 18px;">CS</a>
-                        <ul class="sub-menu">
-                           <li><a href="/jejufriends/qna/list.do">Q&A</a></li>
-                           <li><a href="/jejufriends/faq/list.do">FAQ</a></li>
-                        </ul>
-                     </li>
-		             <li>
-                        <a href="about.html" style="font-size: 18px;">About</a>
-                     </li>
-                  </ul>
-               </div>   
-
-               <!-- Icon header -->
-               <!-- logout-->
-               <div class="wrap-icon-header flex-w flex-r-m" style="margin-bottom: -10px;">
-               	 <sec:authorize access="isAuthenticated()">
-               	     <form action="/jejufriends/logout" method="post">
-                      	<input name="${_csrf.parameterName}" type="hidden" value="${_csrf.token}"/>
-					    <button type="submit" value="Logout" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
-					     <p style="font-size: 18px; font-weight: bold;">Logout</p>
-					    </button>
-					  </form>
-                  </sec:authorize>
-                  <sec:authorize access="isAnonymous()">
-                  <!-- login-->
-                  <a href="/jejufriends/login" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
-                      <p style="font-size: 18px; font-weight: bold;">Login</p>
-                  </a>
-                  </sec:authorize>
-				<!--  장바구니 아이콘
-                  <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="2">
-                     <i class="zmdi zmdi-shopping-cart"></i>
-                  </div>
-				-->
-                  <a href="/jejufriends/member/mypage" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
-                     <i class="zmdi zmdi-account"></i>
-                  </a>
-               </div>
-            </nav>
-         </div>   
-      </div>
-</header>
 
 <script type="text/javascript" src="/js/selectcourse/add_myschedule.js"></script>
 <div style="margin-top: 150px;"></div>
@@ -437,60 +442,6 @@
 </div>
 
 
-<div class="xans-element- xans-board xans-board-list-3001 xans-board-list xans-board-3001"><!--
-            $count = 12
-            $login_page_url = /member/login.html
-            $deny_access_url = /index.html
-        -->
-<div id="storeReview">
-<c:forEach items="${reviewVo}" var="reviewVo">
-<c:if test="${not empty reviewVo}">
-
-	<div class="xans-element- xans-board xans-board-commentpackage-1002 xans-board-commentpackage xans-board-1002 "><div class="xans-element- xans-board xans-board-commentlist-1002 xans-board-commentlist xans-board-1002">
-		<ul class="boardComment">
-			<li class="first  xans-record-">
-                <div class="commentTop">
-                    <strong class="name">
-                    <a href='#none' onclick=EC_BOARD_ADMIN.member_info('rlgh2587','rlgh2587');>${reviewVo.writer}</a></strong>
-                    <span class="date"> <fmt:formatDate value="${reviewVo.rdate }" pattern="yyyy-MM-dd (E) HH:mm" /></span>
-                    <span class="grade displaynone"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point0.gif" alt="0점"/></span>
-                </div>
-                <span class="button">
-                    <a href="javascript:;" class="btnNormal" onclick="BOARD_COMMENT.comment_update('13','2',this);">수정</a>
-                    <a href="del.do?frnum=${reviewVo.frnum }&fnum=${food.fnum}" class="btnNormal"><i class="icoDelete"></i> 삭제</a>
-                </span>
-                <div class="comment">
-                    <span class="displaynone"><img src="//img.echosting.cafe24.com/skin/base/board/ico_spam.gif" alt="스팸글"/></span>
-                     ${reviewVo.content} 
-               </div>
-            </li>
-        </ul>
-	</div>
-</div>
-
-</c:if>
-</c:forEach>
-<script>
-	function subMit(){
-		f.submit();
-	}
-</script>
-
-		<div class="xans-element- xans-board xans-board-commentwrite-1002 xans-board-commentwrite xans-board-1002 "><!-- 댓글권한 있음 -->
-            <fieldset>
-            <form id="commentWriteForm" name="f" action="review.do?fnum=${food.fnum}" method="post" target="_self"  >
-			<legend>댓글 입력</legend>
-                <div class="input">
-                    <strong>댓글달기</strong>
-                 	<input style="border: 1px solid rgba(211, 211, 211, 0.7); background-color: rgba(216, 216, 216, 0.3);"type="text" name="writer" />
-                </div>
-                <div class="view"> 
-                    <textarea name="content" fw-filter="isFill" fw-label="댓글내용" fw-msg="" style="border: 1px solid rgba(211, 211, 211, 0.7);"></textarea>                    
-                    <a href='javascript:subMit()' class="btnEm sizeL ">확인</a>
-                </div>
-                </form>
-            </fieldset>
-		</div>
             
 
 	</div>
@@ -518,49 +469,7 @@
 </div>
 </div>
 
-
-<div id="footer">
-	<div class="xans-element- xans-layout xans-layout-footer cboth inner ">
-	<div class="bt_logo"><a href="/"><img src="/img/jeju2.png"/></a></div>
-	<div class="bt_info" style="margin-left: 50px;">
-				<div class="bt_title">기호제학</div>
-				대표자 : 성기호<br/>
-				소재지 :   <br/>
-				사업자등록번호 :  <br/>
-				통신판매업신고번호 : <br/>
-				개인정보보호책임자 : <a href="mailto:rlgh2587@naver.com">성기호(rlgh2587@naver.com)</a>
-			</div>
-	<!-- //bt_info -->
-	<div class="bt_cscenter">
-				<div class="bt_title">고객센터</div>
-				010-4065-0757<br/>
-				rlgh2587@naver.com		</div>
-	<!-- //bt_cscenter -->
-	<div class="bt_runtime">
-	<!-- 운영시간 및 계좌번호는 [상점관리 - 기본정보관리 - 내쇼핑몰정보 - CS운영시간] 에 작성하시면 자동출력됩니다. -->
-						</div>
-	
-	<!-- //bt_communitu -->
-	<div class="cboth pdt70">
-				<ul class="cboth utilMenu">
-	<li><a href="/member/privacy.html"><strong>개인정보 처리방침</strong></a></li>
-					<li>|</li>
-					<li><a href="/member/agreement.html">이용약관</a></li>
-					<li>|</li>
-					<li><a href="/shopinfo/guide.html">이용안내</a></li>
-					<li>|</li>
-					<li><a href="/board/%EC%83%81%ED%92%88-qa/6/">제휴문의</a></li>
-				</ul>
-	<!-- //utilMenu --><div class="cboth escrow">고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 PG 사의 구매안전서비스를 이용하실 수 있습니다. [ LG U+ 에스크로 ]</div>
-				<div class="copyright">COPYRIGHT © <span>기호제학. </span> ALL RIGHTS RESERVED. HOSTING BY 카페24(주)</div>
-	
-				<div class="cboth bt_sns">
-	<!-- 하단 SNS 링크 수정하는곳 -->
-					</div>
-			</div>
-	</div>
-	<!-- //inner -->
-</div><!-- //footer -->
+<jsp:include page="../footer.jsp" flush="true"/>
 
 
 <!-- 180430 플로팅버튼추가 -->

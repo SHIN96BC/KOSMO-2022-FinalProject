@@ -33,10 +33,6 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 	
 	@Override
 	public List<MakeCourse> search(String keyword) {
-	/*List<Activity> activityList = makeCourseRepository.selectActivitySearch(keyword);
-		List<Hotel> HotelList = makeCourseRepository.selectHotelSearch(keyword);
-		List<Food> foodList = makeCourseRepository.selectFoodSearch(keyword);
-		List<LandMark> landmarkList = makeCourseRepository.selectLandmarkSearch(keyword);*/
 		List<MakeCourse> makeCourseList = new ArrayList<>();
 		if(searchContents != null) {
 			Set<String> keys = searchContents.keySet();
@@ -74,110 +70,43 @@ public class MakeCourseServiceImpl implements MakeCourseService {
 		for(Activity activity: activityList) {
 			makeCourseMap.put(activity.getAname(), 
 					new MakeCourse(
-						activity.getAnum(),
-						activity.getAname(),
-						activity.getDivision(),
-						activity.getStar(),
-						activity.getAcost(),
-						activity.getChoosed(),
-						activity.getAphoto(),
-						activity.getAaddress(),
-						activity.getXlocation(),
-						activity.getYlocation(),
-						"COURSE_ACTIVITY",
-						activity.getAintro(),
-						activity.getAintro2(),
-						activity.getAphone(),
-						activity.getAopcl(),
-						activity.getAbreak(),
-						activity.getAphoto2(),
-						activity.getAphoto3(),
-						activity.getViews(),
-						null,
-						null,
-						null
+						activity.getAnum(), activity.getAname(), activity.getDivision(), activity.getStar(),
+						activity.getAcost(), activity.getChoosed(), activity.getAphoto(), activity.getAaddress(),
+						activity.getXlocation(), activity.getYlocation(), "COURSE_ACTIVITY", activity.getAintro(),
+						activity.getAintro2(), activity.getAphone(), activity.getAopcl(), activity.getAbreak(),
+						activity.getAphoto2(),activity.getAphoto3(), activity.getViews(), null, null, null
 					));
 		}
 		for(Hotel hotel: HotelList) {
 			makeCourseMap.put(hotel.getHname(),
 					new MakeCourse(
-						hotel.getHnum(),
-						hotel.getHname(),
-						hotel.getDivision(),
-						hotel.getStar(),
-						hotel.getHcost(),
-						hotel.getChoosed(),
-						hotel.getHphoto(),
-						hotel.getHaddress(),
-						hotel.getXlocation(),
-						hotel.getYlocation(),
-						"COURSE_HOTEL",
-						hotel.getHintro(),
-						hotel.getHintro2(),
-						hotel.getHphone(),
-						hotel.getHopcl(),
-						hotel.getHbreak(),
-						hotel.getHphoto2(),
-						hotel.getHphoto3(),
-						hotel.getViews(),
-						null,
-						null,
-						null
+						hotel.getHnum(), hotel.getHname(), hotel.getDivision(), hotel.getStar(),
+						hotel.getHcost(), hotel.getChoosed(), hotel.getHphoto(), hotel.getHaddress(),
+						hotel.getXlocation(), hotel.getYlocation(), "COURSE_HOTEL", hotel.getHintro(),
+						hotel.getHintro2(), hotel.getHphone(), hotel.getHopcl(), hotel.getHbreak(),
+						hotel.getHphoto2(), hotel.getHphoto3(), hotel.getViews(), null, null, null
 					));
 		}
 		for(Food food: foodList) {
 			long foodCost = (food.getFcost() + food.getFcost2() + food.getFcost3()) / 3;
 			makeCourseMap.put(food.getFname(),
 					new MakeCourse(
-						food.getFnum(),
-						food.getFname(),
-						food.getDivision(),
-						food.getStar(),
-						foodCost,
-						food.getChoosed(),
-						food.getFphoto(),
-						food.getFaddress(),
-						food.getXlocation(),
-						food.getYlocation(),
-						"COURSE_FOOD",
-						food.getFintro(),
-						food.getFintro2(),
-						food.getFphone(),
-						food.getFopcl(),
-						food.getFbreak(),
-						food.getFphoto2(),
-						food.getFphoto3(),
-						food.getViews(),
-						food.getFmenu(),
-						food.getFmenu2(),
-						food.getFmenu3()
+						food.getFnum(), food.getFname(), food.getDivision(), food.getStar(),
+						foodCost, food.getChoosed(), food.getFphoto(), food.getFaddress(),
+						food.getXlocation(), food.getYlocation(), "COURSE_FOOD", food.getFintro(), 
+						food.getFintro2(), food.getFphone(), food.getFopcl(), food.getFbreak(),
+						food.getFphoto2(), food.getFphoto3(), food.getViews(), food.getFmenu(), food.getFmenu2(), food.getFmenu3()
 					));
 		}
 		for(Landmark landmark: landmarkList) {
 			makeCourseMap.put(landmark.getLname(),
 					new MakeCourse(
-						landmark.getLnum(),
-						landmark.getLname(),
-						landmark.getDivision(),
-						landmark.getStar(),
-						landmark.getLcost(),
-						landmark.getChoosed(),
-						landmark.getLphoto(),
-						landmark.getLaddress(),
-						landmark.getXlocation(),
-						landmark.getYlocation(),
-						"COURSE_LANDMARK",
-						landmark.getLintro(),
-						landmark.getLintro2(),
-						landmark.getLphone(),
-						landmark.getLopcl(),
-						null,
-						landmark.getLphoto2(),
+						landmark.getLnum(), landmark.getLname(), landmark.getDivision(), landmark.getStar(),
+						landmark.getLcost(), landmark.getChoosed(), landmark.getLphoto(), landmark.getLaddress(),
+						landmark.getXlocation(), landmark.getYlocation(), "COURSE_LANDMARK", landmark.getLintro(),
+						landmark.getLintro2(), landmark.getLphone(), landmark.getLopcl(), null, landmark.getLphoto2(),
 						landmark.getLphoto3(),
-						landmark.getViews(),
-						null,
-						null,
-						null
+						landmark.getViews(), null, null, null
 					));
 		}
 		

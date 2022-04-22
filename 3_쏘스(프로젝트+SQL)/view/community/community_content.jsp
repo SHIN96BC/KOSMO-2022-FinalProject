@@ -344,7 +344,7 @@
 </div>
 <div class="ec-base-button ">
             <span class="gLeft">
-                <a href="/board/자유게시판/5/" class="btnNormalFix sizeS">목록</a>
+                <a href="/jejufriends/community/community.do" class="btnNormalFix sizeS">목록</a>
             </span>
 			
 			<sec:authentication property="principal.username" var = "emails"/>
@@ -359,100 +359,12 @@
         </div>
 </div>
 </form></div>
-
-<form id="commentWriteForm" name="" action="/exec/front/Board/CommentWrite/5" method="post" target="_self" enctype="multipart/form-data" >
-<input id="board_no" name="board_no" value="5" type="hidden"  />
-<input id="no" name="no" value="13" type="hidden"  />
-<input id="comment_no" name="comment_no" value="" type="hidden"  />
-<input id="member_id" name="member_id" value="" type="hidden"  />
-<div class="xans-element- xans-board xans-board-commentwrite-1002 xans-board-commentwrite xans-board-1002 "><!-- 댓글권한 있음 -->
-<div class="">
-            <fieldset>
-<legend>댓글 입력</legend>
-                <div class="input">
-                    <strong>댓글달기</strong>
-                 	<input type="text" name="" value="기호" disabled/>
-                </div>
-                <div class="view">
-                
-                    <textarea id="comment" name="comment" fw-filter="isFill" fw-label="댓글내용" fw-msg="" ></textarea>                    
-                    <a href="#none" onclick="BOARD_COMMENT.comment_insert('/exec/front/Board/CommentWrite/5');" class="btnEm sizeL ">확인</a>
-                </div>
-                <p class="grade displaynone"></p>
-                <p class="displaynone"> /  byte</p>
-                <p class="captcha displaynone">
-                <span class="ec-base-help txtInfo">왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)</span>
-                </p>
-            </fieldset>
 </div>
-<!-- 댓글권한 없음 -->
-<div class="displaynone">
-            <p>에게만 댓글 작성 권한이 있습니다.</p>
-        </div>
 </div>
-</form></div>
-
-
-		</div><hr class="layout"/></div><!-- //container -->
-	<hr class="layout"/><div id="quick"></div>
+	</div><!-- //container -->
+	
 </div><!-- //wrap -->
-<hr class="layout"/>
 
-		<div id="footer" style="margin-top: -150px">
-			<div class="xans-element- xans-layout xans-layout-footer cboth inner ">
-				<div class="bt_logo">
-					<a href="/">
-						<img src="/img/jeju2.png" style="width: 190px; height: 100px;"/>
-					</a>
-				</div>
-				<div class="bt_info" style="margin-left: 50px;">
-					<div class="bt_title">기호제학</div>
-					대표자 : 성기호<br/>
-					소재지 :   <br/>
-					사업자등록번호 :  <br/>
-					통신판매업신고번호 : <br/>
-					개인정보보호책임자 : <a href="mailto:rlgh2587@naver.com">성기호(rlgh2587@naver.com)</a>
-				</div>
-				<!-- //bt_info -->
-				<div class="bt_cscenter">
-					<div class="bt_title">고객센터</div>
-					010-4065-0757<br/>
-					rlgh2587@naver.com		
-				</div>
-				<!-- //bt_cscenter -->
-				<div class="bt_runtime">
-				<!-- 운영시간 및 계좌번호는 [상점관리 - 기본정보관리 - 내쇼핑몰정보 - CS운영시간] 에 작성하시면 자동출력됩니다. -->
-				</div>
-				
-				<!-- //bt_communitu -->
-				<div class="cboth pdt70">
-					<ul class="cboth utilMenu">
-						<li><a href="/member/privacy.html"><strong>개인정보 처리방침</strong></a></li>
-						<li>|</li>
-						<li><a href="/member/agreement.html">이용약관</a></li>
-						<li>|</li>
-						<li><a href="/shopinfo/guide.html">이용안내</a></li>
-						<li>|</li>
-						<li><a href="/board/%EC%83%81%ED%92%88-qa/6/">제휴문의</a></li>
-					</ul>
-					<!-- //utilMenu -->
-					<div class="cboth escrow">고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 PG 사의 구매안전서비스를 이용하실 수 있습니다. [ LG U+ 에스크로 ]</div>
-					<div class="copyright">COPYRIGHT © <span>기호제학. </span> ALL RIGHTS RESERVED. HOSTING BY 카페24(주)</div>
-			
-					<div class="cboth bt_sns">
-					<!-- 하단 SNS 링크 수정하는곳 -->
-					</div>
-				</div>
-			</div>
-			<!-- //inner -->
-		</div><!-- //footer -->
-
-<script type="text/javascript">var sAuthSSLDomain = "https://login2.cafe24ssl.com";</script><script type="text/javascript" src="https://login2.cafe24ssl.com/crypt/AuthSSLManager.js"></script><script type="text/javascript" src="https://login2.cafe24ssl.com/crypt/AuthSSLManager.plugin.js"></script>
-<span itemscope="" itemtype="http://schema.org/Organization">
-<link itemprop="url" href="https://rlgh2587.cafe24.com">
-</span>
-<script type="text/javascript" src="/ind-script/i18n.php?lang=ko_KR&domain=front&v=2203161305" charset="utf-8"></script>
-
-<script src="/ind-script/optimizer.php?filename=zVjbcts2EH23-drvYN10On2NlSbt1Ko1tjN5XoJLEiaARXGxzXx9l5KSWk14A-2ZjkYSBeEcLHfPLhbMG9KYX_zk8sqBxkdybe7QU3QC83ufy4tfTXbvf8jH5kVpQbT5_d8RXXf8epP9kv24EIlPAZ0B5Y8DmSBqJa5liU4l3UKGIqtMMtSQIFMpKUISxUX2M7-SFud_A7n_-M06qhmfg7X5b6XkCfnNs0DvHJVRhC2VmP_1feRzXZQQMEieoHmWCTmK7f7ikwzN3ed3ECDT0izgUbJgFN7x9TTKWydNqGbQk4i9We_J6Q2Z4EgpdNO4nYr-rbWXTpb1DHtikGp6VuVo76kzT4oRZM4C2TMlDZ4VYMwcuw4UgrQmM3f2ExjOY8NJYR2G-avscQG1VRyXYS1tqZAKT7R0sG_EKwM4zRLkIf8o7bIFq2hE79B-Xq_iTI_Kfw7DiBEs1fzjIe-eUyj43CmCchFIxwD9uteFR_cwFJwBsCXVVVLNll6JFUQVehd4DS5cfkd1y8trUcs96P9R7EsuIMazR_1aJgQvTb2WRWOAsi-Hg2q8bciehPX9Plh_QguUt_3nTj6hGqtFIzSbfS5-HE3FAegNVujQCNxE1393OydFggVcPmpy3ZX0YTHYIzjRLMqKAFXVfbv7TIbOqlhLLnkPoCRHjPfHYwi_DmR8AX41ba8RU_pv6ZnBsnDx9VZoUFl89ftowJRqcWFZsAAXSskxfjV-LqrhxdykSADvNi1Nl-l_LRjMk0sCV57onUezoh9NA0Uh0oBQDnZ4U1CHQ9vkc2-8jaG5vb1KW6LvQbjxW9QDQ1D9OwnDvQumIQvwuBh4bJUUdBRDKvpLr5MInxDdOFiDUqlYciW65IU7z1tNUqTwCUdyZQsG6tOu8hELRfWi3evLXpv3Vp7b4R13Fl4cf51XfACCsNaSl6KZd15qglacwjJI9IvcDr4z4vCZjNOoizGRTcCve4mKsfozQXAJvsWwnsGO92yzOHZTdWKCZUOR-5o197Ll8xrU6ffxDi15mb7-J-mb8f51BoGguMIFDgWugN_s4XcUQG1W2XE9XnynBIUGK7lW1FfQrbDhg4MyXUrclRDXQCn2NHxseUxXNR_G5Y5stOkUfKxq8Zig6wJ7QrVK7FfyAZU0LZl1Kvtd9s8xuxfQ65HpDooX4fkjoE70kIXQOFJ4PqPXn3Lz4MOmAbBNqOOHffCc25g5j3Mdd6N9av0D&type=js&k=a71faa04c3be5be0c381a1170d54f95a260f28a4&t=1646197605" ></script><script src="/ind-script/optimizer.php?filename=rc_BDcIwDIXhAdIrc1ggIdiDCZLUatzGcVrHoG5PhcQCkNs7fXo_JGEEjM4UN4UtT-lyvd-gWsgUXWqcQUd0IypNBXShcobsd7EGwStFmBXwiaW55sMw6wl6iJ_xs3YAUZil_COwjJbx-2w1iot7Er66Nc6r4bYPoUq1OjCVbjL3ro--4STH2W4iW26kSeojUa1UpoN-Aw&type=js&k=58d15ef1d6c59f6e173a027f1ca309c34bdbe04a&t=1647412175&user=T" ></script>
+	<jsp:include page="../footer.jsp" flush="true"/>
 </body>
 </html>

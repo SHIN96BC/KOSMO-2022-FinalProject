@@ -35,12 +35,14 @@ public class WishListController {
 	
 	@Secured({"ROLE_ADMIN" , "ROLE_SUPERADMIN", "ROLE_USER"})
 	@PostMapping("removeOne")
+	@ResponseBody
 	public void removeOne(WishList wishList) {
 		wishListService.removeOne(wishList);
 	}
 	
 	@Secured({"ROLE_ADMIN" , "ROLE_SUPERADMIN", "ROLE_USER"})
 	@PostMapping("removeAll")
+	@ResponseBody
 	public void removeAll(Member member) {
 		System.out.println("member.getEmail: " + member.getEmail());
 		wishListService.removeAll(member);

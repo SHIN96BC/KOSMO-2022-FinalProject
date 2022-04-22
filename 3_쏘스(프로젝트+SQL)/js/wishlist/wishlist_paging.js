@@ -45,8 +45,8 @@ function wishListPageSet(pageNum, page, wishlistList) {
                 let wishlist = wishlistListTemp[i];
                 wishlistHtml += `
                     <tr class="xans-record-">
-                        <td class="left" style="width:35%;">
-                            <strong class="name"><a href="" class="ec-product-name">${wishlist.cname}</a></strong>
+                        <td class="left" style="width:35%;padding-left:15px;">
+                            <strong class="name"><a href="/jejufriends/select_course/courseContent.do?cnum=${wishlist.cnum}" class="ec-product-name">${wishlist.cname}</a></strong>
                             <ul class="xans-element- xans-myshop xans-myshop-optionall option">
                                 <li class="xans-record-">
                                     <strong class="displaynone"></strong> 
@@ -54,7 +54,7 @@ function wishListPageSet(pageNum, page, wishlistList) {
                             </ul>
                         </td>
                         <td class="left" style="width:45%;">
-                            <strong class="name"><a href="" class="ec-product-name">${wishlist.cintro}</a></strong>
+                            <strong class="name"><a href="/jejufriends/select_course/courseContent.do?cnum=${wishlist.cnum}" class="ec-product-name">${wishlist.cintro}</a></strong>
                             <ul class="xans-element- xans-myshop xans-myshop-optionall option">
                                 <li class="xans-record-">
                                     <strong class="displaynone"></strong> 
@@ -62,8 +62,8 @@ function wishListPageSet(pageNum, page, wishlistList) {
                             </ul>
                         </td>
                         <td class="button" style="width:20%;">
-                            <input class="delete_one" type="hidden" value="${wishlist.cum}"/>
-                            <a class="btnNormal btn_wishlist_del wishlist_delete" rel="9||000A||" style="cursor:pointer;color:rgb(255,255,255);"><i class="icoDelete"></i> 삭제</a>
+                            <input class="delete_one" type="hidden" value="${wishlist.winum}"/>
+                            <a class="btnNormal btn_wishlist_del wishlist_delete" rel="9||000A||" style="cursor:pointer;"><i class="icoDelete"></i> 삭제</a>
                         </td>
                     </tr>
                 `;

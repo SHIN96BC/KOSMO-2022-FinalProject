@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
@@ -311,7 +311,7 @@
 				</div>
 				<div class="ec-base-button"	style="margin-top:100px;">
 		            <span class="gLeft">
-		                <a href="/board/자유게시판/5/" class="btnNormalFix sizeS">목록</a>
+		                <a href="/jejufriends/community/community.do" class="btnNormalFix sizeS">목록</a>
 		            </span>
 		            <span class="gRight">
 		                <a class="btnNormalFix sizeS" onClick="window.location.reload();" style="cursor:pointer;">리셋</a>
@@ -322,146 +322,10 @@
 		</div>
 		
 		
-			</div><!-- //container -->
-		</div><!-- //wrap -->
-		<div id="footer">
-			<div class="xans-element- xans-layout xans-layout-footer cboth inner ">
-				<div class="bt_logo">
-					<a href="/">
-						<img src="/img/jeju2.png" style="width: 190px; height: 100px;"/>
-					</a>
-				</div>
-				<div class="bt_info" style="margin-left: 50px;">
-					<div class="bt_title">기호제학</div>
-					대표자 : 성기호<br/>
-					소재지 :   <br/>
-					사업자등록번호 :  <br/>
-					통신판매업신고번호 : <br/>
-					개인정보보호책임자 : <a href="mailto:rlgh2587@naver.com">성기호(rlgh2587@naver.com)</a>
-				</div>
-				<!-- //bt_info -->
-				<div class="bt_cscenter">
-					<div class="bt_title">고객센터</div>
-					010-4065-0757<br/>
-					rlgh2587@naver.com		
-				</div>
-				<!-- //bt_cscenter -->
-				<div class="bt_runtime">
-				<!-- 운영시간 및 계좌번호는 [상점관리 - 기본정보관리 - 내쇼핑몰정보 - CS운영시간] 에 작성하시면 자동출력됩니다. -->
-				</div>
-				
-				<!-- //bt_communitu -->
-				<div class="cboth pdt70">
-					<ul class="cboth utilMenu">
-						<li><a href="/member/privacy.html"><strong>개인정보 처리방침</strong></a></li>
-						<li>|</li>
-						<li><a href="/member/agreement.html">이용약관</a></li>
-						<li>|</li>
-						<li><a href="/shopinfo/guide.html">이용안내</a></li>
-						<li>|</li>
-						<li><a href="/board/%EC%83%81%ED%92%88-qa/6/">제휴문의</a></li>
-					</ul>
-					<!-- //utilMenu -->
-					<div class="cboth escrow">고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 PG 사의 구매안전서비스를 이용하실 수 있습니다. [ LG U+ 에스크로 ]</div>
-					<div class="copyright">COPYRIGHT © <span>기호제학. </span> ALL RIGHTS RESERVED. HOSTING BY 카페24(주)</div>
-			
-					<div class="cboth bt_sns">
-					<!-- 하단 SNS 링크 수정하는곳 -->
-					</div>
-				</div>
-			</div>
-			<!-- //inner -->
-		</div><!-- //footer -->
+		</div><!-- //container -->
+	</div><!-- //wrap -->
+		
+		<jsp:include page="../footer.jsp" flush="true"/>
 
-<!-- 결제를 위한 필수 영역 -->
-<div id="progressPaybar" style="display:none;">
-    <div id="progressPaybarBackground" class="layerProgress"></div>
-    <div id="progressPaybarView">
-        <div class="box">
-            <p class="graph">
-                <span><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/txt_progress.gif" alt="현재 결제가 진행중입니다."/></span>
-                <span><img src="//img.echosting.cafe24.com/skin/base/layout/img_loading.gif" alt=""/></span>
-            </p>
-            <p class="txt">
-                본 결제 창은 결제완료 후 자동으로 닫히며,결제 진행 중에 본 결제 창을 닫으시면<br/>
-                주문이 되지 않으니 결제 완료 될 때 까지 닫지 마시기 바랍니다.
-            </p>
-        </div>
-    </div>
-</div>
-<!-- //결제를 위한 필수 영역 -->
-
-
-
-<script type="text/javascript">var sAuthSSLDomain = "https://login2.cafe24ssl.com";</script><script type="text/javascript" src="https://login2.cafe24ssl.com/crypt/AuthSSLManager.js"></script><script type="text/javascript" src="https://login2.cafe24ssl.com/crypt/AuthSSLManager.plugin.js"></script>
-<span itemscope="" itemtype="http://schema.org/Organization">
-<link itemprop="url" href="https://rlgh2587.cafe24.com">
-</span>
-<script type="text/javascript" src="/ind-script/i18n.php?lang=ko_KR&domain=front&v=2203161305" charset="utf-8"></script>
-
-<script src="/ind-script/optimizer.php?filename=zVjbcts2EH23-drvYN10On2NlSbt1Ko1tjN5XoJLEiaARXGxzXx9l5KSWk14A-2ZjkYSBeEcLHfPLhbMG9KYX_zk8sqBxkdybe7QU3QC83ufy4tfTXbvf8jH5kVpQbT5_d8RXXf8epP9kv24EIlPAZ0B5Y8DmSBqJa5liU4l3UKGIqtMMtSQIFMpKUISxUX2M7-SFud_A7n_-M06qhmfg7X5b6XkCfnNs0DvHJVRhC2VmP_1feRzXZQQMEieoHmWCTmK7f7ikwzN3ed3ECDT0izgUbJgFN7x9TTKWydNqGbQk4i9We_J6Q2Z4EgpdNO4nYr-rbWXTpb1DHtikGp6VuVo76kzT4oRZM4C2TMlDZ4VYMwcuw4UgrQmM3f2ExjOY8NJYR2G-avscQG1VRyXYS1tqZAKT7R0sG_EKwM4zRLkIf8o7bIFq2hE79B-Xq_iTI_Kfw7DiBEs1fzjIe-eUyj43CmCchFIxwD9uteFR_cwFJwBsCXVVVLNll6JFUQVehd4DS5cfkd1y8trUcs96P9R7EsuIMazR_1aJgQvTb2WRWOAsi-Hg2q8bciehPX9Plh_QguUt_3nTj6hGqtFIzSbfS5-HE3FAegNVujQCNxE1393OydFggVcPmpy3ZX0YTHYIzjRLMqKAFXVfbv7TIbOqlhLLnkPoCRHjPfHYwi_DmR8AX41ba8RU_pv6ZnBsnDx9VZoUFl89ftowJRqcWFZsAAXSskxfjV-LqrhxdykSADvNi1Nl-l_LRjMk0sCV57onUezoh9NA0Uh0oBQDnZ4U1CHQ9vkc2-8jaG5vb1KW6LvQbjxW9QDQ1D9OwnDvQumIQvwuBh4bJUUdBRDKvpLr5MInxDdOFiDUqlYciW65IU7z1tNUqTwCUdyZQsG6tOu8hELRfWi3evLXpv3Vp7b4R13Fl4cf51XfACCsNaSl6KZd15qglacwjJI9IvcDr4z4vCZjNOoizGRTcCve4mKsfozQXAJvsWwnsGO92yzOHZTdWKCZUOR-5o197Ll8xrU6ffxDi15mb7-J-mb8f51BoGguMIFDgWugN_s4XcUQG1W2XE9XnynBIUGK7lW1FfQrbDhg4MyXUrclRDXQCn2NHxseUxXNR_G5Y5stOkUfKxq8Zig6wJ7QrVK7FfyAZU0LZl1Kvtd9s8xuxfQ65HpDooX4fkjoE70kIXQOFJ4PqPXn3Lz4MOmAbBNqOOHffCc25g5j3Mdd6N9av0D&type=js&k=a71faa04c3be5be0c381a1170d54f95a260f28a4&t=1646197605" ></script><script src="/ind-script/optimizer.php?filename=rc_BDcIwDIXhAdIrc1ggIdiDCZLUatzGcVrHoG5PhcQCkNs7fXo_JGEEjM4UN4UtT-lyvd-gWsgUXWqcQUd0IypNBXShcobsd7EGwStFmBXwiaW55sMw6wl6iJ_xs3YAUZil_COwjJbx-2w1iot7Er66Nc6r4bYPoUq1OjCVbjL3ro--4STH2W4iW26kSeojUa1UpoN-Aw&type=js&k=58d15ef1d6c59f6e173a027f1ca309c34bdbe04a&t=1647412175&user=T" ></script>
-<script type="text/javascript">
-CAFE24.MOBILE_WEB = false; var mobileWeb = CAFE24.MOBILE_WEB;
-var bUseElastic = false;
-var sSearchBannerUseFlag = 'F';
-EC$(function() {
-try{
-var ifame_width = parent.EC$('#blog_13').parent().width();
-parent.EC$('#blog_13').contents().find('body').css( 'min-width', ifame_width);
-parent.EC$('#blog_13').css('width', ifame_width);
-if (parseInt(parent.EC$('#blog_13').css('height')) < (document.body.scrollHeight + 70)) {
-parent.EC$('#blog_13').css('height', document.body.scrollHeight + 70);
-}
-}catch(e){};
-});
-var EC_SDE_SHOP_NUM = 1;
-var is_multishop = false;
-function getMultiShopUrl(sUrl)
-{
-if (is_multishop === false) {
-return sUrl;
-} else if (/^\/(admin\/php|disp\/admin)(\/shop\d+)\//.test(sUrl) === true) {
-return sUrl;
-} else {
-return sUrl.replace(/\/(admin\/php|disp\/admin)(\/shop\d+)?\//, "/$1/shop" + EC_SDE_SHOP_NUM + "/");
-}
-}
-EC$(function(){
-FwValidator.bind("BoardDelForm", false);
-});
-var sFormId = 'BoardDelForm'
-var sEleId = ["BoardDelForm::password"]
-AuthSSL.Bind(sFormId, sEleId);
-EC$(function(){
-FwValidator.bind("commentForm", false);
-});
-EC$(function() {
-EC$('#commentForm').css('display', 'none');
-});
-EC$(function(){
-FwValidator.bind("commentSecretForm", false);
-});
-EC$(function() {
-EC$('#commentSecretForm').css('display', 'none');
-});
-EC$(function(){
-FwValidator.bind("commentWriteForm", false);
-});
-EC$(function() {
-BOARD_COMMENT.setCmtData();
-});
-EC$(function(){
-FwValidator.bind("form_1017363450", false);
-});
-var aLogData = {"log_server1":"eclog2-225.cafe24.com","log_server2":"elg-db-svcm-285.cafe24.com","mid":"rlgh2587","stype":"e","domain":"","shop_no":1,"lang":"ko_KR","ver":2,"hash":"53754bfee505f4b6eb6fe50c4c6f580c","ca":"cfa-js.cafe24.com\/cfa.js","etc":""};
-var sMileageName = '적립금';
-var sMileageUnit = '[:PRICE:]원';
-var sDepositName = '예치금';
-var sDepositUnit = '원';
-CAFE24.SHOP_CURRENCY_INFO = {"1":{"aShopCurrencyInfo":{"currency_code":"KRW","currency_no":"410","currency_symbol":"\uffe6","currency_name":"South Korean won","currency_desc":"\uffe6 \uc6d0 (\ud55c\uad6d)","decimal_place":0,"round_method_type":"F"},"aShopSubCurrencyInfo":null,"aBaseCurrencyInfo":{"currency_code":"KRW","currency_no":"410","currency_symbol":"\uffe6","currency_name":"South Korean won","currency_desc":"\uffe6 \uc6d0 (\ud55c\uad6d)","decimal_place":0,"round_method_type":"F"},"fExchangeRate":1,"fExchangeSubRate":null,"aFrontCurrencyFormat":{"head":"","tail":"\uc6d0"},"aFrontSubCurrencyFormat":{"head":"","tail":""}}}; var SHOP_CURRENCY_INFO = CAFE24.SHOP_CURRENCY_INFO;
-var EC_ASYNC_LIVELINKON_ID = '';
-if (EC$('[async_section=before]').length > 0) {
-EC$('[async_section=before]').addClass('displaynone');
-}
-
-</script></body></html>
+</body>
+</html>

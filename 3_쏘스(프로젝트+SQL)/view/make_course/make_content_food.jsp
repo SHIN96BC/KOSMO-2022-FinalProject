@@ -72,10 +72,6 @@
         </tr>
 		<tr>
 			<td class="board_sub_text" colspan="2">
-				<a href='#none' >기호제학(rlgh2587)</a>
-				<span class="aa">
-					평점				
-				</span>
 				<span class="">
 					조회수  ${food.views}					
 				</span>
@@ -252,45 +248,7 @@
 					<!-- 컨텐츠 끝 -->
 </div>
 
-<div class="ec-base-button ">
-            
-        </div>
-</div>
 
-
-<div class="xans-element- xans-board xans-board-list-3001 xans-board-list xans-board-3001"><!--
-            $count = 12
-            $login_page_url = /member/login.html
-            $deny_access_url = /index.html
-        -->
-<div id="storeReview">
-<c:forEach items="${reviewVo}" var="reviewVo">
-<c:if test="${not empty reviewVo}">
-
-	<div class="xans-element- xans-board xans-board-commentpackage-1002 xans-board-commentpackage xans-board-1002 "><div class="xans-element- xans-board xans-board-commentlist-1002 xans-board-commentlist xans-board-1002">
-		<ul class="boardComment">
-			<li class="first  xans-record-">
-                <div class="commentTop">
-                    <strong class="name">
-                    <a href='#none' onclick=EC_BOARD_ADMIN.member_info('rlgh2587','rlgh2587');>${reviewVo.writer }</a></strong>
-                    <span class="date"> <fmt:formatDate value="${reviewVo.rdate }" pattern="yyyy-MM-dd (E) HH:mm" /></span>
-                    <span class="grade displaynone"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point0.gif" alt="0점"/></span>
-                </div>
-                <span class="button">
-                    <a href="javascript:;" class="btnNormal" onclick="BOARD_COMMENT.comment_update('13','2',this);">수정</a>
-                    <a href="del.do?frnum=${reviewVo.frnum }&fnum=${food.fnum}" class="btnNormal"><i class="icoDelete"></i> 삭제</a>
-                </span>
-                <div class="comment">
-                    <span class="displaynone"><img src="//img.echosting.cafe24.com/skin/base/board/ico_spam.gif" alt="스팸글"/></span>
-                     ${reviewVo.content} 
-               </div>
-            </li>
-        </ul>
-	</div>
-</div>
-
-</c:if>
-</c:forEach>
 
             
 		</div>
@@ -319,49 +277,7 @@
 </div>
 </div>
 
-
-<div id="footer">
-	<div class="xans-element- xans-layout xans-layout-footer cboth inner ">
-	<div class="bt_logo"><a href="/"><img src="/img/jeju2.png"/></a></div>
-<div class="bt_info" style="margin-left: 50px;">
-			<div class="bt_title">기호제학</div>
-			대표자 : 성기호<br/>
-			소재지 :   <br/>
-			사업자등록번호 :  <br/>
-			통신판매업신고번호 : <br/>
-			개인정보보호책임자 : <a href="mailto:rlgh2587@naver.com">성기호(rlgh2587@naver.com)</a>
-		</div>
-<!-- //bt_info -->
-<div class="bt_cscenter">
-			<div class="bt_title">고객센터</div>
-			010-4065-0757<br/>
-			rlgh2587@naver.com		</div>
-<!-- //bt_cscenter -->
-<div class="bt_runtime">
-<!-- 운영시간 및 계좌번호는 [상점관리 - 기본정보관리 - 내쇼핑몰정보 - CS운영시간] 에 작성하시면 자동출력됩니다. -->
-					</div>
-
-<!-- //bt_communitu -->
-<div class="cboth pdt70">
-			<ul class="cboth utilMenu">
-<li><a href="/member/privacy.html"><strong>개인정보 처리방침</strong></a></li>
-				<li>|</li>
-				<li><a href="/member/agreement.html">이용약관</a></li>
-				<li>|</li>
-				<li><a href="/shopinfo/guide.html">이용안내</a></li>
-				<li>|</li>
-				<li><a href="/board/%EC%83%81%ED%92%88-qa/6/">제휴문의</a></li>
-			</ul>
-<!-- //utilMenu --><div class="cboth escrow">고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 PG 사의 구매안전서비스를 이용하실 수 있습니다. [ LG U+ 에스크로 ]</div>
-			<div class="copyright">COPYRIGHT © <span>기호제학. </span> ALL RIGHTS RESERVED. HOSTING BY 카페24(주)</div>
-
-			<div class="cboth bt_sns">
-<!-- 하단 SNS 링크 수정하는곳 -->
-				</div>
-		</div>
-</div>
-<!-- //inner -->
-</div><!-- //footer -->
+<jsp:include page="../footer.jsp" flush="true"/>
 
 
 <!-- 180430 플로팅버튼추가 -->
